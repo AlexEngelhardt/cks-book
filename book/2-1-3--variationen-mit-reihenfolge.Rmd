@@ -1,3 +1,3 @@
-### Variationen - mit Reihenfolge
-#### Ziehen ohne Zurücklegen
-#### Ziehen mit Zurücklegen
+## Variationen - mit Reihenfolge
+### Ziehen ohne Zurücklegen
+### Ziehen mit Zurücklegen

@@ -1,1 +1,1 @@
-#### Tabelle $\chi^2$-Verteilung
+### Tabelle $\chi^2$-Verteilung

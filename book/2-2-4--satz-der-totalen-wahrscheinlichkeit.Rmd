@@ -1,1 +1,1 @@
-### Satz der totalen Wahrscheinlichkeit
+## Satz der totalen Wahrscheinlichkeit

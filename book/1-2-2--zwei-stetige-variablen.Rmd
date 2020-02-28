@@ -1,1 +1,1 @@
-### Zwei stetige Variablen
+## Zwei stetige Variablen

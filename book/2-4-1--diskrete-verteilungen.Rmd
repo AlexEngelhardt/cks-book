@@ -1,1 +1,1 @@
-### Diskrete Verteilungen
+## Diskrete Verteilungen

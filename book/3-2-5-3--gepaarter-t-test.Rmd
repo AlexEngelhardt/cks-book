@@ -1,1 +1,1 @@
-#### Gepaarter $t$-Test: Vorher/Nachher-Mittelwertsvergleich
+### Gepaarter $t$-Test: Vorher/Nachher-Mittelwertsvergleich

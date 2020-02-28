@@ -1,1 +1,1 @@
-#### Chi-Quadrat-Test: Abhängigkeit zwischen zwei nominalen Variablen testen
+### Chi-Quadrat-Test: Abhängigkeit zwischen zwei nominalen Variablen testen

@@ -1,1 +1,1 @@
-#### Exponentialverteilung: Wartezeit bis Glühbirnenausfall
+### Exponentialverteilung: Wartezeit bis Glühbirnenausfall

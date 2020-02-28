@@ -1,2 +1,2 @@
-### Was ist eine Wahrscheinlichkeit?
-#### Laplace-Wahrscheinlichkeiten
+## Was ist eine Wahrscheinlichkeit?
+### Laplace-Wahrscheinlichkeiten

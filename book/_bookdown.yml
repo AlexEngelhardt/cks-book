@@ -1,5 +1,12 @@
 book_filename: "book"
 delete_merged_file: true
 language:
+  label:
+    fig: "Abbildung "
+    tab: "Tabelle "
+    exm: "Beispiel "
+    exr: "Aufgabe "
+    solution: "Lösung. "
   ui:
     chapter_name: "Kapitel "
+    appendix_name: "Anhang "

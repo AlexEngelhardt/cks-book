@@ -1,6 +1,6 @@
-### Darstellung und Eigenschaften von diskreten Zufallsvariablen
-#### Dichte
-#### Verteilungsfunktion
-#### Quantile
-#### Erwartungswert
-#### Varianz und Standardabweichung
+## Darstellung und Eigenschaften von diskreten Zufallsvariablen
+### Dichte
+### Verteilungsfunktion
+### Quantile
+### Erwartungswert
+### Varianz und Standardabweichung

@@ -1,4 +1,4 @@
-### Objektivität, Reliabilität, Validität
+## Objektivität, Reliabilität, Validität
 
 Drei häufig verwendete Stichworte, die man im Zusammenhang mit der Datenerhebung hört, sind die **Objektivität** (das *wer*), die **Reliabilität** (das *wie*) und die **Validität** (das *was*). Es handelt sich hier um drei Prinzipien, die man bei der Erhebung seiner Daten beachten sollte, um gute, verwertbare Daten zu erhalten.
 

@@ -1,1 +1,1 @@
-### Zwei diskrete Variablen
+## Zwei diskrete Variablen

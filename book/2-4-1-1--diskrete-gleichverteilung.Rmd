@@ -1,1 +1,1 @@
-#### Diskrete Gleichverteilung: Ein Würfelwurf
+### Diskrete Gleichverteilung: Ein Würfelwurf

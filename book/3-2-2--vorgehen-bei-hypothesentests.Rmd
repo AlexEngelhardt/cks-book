@@ -1,13 +1,13 @@
-### Vorgehen bei Hypothesentests
-#### 1. Hypothesen aufstellen
-##### Einseitige und zweiseitige Tests
-#### 2. Test wählen
-#### 3. Signifikanzniveau festlegen
-##### $\alpha$- und $\beta$-Fehler
-#### 4. Daten sammeln
-#### 5. Prüfgröße berechnen
-#### 6. Verteilung der Prüfgröße bestimmen
-#### 7. Test abschließen: Zwei Möglichkeiten
-##### Von Hand: Über die kritische Schranke und Verteilungstabelle
-##### Per Computer: mit dem p-Wert
-#### 8. Testentscheidung treffen
+## Vorgehen bei Hypothesentests
+### 1. Hypothesen aufstellen
+#### Einseitige und zweiseitige Tests
+### 2. Test wählen
+### 3. Signifikanzniveau festlegen
+#### $\alpha$- und $\beta$-Fehler
+### 4. Daten sammeln
+### 5. Prüfgröße berechnen
+### 6. Verteilung der Prüfgröße bestimmen
+### 7. Test abschließen: Zwei Möglichkeiten
+#### Von Hand: Über die kritische Schranke und Verteilungstabelle
+#### Per Computer: mit dem p-Wert
+### 8. Testentscheidung treffen

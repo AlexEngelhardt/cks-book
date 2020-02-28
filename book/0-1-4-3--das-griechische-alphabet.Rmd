@@ -1,4 +1,4 @@
-#### Das griechische Alphabet
+### Das griechische Alphabet
 
 Statistische Kennziffern werden oft mit griechischen Buchstaben ausgedrückt. Statt einem $x$ findet man dann eben z.B. ein $\lambda$ in einer Formel, wovon man sich aber nicht verunsichern lassen sollte. Bei so vielen Kennzahlen sind uns einfach irgendwann unsere Buchstaben ausgegangen, und wir mussten auf das griechische Alphabet ausweichen :-)
 

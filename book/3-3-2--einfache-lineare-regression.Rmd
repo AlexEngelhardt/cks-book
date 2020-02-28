@@ -1,3 +1,3 @@
-### Einfache lineare Regression
-#### Berechnen der Parameter $a$ und $b$
-#### Prognose mit neuen Daten
+## Einfache lineare Regression
+### Berechnen der Parameter $a$ und $b$
+### Prognose mit neuen Daten

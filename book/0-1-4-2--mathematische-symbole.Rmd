@@ -1,4 +1,4 @@
-#### Mathematische Symbole
+### Mathematische Symbole
 
 Das hier ist eine Übersicht aller mathematischen Schreibweisen, die in diesem Blog auftauchen werden. Man kann sie sich am besten kurz anschauen, dass man sie schonmal gesehen hat, und wieder zurückkommen, wenn die entsprechenden Notationen später wieder auftauchen.
 

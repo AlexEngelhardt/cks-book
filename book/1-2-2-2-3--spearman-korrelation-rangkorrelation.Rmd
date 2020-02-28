@@ -1,1 +1,1 @@
-##### Spearman-Korrelation / Rangkorrelation
+#### Spearman-Korrelation / Rangkorrelation

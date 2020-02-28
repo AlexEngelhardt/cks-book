@@ -1,1 +1,1 @@
-#### Tabelle $t$-Verteilung
+### Tabelle $t$-Verteilung

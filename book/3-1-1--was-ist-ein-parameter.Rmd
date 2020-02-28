@@ -1,8 +1,8 @@
-### Was ist ein Parameter?
-#### Wozu brauchen wir Parameterschätzung?
-#### Parameterschätzer sind die Grundlage für Hypothesentests
-#### Was kann man schätzen?
-##### Prozentuale Anteile
-##### Erwartungswert
-##### Varianz
-##### Andere Verteilungsparameter
+## Was ist ein Parameter?
+### Wozu brauchen wir Parameterschätzung?
+### Parameterschätzer sind die Grundlage für Hypothesentests
+### Was kann man schätzen?
+#### Prozentuale Anteile
+#### Erwartungswert
+#### Varianz
+#### Andere Verteilungsparameter

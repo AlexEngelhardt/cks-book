@@ -1,2 +1,2 @@
-### Schätzfunktionen allgemein
-#### Wie schätzt man einen Parameter?
+## Schätzfunktionen allgemein
+### Wie schätzt man einen Parameter?

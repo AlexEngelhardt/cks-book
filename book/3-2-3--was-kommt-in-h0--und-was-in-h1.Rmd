@@ -1,1 +1,1 @@
-### Was kommt in $H_0$ und was in $H_1$?
+## Was kommt in $H_0$ und was in $H_1$?

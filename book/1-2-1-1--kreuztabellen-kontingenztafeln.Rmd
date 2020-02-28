@@ -1,2 +1,2 @@
-#### Kreuztabellen / Kontingenztafeln
-##### Bedingte Häufigkeiten
+### Kreuztabellen / Kontingenztafeln
+#### Bedingte Häufigkeiten

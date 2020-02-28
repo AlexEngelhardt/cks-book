@@ -1,5 +1,5 @@
+## Was ist ein Konfidenzintervall?
+### Wozu braucht man Konfidenzintervalle?
 ### Was ist ein Konfidenzintervall?
-#### Wozu braucht man Konfidenzintervalle?
-#### Was ist ein Konfidenzintervall?
-#### Konfidenzintervalle werden auch nur geschätzt
-#### Wie schätzt man ein Konfidenzintervall?
+### Konfidenzintervalle werden auch nur geschätzt
+### Wie schätzt man ein Konfidenzintervall?

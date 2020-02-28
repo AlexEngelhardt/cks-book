@@ -1,1 +1,1 @@
-#### Binomialverteilung: Zehn Münzwürfe
+### Binomialverteilung: Zehn Münzwürfe

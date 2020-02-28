@@ -1,1 +1,1 @@
-#### Bernoulliverteilung: Ein Münzwurf
+### Bernoulliverteilung: Ein Münzwurf

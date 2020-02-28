@@ -1,1 +1,1 @@
-# III. Auf die Grundgesamtheit schließen: Inferenzstatistik
+# (PART) Auf die Grundgesamtheit schließen: Inferenzstatistik {-}
