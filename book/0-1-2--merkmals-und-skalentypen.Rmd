@@ -1,3 +1,93 @@
 ### Merkmals- und Skalentypen
+
+**Das Wichtigste in Kürze**
+
+Die Unterscheidungen diskret - stetig bzw. nominal - ordinal - intervallskaliert - verhältnisskaliert sind zwei verschiedene Möglichkeiten, ein Merkmal zu beschreiben. Meistens benutzt man allerdings nur die Bezeichnungen "nominal", "ordinal" und "stetig", bzw. "diskret" für verhältnisskalierte Zähldaten.
+
+```{r merkmals-und-skalentypen}
+knitr::kable(
+    tibble(
+        `Merkmals-/Skalentyp` = c(
+            "Diskret",
+            "Stetig",
+            "Nominalskaliert",
+            "Ordinalskaliert",
+            "Intervallskaliert",
+            "Verhältnisskaliert"
+        ),
+        Beispiele = c(
+            "Kinderzahl, Studiendauer in Semestern",
+            "Körpergröße, Nettoeinkommen",
+            "Geschlecht, Religionszugehörigkeit",
+            "Letzte Englischnote, Testantwort auf einer Skala gut - mittel - schlecht",
+            "Temperatur in Celsius, Intelligenzquotient",
+            "Geschwindigkeit, Einkommen"
+        )
+    )
+)
+```
+
+Bei der Erhebung, Auswertung und Interpretation von Merkmalen gibt es viele Methoden, die oft nur bei bestimmten Merkmalstypen möglich oder sinnvoll sind. Wir werten zum Beispiel die Größe einer Person anders aus als die Religionszugehörigkeit oder den Vornamen.
+
 #### Merkmalstypen: Diskrete und stetige Merkmale
+
+Für den praktischen Umgang mit Daten ist meist nur interessant, ob es sich um diskrete oder stetige Daten handelt, da diese Unterscheidung bestimmt, mit welchen Methoden man vorgeht.
+
+**Diskrete Daten** sind definiert als Daten, die endlich oder abzählbar unendlich viele Ausprägungen haben. Abzählbar unendlich heißt hier, dass es sich meist um Zähldaten handelt, die theoretisch ins Unendliche gehen können, wie z.B. die Anzahl der Kinder einer Person.
+
+**Stetige Daten**, wie z.B. die Körpergröße, sind dadurch charakterisiert, dass theoretisch unendlich viele verschiedene Werte innerhalb eines Intervalls als Ausprägung vorkommen können. Bei der Körpergröße ist dieses Intervall das der reellen Zahlen (obwohl man es wohl auf das Intervall von 0cm bis 300cm beschränken kann). In diesem Intervall kann jede denkbare Zahl mit beliebig vielen Nachkommastellen als Ausprägung vorkommen, zum Beispiel 178,42525342...cm.
+
+Einen Sonderfall bilden sogenannte **quasi-stetige Daten**, die zwar theoretisch stetig sind, aber nur gerundet gemessen werden, wie z.B. das Nettoeinkommen, das auf Cent gerundet wird. Sie werden aber in fast allen Fällen genauso wie stetige Daten behandelt.
+
+Außerdem trifft man ab und zu auf **stetig klassierte Daten**, also Daten, die in Rohform eigentlich stetig sind, aber in Gruppen zusammengefasst wurden. Das kann z.B. aus Anonymitätsgründen passieren - In Fragebögen wird etwa fast nie nach dem genauen Einkommen in Euro gefragt, sondern immer eine Auswahlliste gegeben, die z.B. so aussieht:
+
+- bis 800 Euro
+- 801 bis 1500 Euro
+- 1501 bis 2500 Euro
+- über 2500 Euro
+
+Die Klassen müssen nicht gleich breit sein, aber sie dürfen sich natürlich nicht überlappen.
+
 #### Skalentypen
+
+Eine weitere Möglichkeit der Unterscheidung kann man anhand der Skala vornehmen. Dabei unterscheidet man die Art und Anzahl der Werte, die eine Variable annehmen kann.
+
+**Nominalskalierte Merkmale** haben nur eine endliche Menge von Ausprägungen und können nicht nach irgendeiner Rangfolge geordnet werden. Ein Beispiel ist bei einer Prüfung von Autos das Merkmal "Farbe". Statistische Software wie SPSS ordnet den einzelnen Ausprägungen zwar Zahlen zu, aber man kann nicht sagen, dass die Zahl 2 (also etwa die Farbe "blau") besser sei als die Zahl 1 (etwa "rot").
+
+**Ordinalskalierte Daten** haben - wie Nominaldaten auch - nur eine endliche Zahl von möglichen Ausprägungen. Allerdings können sie in eine natürliche Rangfolge gebracht werden. Meistens sind dies Antworten in einem Test, die auf einer Skala wie etwa *trifft sehr zu / trifft eher zu / trifft eher nicht zu / trifft nicht zu* gegeben werden. Man kann hier allerdings keine Abstände zwischen den einzelnen Ausprägungen interpretieren, sondern nur sagen, dass eine Ausprägung größer als die andere ist.
+
+**Intervallskalierte Daten** können *unendlich viele Ausprägungen* annehmen. Meist handelt es sich um die reellen Zahlen. Auf einer Intervallskala kann man Abstände, also Differenzen bilden, allerdings hat diese Skala keinen Nullpunkt. Und ohne Nullpunkt kann man keine Verhältnisse bilden. Typisches Beispiel für diese Skala ist unsere Temperaturskala in Grad Celsius. Man kann Differenzen bilden ("morgen wird es 10 Grad kälter als heute"), aber keine Verhältnisse ("morgen wird es doppelt so kalt wie heute"). Wenn es heute null Grad hat, wie kalt ist dann "doppelt so kalt"?
+
+**Verhältnisskalierte Daten** haben im Unterschied zur Intervallskala einen absoluten Nullpunkt. Diesen Nullpunkt gibt es bei der Temperatur in Celsius oder dem Intelligenzquotienten nämlich nicht, daher kann man dort nicht sinnvoll sagen, es sei "doppelt so heiß" wie gestern, oder jemand ist "doppelt so klug" wie jemand anderes.
+
+Bei der Verhältnisskala gibt es nun so einen Nullpunkt. Die meisten stetigen Daten sind verhältnisskaliert, da es dort eine Null gibt. Beispiele hierfür sind das Einkommen, Zeiten, Längen bzw. Größen, uvm. Mit solchen Daten kann man nun wirkliche Verhältnisse bilden, also "doppelt so lang" oder "ein doppelt so hohes Einkommen" sagen.
+
+**Beispielaufgabe**
+
+Entscheide für die folgenden Merkmale, ob sie stetig oder diskret sind, und ordne sie der entsprechenden Skala (Nominal-, ordinal-, intervall- oder verhältnisskaliert) zu.
+
+a) Buchbewertungen auf einer Webseite, 0 bis 5 Sterne
+b) Intelligenzquotient
+c) Farbe eines Autos
+d) Alter in Jahren
+e) Anteil schwarzer Autos (in %), die an einem Tag über eine Kreuzung fahren
+f) Blutgruppe (A, B, AB, oder 0)
+g) Kleidergröße (S, M, L, XL)
+h) Jahreszahlen auf einem Kalender
+i) Produzierte Menge Kaffee in Südamerika pro Jahr
+
+**Lösung**
+
+a) Diskret, ordinalskaliert
+b) Stetig, intervallskaliert. Der IQ wurde so konstruiert, dass dessen Verteilung eine Normalverteilung mit Mittelwert 100 und Standardabweichung 10 hat. Der durchschnittliche Mensch hat also einen IQ von 100. Hier kann man auch keine Verhältnisse bilden: Eine Aussage wie "doppelt so klug" ginge zwar mathematisch, macht aber (wie bei der Temperatur in Celsius) keinen Sinn.
+c) Diskret, nominalskaliert
+d) Diskret, verhältnisskaliert
+e) Stetig, verhältnisskaliert. Es können zwar nur Werte zwischen 0 und 1 (bzw. 0% und 100%) angenommen werden, aber die Verhältnisskala ist trotzdem gegeben.
+f) Diskret, nominalskaliert
+g) Diskret, ordinalskaliert. Die Reihenfolge der Größen ist klar, aber es gibt keine klar definierten Abstände zwischen den Größen. Selbst wenn es eine "Übersetzungstabelle" gibt, in der steht, dass eine Hose der Größe L z.B. 90cm lang ist: Man kann keinen Mittelwert aus "L" und "M" berechnen.
+h) Diskret, intervallskaliert. Der Nullpunkt, also "Jahr null", ist auf einem Kalender willkürlich gewählt, und unterscheidet sich ja in verschiedenen Religionen. Man könnte eventuell argumentieren, dass ein Kalender, der beim Urknall beginnt, als verhältnisskaliert angesehen werden kann, aber bei unserem Kalender ist auf jeden Fall nur eine Intervallskala gegeben. Das Jahr 1000 n. Chr. ist ja nicht "doppelt so spät" wie das Jahr 500 n. Chr.
+i) Stetig, verhältnisskaliert. Das ist eine klare, physikalisch messbare Menge mit Nullpunkt.
+
+
+
+

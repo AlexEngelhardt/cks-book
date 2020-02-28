@@ -1,1 +1,18 @@
 ### Grundgesamtheit, Stichprobe, Merkmale
+
+Wenn man Daten erhebt und sie auswerten möchte, dann gibt es drei grundlegende Begriffe, deren Unterschiede man genau kennen muss: Grundgesamtheit, Stichprobe, und Merkmale. Wir schauen uns diese drei Begriffe hier genauer an, und erklären sie anhand eines Beispiels: Es soll bei ein paar ausgewählten Klassen von Grundschülern ein Mathematiktest und ein Wortschatztest durchgeführt werden. Ziel der Analyse ist es, Informationen über die Mathematik- und Wortschatzkenntnisse aller Grundschüler aus München zu erfahren.
+
+Man interessiert sich also für die Mathematikkenntnisse und den Wortschatz in einer **Grundgesamtheit** - hier sind das *alle* Münchner Viertklässler. Da man jedoch (z.B. aus finanziellen Gründen) nicht alle Schüler befragen kann, zieht man eine **Stichprobe** von drei Klassen aus drei verschiedenen Schulen und testet nur 90 Schüler. Jeder dieser Schüler bildet eine **statistische Einheit** (oft auch **Beobachtung** genannt). Die interessierenden **Merkmale** sind Mathematikkenntnisse und Wortschatz, die z.B. durch einen Score auf einer Skala von 0 bis 100 gemessen werden. Die **Merkmalsausprägung** ist dann ein bestimmter Wert auf dieser Skala - für *einen* Schüler und *ein* Merkmal, z.B. die Note 2 beim Wortschatztest des dritten Schülers.
+
+Die folgende Tabelle fasst die Unterschiede nocheinmal zusammen:
+
+```{r grundgesamtheit-stichprobe-merkmale}
+knitr::kable(
+    tibble(
+        Begriff = c("Grundgesamtheit", "Stichprobe", "Statistische Einheit", "Merkmal", "Merkmalsausprägung"),
+        Erklärung = c("Die Menge an statistischen Einheiten, über die man Aussagen treffen möchte", "Alle untersuchten Einheiten zusammengefasst", "eine einzelne zu untersuchende Einheit", "Die Variablen der statistischen Einheiten, die untersucht werden", "Der gemessene Wert eines bestimmten Merkmals an einer Einheit der Stichprobe"),
+        Beispiel = c("alle Viertklässler in München", "drei zufällig ausgewählte Klassen", "einer der befragten Schüler", "Wortschatz, Mathematikkenntnisse", "Wortschatz: 87%")
+    )    
+)
+```
+

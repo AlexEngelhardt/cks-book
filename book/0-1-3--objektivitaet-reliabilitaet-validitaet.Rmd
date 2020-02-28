@@ -1,1 +1,13 @@
 ### Objektivität, Reliabilität, Validität
+
+Drei häufig verwendete Stichworte, die man im Zusammenhang mit der Datenerhebung hört, sind die **Objektivität** (das *wer*), die **Reliabilität** (das *wie*) und die **Validität** (das *was*). Es handelt sich hier um drei Prinzipien, die man bei der Erhebung seiner Daten beachten sollte, um gute, verwertbare Daten zu erhalten.
+
+Man sollte nämlich beim Sammeln seiner Daten nicht unüberlegt handeln, sondern geschickt vorgehen. "Geschickte Datenerhebung" bedeutet, dass man sich bei der Datenerhebung bewußt sein sollte, wie seine Daten zustande kommen, also *wer wie was* misst.
+
+Das Prinzip der **Objektivität** besagt, dass das Resultat dieser Messung unabhängig von der messenden Person sein soll. Fragestellungen, die dem Interviewer einen gewissen Spielraum zur Interpretation lassen, sollte man also noch einmal überarbeiten. Bei einer objektiven Messung ist es im Idealfall egal, wenn man mitten während der Datenerhebung die Person austauscht, die die Daten misst. Eine Briefwaage um das Gewicht eines Pakets zu messen, ist z.B. sehr objektiv, aber die Beurteilung der Attraktivität einer Person durch eine andere Person ist nicht sehr objektiv.
+
+Mit der **Reliabilität** (oder Zuverlässigkeit) einer Messung ist gemeint, dass Daten so definiert bzw. erhoben werden sollen, dass bei einer eventuellen wiederholten Messung am selben Merkmal dieselbe Ausprägung entsteht. Zum Beispiel kann die Körpergröße einer Person sehr reliabel gemessen werden, eine Antwort auf die Frage "Wie geht es Ihnen heute?" (*gut / okay / weniger gut / schlecht*) aber nicht.
+
+Die **Validität** gibt an, wie gut sich eine Variable zur Beantwortung der eigentlichen Fragestellung eignet. Ein Test bestehend aus zwanzig Grundrechenaufgaben etwa ist sehr valide, falls man sich für Mathematikkenntnisse von Grundschülern interessiert. Derselbe Test wiederum ist aber alles andere als valide für Wortschatzkenntnisse.
+
+Alle drei Begriffe sind wichtig, um eine solide Datenerhebung zu erhalten, und die drei Fragen, ob eine Datenerhebung objektiv, reliabell, und valide ist, sollten auch jedesmal separat beantwortet werden können, damit die Ergebnisse der darauf folgenden Analyse dann auch verwertbar sind.

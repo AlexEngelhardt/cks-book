@@ -12,4 +12,10 @@ description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statist
 
 # Willkommen! {-}
 
+```{r global-options, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+library(tidyverse)
+```
+
 Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form.
+

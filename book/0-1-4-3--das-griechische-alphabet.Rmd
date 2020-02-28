@@ -1,1 +1,22 @@
 #### Das griechische Alphabet
+
+Statistische Kennziffern werden oft mit griechischen Buchstaben ausgedrückt. Statt einem $x$ findet man dann eben z.B. ein $\lambda$ in einer Formel, wovon man sich aber nicht verunsichern lassen sollte. Bei so vielen Kennzahlen sind uns einfach irgendwann unsere Buchstaben ausgegangen, und wir mussten auf das griechische Alphabet ausweichen :-)
+
+Die folgende Tabelle zeigt das große und kleine griechische Alphabet und wie man die Buchstaben ausspricht. Für manche Buchstaben gibt es zwei verschiedene Schreibweisen; in dem Fall sind beide Varianten abgebildet.
+
+| Groß      | Klein                   | Name    | $\mid$  | Groß       | Klein               | Name    |
+| --------- | ----------------------- | ------- | ------- | ---------- | ------------------- | ------- |
+| $A$       | $\alpha$                | Alpha   | $\mid$  | $N$        | $\nu$               | Ny      |
+| $B$       | $\beta$                 | Beta    | $\mid$  | $\Xi$      | $\xi$               | Xi      |
+| $\Gamma$  | $\gamma$                | Gamma   | $\mid$  | $O$        | $o$                 | Omikron |
+| $\Delta$  | $\delta$                | Delta   | $\mid$  | $\Pi$      | $\pi$               | Pi      |
+| $E$       | $\epsilon, \varepsilon$ | Epsilon | $\mid$  | $P$        | $\rho, \varrho$     | Rho     |
+| $Z$       | $\zeta$                 | Zeta    | $\mid$  | $\Sigma$   | $\sigma, \varsigma$ | Sigma   |
+| $H$       | $\eta$                  | Eta     | $\mid$  | $T$        | $\tau$              | Tau     |
+| $\Theta$  | $\theta, \vartheta$     | Theta   | $\mid$  | $\Upsilon$ | $\upsilon$          | Upsilon |
+| $I$       | $\iota$                 | Iota    | $\mid$  | $\Phi$     | $\phi, \varphi$     | Phi     |
+| $K$       | $\kappa$                | Kappa   | $\mid$  | $X$        | $\chi$              | Chi     |
+| $\Lambda$ | $\lambda$               | Lambda  | $\mid$  | $\Psi$     | $\psi$              | Psi     |
+| $M$       | $\mu$                   | My      | $\mid$  | $\Omega$   | $\omega$            | Omega   |
+
+
