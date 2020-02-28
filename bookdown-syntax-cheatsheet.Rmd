@@ -1,0 +1,21 @@
+# Mein Kapitel {#label}
+
+Ein bisschen Text
+
+# Noch ein Kapitel
+
+## Ein Unterabschnitt
+
+Eine Referenz (s. Kap. \@ref(label)) machen.
+
+Einen in-text Link zu [diesem Kapitel](#label) setzen.
+
+## Grafiken
+
+Referenziere (s. Abb. \@ref(fig:mediandots). 
+
+(ref:mediandots-caption) Eine lange komplexe Überschrift mit Mathe: $x^2$
+
+```{r mediandots, fig.cap="(ref:mediandots-caption)"}
+knitr::include_graphics("img/median.png")
+```

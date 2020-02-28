@@ -1,1 +1,23 @@
 ## Häufigkeitstabellen
+
+Häufigkeitstabellen fassen Daten in einer Tabelle zusammen, die für jede mögliche Ausprägung zeigt, wie oft diese Ausprägung vorgekommen ist. Diese Tabellen sind nur für [diskrete](#merkmals-und-skalentypen) Daten sinnvoll, da bei stetigen Daten jede Beobachtung einen anderen Wert hat, und die Tabelle dann nichts zusammenfassen würde. Bei gruppierten stetigen Daten kann aber eine Tabelle erstellt werden.
+
+Häufigkeitstabellen sind meist ein erster Schritt in der Datenanalyse, da sie die Grundlage für z.B. Balkendiagramme, Lorenzkurven oder Verteilungsfunktionen bilden.
+
+Man unterscheidet **absolute** und **relative** Häufigkeiten. Absolute Häufigkeiten bezeichnet man für die verschiedenen Ausprägungen mit \(h_i\). Sie sind einfach die ausgezählten Daten für jede Ausprägung. Relative Häufigkeiten, die wir \(f_i\) nennen, sind die *Anteile*, die auf jede Ausprägung fallen.
+
+Dann gibt es noch **kumulierte** Häufigkeiten, die wir \(F_i\) nennen. In ihr werden die relativen Häufigkeiten aufsummiert. Die kumulierte Häufigkeitstabelle wird meist nur mit relativen Häufigkeiten gebildet - mit absoluten Häufigkeiten findet sie eigentlich nirgends Verwendung. Ein Beispiel veranschaulicht das wahrscheinlich am besten.
+
+Wir packen einen Block und einen Bleistift ein, und machen uns auf den Weg zum Campus, um 80 Studenten zu befragen. Uns interessiert, in welchem Semester sie sich so befinden. Da gerade Wintersemester ist, erwarten wir mehr Studenten in "ungeraden" Semestern, also im ersten, dritten, etc.
+
+Nach einem anstrengenden Tag zählen wir die Daten aus. 20 unserer 80 befragten Studenten - also ein Viertel - sind im ersten Semester. Die restlichen Antworten sind in der folgenden Tabelle zusammengefasst. Die Spalte \(h_i\) zeigt die absolute Anzahl an Antworten für jede Semesterzahl (von 1 bis 7). In der Spalte \(f_i\) ist die relative Häufigkeit, also die Spalte \(h_i\) geteilt durch \(n=80\). In der letzten Spalte ist die kumulierte Häufigkeit \(F_i\), hier werden die Elemente der Spalte \(f_i\) schrittweise aufsummiert.
+
+| Semester $i$ | $h_i$ | $f_i$  | $F_i$  |
+| ------------ | ----- | ------ | ------ |
+| 1            | 20    | 0.25   | 0.25   |
+| 2            | 4     | 0.05   | 0.3    |
+| 3            | 13    | 0.1625 | 0.4625 |
+| 4            | 9     | 0.1125 | 0.575  |
+| 5            | 21    | 0.2625 | 0.8375 |
+| 6            | 5     | 0.0625 | 0.9    |
+| 7            | 8     | 0.1    | 1      |

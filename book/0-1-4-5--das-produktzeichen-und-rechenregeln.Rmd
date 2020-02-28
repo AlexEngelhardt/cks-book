@@ -1,1 +1,28 @@
 ### Das Produktzeichen $\Pi$ und Rechenregeln
+
+Das Pendant zum Summenzeichen \(\Sigma\) für die Multiplikation ist das Produktzeichen \(\Pi\), ein großes Pi. Mit diesem Zeichen kann man Multiplikationen über viele Variablen zusammenfassen. Diese Notation sieht für Nicht-Mathematiker auf den ersten Blick immer etwas furchteinflößend aus, aber wenn man versteht, dass es einfach nur eine Abkürzung für eine längere Formel ist, kommt man gut mit dieser Schreibweise zurecht.
+
+Statt ausführlich \(1 \cdot 2 \cdot 3 \cdot 4 \cdot 5\) zu schreiben, kann man nämlich einfach eine Zählvariable \(i\) von 1 bis 5 laufen lassen, und diese Zählvariablen multiplizieren:
+
+\[ \prod_{i=1}^5 i = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \]
+
+Diese Notation ist übrigens äquivalent zur Fakultät (s. Kap. \@ref(fakultaet) von 5. Es ist also \(x! = \prod_{i=1}^x i\).
+
+Wenn man nicht über Ganzzahlen, sondern z.B. gemessene Daten \(x_1,x_2,x_3,x_4,x_5\) multiplizieren möchte, kann man auch über den Index der Variablen \(x\) laufen:
+
+\[ \prod_{i=1}^5 x_i =x_1 \cdot x_2 \cdot x_3 \cdot x_4 \cdot x_5 \]
+
+Die Variable hinter dem \(\Pi\) ist jetzt nicht mehr nur ein \(i\), sondern ein Datenpunkt \(x_i\). Man muss sich merken, dass der Index, der unter dem \(\Pi\) steht, eine Zählvariable ist, die in diesem Fall von 1 bis 5 läuft. Wenn man genau diesen Index \(i\) multiplizieren will, dann steht eben nur ein \(i\) nach dem \(\Pi\), aber wenn man *Datenpunkte* \(x_i\) muliplizieren will, dann ersetzt man das \(i\) durch ein \(x_i\).
+
+Da sich hinter dem Produktzeichen eine ganz normale Multiplikation verbirgt, gelten dafür dieselben **Rechenregeln** wie für die normale Multiplikation:
+
+1. Nach dem Distributivgesetz kann man bei der Multiplikation die Reihenfolge der Faktoren vertauschen. Es gilt also z.B. \(x_1 \cdot y_1 \cdot x_2 \cdot y_2 =x_1 \cdot x_2 \cdot y_1 \cdot y_2\). Genauso gilt das Distributivgesetz auch mit dem Produktzeichen:
+\[ \prod_{i=1}^n (x_iy_i) = \prod_{i=1}^n x_i \cdot \prod_{i=1}^n y_i \]
+Wenn man diese Formel anhand eines kurzen Beispielfalls ausschreibt, sieht man, dass hier tatsächlich nur die Reihenfolge vertauscht wurde.
+2. Wenn man eine konstante Zahl \(n\)-mal mit sich selbst multipliziert, erhält man ihre \(n\)-te Potenz:
+\[ \prod_{i=1}^n c = c^n \]
+Die Zahl \(c\) ist hier nicht vom Index \(i\) abhängig. Daher wird einfach nur \(c\) multipliziert. Es gilt also \(\prod_i c = c \cdot c \cdot \ldots \cdot c = c^n\).
+3. Man kann ebenso eine Konstante aus einem Produkt herausziehen, wenn noch andere Faktoren mit dabei stehen. Es gilt also zum Beispiel
+\[ \prod_{i=1}^3 c x_i = c x_1 \cdot c x_2 \cdot c x_3 = c^3 \prod_{i=1}^3 x_i \]
+Allgemein ausgedrückt lautet diese Formel
+\[ \prod_{i=1}^n c x_i = c^n \prod_{i=1}^n x_i \]

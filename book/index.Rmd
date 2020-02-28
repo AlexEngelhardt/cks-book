@@ -13,8 +13,16 @@ description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statist
 # Willkommen! {-}
 
 ```{r global-options, echo=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo=FALSE)
 library(tidyverse)
+library(colorspace)
+
+knitr::opts_chunk$set(echo=FALSE)
+
+n <- 7
+palette(
+  rainbow_hcl(n, c = 50, l = 70, start = 0, end = 360*(n-1)/n,
+              gamma = NULL, fixup = TRUE)
+  )
 ```
 
 Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form.

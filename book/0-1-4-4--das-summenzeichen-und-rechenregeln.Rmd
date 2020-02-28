@@ -57,7 +57,7 @@ Um den Umgang mit dem Summenzeichen zu erlernen, bestimme, welcher Anteil der To
 ```
 
 ```{r summenzeichen-pie, fig.cap="Wieviel wurde schon gegessen, nachdem Person 1, 2, und 3 sich nacheinander die Hälfte vom Rest abgeschnitten haben?"}
-pie(c(4,2,1,1), labels=c(1,2,3,NA))
+knitr::include_graphics("img/summenzeichen-kuchen.png")
 ```
 
 

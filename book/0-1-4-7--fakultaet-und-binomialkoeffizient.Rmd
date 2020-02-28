@@ -1,1 +1,29 @@
-### Fakultät $N!$ und Binomialkoeffizient $N \choose k$
+### Fakultät $N!$ und Binomialkoeffizient $N \choose k$ {#fakultaet}
+
+Diese beiden Konstrukte, die Fakultät sowie der Binomialkoeffizient, werden in der Kombinatorik (s. Kap. \@ref(kombinatorik)) häufiger gebraucht. Es handelt sich im Prinzip nur um abkürzende Schreibweisen.
+
+Die **Fakultät** wird durch ein nachgestelltes Ausrufezeichen dargestellt und ist eine bestimmte Art von Produkt:
+
+\[ N! = 1 \cdot 2 \cdot \ldots \cdot N \]
+
+So ist die Fakultät von 5 also \(5! = 1\cdot 2\cdot 3\cdot 4\cdot 5 = 120\). Die Fakultät von 0 ist ein Spezialfall und definiert als \(0! = 1\).
+
+Mit der Schreibweise des Produktzeichens \(\Pi\) kann man diese Formel noch etwas verkürzt darstellen:
+
+\[25! = \Pi_{i=1}^25\]
+
+Durch das \(\Pi\) spart man sich jetzt die Arbeit, die Zahlen \(1 \cdot 2 \cdot \ldots \cdot 25\) ausschreiben zu müssen.
+
+Ein nützlicher Fakt, mit dem man super ein erstes Date platzen lassen kann, ist dieser: Es gibt genau \( 10! \) Sekunden innerhalb eines Zeitraums von 6 Wochen. Die Herleitung geht so: Die Anzahl der Sekunden in 6 Wochen ist 6 (Wochen) \(\cdot\) 7 (Tage) \(\cdot\) 24 (Stunden) \(\cdot\) 60 (Minuten) \(\cdot\) 60 (Sekunden). Durch Aufteilen mancher Zahlen in kleinere Faktoren erhält man dann:
+
+\[ 6 \cdot 7 \cdot 24 \cdot 60 \cdot 60 =6\cdot 7 \cdot (8 \cdot 3) \cdot (3 \cdot 2 \cdot 10) \cdot ( 1 \cdot 3 \cdot 4 \cdot 5) = 10! \]
+
+Man kann auch Produkte in dieser Kurzschreibweise ausdrücken, die nicht bei 1 beginnen. Das Produkt \(8\cdot 7\cdot 6\cdot 5\) kann man als \(\frac{8!}{4!}\) schreiben, weil sich die Faktoren 4, 3, 2, 1 im Nenner wieder wegkürzen:
+
+\[ \frac{8!}{4!} = \frac{8\cdot 7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{4\cdot 3\cdot 2\cdot 1} = 8\cdot 7\cdot 6\cdot 5 \]
+
+In einem späteren Beispiel zur Lottoziehung möchten wir wissen, was \(49\cdot 48\cdot 47\cdot 46\cdot 45\cdot 44\) ist: \(\frac{49!}{43!}\)
+
+Der **Binomialkoeffizient** ist eine verkürzende Schreibweise für eine häufig benutzte Formel in der Kombinatorik:
+\[ {N \choose k} = \frac{N!}{k!\cdot (N-k)!} \]
+Man spricht dieses Konstrukt als "N über k" oder "k aus N" aus. Diese Formel wird später in der Kombinatorik wichtig. Wenn wir z.B. wissen wollen, wieviele verschiedene Möglichkeiten es gibt, 2 Personen aus einer Menge von 10 Personen auszuwählen, so ist das einfach das Ergebnis der Formel \({10 \choose 2}\). Wer nachrechnen möchte, das Ergebnis wird 45 sein.
