@@ -1,1 +1,1 @@
-#### t-Verteilung: Stichprobenmittelwerte
+#### $t$-Verteilung: Stichprobenmittelwerte

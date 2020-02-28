@@ -1,4 +1,4 @@
 ### Die wichtigsten Parameterschätzer
-#### Prozentualer Anteil
-#### Erwartungswert
+#### Prozentualer Anteil $p$
+#### Erwartungswert $\mu$
 #### Varianz

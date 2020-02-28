@@ -1,1 +1,1 @@
-#### Zweistichproben-t-Test: Mittelwerte zweier Gruppen vergleichen
+#### Zweistichproben-$t$-Test: Mittelwerte zweier Gruppen vergleichen

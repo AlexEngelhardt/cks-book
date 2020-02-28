@@ -10,6 +10,6 @@ link-citations: yes
 description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form."
 ---
 
-# Willkommen!
+# Willkommen! {-}
 
 Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form.

@@ -1,1 +1,1 @@
-#### Einstichproben-t-Test: Einzelnen Mittelwert testen
+#### Einstichproben-$t$-Test: Einzelnen Mittelwert testen

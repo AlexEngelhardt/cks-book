@@ -1,1 +1,1 @@
-#### Fakultät N! und Binomialkoeffizient (Nk)
+#### Fakultät $N!$ und Binomialkoeffizient $N \choose k$

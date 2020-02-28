@@ -1,1 +1,1 @@
-#### KI für die Varianz σ2
+#### KI für die Varianz $\sigma^2$

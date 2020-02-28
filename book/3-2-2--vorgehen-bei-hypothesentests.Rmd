@@ -3,7 +3,7 @@
 ##### Einseitige und zweiseitige Tests
 #### 2. Test wählen
 #### 3. Signifikanzniveau festlegen
-##### α- und β-Fehler
+##### $\alpha$- und $\beta$-Fehler
 #### 4. Daten sammeln
 #### 5. Prüfgröße berechnen
 #### 6. Verteilung der Prüfgröße bestimmen

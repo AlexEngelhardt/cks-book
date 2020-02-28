@@ -1,3 +1,3 @@
-#### KI für den Erwartungswert μ
-##### Falls σ2--bekannt
-##### Falls σ2--unbekannt
+#### KI für den Erwartungswert $\mu$
+##### Falls $\sigma^2$ bekannt
+##### Falls $\sigma^2$ unbekannt
