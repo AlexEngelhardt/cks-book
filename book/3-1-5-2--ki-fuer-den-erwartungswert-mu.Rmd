@@ -1,0 +1,3 @@
+#### KI für den Erwartungswert μ
+##### Falls σ2--bekannt
+##### Falls σ2--unbekannt

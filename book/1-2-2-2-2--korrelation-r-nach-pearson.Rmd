@@ -1,0 +1,2 @@
+##### Korrelation r nach Pearson
+###### Empirische Kovarianz

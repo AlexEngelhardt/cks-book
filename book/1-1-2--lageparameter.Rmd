@@ -1,0 +1,4 @@
+### Lageparameter
+#### Arithmetischer Mittelwert
+#### Median
+#### Modus

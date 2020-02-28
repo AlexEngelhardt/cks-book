@@ -1,0 +1,4 @@
+### Die wichtigsten Parameterschätzer
+#### Prozentualer Anteil
+#### Erwartungswert
+#### Varianz

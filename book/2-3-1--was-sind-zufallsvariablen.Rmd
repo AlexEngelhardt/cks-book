@@ -1,0 +1,2 @@
+### Was sind Zufallsvariablen?
+#### Diskrete und stetige Zufallsvariablen

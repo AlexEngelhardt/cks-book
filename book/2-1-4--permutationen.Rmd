@@ -1,0 +1,2 @@
+### Permutationen
+#### Falls Elemente in der Ausgangsmenge gleich sind

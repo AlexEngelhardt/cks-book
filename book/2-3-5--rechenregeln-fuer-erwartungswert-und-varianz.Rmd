@@ -1,0 +1,3 @@
+### Rechenregeln für Erwartungswert und Varianz
+#### Erwartungswert
+#### Varianz

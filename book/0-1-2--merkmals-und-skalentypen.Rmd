@@ -1,0 +1,3 @@
+### Merkmals- und Skalentypen
+#### Merkmalstypen: Diskrete und stetige Merkmale
+#### Skalentypen

@@ -1,0 +1,7 @@
+### Darstellung und Eigenschaften von stetigen Zufallsvariablen
+#### Dichte
+#### Verteilungsfunktion
+#### Quantilsfunktion
+#### Umwandeln von der Dichte zur Verteilungsfunktion/Quantilsfunktion und wieder zurück
+#### Erwartungswert
+#### Varianz und Standardabweichung
