@@ -1,2 +1,90 @@
-### Kreuztabellen / Kontingenztafeln
+### Kreuztabellen / Kontingenztafeln {#sec-kreuztabellen}
+
+Kreuztabellen sind [Häufigkeitstabellen](#sec-haeufigkeitstabellen) für zwei Merkmale. Sie sind also dazu da, die *gemeinsame Verteilung* von zwei Merkmalen zu visualisieren.
+
+**Kreuztabellen für absolute Häufigkeiten**
+
+Die einfachste Tabelle besteht aus absoluten Häufigkeiten, also einfach der Anzahl an untersuchten Einheiten in jeder Gruppe. Befragt man zum Beispiel 200 Personen nach ihrem Geschlecht und der letzten gewählten Partei, könnte sich eine Tabelle wie folgt ergeben:
+
+|            | SPD    | CDU/CSU | FDP    | GRÜNE  | Sonstige | Summe   |
+| ---------- | ------ | ------- | ------ | ------ | -------- | ------- |
+| Männer     | 26     | 22      | 8      | 12     | 16       | **84**  |
+| Frauen     | 36     | 28      | 14     | 14     | 24       | **116** |
+| **Summe**  | **62** | **50**  | **22** | **26** | **40**   | **200** |
+
+Allgemein notieren kann man eine Tabelle zum Beispiel so:
+
+|            | \(b_1\)         | \(b_2\)         | \(\dots\)  | \(b_J\)         | Summe          |
+| ---------- | --------------- | --------------- | ---------- | --------------- | -------------- |
+| \(a_1\)    | \(h_{11}\)      | \(h_{12}\)      | \(\dots\)  | \(h_{1J}\)      | \(h_{1\cdot}\) |
+| \(a_2\)    | \(h_{21}\)      | \(h_{22}\)      | \(\dots\)  | \(h_{2J}\)      | \(h_{2\cdot}\) |
+| \(\vdots\) | \(\vdots\)      | \(\vdots\)      | \(\ddots\) | \(\vdots\)      | \(\vdots\)     |
+| \(a_I\)    | \(h_{I1}\)      | \(h_{I2}\)      | \(\dots\)  | \(h_{IJ}\)      | \(h_{I\cdot}\) |
+| **Summe**	 | \(h_{\cdot 1}\) | \(h_{\cdot 2}\) | \(\dots\)  | \(h_{\cdot J}\) | \(n\)          |
+
+Das Merkmal \(X\) ist in den Zeilen dargestellt und kann \(I\) verschiedene Ausprägungen haben, \(a_1\) bis \(a_I\). Im oberen Beispiel war \(X\) das Geschlecht, \(I=2\) und \(a_1\) war "männlich", \(a_2\) war "weiblich". Das zweite Merkmal, \(Y\) läuft über die Spalten und hat \(J\) verschiedene Ausprägungen \(b_1, \ldots, b_J\) (oben waren das die fünf Parteien).
+
+Die einzelnen Häufigkeiten werden nun durch \(h_{ij}\) dargestellt, wobei die erste Zahl, \(i\), *immer* die Zeile angibt, und die zweite Zahl, \(j\), *immer* die Spalte. \(h_{13}\) ist also der Eintrag in der ersten Zeile, dritte Spalte. In unserer Parteientabelle ist \(h_{13}=8\).
+
+Die **Randhäufigkeiten** sind die gebildeten Summen über eine ganze Zeile (z.B. \(h_{2\cdot}\) für die zweite Zeile) oder eine ganze Spalte (z.B. \(h_{\cdot 1}\) für Spalte 1). Der Punkt deutet an, dass an dieser Position summiert wird; steht er an erster Stelle, wird eine feste Spalte über alle Zeilen summiert. Für eine beliebige Zeile \(i\) stellt man die Zeilensumme durch die Formel \(h_{i\cdot} = \sum_{j=1}^J h_{ij}\) dar, und eine Spaltensumme für eine beliebige Spalte \(j\) bildet man mit \(h_{\cdot j} = \sum_{i=1}^I h_{ij}\).
+
+Ganz unten rechts steht noch \(n\), die gesamte Anzahl an untersuchten Einheiten. In unserem Beispiel war \(n=200\).
+
+Als kleine Verständniskontrolle kann man sich überlegen, wofür die folgenden Bezeichnungen in unserer Beispieltabelle der Wahldaten stehen:
+
+- \(I\)
+- \(h_{12}\)
+- \(h_{\cdot 2}\)
+- \(a_2\)
+- \(n\)
+
+```{solution, echo=TRUE}
+
+- \(I=2\) (die Anzahl der Zeilen ohne der Summenzeile)
+- \(h_{12} = 22\) (die Anzahl der Männer, die CDU/CSU gewählt haben)
+- \(h_{\cdot 2}=50\) (die Anzahl aller CDU/CSU-Wähler)
+- \(a_2=\text{Frauen}\) (die zweite Ausprägung für das Merkmal \(X\) in den Zeilen)
+- \(n=200\) (die Gesamtzahl an befragten Einheiten)
+
+```
+
+**Kreuztabellen für relative Häufigkeiten**
+
+Eine Tabelle für absolute Häufigkeiten wandelt man ganz einfach in eine Tabelle relativer Häufigkeiten um: Man dividiert jede Zelle (egal ob es eine Datenzelle oder eine Randhäufigkeit ist) durch \(n\), und ist fertig. Hier ist unsere Beispieltabelle von oben in relativen Häufigkeiten, indem wir jede Zelle durch 200 teilen:
+
+|            | SPD      | CDU/CSU   | FDP      | GRÜNE    | Sonstige  | Summe    |
+| ---------- | -------- | --------- | -------- | -------- | --------- | -------- |
+| Männer     | 0.13     | 0.11      | 0.04     | 0.06     | 0.08      | **0.42** |
+| Frauen     | 0.18     | 0.14      | 0.07     | 0.07     | 0.12      | **0.58** |
+| **Summe**  | **0.31** | **0.25**  | **0.11** | **0.13** | **0.2**   | **1**    |
+
+Relative Häufigkeiten sollte man anders bezeichnen als absolute Häufigkeiten. Daher nennen wir absolute Häufigkeiten \(h_{ij}\), und relative Häufigkeiten \(f_{ij}\). Das kann aber natürlich in jedem Kurs anders heißen.
+
 #### Bedingte Häufigkeiten
+
+Mit bedingten Häufigkeiten drücken wir die Verteilung eines Merkmals aus, gegeben ein zweites Merkmal hat eine bestimmte Ausprägung. In einer Formel deutet der vertikale Balken an, dass es sich um eine bedingte Häufigkeit handelt. So bedeutet f(Grüne|Mann) die relative Häufigkeit der Grünen-Wähler innerhalb der Gruppe der Männer - d.h. *bedingt auf die Männer*.
+
+Wenn man auf die Männer bedingt, interessiert einen in der folgenden Tabelle nur die erste Zeile:
+
+
+|            | SPD    | CDU/CSU | FDP    | GRÜNE  | Sonstige | Summe   |
+| ---------- | ------ | ------- | ------ | ------ | -------- | ------- |
+| Männer     | 26     | 22      | 8      | 12     | 16       | **84**  |
+| Frauen     | 36     | 28      | 14     | 14     | 24       | **116** |
+| **Summe**  | **62** | **50**  | **22** | **26** | **40**   | **200** |
+
+Der Anteil der Grünen-Wähler an den Männern ist also 12 von 84 Männern, d.h. 14%.
+
+Um eine bedingte Häufigkeit zu erhalten, teilen wir also nicht durch die Gesamtzahl an Personen \(n\), sondern nur durch die Personen, auf die bedingt wurde. Im Beispiel oben teilen wir die absolute Anzahl an Männern, die die Grünen gewählt haben (=12) durch die Anzahl an befragten Männern (also durch \(h_{1\cdot} = 84\) statt durch \(n\)).
+
+Mit unseren Bezeichnungen von oben ("Grüne" sind \(b_4\) usw.) berechnen wir diese bedingte Häufigkeit wie folgt:
+
+\[ f(b_4 | a_1) = \frac{h_{14}}{h_{1\cdot}} = 12/84 = 0.14 \]
+
+In Formeln ausgedrückt berechnet man die **auf eine Spalte** bedingte Häufigkeit durch
+
+\[ f(a_i | b_j) = \frac{h_{ij}}{h_{\cdot j}}, \]
+
+und die **auf eine Zeile** bedingte Häufigkeit durch
+
+\[ f(b_j | a_i) = \frac{h_{ij}}{h_{i \cdot}}. \]

@@ -1,1 +1,53 @@
 #### Korrelation und Kausalität
+
+Zwischen einem reinem Zusammenhang, d.h. einer Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) zwischen zwei Variablen, und einer tatsächlichen Auswirkung von einer auf die andere Variable, d.h. einer Kausalität, besteht noch ein großer Unterschied, der in diesem Artikel behandelt wird.
+
+Sehen wir uns eine Grafik dazu an. Wir befragen \(n=30\) Personen zu ihrer Schuhgröße und ihrem monatlichem Einkommen. Abbildung \@ref(fig:zweivariablen-kausalitaet) zeigt das Streudiagramm mit den Ergebnissen.
+
+```{r zweivariablen-kausalitaet, fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
+knitr::include_graphics("img/zweivariablen-kausalitaet.png")
+```
+
+Die Korrelation beträgt hier \(r=0.709\).
+
+Wir sehen einen Zusammenhang zwischen den beiden Variablen, der auch tatsächlich vorhanden ist, und durch den Korrelationskoeffizienten \(r\) berechnet werden kann. Es wäre jetzt aber falsch, deswegen auch auf eine Auswirkung von einer der beiden Variablen auf die andere zu schließen.
+
+Einen **Korrelation** (oder einen Zusammenhang) formuliert man so: *"Menschen mit größerer Schuhgröße haben tendenziell ein höheres Einkommen"*.
+
+Eine **Kausalität** würde aber so formuliert werden: *"Die Schuhgröße hat einen Einfluss auf das Nettoeinkommen"*.
+
+Wenn der zweite Satz stimmen würde, dann könnte man sich morgen Schuhe der Größe 65 kaufen, und bekäme deswegen eine saftige Gehaltserhöhung. Das macht natürlich keinen Sinn. Auch umgekehrt wäre eine Kausalität sinnlos, denn dann hätte das Einkommen eine Auswirkung auf die Schuhgröße. Wenn ich also eine Gehaltserhöhung bekäme, würden deswegen meine Füße wachsen.
+
+Eine Korrelation zwischen zwei Merkmalen \(X\) und \(Y\) bedeutet also noch nicht, dass \(Y\) ein Verursacher von \(X\) ist (oder \(X\) ein Verursacher von \(Y\)). Dieses Phänomen nennt man **Scheinkorrelation**.
+
+Viele, teils richtig absurde Korrelationen gibt es auf der Webseite "[Spurious Correlations](http://www.tylervigen.com/spurious-correlations)".
+
+Was allerdings hier wahr ist: Wenn man zwei Menschen mit unbekanntem Einkommen auf einem Blatt Papier stehen hat, und einer eine viel größere Schuhgröße hat, erwarten wir von dieser Person ein höheres Einkommen als von der anderen.
+
+**Mediator-/Confoundervariablen**
+
+Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt 22% weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Das hat ein paar erklärbare Gründe, wie z.B. die Tendenz, dass Frauen häufiger Teilzeitjobs oder schlechter bezahlte Berufe annehmen, und ihnen eine steile Karriere nicht so wichtig ist wie z.B. geistige Gesundheit. Aber der Effekt auf das Einkommen ist trotzdem da. Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
+
+```{r zweivariablen-kausalitaet-getrennt, fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
+knitr::include_graphics("img/zweivariablen-kausalitaet-getrennt.png")
+```
+
+Die zu Beginn ignorierte Variable "Geschlecht" ist hier eine Mediator- oder Confoundervariable (die Worte bedeuten das gleiche, aber in gewissen Fachbereichen benutzt man eines lieber als das andere).
+
+**Beispiel aus der Realität**
+
+Das klingt nun vielleicht alles etwas realitätsfern, weil mein Beispiel sehr offensichtlich unklug war. Solche Sachen passieren allerdings in der Realität, und auch unter Experten:
+
+Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz (s. Abb. \@ref(fig:chocolate-nobel)).
+
+```{r chocolate-nobel, fig.cap="Quelle: Messerli, Franz H. (2012). Chocolate Consumption, Cognitive Function, and Nobel Laureates. New England Journal of Medicine, 367:16, 1562-1564."}
+knitr::include_graphics("img/pictures/chocolate_nobel.jpg")
+```
+
+Ein Blogartikel, der dieses Beispiel (auf Englisch) ausführlich behandelt, und sich am Ende sogar darüber lustig macht, ist hier zu finden: https://epianalysis.wordpress.com/2012/11/19/chocolate/
+
+**Kausalität nachweisen**
+
+Wie man sieht, gibt es mehrere mögliche Erklärungen für eine Korrelation zwischen zwei Variablen \(X\) und \(Y\). Es könnte z.B. \(X\) eine Auswirkung auf \(Y\) haben, oder umgekehrt \(Y\) eine Auswirkung auf \(X\), oder aber wie im Beispiel oben eine Mediatorvariable im Spiel sein, die beide Variablen, \(X\) sowie \(Y\) beeinflusst.
+
+Nachweisen kann man eine Kausalität nur durch ein Experiment. Hier müssten wir zum Beispiel von 100 Personen die Schuhgrösse und das Einkommen notieren, und dann der einen Hälfte größere Schuhe geben und der anderen nicht. Wenn sich nun das Einkommen der *Treatment-Gruppe*, also der Personen mit größeren Schuhen, gegenüber der *Kontrollgruppe* erhöht, dann haben wir einen Zusammenhang nachgewiesen (das wird aber in diesem Fall eher nicht erwartet).

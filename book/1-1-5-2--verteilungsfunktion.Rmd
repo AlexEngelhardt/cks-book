@@ -1,1 +1,52 @@
 ### Verteilungsfunktion
+
+[Häufigkeitstabellen](#sec-haeufigkeitstabellen) kann man auf zweierlei Art visualisieren: Absolute oder relative Häufigkeiten stellt man meist durch [Balkendiagramme](#sec-balkendiagramme) dar. Für *kumulierte Häufigkeiten* ist nun eine Verteilungsfunktion angebracht. Sie zeigt auf der \(x\)-Achse die geordneten Ausprägungen für das Merkmal, und auf der \(y\)-Achse den *Anteil der Daten, der kleiner oder gleich dieser Ausprägung ist*.
+
+Wenn wir eine Verteilungsfunktion zeichen, sollten wir immer ihr Prinzip im Hinterkopf behalten: Sie zeigt euch für jede Ausprägung den Anteil der Daten, der *kleiner oder gleich* dieser Ausprägung ist. Diese Verteilungsfunktion \(F(x)\) haben wir im Kapitel zu [Häufigkeitstabellen](#sec-haeufigkeitstabellen) schon gesehen, allerdings nur in Tabellenform. Hier zeichnen wir im Prinzip nur die zu der Tabelle passende Grafik.
+
+```{exercise, echo=TRUE}
+
+Wir haben 80 Studenten befragt, in welchem Semester sie sich befinden, und daraus eine Häufigkeitstabelle erstellt:
+
+| Semester $i$ | $h_i$ | $f_i$  | $F_i$  |
+| ------------ | ----- | ------ | ------ |
+| 1            | 20    | 0.25   | 0.25   |
+| 2            | 4     | 0.05   | 0.3    |
+| 3            | 13    | 0.1625 | 0.4625 |
+| 4            | 9     | 0.1125 | 0.575  |
+| 5            | 21    | 0.2625 | 0.8375 |
+| 6            | 5     | 0.0625 | 0.9    |
+| 7            | 8     | 0.1    | 1      |
+
+Abbildung \@ref(fig:verteilungsfunktion-aufgabe) zeigt die Verteilungsfunktion für unsere Studentenbefragung (das Semester \(i\) ist die \(x\)-Achse, und die Spalte \(F_i\) ist die \(y\)-Achse).
+```
+
+```{r verteilungsfunktion-aufgabe, fig.cap='Die Verteilungsfunktion für unsere Studentenbefragung. An den "Sprüngen" der Funktion zählt der Wert, an dem der Punkt eingezeichnet ist. Vertikale Linien zwischen den Sprüngen der Funktion können, aber müssen nicht gezeichnet werden.'}
+knitr::include_graphics("img/verteilungsfunktion.png")
+```
+
+In Abbildung \@ref{fig:verteilungsfunktion-aufgabe} sind die Punkte einfach aus der Häufigkeitstabelle übernommen. Der \(x\)-Wert ist das jeweilige Semester, und der \(y\)-Wert das zugehörige \(F_i\), also der Anteil der Studenten, die *höchstens* in diesem Semester sind. Die horizontalen Linien zwischen den Punkten geben nun auch für "krumme" Zahlen einen sinnvollen Prozentsatz an: Möchte man z.B. wissen, welcher Anteil der Studenten mit einer Semesterzahl von höchstens 4.3 geantwortet hat, ist das (also \(F(4.3)\)) derselbe Anteil, der mit höchstens 4.0 geantwortet hat (also \(F(4.0)\)).
+
+Hier ist dann natürlich zwingend, dass die Verteilungsfunktion immer bei 0 beginnt, und dann kontinuierlich (mathematisch: *monoton*) steigt, und irgendwann bei 1 endet. Die Verteilung kommt immer von \(-\infty\) und geht immer weiter bis \(+\infty\): Der Anteil der Studenten, die höchstens im 7. Semester sind, ist 1; der Anteil derer, die höchstens im 850. Semester sind, ist natürlich immer noch 1.
+
+#### Quantilsfunktion
+
+Übrigens kann man an der Verteilungsfunktion auch die Quantile ablesen, indem man den Graphen "andersrum" liest. Sucht man sich auf der \(y\)-Achse ein gewünschtes Quantil, z.B. das 70%-Quantil, geht man von dort auf einer Horizontalen nach rechts, bis man die Verteilungsfunktion schneidet. Der zugehörige \(x\)-Wert (in diesem Fall 5) ist das Semester, das 70% der Studenten nicht überschreiten (also das 70%-Quantil, oder \(x_{0.7}\)).
+
+Für den Fall, dass man ein \(p\)-Quantil bestimmen will, und \(np\) gerade ist (vgl. Kapitel \@ref(sec-quantile)), landet man in der Verteilungsfunktion direkt auf einer "Stufe" der Treppe. In dem Fall kann das Quantil theoretisch jeder Wert dieser Stufe sein, wir nehmen aber meist den Mittelwert der beiden "Grenzen". Schauen wir uns die Verteilungsfunktion für die folgenden Daten an:
+
+| Person | Ausprägung |
+| ------ | ---------- |
+| A      | 1          |
+| B      | 2          |
+| C      | 3          |
+| D      | 5          |
+| E      | 7          |
+
+(ref:verteilungsfunktion-beispiel-caption) Das 20%-Quantil (die gepunktete Linie) in diesem Beispiel könnte jeder Wert auf der \(x\)-Achse sein, der zwischen dem ersten (1) und dem zweiten Datenpunkt (2) liegt, da alle Werte die Daten in "niedrige 20%" und "hohe 80%" teilen. Das wird durch das Plateau auf der Treppenfunktion verdeutlicht. Das Quantil kann man aber meist einfach als \(\frac{1}{2}(1+2)\), also 1.5 definieren.
+
+```{r verteilungsfunktion-beispiel, fig.cap='(ref:verteilungsfunktion-beispiel-caption)'}
+knitr::include_graphics("img/verteilungsfunktion-beispiel.png")
+```
+
+Mathematisch ausgedrückt: Die Quantilsfunktion ist die *Inversfunktion* der Verteilungsfunktion. Die Quantilsfunktion wird daher auch mit \(F^{-1}(x)\) bezeichnet.

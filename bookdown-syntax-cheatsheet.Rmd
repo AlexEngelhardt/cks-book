@@ -12,7 +12,7 @@ Einen in-text Link zu [diesem Kapitel](#label) setzen.
 
 ## Grafiken
 
-Referenziere (s. Abb. \@ref(fig:mediandots). 
+Referenziere Abb. \@ref(fig:mediandots) 
 
 (ref:mediandots-caption) Eine lange komplexe Überschrift mit Mathe: $x^2$
 

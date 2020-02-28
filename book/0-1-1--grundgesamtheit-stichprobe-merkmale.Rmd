@@ -1,4 +1,4 @@
-## Grundgesamtheit, Stichprobe, Merkmale
+## Grundgesamtheit, Stichprobe, Merkmale {#sec-ggsm}
 
 Wenn man Daten erhebt und sie auswerten möchte, dann gibt es drei grundlegende Begriffe, deren Unterschiede man genau kennen muss: Grundgesamtheit, Stichprobe, und Merkmale. Wir schauen uns diese drei Begriffe hier genauer an, und erklären sie anhand eines Beispiels: Es soll bei ein paar ausgewählten Klassen von Grundschülern ein Mathematiktest und ein Wortschatztest durchgeführt werden. Ziel der Analyse ist es, Informationen über die Mathematik- und Wortschatzkenntnisse aller Grundschüler aus München zu erfahren.
 

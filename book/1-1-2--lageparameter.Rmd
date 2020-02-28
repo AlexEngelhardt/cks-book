@@ -1,6 +1,6 @@
-## Lageparameter
+## Lageparameter {#lageparameter}
 
-Das Wichtigste in Kürze
+**Das Wichtigste in Kürze**
 
 Lageparameter beschreiben grob gesagt, wo auf einer Skala sich die Daten befinden. Dabei gibt es verschiedene Methoden der Berechnung, die für verschiedene Merkmalstypen mehr oder weniger Sinn machen. Eine kurze Übersicht sieht man in der Tabelle unten. Da der Median ein bestimmtes [Quantil](#sec-quantile) ist (nämlich das 50%-Quantil), sind die beiden Spalten gleich. Mit "Diskret" sind in dieser Tabelle Zähldaten wie etwa die Kinderzahl gemeint.
 
@@ -12,7 +12,7 @@ Lageparameter beschreiben grob gesagt, wo auf einer Skala sich die Daten befinde
 | Stetig klassiert | ja    | ja     | ja       | nein       |
 | Stetig           | nein  | ja     | ja       | ja         |
 
-### Arithmetischer Mittelwert
+### Arithmetischer Mittelwert {#sec-mittelwert}
 
 Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelwert" genannt) ist der bekannteste Lageparameter. Er wird gebildet, indem man alle Ausprägungen aufsummiert und durch die Gesamtzahl von Ausprägungen teilt. Für die Beobachtungen \(x_1, x_2, \ldots, x_n\) sieht das arithmetische Mittel \(\bar{x}\) folgendermaßen aus:
 

@@ -1,1 +1,113 @@
-#### $\chi^2$-Koeffizient und Kontingenzkoeffizient K
+#### $\chi^2$-Koeffizient und Kontingenzkoeffizient K {#sec-chisq-und-k}
+
+Zwei [nominale oder ordinale Merkmale](#merkmals-und-skalentypen) werden immer mit einer Kreuztabelle visualisiert. In Kapitel \@ref(sec-kreuztabellen) gibt es Beispieldaten für die Merkmale "Geschlecht" und "gewählte Partei". Um nun zu beschreiben, wie gross der Zusammenhang zwischen den beiden Variablen ist, gibt es drei Koeffizienten, die in diesem Artikel vorgestellt werden, wobei die drei Werte am besten nacheinander berechnet werden:
+
+1. Aus der Kreuztabelle berechnet man die Unabhängigkeitstabelle (manchmal auch *Indifferenztabelle* genannt)
+2. Mithilfe derer berechnet man den \(\chi^2\)-Koeffizienten.
+3. Aus dem \(\chi^2\)-Koeffizienten berechnet man (falls gewünscht) den Kontingenzkoeffizienten \(K\).
+4. Aus dem Kontingenzkoeffizienten \(K\) berechnet man schließlich (falls gewünscht) den korrigierten Kontingenzkoeffizienten \(K^*\).
+
+Wird also in einer Klausur nur nach dem \(\chi^2\)-Koeffizienten gefragt, führt man nur die ersten beiden Schritte aus. Wird stattdessen nur nach dem korrigierten Kontingenzkoeffizienten \(K^*\) gefragt, muss man alle vier Schritte berechnen.
+
+Wir verwenden für die Berechnung als Beispiel eine Stichprobe von Verspätungen von Zügen. Es wurden für \(n=180\) Züge gemessen, ob sie pünktlich, mit einer Verspätung von 1-15 Minuten, oder mit mehr als 15 Minuten Verspätung abgefahren sind. Zusätzlich wurde festgehalten, ob der Zug an einem Wochentag (Montag-Freitag) oder am Wochenende abgefahren ist:
+
+|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
+| ---------- | --------- | --------- | ----------- | ----- |
+| Mo-Fr      | 58        | 46        | 16          | 120   |
+| Wochenende | 32        | 14        | 14          | 60    |
+| Summe      | 90        | 60        | 30          | 180   |
+
+Um nun zu überprüfen, wie stark der Zusammenhang zwischen dem Wochentag und der Verspätung ist, berechnen wir die Abweichung dieser echten Tabelle von der *Unabhängigkeitstabelle*:
+
+**1. Berechnen der Unabhängigkeitstabelle**
+
+Angenommen, man bekommt nicht die Tabelle wie oben angegeben, sondern nur die getrennten Häufigkeiten (in der Tabelle heißen sie Randhäufigkeiten) für die Verspätung, sowie für den Wochentag. Man kann sich dann nur die folgende Tabelle aufstellen:
+
+
+|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
+| ---------- | --------- | --------- | ----------- | ----- |
+| Mo-Fr      |           |           |             | 120   |
+| Wochenende |           |           |             | 60    |
+| Summe      | 90        | 60        | 30          | 180   |
+
+Unter der Annahme, dass es nun gar keinen Zusammenhang zwischen den zwei Variablen "Wochentag" und "Verspätung" gibt, können wir die erwarteten Häufigkeiten \(e_{ij}\) für die Tabelle berechnen.
+
+Ein Beispiel: Wir wissen, dass insgesamt 60 der 180 Züge (das ist \(\frac{1}{3}\)) am Wochenende abgefahren sind. Wir wissen auch, dass insgesamt 90 von 180 Zügen (das ist die Hälfte) pünktlich abgefahren sind. Wir würden daher erwarten, dass auch innerhalb der Untergruppe der 60 Züge vom Wochenende die Hälfte der Züge (also dann **30** von 60) pünktlich abgefahren sind. Die erwartete Anzahl im Feld \(e_{21}\) ist also 30.
+
+Die Berechnung dieses Gedankens in mathematischer Notation funktioniert, indem wir die Anzahl der pünktlichen Züge (also 90) multiplizieren mit dem Anteil der Züge am Wochenende, \(\frac{60}{180}\). Das ergibt insgesamt \(\frac{60}{180} \cdot 90\), oder, etwas zusammengerückt, \(\frac{60 \cdot 90}{180}\).
+
+Die Formel, die diesen Gedanken ausdrückt, lautet allgemein:
+
+\[ e_{ij} = \frac{h_{i\cdot} \cdot h_{\cdot j}}{n} \]
+
+Die Notationen \(h_{i\cdot}\) usw. sind im Kapitel \@ref(sec-kreuztabellen) erklärt. Am oben schon berechneten Beispiel für das Feld \(e_{21}\) schreibt man die Formel aus zu \(e_{21} = \frac{h_{2\cdot} \cdot h_{\cdot 1}}{n} = \frac{60 \cdot 90}{180} = 30\). So kann man nun alle erwarteten Häufigkeiten bestimmen, und landet am Ende bei der folgenden *Unabhängigkeitstabelle*:
+
+|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
+| ---------- | --------- | --------- | ----------- | ----- |
+| Mo-Fr      | 60        | 40        | 20          | 120   |
+| Wochenende | 30        | 20        | 10          | 60    |
+| Summe      | 90        | 60        | 30          | 180   |
+
+
+In der Realität (und in Klausuren) können in den erwarteten Häufigkeiten auch Kommazahlen wie z.B. "32.4 Züge" herauskommen.
+
+**2. Berechnen des \(\chi^2\)-Koeffizienten**
+
+Der \(\chi^2\)-Koeffizient ist nun ein Wert, der entsteht indem man die Abweichungen der tatsächlichen Häufigkeiten von den erwarteten Häufigkeiten der Unabhängigkeitstabelle betrachtet. Es wurden zum Beispiel 58 Züge beobachtet, die unter der Woche (Mo-Fr) pünktlich abgefahren sind (das ist \(h_{11}\)). Unter totaler Unabhängigkeit würden wir \(e_{11} = \frac{120 \cdot 90}{180} = 60\) Züge in dieser Zelle erwarten. Die Abweichung ist also in diesem Fall 2 Züge.
+
+Um den \(\chi^2\)-Koeffizienten zu berechnen, wird diese Abweichung nun noch quadriert, und danach durch die jeweilige erwartete Häufigkeit geteilt. Wir enden also bei \(\frac{2^2}{60} = 0.0667\).
+
+Genau diese Berechnung (Abweichung \(\rightarrow\) quadrieren \(\rightarrow\) durch \(e_{ij}\) teilen) macht man nun für alle 6 Zellen in der Tabelle. Die resultierenden 6 Zahlen schreibt man auf - man kannn sie der Übersicht halber in eine neue Tabelle übertragen. Versucht es als Übung, und prüft, ob ihr diese Werte herausbekommt:
+
+|            | pünktlich | 1-15 min. | $>$ 15 min. |
+| ---------- | --------- | --------- | ----------- |
+| Mo-Fr      | 0.0667    | 0.9       | 0.8         |
+| Wochenende | 0.1333    | 1.8       | 1.6         |
+
+Der \(\chi^2\)-Koeffizient ist nun die Summe all dieser Zahlen:
+
+\[ \chi^2 = 0.0667 + 0.9 + 0.8 + 0.1333 + 1.8 + 1.6 = 5.3 \]
+
+Wenn \(\chi^2=0\) ist, dann sind in jeder Zelle der Tabelle die tatsächlichen Häufigkeiten genau gleich der erwarteten Häufigkeiten. Das wäre also eine "perfekte" Unabhängigkeit. Je weiter sich der Wert von \(\chi^2\) von 0 entfernt, desto eher sprechen die Daten für eine Abhängigkeit zwischen den beiden Variablen.
+
+**Die Formel für den \(\chi^2\)-Koeffizienten**
+
+Das, was in diesem Abschnitt gerade ausführlich erklärt wurde, kann man in eine Formel zusammenfassen. Der \(\chi^2\)-Koeffizient ist die Summe über alle Zeilen \(i\) und alle Spalten \(j\), über die quadrierten und dividierten Abweichungen \(\frac{(h_{ij}-e_{ij})^2}{e_{ij}}\). Es ist also
+
+\[ \chi^2 = \sum_{i=1}^I \sum_{j=1}^J \frac{(h_{ij}-e_{ij})^2}{e_{ij}} \]
+
+Die einzelnen Buchstaben sind im Kapitel \@ref(sec-kreuztabellen) zu [Kreuztabellen](#sec-kreuztabellen) erklärt. Wenn man die erwarteten Häufigkeiten \(e_{ij}\) nun auch noch ausschreibt (sie sind ja \(e_{ij} = \frac{h_{i\cdot} \cdot h_{\cdot j}}{n}\)), kommt man zur oft gesehenen, aber sehr komplizierten Formel
+
+\[ \chi^2 = \sum_{i=1}^I \sum_{j=1}^J \frac{(h_{ij}-\frac{h_{i\cdot} \cdot h_{\cdot j}}{n})^2}{\frac{h_{i\cdot} \cdot h_{\cdot j}}{n}} \]
+
+Diese Formel fasst nun das gesamte Vorgehen bisher zusammen, sieht aber dafür eher furchteinflößend aus. Wer also mit dieser Formel Schwierigkeiten hat, findet es bestimmt hilfreich, sich das schrittweise Vorgehen einzuprägen oder intuitiv zu verstehen, warum \(\chi^2\) auf diese Art bestimmt wird.
+
+**Wann ist \(\chi^2\) gleich Null?**
+
+Der Wert für \(\chi^2\) kann zwischen 0 und \(\infty\) liegen. Je näher die Häufigkeiten der echten Tabelle an den erwarteten Häufigkeiten liegen, desto kleiner wird der Wert für \(\chi^2\).
+
+Falls im Extremfall *dieselbe* Zahl in jeder Zelle steht, wie erwartet wurde, also \(h_{ij} = e_{ij}\) in jeder Zelle ist, dann sind die einzelnen Summanden für \(\chi^2\) alle gleich Null, und somit der gesamte Wert für \(\chi^2\) gleich Null. Dieser Fall tritt in der Praxis allerdings so gut wie nie auf, da es schon ein sehr großer Zufall sein müsste, genau die erwarteten Häufigkeiten zu beobachten.
+
+**3. Berechnen des Kontingenzkoeffizienten \(K\)**
+
+Der Nachteil des \(\chi^2\)-Koeffizienten ist nun, dass er Werte zwischen \(0\) und \(\infty\) angeben kann. Das bedeutet, dass man die tatsächliche Stärke des Zusammenhangs schlecht anhand des \(\chi^2\)-Wertes ablesen kann.
+
+Der Kontingenzkoeffizient behebt diese Schwäche nun, denn er ist einfach eine normierte Version des \(\chi^2\)-Koeffizienten. Man berechnet ihn durch
+
+\[ K = \sqrt{\frac{\chi^2}{\chi^2 + n}} \]
+
+In unserem Beispiel haben wir die Verspätung für \(n=180\) Züge gemessen, und oben einen \(\chi^2\)-Koeffizienten von \(\chi^2=5.3\) bestimmt. Der Kontingenzkoeffizient in unserem Beispiel ist also
+
+\[ K = \sqrt{\frac{5.3}{5.3+180}} = 0.169 \]
+
+**4. Berechnen des korrigierten Kontingenzkoeffizienten \(K^*\)**
+
+Der Kontingenzkoeffizient \(K\) ist nun *fast* normiert - sein Wertebereich geht nicht von 0 bis 1, sondern von 0 bis \(\sqrt{\frac{c-1}{c}}\) (das ist ein Wert, der auf jeden Fall kleiner als 1 ist). \(c\) ist definiert als die Anzahl der Zeilen bzw. Spalten der Kreuztabelle, je nachdem welcher Wert *kleiner* ist. In mathematisch heißt das: \(c = \min(I, J)\). In unserem Beispiel ist \(c=2\), da wir 2 Zeilen in der Kreuztabelle haben.
+
+Um \(K\) jetzt endgültig in den Wertebereich von 0 und 1 zu normieren, gibt es den korrigierten Kontingenzkoeffizienten \(K^*\). Er wird berechnet durch
+
+\[ K^* = \sqrt{\frac{c}{c-1}} K \]
+
+In unserem Fall ist \(K^* = \sqrt{\frac{I}{I-1}} \cdot K = \sqrt{\frac{2}{2-1}} \cdot 0.169= 0.239\).
+
+Da der Wert für \(K^*\) zwischen 0 (kein Zusammenhang) und 1 (großer Zusammenhang) liegen kann, deutet unser Wert von 0.239 hier auf einen eher geringen Zusammenhang hin.

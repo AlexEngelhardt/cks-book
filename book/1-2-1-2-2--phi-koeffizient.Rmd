@@ -1,1 +1,33 @@
 #### $\phi$-Koeffizient
+
+Der \(\phi\)-Koeffizient ist ein Zusammenhangsmaß für zwei binäre (oder dichotome) Variablen, das heißt zwei Variablen, die jeweils nur zwei mögliche [Ausprägungen](#sec-ggsm) haben. Die resultierenden Daten kann man in einer 2x2-[Kreuztabelle](#sec-kreuztabellen) zusammenfassen. (Für größere Tabellen muss man auf den [Chi-Quadrat- oder den Kontingenzkoeffizienten](#sec-chisq-und-k) ausweichen)
+
+Als Beispiel sehen wir uns eine andere Darstellung der Daten aus Kapitel \@ref(sec-chisq-und-k) zum \(\chi^2\)-Koeffizienten an: Wir betrachten für 180 Züge nur, ob sie (a) unter der Woche oder am Wochenende abfahren, und (b) ob sie pünktlich oder mit Verspätung abfahren. Wir fassen also die letzten beiden Spalten der Tabelle aus dem obigen Artikel zusammen, und erhalten diese Tabelle:
+
+|            | pünktlich | verspätet | Summe   |
+| ---------- | --------- | --------- | ------- |
+| Mo-Fr      | 58        | 62        | **120** |
+| Wochenende | 32        | 28        | **60**  |
+| **Summe**  | **90**    | **90**    | **180** |
+
+Mit dem \(\phi\)-Koeffizienten beantworten wir nun die Frage, wie stark der Zusammenhang dieser beiden Variablen ist, ob es also am Wochenende unterschiedlich viele Verspätungen gibt wie unter der Woche.
+
+Allgemein sieht eine 2x2-Kreuztabelle (siehe auch Kapitel \@ref(sec-kreuztabellen)) wie folgt aus:
+
+|         | \(b_1\)         | \(b_2\)         | Summe           |
+| ------- | --------------- | --------------- | --------------- |
+| \(a_1\) | \(h_{11}\)      | \(h_{12}\)      | \(h_{1 \cdot}\) |
+| \(a_2\) | \(h_{21}\)      | \(h_{22}\)      | \(h_{2 \cdot}\) |
+| Summe   | \(h_{\cdot 1}\) | \(h_{\cdot 2}\) | \(n\)           |
+
+Der \(\phi\)-Koeffizient berechnet sich nun wie folgt:
+
+\[ \phi = \frac{h_{11}\cdot h_{22} - h_{12}\cdot h_{21}}{\sqrt{h_{1 \cdot} \cdot h_{2 \cdot} \cdot h_{\cdot 1} \cdot h_{\cdot 2} }} \]
+
+Er kann (im Gegensatz zum \(\chi^2\)-Koeffizienten und dem Kontingenzkoeffizienten \(K\)) Werte von -1 bis 1 annehmen, nicht nur von 0 bis 1. Auch hier bedeutet ein Wert von \(\phi=0\), dass kein Zusammenhang vorliegt. Je näher der Wert an -1 oder 1 rückt, desto stärker ist der Zusammenhang zwischen den beiden Variablen.
+
+In unserem Beispiel setzen wir also ein:
+
+\[ \phi = \frac{58 \cdot 28 - 62 \cdot 32}{\sqrt{120 \cdot 60 \cdot 90 \cdot 90}} = -0.0471 \]
+
+Wir erhalten einen Wert, der fast Null ist, können also sagen, dass wir hier keinen großartigen Zusammenhang gefunden haben.

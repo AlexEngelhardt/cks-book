@@ -1,1 +1,98 @@
-## Streuungsparameter
+## Streuungsparameter {#sec-streuungsparameter}
+
+Meist reicht ein [Lageparameter](#lageparameter) als Zusammenfassung einer Datenreihe nicht aus, und man wünscht sich mehr Information. Streuungsparameter sind nun ein Maß dafür, wie sehr die Daten um einen Mittelwert schwanken. Auch hier gibt es verschiedene Möglichkeiten, solche Kennziffern zu berechnen. In der Praxis wird allerdings meist die Varianz bzw. ihre Wurzel, die Standardabweichung benutzt.
+
+Da (zumindest die gebräuchlichen) Streuungsparameter in ihrer Definition immer irgendwo eine Differenz beinhalten, kann man sie nur für numerische Daten bestimmen, also diskrete oder stetige *Zahlen.* Bei einem [nominal- oder ordinalskalierten Merkmal](#merkmals-und-skalentypen) ist das nicht möglich.
+
+**Das Wichtigste in Kürze**
+
+Für gemessene Daten \(x_1, x_2, \ldots, x_n\):
+
+- Spannweite:
+\[ x_\text{max} - x_\text{min} \]
+- Interquartilsabstand:
+\[ x_{0.75} - x_{0.25} \]
+- Varianz:
+    - In einer Stichprobe (meistens der Fall) kann man die folgenden zwei äquivalenten Formeln verwenden:
+\[\begin{aligned} s^2 & = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 \\ s^2 & = \left( \frac{1}{n-1}\sum_{i=1}^n x_i^2 \right)-\frac{n}{n-1}\bar{x}^2\end{aligned}\]
+    - In einer Vollerhebung oder wenn der wahre Mittelwert \(\mu\) bekannt ist (selten der Fall) verwendet man eine dieser beiden Formeln:
+\[\begin{aligned} \tilde{s}^2 & = \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 \\ \tilde{s}^2 &= \left( \frac{1}{n}\sum_{i=1}^n x_i^2 \right)-\mu^2 \end{aligned} \]
+- Standardabweichung:
+    - In einer Stichprobe: \(s = \sqrt{s^2}\)
+    - In einer Vollerhebung oder bei bekanntem Mittelwert: \(\tilde{s} = \sqrt{\tilde{s}^2}\)
+    
+### Spannweite und Quartilsabstand {#sec-spannweite-iqr}
+
+Die **Spannweite** einer Datenreihe ist definiert als der Abstand zwischen dem
+Maximum und dem Minimum dieser Daten (s. Abb. \@ref(fig:spannweite))
+
+```{r spannweite, fig.cap="Die Spannweite ist die Differenz zwischen dem größten und dem kleinsten Wert einer Datenreihe"}
+knitr::include_graphics("img/spannweite.png")
+```
+
+Man sucht also in den Daten nach dem Maximum und dem Minimum, und zieht das Minimum vom Maximum ab - so erhält man die Spannweite. Das ist ein sehr einfaches Streuungsmaß, aber unglaublich anfällig für Ausreißer (was in der Statistik meist unerwünscht ist). Daher betrachtet man auch den **Interquartilsabstand**, der ein bisschen dagegen hilft; er ist der Abstand zwischen dem 75%-[Quantil](#sec-quantile) und dem 25%-Quantil (s. Abb. \@ref(fig:interquartilsabstand)).
+
+```{r interquartilsabstand, fig.cap="Der Interquartilsabstand ist die Differenz zwischen dem 75%-Quantil und dem 25%-Quantil einer Datenreihe"}
+knitr::include_graphics("img/interquartilsabstand.png")
+```
+
+Hier muss man also das 75%-Quantil (\(x_{0.75}\)) und das 25%-Quantil (\(x_{0.25}\)) berechnen, und erhält den Interquartilsabstand durch \( x_{0.75}-x_{0.25} \). Im oberen Bild mit \(n=10\) Datenpunkten ist das 25%-Quantil bestimmt als \(x_{0.25}=x_{(\lfloor np \rfloor + 1)} = x_{(3)}\), und das 75%-Quantil analog als \(x_{(8)}\). Die tatsächlichen Werte der Datenpunkte sind hier nicht berücksichtigt, aber wir nehmen immer den dritten und achten Wert der sortierten Daten.
+
+Den Interquartilsabstand interessiert es nun nicht, ob die "äußeren" Daten (also \(x_{(1)}\), \(x_{(2)}\), \(x_{(9)}\) und \(x_{(10)}\)) Ausreißer sind oder nicht, also wenn man sie weiter nach aussen verschieben würde.
+
+### Varianz und Standardabweichung {#sec-var-sd}
+
+Für die **Varianz** einer Reihe von Daten gibt es dummerweise zwei ähnliche, aber verschiedene Formeln. Zu allem Übel gibt es für die beiden Formeln keine einheitliche Bezeichnung. Welche man verwendet, hängt von der Art der Daten ab, die man ansieht.
+
+Die Idee hinter der Varianz ist grob ausgedrückt die folgende: Man will wissen, wie weit die Daten \((x_1, x_2, \ldots, x_n)\) normalerweise vom Mittelwert \(\mu\) abweichen—das ist die Distanz \((x_i-\mu)\). Dabei ist egal, ob die Abweichung nach oben oder nach unten ist, daher quadriert man die Distanz (Man könnte hier natürlich auch den Betrag der Distanz statt dem Quadrat nehmen. Allerdings macht es später vieles einfacher, wenn wir das Quadrat nehmen, z.B. die Maximum-Likelihood-Schätzung oder die Regression. So gesehen ist es rein willkürlich, dass man den quadratischen Abstand verwendet.): \((x_i-\mu)^2\). Und genau aus diesem quadratischen Abstand wird nun der Mittelwert über alle Daten, d.h. alle \(x_i\) gebildet: \(\frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2\).
+
+Ist der wahre Mittelwert der Daten bekannt, benutzt man die empirische Varianz, \(\tilde{s}^2\). Wenn die Daten die komplette *Grundgesamtheit* widerspiegeln, ist dies der Fall, da man den wahren Mittelwert ja ausrechnen kann, wenn einem alle Daten zur Verfügung stehen. Die empirische Varianz ist für eine Datenreihe \(x_1, x_2, \ldots, x_n\) und deren Mittelwert \(\mu\) folgendermaßen bestimmt:
+\[ \tilde{s}^2 = \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 \]
+
+Meistens ist der wahre Mittelwert der unterliegenden Grundgesamtheit allerdings nicht bekannt, und man benutzt stattdessen den Mittelwert der Stichprobe (Vorsicht: Das sind zwei verschiedene Dinge: Der wahre Mittelwert ist ein fester Wert und ändert sich innerhalb der Grundgesamtheit nie, aber das Stichprobenmittel ist im Allgemeinen für jede Stichprobe ein anderer). Man bestimmt also, wie sehr die Daten um das Stichprobenmittel streuen, und nicht, wie stark sie um den wahren Mittelwert streuen. In diesem Fall, der eigentlich so gut wie immer gegeben ist, betrachtet man die (korrigierte) Stichprobenvarianz \(s^2\), die folgendermaßen bestimmt ist:
+\[ s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 \]
+
+Der Unterschied zu der empirischen Varianz \(\tilde{s}^2\) ist, dass in der Summe jeweils das Stichprobenmittel \(\bar{x}\) abgezogen wird, und dass vor der Summe durch \(n-1\) statt \(n\) geteilt wird. Für größere Stichproben wird der Unterschied zwischen \(s^2\) und \(\tilde{s}^2\) immer kleiner, da für sehr grosse \(n\) erstens der Unterschied zwischen \(n\) und \(n-1\) nicht mehr so wichtig ist, und zum anderen das Stichprobenmittel \(\bar{x}\) immer näher an den wahren Mittelwert \(\mu\) der Grundgesamtheit kommt (Der Grund für dieses Verhalten ist das Gesetz der großen Zahlen, das wir uns später noch anschauen werden).
+
+Die Berechnung der Varianz mit dem Taschenrechner ist ziemlich nervig. Als kleine Hilfestellung dafür gibt es den sogenannten **Verschiebungssatz**. Nach ihm kann man die Formel der empirischen bzw. Stichproben-Varianz folgendermaßen umschreiben:
+
+\[ \begin{array}{rclcl} \tilde{s}^2 & = & \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 & = & \left( \frac{1}{n}\sum_{i=1}^n x_i^2 \right)-\mu^2 \\ s^2 & = & \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 & = & \left( \frac{1}{n-1}\sum_{i=1}^n x_i^2 \right)-\frac{n}{n-1}\bar{x}^2 \end{array} \]
+
+Die jeweils rechte Seite der Gleichung ist nun die neue Formel. Sie ist bei der Berechnung von Hand angenehmer, weil man nicht erst den Mittelwert ausrechnen muss. Außerdem hat die zweite Formel den Vorteil, dass sie nicht nochmal komplett von vorne berechnet werden muss, wenn ein neuer Datenpunkt zu den Daten dazukommt. Man kann dann nämlich zur gesamten Summe der \(x_i\) und \(x_i^2\) den neuen Wert einfach addieren, und \(n\) um eins erhöhen. In der alten Formel müsste man jede Teilsumme \((x_i-\bar{x})^2\) nochmal ausrechnen, da sich ja durch den neuen Datenpunkt das Stichprobenmittel \(\bar{x}\) bzw. der Erwartungswert \(\mu\) verändert hat.
+
+Die **Standardabweichung** einer Datenreihe ist einfach die Wurzel aus der Varianz. Je nachdem, welche Formel man für die Varianz verwendet hat (wie gesagt, meistens ist es die Stichprobenvarianz, die durch \(n-1\) teilt), ist die Standardabweichung \(s\) entweder \(\sqrt{s^2}\) oder \(\sqrt{\tilde{s}^2}\).
+
+```{exercise, echo=TRUE}
+
+Schauen wir uns Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir berechnen für diese Datenreihe die Spannweite, den Interquartilsabstand, und die Varianz und Standardabweichung.
+
+| Person | Merkmal |
+| ------ | ------- |
+| A      | 3       |
+| B      | 2       |
+| C      | 0       |
+| D      | 5       |
+| E      | 1       |
+| F      | 4       |
+| G      | 4       |
+
+Für Spannweite und Interquartilsabstand brauchen wir zuerst wieder die sortierten Daten:
+
+Geordnetes Merkmal: 0	1	2	3	4	4	5
+
+Die Spannweite ist also \(5-0=5\).
+
+Für den Interquartilsabstand berechnen wir zuerst
+
+\(x_{(0.25)} = x_{(\lfloor np \rfloor +1)} = x_{(\lfloor 7\cdot 0.25 \rfloor +1)} = x_{(2)} = 1\) und
+\(x_{(0.75)} = x_{(\lfloor np \rfloor +1)}= x_{(\lfloor 7\cdot 0.75 \rfloor +1)} = x_{(6)} = 4\).
+
+(Die Klammern \(\lfloor\) und \(\rfloor\) bedeuten hier [Abrunden](#sec-abrunden))
+
+Der Interquartilsabstand ist nun \(x_{0.75}-x_{0.25}=4-1=3\).
+
+Die Varianz geht ein bisschen mühsamer, aber einfach nach Formel. Nachdem wir den Mittelwert \(\mu=2.714\) berechnet haben:
+\[ \begin{aligned} s^2 = & \frac{1}{n-1} \sum_{i=1}^n (x_i-\mu)^2 \\ = &\frac{1}{6} \cdot [ (3-2.714)^2 + (2-2.714)^2 + (0-2.714)^2 + \\ & (5-2.714)^2 + (1-2.714)^2 + (4-2.714)^2 + (4-2.714)^2 ] \\ =& 3.238 \end{aligned} \]
+
+Die Standardabweichung ist nun einfach \(\sqrt{s^2} = \sqrt{3.238} = 1.799\).
+```

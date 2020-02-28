@@ -1,1 +1,44 @@
 ### Variationskoeffizient
+
+Der Variationskoeffizient (oft mit \(v\) bezeichnet) ist eine Kennzahl, die die Streuung eines Merkmals beschreibt. Er wird berechnet indem man die [Standardabweichung](#sec-var-sd) der Daten durch ihren [Mittelwert](#sec-mittelwert) teilt:
+
+\[ v = \frac{s}{\bar{x}} \]
+
+Der Vorteil des Variationskoeffizienten \(v\) gegenüber der Standardabweichung \(s\) ist, dass dem Variationskoeffizient egal ist, auf welcher Skala die Daten gemessen wurden. Misst man etwa die Körpergrösse von fünf Personen in Zentimeter, kommt ein anderer Mittelwert raus (z.B. 175) als wenn man die Körpergrösse in Meter misst (dann sind es z.B. 1,75). Dasselbe passiert mit der Varianz und der Standardabweichung, *aber nicht mit dem Variationskoeffizenten*.
+
+Dazu können wir uns beispielhaft die gerade erwähnten Daten anschauen, die Körpergrösse von fünf Personen in Zentimetern und in Metern:
+
+| Person $i$ | Körpergröße in cm | Körpergröße in m |
+| ---------- | ----------------- | ---------------- |
+| 1          | 160               | 1.60             |
+| 2          | 173               | 1.73             |
+| 3          | 177               | 1.77             |
+| 4          | 164               | 1.64             |
+| 5          | 182               | 1.82             |
+
+```{exercise, echo=TRUE}
+
+Berechne für beide obigen Datenreihen, die Körpergrösse in Zentimeter sowie in Meter, die folgenden Kennzahlen:
+
+- [Mittelwert](#sec-mittelwert) \(\bar{x}\)
+- [Varianz](#sec-var-sd) \(s^2\)
+- [Standardabweichung](#sec-var-sd) \(s\)
+- Variationskoeffizient \(v\)
+
+Eine Anleitung zum Berechnen der ersten drei Werte findest du in den entsprechenden Kapiteln. Den Variationskoeffizienten \(v\) erhältst du wie oben erklärt, indem du die Standardabweichung \(s\) durch den Mittelwert \(\bar{x}\) teilst.
+```
+
+```{solution, echo=TRUE}
+Zum Nachprüfen: Die folgenden Kennzahlen sind richtig:
+
+|                             | in Zentimeter | in Meter |
+| --------------------------- | ------------- | -------- |
+| Mittelwert \(\bar{x}\)      | 171.2         | 1.712    |
+| Varianz \(s^2\)             | 82.7          | 0.00827  |
+| Standardabweichung \(s\)    | 9.09          | 0.0909   |
+| Variationskoeffizient \(v\) | 0.0531        | 0.0531   |
+
+Es fällt hier auf, dass der Mittelwert, die Varianz und die Standardabweichung jeweils andere Werte annehmen, aber der Variationskoeffizient \(v\) für beide Daten gleich ist. Aus diesem Grund ist der Variationskoeffizient eine geeignete Maßzahl, wenn man die Streuung eines Merkmals unabhängig von ihrer Skalierung beschreiben möchte.
+```
+
+Man kann auch den Variationskoeffizienten von zwei oder mehr Merkmalen mit unterschiedlicher Skalierung vergleichen, z.B. die Körpergröße und das Gewicht von Studenten, oder die Population der USA und Deutschland. Wo normalerweise die Standardabweichung eines Merkmals mit großem Mittelwert (z.B. die Bevölkerung der USA) automatisch dazu tendiert, größer zu sein, ist der Variationskoeffizient nun vergleichbar.
