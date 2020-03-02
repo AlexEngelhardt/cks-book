@@ -1,1 +1,164 @@
 ### Normalverteilung: Körpergrösse
+
+**Idee**
+
+Die Normalverteilung ist aus vielen Gründen die wichtigste Verteilung in der Statistik:
+
+- Modelle (zum Beispiel das lineare Regressionsmodell) mit Normalverteilung sind besonders einfach zu rechnen, da die Formeln zur Bestimmung der Parameter \(\beta\) im Normalverteilungsfall sehr leicht auszuwerten sind.
+- Der Durchschnitt einer Stichprobe mit **beliebiger Verteilung** folgt einer Normalverteilung. Das ist weitaus wichtiger als es beim ersten Mal lesen klingt. Ich kann 100 Zufallszahlen aus irgendeiner Verteilung (stetig oder diskret, auch selbstgebastelte Verteilungen mit irgendeiner Dichte) ziehen, und ihr Mittelwert folgt immer einer Normalverteilung. Dieses Phänomen ist als *zentraler Grenzwertsatz* bekannt, und wird z.B. beim klassischen \(t\)-Test wichtig. Dort bildet man nämlich einen Stichprobenmittelwert und nutzt aus, dass er annähernd normalverteilt ist.
+- Viele natürliche Merkmale folgen einer Normalverteilung. Besonders wenn es ein Merkmal ist, dass aus dem Durchschnitt vieler einzelner Eigenschaften gebildet wird, ist das Resultat am Ende zumindest annähernd normalverteilt. Die Körpergrösse einer Person ist zum Beispiel das Ergebnis (der "Durchschnitt") vieler verschiedener genetischen Faktoren, und kann für ein gegebenes Geschlecht auch sehr gut mit einer Normalverteilung modelliert werden.
+
+**Parameter**
+
+Die Glockenkurve der Normalverteilung ist abhängig von zwei Parametern: Dem Mittelwert \(\mu\) und der Varianz \(\sigma^2\). Man notiert eine normalverteilte Zufallsvariable \(X\) als
+
+\[ X \sim \text{N}(\mu, \sigma^2) \]
+
+Mit dem Mittelwert \(\mu\) verschiebt man die Kurve nach links bzw. rechts, und mit der Varianz \(\sigma^2\) verändert man die Form der Kurve - also ob sie enger oder weiter ist. Abbildung \@ref(fig:verteilungen-normalverteilung-mu-sigma) veranschaulicht den Einfluss der Parameter.
+
+(ref:verteilungen-normalverteilung-mu-sigma-caption) Der Einfluss der Parameter \(\mu\) und \(\sigma^2\) auf die Dichte der Normalverteilung.
+
+```{r verteilungen-normalverteilung-mu-sigma, fig.cap="(ref:verteilungen-normalverteilung-mu-sigma-caption)"}
+knitr::include_graphics("img/verteilungen-normalverteilung-mu-sigma.png")
+```
+
+Vorsicht: Der Parameter ist meist die Varianz, also \(\sigma^2\). Beim Rechnen mit der Normalverteilung (zum Beispiel beim Standardisieren der Zufallsvariablen oder bei Hypothesentests) wird oft mit der Standardabweichung \(\sigma\), also der Wurzel der Varianz, gearbeitet. Hier muss man immer genau hinschauen, welche Variante verwendet wird, und gegebenenfalls zwischen den beiden Werten umrechnen.
+
+**Träger**
+
+Bei jeder Normalverteilung, also egal welche Parameter \(\mu\) und \(\sigma^2\) sie hat, sind theoretisch alle Realisationen aus den positiven und negativen reellen Zahlen möglich. Der Träger einer Normalverteilung ist also
+
+\[ \mathcal{T} = \mathbb{R} \]
+
+Das erscheint vielleicht etwas seltsam, da man die Normalverteilung oft auch dazu verwendet, Dinge wie die Körpergrösse zu modellieren, und es kann ja keine negativen Körpergrössen geben. Man sollte aber zwei Dinge beachten:
+
+- Bei der Modellierung der Körpergrösse wird zum Beispiel eine Normalverteilung mit \(\mu=165\)cm und \(\sigma^2=100\) verwendet. Da liegt die Wahrscheinlichkeit, dass eine Realisation kleiner als 0 herauskommt, bei ungefähr \(2\cdot 10^{-61}\). Diese Zahl ist eine Null, ein Komma, 60 Nullen, und dann erst eine zwei. Das ist so vernachlässigbar klein, dass in der gesamten Geschichte der Menschheit keine Person in diesem Bereich erwartet wird.
+- Die Normalverteilung ist natürlich nur ein "gut genug" passendes Modell, das zur Beschreibung der Körpergrösse verwendet wird. Die wahre Verteilung der Körpergrösse von Menschen sieht anders aus (und hat natürlich nur einen positiven Träger), aber niemand kennt diese Verteilung, und sie lässt sich wohl auch nicht durch eine so einfache Formel hinschreiben. Daher verwendet man bekannte Verteilungen als *Approximation*. Man sagt, dass eine bestimmte Verteilung gut genug zur Modellierung ist, und nimmt solche, mit denen man besonders einfach rechnen kann.
+
+**Erwartungswert**
+
+Der Erwartungswert ist direkt der erste Parameter, \(\mu\). Bei einer Normalverteilung mit \(\mu=4\) erwartet man also im Durchschnitt eine Realisation von 4, egal wie groß die Varianz \(\sigma^2\) ist.
+
+**Varianz**
+
+Die Varianz der Normalverteilung ist der zweite Parameter, \(\sigma^2\). In der Hinsicht ist die Normalverteilung ein Sonderfall, da ihre beiden Parameter direkt der Erwartungswert und die Varianz sind - sehr bequem.
+
+**Dichte**
+
+Die Dichtefunktion einer normalverteilten Zufallsvariablen \(X\) mit Parametern \(\mu\) und \(\sigma^2\) lautet
+
+\[ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \cdot \exp \left( - \frac{(x-\mu)^2}{2\sigma^2} \right) \]
+
+Wenn man sich statt der Varianz \(\sigma^2\) die Standardabweichung \(\sigma\), also \(\sqrt{\sigma^2}\) anschaut, kann man eine beliebige Normalverteilungsdichte skizzieren. Sie hat ihr Maximum an der Stelle \(\mu\), und fällt dann im Bereich von ungefähr \(\pm 3 \sigma\) ab. Außerhalb eines Abstandes von \(3\sigma\) ist die Dichte sehr nahe bei Null (s. Abb. \@ref(fig:verteilungen-normalverteilung-skizze)).
+
+(ref:verteilungen-normalverteilung-skizze-caption) Skizze einer Normalverteilung mit \(\mu=0\) und \(\sigma^2=1\).
+
+```{r verteilungen-normalverteilung-skizze, fig.cap="(ref:verteilungen-normalverteilung-skizze-caption)"}
+knitr::include_graphics("img/verteilungen-normalverteilung-skizze.png")
+```
+
+**Verteilungsfunktion**
+
+Die Verteilungsfunktion der Normalverteilung kann man nicht mit einer Formel im Taschenrechner berechnen. Das Integral über die Dichtefunktion lässt sich nämlich nicht mit Stift und Papier lösen:
+
+\[ F(x) = \int_{-\infty}^t \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( - \frac{(t-\mu)^2}{2\sigma^2} \right) dt \]
+
+Man nimmt daher eine Verteilungstabelle (s. Kap. \@ref(sec-verteilungstabelle)) her, die man häufig am Ende von Statistikbüchern, oder in der Anlage zu Klausuren findet. Wie man die abliest, wird in Kapitel \@ref(sec-tabelle-normalverteilung) erklärt.
+
+(ref:verteilungen-normalverteilung-verteilungsfunktion-caption) Verteilungsfunktion \(\Phi(z)\) der Standardnormalverteilung (also mit \(\mu=0\) und \(\sigma^2=1\)).
+
+```{r verteilungen-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-normalverteilung-verteilungsfunktion-caption)"}
+knitr::include_graphics("img/verteilungen-normalverteilung-verteilungsfunktion.png")
+```
+
+**Zum Ablesen von Verteilungstabellen**
+
+Nun hat man das Problem, dass es unendlich viele Normalverteilungen gibt, mit jeweils unterschiedlichen Parametern \(\mu\) und \(\sigma^2\). Man bräuchte also eine Tabelle für die Verteilung \(\text{N}(10, 1)\), eine für \(\text{N}(10, 1.4)\), und so weiter. Man hilft sich hier dadurch, indem man nur eine Tabelle verwendet, und zwar für die **Standardnormalverteilung**, also \(X\sim \text{N}(0,1)\), mit \(\mu=0\) und \(\sigma^2=1\). Nun kann man eine beliebige Normalverteilung *standardisieren*, und dann deren Wert anhand der Verteilungstabelle bestimmen.
+
+#### Standardisieren von normalverteilten Zufallsvariablen
+
+Angenommen, wir haben eine Zufallsvariable \(X\sim \text{N}(4, 1)\), und möchten ihre Verteilungsfunktion an der Stelle \(x=3\) wissen. Wir suchen also die Wahrscheinlichkeit, dass diese Zufallsvariable einen Wert kleiner oder gleich 3 erhält. Man muss sich jetzt klar darüber werden, dass das genau dasselbe ist, wie wenn ich für eine Zufallsvariable \(Z\sim \text{N}(0,1)\) die Verteilungsfunktion an der Stelle \(x=-1\) suche. Abbildung \@ref(fig:verteilungen-normalverteilung-standardisierung) veranschaulicht die Gleichheit der beiden Werte anhand der Fläche unter der Dichte.
+
+(ref:verteilungen-normalverteilung-standardisierung-caption) Die linke Fläche, d.h. \(\mathbb{P}(X \leq 3)\) für die Zufallsvariable \(X\sim \text{N}(4, 1)\) ist genau gleich der Fläche \(\mathbb{P}(Z \leq -1)\) für die Standardnormalverteilung \(Z\sim \text{N}(0,1)\).
+
+```{r verteilungen-normalverteilung-standardisierung, fig.cap="(ref:verteilungen-normalverteilung-standardisierung-caption)"}
+knitr::include_graphics("img/verteilungen-normalverteilung-standardisierung.png")
+```
+
+Man standardisiert eine normalverteilte Zufallsvariable \(X\), indem man also, wie gerade gezeigt, zuerst ihren Mittelwert abzieht, und danach durch die Standardabweichung teilt:
+
+\[ Z = \frac{X-\mu}{\sigma} \]
+
+Das Teilen durch die Standardabweichung streckt bzw. staucht die Glockenkurve so, dass danach ihre Varianz gleich 1 ist.
+
+Damit kann man nun die Verteilungsfunktion jeder beliebigen Normalverteilung bestimmen.
+
+Es gilt also:
+
+\[ \mathbb{P}(X \leq x) = \mathbb{P}(Z \leq \frac{x-\mu}{\sigma}) = \Phi(\frac{x-\mu}{\sigma}) = \Phi(z) \]
+
+Die Standardnormalverteilung wird dabei statt \(F(x)\) mit \(\Phi(z)\) notiert, um Verwechslungen mit der unstandardisierten Verteilungsfunktion zu vermeiden.
+
+Damit können wir nun den oben gesuchten Wert \(\mathbb{P}(X \leq 3)\) für die Zufallsvariable \(X\sim \text{N}(4,1)\) bestimmen:
+
+\[ \mathbb{P}(X \leq 3) = \mathbb{P}(Z \leq \frac{3-4}{1}) = \mathbb{P}(Z \leq -1) = \Phi(-1) = 1 -\Phi(1) = 1 - 0.8413 = 0.1587 \]
+
+Den Wert 0.8413 haben wir dabei mit der Verteilungstabelle (s. Kap. \@ref(sec-tabelle-normalverteilung)) bestimmt. Wir mussten die Umrechnung \(\mathbb{P}(Z \leq -1) = 1 -\mathbb{P}(Z \leq 1)\) einführen, da in der Tabelle nur die positiven Werte tabelliert sind. Die Details dazu sind in Kapitel \@ref(sec-tabelle-normalverteilung) erklärt.
+
+Der Wert \(F(3)\) der Zufallsvariablen \(X\) ist also gleich dem Wert \(\Phi(-1)\) der standardisierten Zufallsvariable \(Z\). Und da \(\Phi(-1)\) nicht in der Tabelle steht, formen wir es noch um in \(1-\Phi(1)\), und schlagen den Wert für \(\Phi(1)\) nach.
+
+```{exercise, echo=TRUE}
+
+Das Standardisieren muss man einfach einige Male drillen, dann hat man das Prinzip verinnerlicht und Leichtsinnsfehler beseitigt. Bestimme zur Übung die folgenden Werte für verschiedene Normalverteilungen. Beachte, dass der zweite Parameter, \(\sigma^2\), zum Standardisieren noch in die Standardabweichung transformiert werden muss:
+
+a) Sei \(X\sim \text{N}(2,1)\). Bestimme \(\mathbb{P}(X \leq 3)\).
+b) Sei \(X\sim \text{N}(-1, 4)\). Bestimme \(\mathbb{P}(X \leq 0)\).
+c) Sei \(X\sim \text{N}(0, 5)\). Bestimme \(\mathbb{P}(X > 2)\).
+d) Sei \(X\sim \text{N}(123, 456)\). Bestimme \(\mathbb{P}(X \leq 130)\).
+e) Sei \(X\sim \text{N}(150, 100)\). Bestimme \(\mathbb{P}(160 < X \leq 170)\).
+
+```
+```{solution, echo=TRUE}
+
+a) Wir suchen also für \(\mu=2\) und \(\sigma^2=1\) (d.h. auch \(\sigma=1\)) den Wert \(\mathbb{P}(X \leq 3)\). Der äquivalente \(z\)-Wert der Standardnormalverteilung ist \(\frac{x-\mu}{\sigma} = \frac{3-2}{1} = 1\). Es ist also
+\[ \mathbb{P}(X \leq 3) = \mathbb{P}(Z \leq 1) = 0.8413 \]
+b) Die Standardabweichung \(\sigma\) ist hier \(\sigma=\sqrt{4}=2\). Damit ist hier \(\mathbb{P}(X \leq 0) = \mathbb{P}(Z \leq \frac{0-(-1)}{2}) = \mathbb{P}(Z \leq 0.5) = \Phi(0.5) = 0.6915\)  
+c) Vorsicht: Hier ist die Wahrscheinlichkeit gesucht, dass \(X\) größer als 2 ist. Wir bestimmen das mit der Gegenwahrscheinlichkeit, d.h. wir berechnen
+\[ \mathbb{P}(X > 2) = 1 - \mathbb{P}(X \leq 2) \]
+Wir bestimmen also
+\[ 1-\mathbb{P}(X \leq 2) = 1-\mathbb{P}(Z \leq \frac{2-0}{\sqrt{5}}) = 1-\mathbb{P}(Z \leq 0.894) = 1-\Phi(0.89) = 1-0.8132 = 0.1867 \]
+d) \(\mathbb{P}(X \leq 130) = \mathbb{P}(\frac{X-123}{\sqrt{456}} \leq \frac{130-123}{\sqrt{456}}) = \mathbb{P}(Z \leq 0.33) =\Phi(0.33) = 0.6293\)  
+e) Hier brauchen wir die Differenz der Werte der Verteilungsfunktion an der Stelle \(x=170\) und an \(x=160\). Das Vorgehen ist in Kapitel \@ref(sec-duevsz-verteilungsfunktion) beschrieben. Wir berechnen also:
+\[ \mathbb{P}(X \leq 170) = \mathbb{P}(Z \leq \frac{170-150}{\sqrt{100}}) =\Phi(2) = 0.977 \]
+\[ \mathbb{P}(X \leq 160) = \mathbb{P}(Z \leq \frac{160-150}{\sqrt{100}}) =\Phi(1) = 0.841 \]
+Das Ergebnis ist also \(\Phi(2)-\Phi(1) = 0.136\).
+
+```
+
+#### Quantile bestimmen
+
+Das \(\alpha\)-Quantil einer Normalverteilung bestimmt man genau umgekehrt wie den Wert der Verteilungsfunktion:
+
+Man schlägt zuerst das \(\alpha\)-Quantil der Standardnormalverteilung in der Verteilungstabelle nach. Nennen wir es \(z_\alpha\). Man transformiert es nun in das Quantil \(q_\alpha\) der tatsächlichen Normalverteilung, indem man es erst mit \(\sigma\) multipliziert, und dann noch \(\mu\) addiert. Es ist also
+
+\[ q_\alpha = \mu + \sigma \cdot z_\alpha \]
+
+```{exercise, echo=TRUE}
+
+a) Sei \(X\sim \text{N}(2,1)\). Bestimme das 75%-Quantil \(q_{0.75}\).  
+b) Sei \(X\sim \text{N}(-1, 4)\). Bestimme das 50%-Quantil \(q_{0.5}\).  
+c) Sei \(X\sim \text{N}(0, 5)\). Bestimme das 97.5%-Quantil \(q_{0.975}\).  
+d) Sei \(X\sim \text{N}(123, 456)\). Bestimme das 2.5%-Quantil \(q_{0.025}\).  
+e) Sei \(X\sim \text{N}(150, 100)\). Bestimme das 10%-Quantil \(q_{0.1}\).
+
+```
+```{solution, echo=TRUE}
+
+a) Das 75%-Quantil der Standardnormalverteilung ist \(z_{0.75}=0.67\). Wir übersetzen das in das 75%-Quantil der \(\text{N}(2,1)\)-Verteilung:
+\[ q_{0.75} = \mu + \sigma z_{0.75} = 2 + 1 \cdot 0.67 = 2.67\]
+b) \(q_{0.5} = \mu + \sigma z_{0.5} = -1 + \sqrt{4} \cdot 0 = -1\). Das 50%-Quantil (d.h. der Median) jeder Normalverteilung ist automatisch ihr Mittelwert \(\mu\).  
+c) \(q_{0.975} = \mu + \sigma z_{0.975} = 0 + \sqrt{5} \cdot 1.96 = 4.382\)  
+d) Das 2.5%-Quantil der Standardnormalverteilung ist \(z_{0.025} = -z_{0.975} = -1.96\). Damit ist \(q_{0.025} = \mu + \sigma z_{0.025} = 123 + \sqrt{456} \cdot (-1.96) = 81.15\)  
+e) \(q_{0.1} =\mu + \sigma z_{0.1} = 150 + \sqrt{100} \cdot (-z_{0.9}) = 150 + 10 \cdot (-1.28) = 137.2\)
+
+```

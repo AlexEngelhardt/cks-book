@@ -1,2 +1,29 @@
-## Was sind Zufallsvariablen?
-### Diskrete und stetige Zufallsvariablen
+## Was sind Zufallsvariablen? {#sec-was-sind-zv}
+
+Zufallsvariablen werden meistens mit \(X\), und manchmal mit \(Y\) oder \(Z\) beschrieben. Sie sind Variablen, mit denen wir das Ergebnis eines noch nicht durchgeführten Zufallsexperiments beschreiben. Betrachten wir zum Beispiel den Wurf eines Würfels, können wir die Zufallsvariable dafür \(X\) nennen. Vor dem Würfelwurf ist der Wert von \(X\) unbekannt, und nach dem Wurf nimmt \(X\) einen Wert von \(1, 2, 3, 4, 5, 6\) an. Diesen Wert nennt man **Realisierung** der Zufallsvariable, und nennt ihn verallgemeinert \(x\).
+
+Der Unterschied zwischen \(X\) und \(x\) ist also, dass \(X\) die tatsächliche Zufallsvariable ist, und keinen festen Wert hat, sondern quasi für das noch unbekannte Ergebnis des Zufallsexperiments steht, und \(x\) für eine feste Zahl steht, die für das Ergebnis nach dem Experiment steht. Man sieht also für das Beispiel Würfelwurf Schreibweisen wie \(\mathbb{P}(X=1) = \frac{1}{6}\). Da aber die Wahrscheinlichkeit für jede Augenzahl \(x=1,2,3,4,5,6\) gleich ist, schreibt man verallgemeinert \(\mathbb{P}(X=x) = \frac{1}{6}\). Gesprochen wird das so: "Die Wahrscheinlichkeit, dass X gleich x ist, beträgt ein Sechstel."
+
+Es ist wichtig, dass die möglichen Werte der Zufallsvariablen immer Zahlen sind. Für einen Münzwurf können wir also nicht \(\mathbb{P}(X=\text{Kopf})\) schreiben, sondern müssen die Werte vorher kodieren, z.B. in \(\text{Kopf}=0\) und \(\text{Zahl}=1\). Das ist wichtig, um später Erwartungswerte (s. Kap. \@ref(sec-duevdz-erwartungswert)) der Zufallsvariablen bilden zu können. Es ist nämlich unmöglich, den Mittelwert von \(\text{Kopf}\) und \(\text{Zahl}\) zu bilden, aber der Mittelwert von \(0\) und \(1\) ist \(0.5\).
+
+### Diskrete und stetige Zufallsvariablen {#sec-duszv}
+
+Es gibt zwei verschiedene Klassen von Zufallsvariablen. **Diskrete** Zufallsvariablen können nur eine endliche oder abzählbar unendliche Menge an Werten annehmen. Das bedeutet meist, dass es entweder eine feste Anzahl an Werten gibt (wie z.B. beim Würfelwurf), oder dass es sich um Zähldaten handelt, wie etwa die Anzahl an Bankkunden an einem Tag, oder die Anzahl an Blitzen in einem Gewitter. Theoretisch sind beliebig hohe Werte möglich, aber die möglichen Werte sind doch *abzählbar*.
+
+**Stetige** Zufallsvariablen hingegen können innerhalb eines beliebigen Intervalls unendlich viele Werte annehmen. Wenn wir die Körpergröße eines Menschen messen, sind theoretisch unendlich viele Werte zwischen z.B. 165.3cm und 166.84cm möglich. Man nennt diese Wertebereiche *überabzählbar unendlich*.
+
+#### Der Träger einer Zufallsvariablen {#sec-duszv-traeger}
+
+Mit dem Wort "Träger" - und dem Zeichen \(\mathcal{T}\) bezeichnen wir die Menge aller möglichen Ergebnisse einer Zufallsvariablen. Für das obige Beispiel eines Würfelwurfs wäre der Träger z.B. \(\mathcal{T} = {1, 2, 3, 4, 5, 6}\). Für die Körpergröße eines Menschen kommen theoretisch alle positiven reellen Zahlen in Frage, hier wäre der Träger also \(\mathbb{R}^+\).
+
+#### Verteilung von Zufallsvariablen
+
+Für alle Zufallsexperimente, mit denen wir uns (zumindest in den einführenden Veranstaltungen, und in einfachen Anwendungsproblemen) beschäftigen, existieren bekannte Verteilungen. Wir wissen also vor dem Experiment zwar nicht, welches Ergebnis wir bekommen, aber wir wissen, wie wahrscheinlich bestimmte Ergebnisse sind. Diese Information stellen wir dar, indem wir sagen, \(X\) folgt einer bestimmten **Verteilung**. Mathematisch notiert wird das so: \[ X \sim P_\theta \] Dabei steht \(P\) für eine bestimmte Verteilung (bei der Normalverteilung würde hier z.B. \(N\) stehen, und \(\theta\) sind die Parameter dieser Verteilung (bei der Normalverteilung wäre das der Mittelwert, \(\mu\), und die Varianz, \(\sigma^2\)).
+
+Man kann die möglichen Werte einer Zufallsvariable und die Wahrscheinlichkeitsverteilung über alle diese Werte auf drei verschiedene Arten darstellen: Mit der Dichte (Kap. \@ref(sec-duevdz-dichte)), der Verteilungsfunktion (Kap. \@ref(sec-duevdz-verteilungsfunktion)), und der Quantilsfunktion (Kap. \@ref(sec-duevdz-quantile)). Alle diese Arten sind gleichwertig, spezifizieren die Eigenschaften der Zufallsvariablen vollständig, und man kann auf dem Papier zwischen allen drei Arten hin-und-her-rechnen.
+
+#### Parameter von Verteilungen
+
+Jede Verteilungsklasse (als Beispiel wieder die Normalverteilung) kann natürlich mehr als nur eine Verteilung beschreiben. **Parameter** sind Variablen, die zu einer Verteilungsklasse gehören, und mit denen die Verteilung einer Zufallsvariablen \(X\) dann vollständig spezifiziert ist.
+
+Wenn wir zum Beispiel mit \(X\) den Intelligenzquotienten von einigen Personen messen, folgt das Ergebnis einer Normalverteilung mit Mittelwert 100 und Varianz 225, also \(X \sim N(100, 225)\). Messen wir aber von einigen Autos die Geschwindigkeit innerorts, erhalten wir vielleicht eine Normalverteilung mit Mittelwert 55 und Varianz 25, also \(X \sim N(55, 25)\).

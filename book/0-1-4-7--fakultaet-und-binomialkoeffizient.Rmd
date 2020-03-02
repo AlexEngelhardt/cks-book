@@ -1,6 +1,6 @@
 ### Fakultät $N!$ und Binomialkoeffizient $N \choose k$ {#fakultaet}
 
-Diese beiden Konstrukte, die Fakultät sowie der Binomialkoeffizient, werden in der Kombinatorik (s. Kap. \@ref(kombinatorik)) häufiger gebraucht. Es handelt sich im Prinzip nur um abkürzende Schreibweisen.
+Diese beiden Konstrukte, die Fakultät sowie der Binomialkoeffizient, werden in der Kombinatorik (s. Kap. \@ref(sec-kombinatorik)) häufiger gebraucht. Es handelt sich im Prinzip nur um abkürzende Schreibweisen.
 
 Die **Fakultät** wird durch ein nachgestelltes Ausrufezeichen dargestellt und ist eine bestimmte Art von Produkt:
 

@@ -1,1 +1,74 @@
-## Anleitung zum Rechnen mit Wahrscheinlichkeiten
+## Anleitung zum Rechnen mit Wahrscheinlichkeiten {#sec-wsk-rechenregeln}
+
+Das Umgehen mit Wahrscheinlichkeiten gehört zum essentiellen Handwerkszeug in den einführenden Statistikklausuren. Die wichtigsten Regeln, die verwendet werden, wurden in früheren Artikeln bereits besprochen:
+
+| Thema | Formel |
+| ------------------------ | -------------------------- |
+| Laplace-Wahrscheinlichkeit                     | \(\mathbb{P}(A) =\frac{\text{Anzahl der }\mathrm{f\ddot{u}r }A\text{ "}\mathrm{g\ddot{u}nstige}\text{" Ergebnisse}}{\text{Anzahl aller }  \mathrm{m\ddot{o}glichen}\text{ Ergebnisse}}\) |
+| Bedingte Wahrscheinlichkeit                    | \(\mathbb{P}(A\mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}\)          |
+| Totale Wahrscheinlichkeit                      | \(\mathbb{P}(A) =\mathbb{P}(A \mid  B) \cdot \mathbb{P}(B) +\mathbb{P}(A \mid  \bar{B}) \cdot \mathbb{P}(\bar{B})\) |
+| Multiplikationssatz                            | \(\mathbb{P}(A \cap B) =\mathbb{P}(A \mid  B) \cdot\mathbb{P}(B)\) |
+| Multiplikationssatz für unabhängige Ereignisse | \(\mathbb{P}(A \cap B) =\mathbb{P}(A) \cdot\mathbb{P}(B)\) |
+| Satz von Bayes                                 | \(\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \cdot\mathbb{P}(A)}{\mathbb{P}(B)}\) |
+
+
+
+Welche Formel man in einer bestimmten Situation braucht, kann man herausfinden, indem man die Aufgabe systematisch angeht:
+
+1. Benenne die Ereignisse und Wahrscheinlichkeiten der Aufgabe mit Buchstaben, falls noch keine gegeben sind.
+2. Notiere in Formelschreibweise, was gesucht ist (z.B.: \(\mathbb{P}(B|C)\)).
+3. Notiere in Formelschreibweise, welche Werte gegeben sind.
+4. Suche die Formeln heraus, in denen sowohl die gesuchten als auch die gegebenen Werte vorkommen.
+
+Dazu ist es hilfreich, noch ein paar zusätzliche Regeln zu kennen (wenn sie nicht schon offensichtlich sind):
+
+- \(\mathbb{P}(\bar{A}) = 1-\mathbb{P}(A)\). Mit \(\bar{A}\) ist die Gegenwahrscheinlichkeit von \(A\) gemeint. Das ist natürlich genau die Wahrscheinlichkeit, die auf die Gesamtsumme von 1 fehlt, denn \(\mathbb{P}(A) + \mathbb{P}(\bar{A}) = 1\).
+- \(\mathbb{P}(A \cup B) =\mathbb{P}(A)+\mathbb{P}(B) -\mathbb{P}(A \cap B)\). Die Wahrscheinlichkeit \(\mathbb{P}(A \cup B)\), dass also entweder \(A\) oder \(B\) eintritt (oder auch beide Ereignisse gleichzeitig), ist deren Summe, minus der Wahrscheinlichkeit dass beide Ereignisse eintreten. Diese Formel kann man sich an einem Venn-Diagramm (s. Kap. \@ref(sec-venn)) gut selbst herleiten.
+
+Ab und zu muss man mit den gegebenen Werten erst ein Zwischenergebnis berechnen, bevor man das letztendliche Ergebnis erhalten kann. Das ist zum Beispiel beim [Satz von Bayes](#sec-bayes) der Fall, wo man im Nenner die Wahrscheinlichkeit \(\mathbb{P}(A)\) erst über den [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) berechnen muss. Die folgende Beispielaufgabe illustriert dieses Vorgehen:
+
+```{exercise, echo=TRUE}
+
+In einer Spielwarenfabrik stehen drei Maschinen 1, 2, und 3, die mit unterschiedlicher Geschwindigkeit Spielzeugsoldaten herstellen. Jede Maschine produziert mit einer bestimmten Wahrscheinlichkeit ein fehlerhaftes Spielzeug, das in der Qualitätskontrolle aussortiert werden muss:
+
+| Maschine | Anteil an der Gesamtproduktion | Anteil fehlerhafter Soldaten |
+| -------- | ------------------------------ | ---------------------------- |
+| 1        | 0.15                           | 0.10                         |
+| 2        | 0.40                           | 0.02                         |
+| 3        | 0.45                           | 0.01                         |
+
+Man sieht, dass die Maschine 1 ein älteres Stück ist, das langsamer und fehleranfälliger arbeitet.
+
+Angenommen, man hält nun einen fehlerhaften Spielzeugsoldaten in der Hand. Wie hoch ist die Wahrscheinlichkeit, dass er von Maschine 1 kommt?
+    
+```
+
+```{solution, echo=TRUE}
+
+Um diese Aufgabe zu lösen, gehen wir wie oben beschrieben Schritt für Schritt vor. Zuerst stellen wir die Aufgabe in Formelschreibweise dar:
+
+- Ereignisse benennen
+    - Die Ereignisse "Ein Soldat wurde von Maschine 1 produziert" können wir einfach \(M_1\), \(M_2\), und \(M_3\) nennen. Das Ereignis "Ein produzierter Soldat ist fehlerhaft" nennen wir \(F\), somit ist das Ereignis "Ein Soldat ist in Ordnung" das Gegenereignis \(\bar{F}\).
+- Gesuchter Wert
+    - Gesucht ist die Wahrscheinlichkeit, dass ein Soldat von Maschine 1 produziert wurde, gegeben er ist fehlerhaft, also: \(\mathbb{P}(M_1|F)\).
+- Gegebene Werte
+    - Gegeben sind zum Einen die A-priori-Wahrscheinlichkeiten, dass ein beliebiger Soldat von Maschine 1, 2, bzw. 3 kommt. Das sind einfach die Werte \(\mathbb{P}(M_1)=0.15\), \(\mathbb{P}(M_2)=0.40\) und \(\mathbb{P}(M_3)=0.45\). Zusätzlich sind die Anteile fehlerhafter Soldaten die bedingte Wahrscheinlichkeit für \(F\), gegeben der Maschine, also \(\mathbb{P}(F|M_1)=0.10\), \(\mathbb{P}(F|M_2)=0.02\), und \(\mathbb{P}(F|M_3)=0.01\).
+- Hilfreiche Formeln
+    - Wir sehen, dass eine bedingte Wahrscheinlichkeit gesucht ist, und die "andersrum" bedingten Wahrscheinlichkeiten gegeben sind. Das sind Aufgabentypen, die mit dem [Satz von Bayes](#sec-bayes) gelöst werden können:
+\[ \mathbb{P}(A|B) = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B)} \]
+
+In dieser Aufgabe beginnen wir also mit dem Satz von Bayes und unseren Ereignissen:
+
+\[ \mathbb{P}(M_1|F) = \frac{\mathbb{P}(F|M_1)\mathbb{P}(M_1)}{\mathbb{P}(F)} \]
+
+Alle diese Werte sind aus der Angabe bekannt, bis auf \(\mathbb{P}(F)\), die Wahrscheinlichkeit, dass ein beliebiger Soldat fehlerhaft ist. Um diese Wahrscheinlichkeit aus den gegebenen Werten zu berechnen, bietet sich der [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) an:
+
+\[\begin{aligned} \mathbb{P}(F) &=\mathbb{P}(F|M_1)\mathbb{P}(M_1) +\mathbb{P}(F|M_2)\mathbb{P}(M_2) +\mathbb{P}(F|M_3)\mathbb{P}(M_3) \\ &= 0.10 \cdot 0.15 + 0.02 \cdot 0.40 + 0.01 \cdot 0.45 \\&= 0.0275 \end{aligned}\]
+
+Es sind also insgesamt etwa 2,75% aller Soldaten fehlerhaft. Diesen Wert können wir nun in die Bayes-Formel einsetzten, um die gesuchte Wahrscheinlichkeit zu erhalten:
+
+\[ \mathbb{P}(M_1|F) = \frac{\mathbb{P}(F|M_1)\mathbb{P}(M_1)}{\mathbb{P}(F)} = \frac{0.10 \cdot 0.15}{0.0275} = 0.545 \]
+
+Ein beliebiger defekter Soldat kommt also mit einer Wahrscheinlichkeit von über 50% von Maschine 1. Obwohl diese Maschine nur 15% aller Soldaten produziert, kommen mehr als die Hälfte aller defekten Soldaten von ihr.
+
+```

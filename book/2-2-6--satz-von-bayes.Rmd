@@ -1,1 +1,105 @@
-## Satz von Bayes
+## Satz von Bayes {#sec-bayes}
+
+Der Satz von Bayes ist eine hilfreiche Regel, um bedingte Wahrscheinlichkeiten der Form \(\mathbb{P}(A|B)\) auszurechnen, wenn nur "andersherum" bedingte Wahrscheinlichkeiten der Form \(\mathbb{P}(B|A)\) gegeben sind.
+
+**Herleitung des Satzes von Bayes**
+
+Der Satz von Bayes erweitert die bekannte Formel für bedingte Wahrscheinlichkeiten:
+
+\[ \mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \]
+
+Falls die im Zähler stehende gemeinsame Wahrscheinlichkeit nicht gegeben ist, kann man sie auch durch den **Multiplikationssatz** bestimmen:
+
+\[ \mathbb{P}(A \cap B) =\mathbb{P}(A | B) \cdot\mathbb{P}(B)\]
+
+Diese Regel ergibt sich durch das Umstellen der Formel für die bedingte Wahrscheinlichkeit. Da in der Notation die Reihenfolge bei zwei gemeinsam eintretenden Ereignissen egal ist, d.h. \(\mathbb{P}(A \cap B) = \mathbb{P}(B \cap A)\), gilt der Multiplikationssatz auch mit umgekehrten Buchstaben:
+
+\[ \mathbb{P}(A \cap B) =\mathbb{P}(B | A) \cdot\mathbb{P}(A)\]
+
+Genau diese Formel wird nun im Zähler ersetzt, und man erhält den **Satz von Bayes**:
+
+\[ \mathbb{P}(A|B) = \frac{\mathbb{P}(B | A) \cdot\mathbb{P}(A)}{\mathbb{P}(B)} \]
+
+**Falls \(\mathbb{P}(B)\) nicht gegeben ist**
+
+In manchen Aufgaben ist die Wahrscheinlichkeit \(\mathbb{P}(B)\) im Nenner nicht gegeben. Dann muss man sie über einen Umweg mit dem [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) (s. Kap. \@ref(sec-totale-wsk)) herleiten.
+
+Für den Spezialfall von nur zwei Aufteilungen von \(A\) ersetzt man den Nenner also wie folgt:
+
+\[ \mathbb{P}(A|B) = \frac{\mathbb{P}(B | A) \cdot\mathbb{P}(A)}{\mathbb{P}(B|A) \cdot \mathbb{P}(A) +\mathbb{P}(B|\bar{A}) \cdot \mathbb{P}(\bar{A})} \]
+
+```{exercise, echo=TRUE}
+
+Eine neu entwickelte Maschine kann gefälschte Geldscheine erkennen. Wir definieren das Ereignis \(A\): "Die Maschine schlägt Alarm", und Ereignis \(F\): "Der Geldschein ist falsch".
+
+Wir möchten nun herausfinden, wie hoch die Wahrscheinlichkeit ist, dass ein Geldschein tatsächlich eine Fälschung ist, gegeben die Maschine schlägt Alarm. Gesucht ist also
+
+\[ \mathbb{P}(F|A). \]
+
+Die Maschine wurde anhand vieler echter und unechter Scheine getestet. Man fand heraus, dass die Maschine bei einem falschen Schein mit 96% Sicherheit Alarm schlägt. Allerdings gibt die Maschine auch bei 1% der echten Geldscheine Alarm. Wir wissen also:
+
+- \(\mathbb{P}(A|F) = 0.96\)
+- \(\mathbb{P}(A|\bar{F}) = 0.01\)
+
+Zusätzlich ist bekannt, dass 0,01% aller im Umlauf befindlichen Geldscheine Fälschungen sind. Das heißt:
+
+- \(\mathbb{P}(F) = 0.0001\)
+
+```
+
+```{solution, echo=TRUE}
+
+Aufgaben dieser Art lassen sich mit dem Satz von Bayes lösen, da \(\mathbb{P}(A|F)\) gegeben, aber \(\mathbb{P}(F|A)\) gesucht ist. Wir starten also mit der Formel von Bayes (adaptiert mit den Buchstaben für unsere Ereignisse):
+
+\[ \mathbb{P}(F|A) = \frac{\mathbb{P}(A|F) \cdot\mathbb{P}(F)}{\mathbb{P}(A)} \]
+
+Die beiden Faktoren im Zähler sind in der Aufgabe gegeben, wir können sie also einfach einsetzen: \(\mathbb{P}(A|F) = 0.96\) und \(\mathbb{P}(F) = 0.0001\).
+
+Im Nenner fehlt uns noch \(\mathbb{P}(A)\), die nicht-bedingte Wahrscheinlichkeit, dass die Maschine Alarm schlägt. Diese Wahrscheinlichkeit ist nicht gegeben, aber wir haben die beiden bedingten Wahrscheinlichkeiten, dass die Maschine Alarm schlägt, gegeben der Geldschein ist echt bzw. falsch. Wir können \(\mathbb{P}(A)\) also mit dem Satz der totalen Wahrscheinlichkeit berechnen:
+
+\[ \begin{aligned}\mathbb{P}(A) &=\mathbb{P}(A|F)\cdot \mathbb{P}(F) +\mathbb{P}(A|\bar{F})\cdot \mathbb{P}(\bar{F}) \\ &= 0.96 \cdot 0.0001 + 0.01 \cdot 0.9999 \\ &= 0.010095 \end{aligned} \]
+
+Die Maschine schlägt also insgesamt in etwas über 1% aller Fälle Alarm. Mit diesem Wert können wir nun die gesuchte bedingte Wahrscheinlichkeit berechnen, dass ein Geldschein gefälscht ist, gegeben die Maschine schlägt Alarm:
+
+\[ \mathbb{P}(F|A) = \frac{\mathbb{P}(A|F) \cdot\mathbb{P}(F)}{\mathbb{P}(A)} = \frac{0.96 \cdot 0.0001}{0.010095} = 0.0095\]
+
+Dieser Wert ist erschreckend: Wenn die Maschine Alarm schlägt, ist der betreffende Geldschein nur zu etwa 0,95% eine Fälschung, und umgekehrt zu etwa 99,05% ein echter Geldschein.
+
+Dieses Phänomen lässt sich dadurch erklären, dass sich sehr viel mehr echte als falsche Geldscheine im Umlauf befinden, und dass also ein Alarm viel wahrscheinlicher fälschlicherweise bei einem echten Geldschein gegeben worden ist als korrekterweise bei einem gefälschten Schein. Um eine verlässliche Maschine zu bauen, muss man also entweder die Wahrscheinlichkeit für einen Fehlalarm senken, oder die Genauigkeit beim tatsächlichen Erkennen gefälschter Scheine erhöhen.
+
+```
+
+```{exercise, echo=TRUE}
+
+Die Rot-Grün-Blindheit ist eine angeborene Sehschwäche, die bei etwa 9% aller Jungen, aber nur bei 0,6% aller Mädchen auftritt. Wir nehmen hier an, dass ein neugeborenes Kind zu 51% ein Junge wird, und zu 49% ein Mädchen.
+
+Eine Mutter erzählt dir, dass ihr Kind eine Rot-Grün-Blindheit hat. Bestimme nun die Wahrscheinlichkeit, gegeben dieser Information, dass es sich um einen Jungen handelt.
+
+Hinweis: Gesucht ist die Wahrscheinlichkeit \(\mathbb{P}(J | B)\), mit den Ereignissen \(J\)="Kind ist ein Junge" (d.h. \(\bar{J}\)="Kind ist ein Mädchen") und \(B\)="Kind hat Rot-Grün-Blindheit". Verwende den Satz von Bayes, um diese Wahrscheinlichkeit zu ermitteln. Auf dem Weg dorthin begegnest du \(\mathbb{P}(B)\), der Wahrscheinlichkeit, dass irgendein Kind unter der Rot-Grün-Blindheit leidet. Das ermittelst du mit dem Satz der totalen Wahrscheinlichkeit.
+
+```
+
+```{solution, echo=TRUE}
+
+Gegeben sind in dieser Aufgabe die folgenden Wahrscheinlichkeiten:
+
+- \(\mathbb{P}(B|J) = 0.09\)
+- \(\mathbb{P}(B|\bar{J}) = 0.006\)
+- \(\mathbb{P}(J) = 0.51\)
+- \(\mathbb{P}(\bar{J}) = 0.49\)
+
+Die gesuchte Wahrscheinlichkeit \(\mathbb{P}(J|B)\) erhalten wir wieder über den Satz von Bayes:
+
+\[ \mathbb{P}(J|B) = \frac{\mathbb{P}(B|J) \cdot\mathbb{P}(J)}{\mathbb{P}(B)} \]
+
+Bis auf \(\mathbb{P}(B)\) können wir alle Werte direkt einsetzen. Für \(\mathbb{P}(B)\) verwenden wir den Satz der totalen Wahrscheinlichkeit:
+
+\[ \mathbb{P}(B) =\mathbb{P}(B|J) \cdot \mathbb{P}(J) +\mathbb{P}(B|\bar{J}) \cdot \mathbb{P}(\bar{J}) = 0.09 \cdot 0.51 + 0.006 \cdot 0.49 = 0.04884 \]
+
+Damit erhalten wir die gesuchte Wahrscheinlichkeit:
+
+\[ \mathbb{P}(J|B) = \frac{\mathbb{P}(B|J) \cdot\mathbb{P}(J)}{\mathbb{P}(B)} = \frac{0.09 \cdot 0.51}{0.04884} = 0.9398 \]
+
+Das Kind ist also zu etwa 94% ein Junge, wenn man die Information hat, dass es rot-grün-blind ist.
+
+```

@@ -1,3 +1,36 @@
-## Kombinationen - ohne Reihenfolge
+## Kombinationen - ohne Reihenfolge {#sec-kombinationen}
+
+Bei einer Kombination spielt die Reihenfolge, in der Objekte gezogen werden, keine Rolle. Man interessiert sich also nur dafür, *welche* Elemente man zieht.
+
 ### Ziehen ohne Zurücklegen
+
+Ziehen *ohne Zurücklegen* (oft auch *ohne Wiederholung* genannt) bedeutet, dass ein Element das einmal gezogen wurde aus der Grundgesamtheit entfernt wird, und im weiteren Verlauf nicht noch einmal gezogen werden kann.
+
+Diese Situation kennt man aus der klassischen Stichprobe, bei der aus einer Grundgesamtheit von \(N\) Elementen ein paar Elemente gezogen werden. Auch eine Lottoziehung, bei der 6 aus 49 Kugeln gezogen werden, folgt diesem Prinzip.
+
+Die Gesamtzahl der möglichen Kombinationen von \(k\) Elementen aus einer Grundgesamtheit mit \(N\) Elementen ist
+
+\[ {N\choose k} = \frac{N!}{(N-k)!\cdot k!}. \]
+
+Einige Beispiele für die Kombination ohne Zurücklegen:
+
+- Aus einem Pokerspiel mit 52 Karten werden 2 Karten ("eine Hand") gezogen.
+- Auf einer Party mit 12 Personen gibt zur Begrüßung jeder jedem einmal die Hand. Wie oft wird insgesamt Hände geschüttelt? (ohne Reihenfolge, da eine bestimmte Person sich nicht selbst die Hand gibt, also nicht zweimal gezogen werden kann).
+- Lotto: Wieviele Möglichkeiten gibt es, 6 von 49 Zahlen anzukreuzen?
+
+Für das Pokerspiel kommen wir auf \({52 \choose 2} = 1326\) mögliche Hände (wobei hier z.B. die Hände [3\(\clubsuit\) K\(\heartsuit\)] und [K\(\heartsuit\) 3\(\clubsuit\)] als äquivalent angesehen werden, die Hände [9\(\spadesuit\) 2\(\diamondsuit\)] und [9\(\diamondsuit\) 2\(\spadesuit\)] allerdings nicht.). Auf der Party haben wir \({12 \choose 2} = 66\) Begrüßungen. Hier rechnet man ohne Reihenfolge, da es für ein Paar egal ist, wer wem die Hand gibt. Ziehen ohne Zurücklegen wird angewendet, da ansonsten—falls wir "mit Zurücklegen" ziehen würden—eine Person zweimal gezogen werden könnte, und sich somit selbst die Hand gibt. Die berühmte Zahl für die 6 aus 49 im Lotto ist \({49\choose 6} = 13983816\). Soviele Möglichkeiten gibt es, die Kreuzchen auf den Lottoschein zu setzen. Mit Superzahl (die ist eine Ziffer von 0 bis 9) sind es übrigens nochmal zehnmal so viele!
+
 ### Ziehen mit Zurücklegen
+
+Diese Art der Stichprobenbildung kommt in der Praxis eher selten vor. Ein Anwendungsfall könnte in etwa so lauten:
+
+Wieviele Möglichkeiten gibt es, fünf Äpfel auf drei Kinder zu verteilen?
+
+Man berechnet die Anzahl dieser Möglichkeiten wie folgt:
+\[ {N+k-1 \choose k} = \frac{(N+k-1)!}{(N-1)!\cdot k!} \]
+
+In unserem Beispiel hilft es, sich das Verteilen andersherum vorzustellen: Jeder Apfel "zieht sich ein Kind", und zwar ohne Reihenfolge, da es egal ist *welche* Äpfel ein Kind hat, und mit Zurücklegen, da ein Kind öfter als einmal ausgewählt werden kann.
+
+Es gibt insgesamt also \(N=3\) Elemente (Kinder), und es werden \(k=5\) Elemente mit Zurücklegen gezogen (ein Kind pro Apfel).
+
+Hier kämen wir also auf \({3+5-1 \choose 5} = {7 \choose 5} = \frac{7!}{5! \cdot 2!} = \frac{7\cdot 6}{2\cdot 1} = 21\) mehr oder weniger faire Möglichkeiten, die Äpfel auf die Kinder zu verteilen.

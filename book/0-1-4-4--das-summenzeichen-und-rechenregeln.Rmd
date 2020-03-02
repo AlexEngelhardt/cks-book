@@ -1,4 +1,4 @@
-### Das Summenzeichen $\Sigma$ und Rechenregeln
+### Das Summenzeichen $\Sigma$ und Rechenregeln {#sec-summenzeichen}
 
 Das grosse Sigma \(\Sigma\) wird verwendet, um längere Summen in einer kurzen Schreibweise darzustellen. Meist wird das Zeichen verwendet, wenn man Kennziffern oder Teststatistiken für eine Stichprobe ausrechnet.
 

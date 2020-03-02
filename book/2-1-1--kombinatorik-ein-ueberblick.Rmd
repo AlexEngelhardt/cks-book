@@ -1,1 +1,41 @@
 ## Kombinatorik: Ein Überblick
+
+Die Kombinatorik ist ein breites Teilgebiet der Mathematik. Im Bereich der Statistik sind hier aber meist nur Berechnungen gemeint, die mit Stichproben und Umordnungen aus einer Grundgesamtheit zu tun haben. Die Problemstellung ist hier meist von der Form "es werden \(k\) Objekte aus einer Grundgesamtheit von \(N\) Objekten gezogen".
+
+Die zwei zentralen Begriffe sind hier zum einen die *Kombination*, und zum anderen die *Variation* von Objekten. Der Unterschied zwischen den beiden Begriffen ist, dass in einer Kombination die Reihenfolge der Objekte nicht interessant ist, in einer Variation jedoch schon.
+
+**Das Wichtigste in Kürze**
+
+In einer Aufgabe sollte man sich immer die folgenden Fragen stellen:
+
+1. Wie groß ist meine Grundgesamtheit? \(\longrightarrow N\)
+2. Wieviele Objekte werden gezogen? \(\longrightarrow k\)
+3. Ist die Reihenfolge der gezogenen Objekte wichtig? (Falls ja: [Variation](#sec-variationen) / Falls nein: [Kombination](#sec-kombinationen))
+4. Werden die Objekte mit oder ohne Zurücklegen gezogen?
+5. Kommen Objekte in der Grundgesamtheit mehrfach vor?
+
+Durch die Antworten auf die Fragen 3 und 4 wird nun klar, welche der Formeln aus der folgenden Tabelle man verwendet.
+
+|                  | Variation                                | Kombination                                             |
+| ---------------- | ---------------------------------------- | ------------------------------------------------------- |
+| Mit Zurücklegen  | \(N^k\)                                  | \(\frac{(N+k-1)!}{(N-1)!\cdot k!} = {N+k-1 \choose k}\) |
+| Ohne Zurücklegen | \(\frac{N!}{(N-k)!} = {N \choose k}k! \) | \(\frac{N!}{(N-k)!\cdot k!} = {N \choose k}\)           |
+
+Die Schreibweise \({N \choose k}\) beschreibt dabei den [Binomialkoeffizienten](#fakultaet) (s. Kap. \@ref(fakultaet)).
+
+Die [Permutation](#sec-permutationen) ist ein Spezialfall der Variation, wenn man \(N=k\) setzt. In Worten ausgedrückt hat man eine Permutation, wenn man wissen will, auf wieviele Arten man \(N\) unterscheidbare Objekte (z.B. eine vierköpfige Familie auf einem Familienfoto) in eine Reihenfolge anordnen kann. Hier ist dann auch die 5. Frage wichtig, denn es kann vorkommen, dass in der Ausgangsmenge manche Elemente gleich sind (in Kapitel \@ref(sec-permutationen) gibt es ein Beispiel dafür).
+
+Vorsicht: Wenn man \(N=k\) wählt, also z.B. 7 Objekte hat, und davon 7 zieht, dann ergibt sich im Nenner der Term \(0!\), also die [Fakultät](#fakultaet) von Null. Hier muss man wissen, dass \(0!=1\) ist, sonst würde man durch Null dividieren.
+
+Die grundlegende Frage in der Kombinatorik ist also immer, wieviele Möglichkeiten es gibt, eine bestimmte Konstellation von Objekten zu erhalten. Der Trick in der Kombinatorik ist immer, dass man die Anzahl der gesamten Möglichkeiten durch Multiplizieren der einzelnen Möglichkeiten erhält. Dazu zwei Beispiele:
+
+- In meiner Küche habe ich die folgenden Zutaten:
+    - Fleisch: Huhn, Schwein und Rind
+    - Gemüse: Broccoli, Karotten und Bohnen
+    - Kohlenhydrate: Reis und Nudeln  
+Wenn ich nun ein Gericht aus einer Zutat jeder Gruppe (d.h. eine Sorte Fleisch, eine Sorte Gemüse, und eine Sorte Kohlenhydrate) kochen will, wieviele verschiedene Gerichte wären damit möglich?  
+Hier gibt es 3 Sorten Fleisch, 3 Sorten Gemüse und 2 Sorten Kohlenhydrate. Die Anzahl der gesamten Möglichkeiten erhält man dann, wie oben erklärt, durch die Multiplikation der einzelnen Möglichkeiten. Ich kann aus diesen Zutaten also \(3\cdot 3\cdot 2 = 18\) verschiedene Gerichte zaubern.
+- Wieviele Möglichkeiten gibt es, eine vierköpfige Familie für ein Familienfoto in eine Reihenfolge zu stellen?  
+  Wenn wir die Plätze in der Reihenfolge mit 1, 2, 3, und 4 benennen, gibt es für den ersten Platz vier Möglichkeiten. Für den zweiten Platz gibt es dann nur noch drei Möglichkeiten, da die erste Person ja schon auf Platz 1 steht. Für den dritten Platz gibt es noch zwei, und für den vierten Platz bleibt nur noch eine Möglichkeit. Die Gesamtzahl der möglichen Anordnungen ist also \(4\cdot 3\cdot 2\cdot 1 = 24\).
+
+Diese Situation ist eine Permutation, und ist in Kapitel \@ref(sec-permutationen) näher erklärt.

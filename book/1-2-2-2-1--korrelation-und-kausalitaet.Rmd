@@ -1,4 +1,4 @@
-#### Korrelation und Kausalität
+#### Korrelation und Kausalität {#sec-korrelation-kausalitaet}
 
 Zwischen einem reinem Zusammenhang, d.h. einer Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) zwischen zwei Variablen, und einer tatsächlichen Auswirkung von einer auf die andere Variable, d.h. einer Kausalität, besteht noch ein großer Unterschied, der in diesem Artikel behandelt wird.
 

@@ -1,4 +1,4 @@
-### Gini-Koeffizient
+### Gini-Koeffizient {#sec-gini}
 
 Der Gini-Koeffizient verpackt die grafische Information der [Lorenzkurve](#sec-lorenzkurve) in eine einzelne Zahl. Die Grundidee dazu basiert auf der Fläche, die zwischen der tatsächlichen Lorenzkurve und der Winkelhalbierenden (die "Gerade der perfekten Verteilung") aufgespannt wird; wir nennen sie *Konzentrationsfläche.* Wenn diese Fläche nämlich größer wird, ist das ein Zeichen dafür, dass die Verteilung ungerechter wird. Je größer diese Konzentrationsfläche ist, desto größer ist der dazugehörige Gini-Koeffizient, und desto ungerechter ist die Verteilung des betrachteten Merkmals.
 

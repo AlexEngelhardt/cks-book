@@ -1,3 +1,125 @@
 ## Rechenregeln für Erwartungswert und Varianz
-### Erwartungswert
-### Varianz
+
+### Rechenregeln für den Erwartungswert
+
+#### Summe zweier Zufallsvariablen
+
+Angenommen, wir führen unser Beispiel aus Kapitel \@ref(sec-duevdz), und werfen jetzt nicht einen, sondern zwei Würfel. Nennen wir die Zufallsvariable für den ersten Würfel \(X\), und die für den zweiten \(Y\). Uns interessiert der Erwartungswert der Summe der Augenzahlen, also \(\mathbb{E}(X+Y)\).
+
+Wir könnten jetzt aufwändig alle möglichen Ergebnisse von \(X+Y\) zusammen mit deren Wahrscheinlichkeiten ausrechnen. So ist z.B. \(\mathbb{P}(X+Y=2) = \frac{1}{36}\), da dieser Fall nur auftritt wenn \(X=1\) und \(Y=1\). Als weiteres Beispiel ist \(\mathbb{P}(X+Y=7) = \frac{1}{6}\), denn es gibt \(6\cdot 6 = 36\) mögliche Ergebnisse der beiden Würfel, und 6 dieser Möglichkeiten resultieren in einer Augenzahl von 7, nämlich \((1,6), \,(2,5), \,(3,4), \,(4,3), \,(5,2), \,(6,1)\).
+
+Über diese gemeinsame Dichte können wir dann den mit der Formel den Erwartungswert bilden.
+
+Oder wir machen es uns einfach und benutzen folgende Formel:
+
+\[ \mathbb{E}(X+Y) = \mathbb{E}(X) + \mathbb{E}(Y) \]
+
+Der Erwartungswert der Summe zweier Würfel ist also die Summe beider Erwartungswerte (den Satz muss man vielleicht zweimal lesen). Der Erwartungswert eines Wurfes ist ja 3.5; das haben wir hier schon berechnet. Bei unserem Beispiel ist \(\mathbb{E}(X+Y) = \mathbb{E}(X) + \mathbb{E}(Y) = 3.5 + 3.5 = 7\).
+
+Das klingt eventuell selbstverständlich. Dass das nicht so ist, sieht man bei der nächsten Rechenregel, die nur im Spezialfall unabhängiger Zufallsvariablen gilt.
+
+#### Produkt zweier unabhängiger Zufallsvariablen
+
+Was, wenn wir wie oben zwei Würfel werfen, und den Erwartungswert vom Produkt statt der Summe der Augenzahlen berechnen möchten? Unter der Bedingung, dass zwei Zufallsvariablen **unabhängig** sind, geht das:
+
+\[ \mathbb{E}(X \cdot Y) = \mathbb{E}(X) \cdot \mathbb{E}(Y), \]
+
+und damit ist unser gesuchter Erwartungswert \(3.5 \cdot 3.5 = 12.25\).
+
+Vorsicht: Bei abhängigen Zufallsvariablen gilt diese Regel nicht. Ein Beispiel für zwei Zufallsvariablen, die voneinander abhängig sind, ist \(X\): Augenzahl auf der Oberseite eines geworfenen Würfels, und \(Y\): Augenzahl auf der Unterseite desselben Würfels. Wenn \(X=2\), ist automatisch \(Y=5\) (die Augenzahlen auf gegenüberliegenden Seiten summieren sich nämlich immer zu 7). Wenn wir den Erwartungswert von \(X\cdot Y\) von Hand berechnen (über die Summe aller möglichen Ergebnisse multipliziert mit ihren Wahrscheinlichkeiten), kommen wir auf das folgende (richtige) Ergebnis:
+
+\[ \mathbb{E}(X\cdot Y) = \frac{1}{6} \cdot (1 \cdot 6) + \frac{1}{6} \cdot (2 \cdot 5) + \frac{1}{6} \cdot (3 \cdot 4) + \frac{1}{6} \cdot (4 \cdot 3) + \frac{1}{6} \cdot (5 \cdot 2) + \frac{1}{6} \cdot (6 \cdot 1) \approx 9.333, \]
+
+und das ist nicht dasselbe wie \(\mathbb{E}(X) \cdot \mathbb{E}(Y) = 3.5 \cdot 3.5 = 12.25\), was das falsche Ergebnis ist.
+
+#### Lineartransformationen {#sec-ew-lineartrafo}
+
+Angenommen, der Wetterbericht verrät euch, dass die erwartete Außentemperatur morgen 24 Grad Celsius (°C) beträgt, könnt ihr daraus die erwartete Außentemperatur in Grad Fahrenheit (°F) berechnen?
+
+Natürlich. Und das ist die Idee hinter dieser Formel:
+
+\[ \mathbb{E}(aX + b) = a \cdot \mathbb{E}(X) + b \]
+
+Von °C rechnet man wie folgt in °F um: \(^{\circ}F = 1.8 \cdot ^{\circ}C + 32\). Die Umwandlung von Grad Celsius in Grad Fahrenheit (und andersrum) ist eine **Lineartransformation**. In unserem Fall ist \(a=1.8\) und \(b=32\). Die erwartete Temperatur in Fahrenheit ist also
+
+\[ \mathbb{E}(^{\circ}F) = \mathbb{E}(1.8 \cdot ^{\circ}C + 32) = 1.8\cdot \mathbb{E}(^{\circ}C) + 32 =1.8\cdot 24 + 32 = 75.2 \]
+
+#### Transformationsregel {#sec-transformationsregel}
+
+Manchmal bildet man aus einer Zufallsvariablen eine neue Zufallsvariable, wenn man nicht an dem Ergebnis eines Zufallsexperiments interessiert ist, sondern an einer Transformation davon.
+
+Schauen wir uns ein vereinfachtes Casinospiel an: Wir werfen einen Würfel. Kommt eine 1 oder 2, verlieren wir 15€. Kommt aber eine 3, 4, 5, oder 6, gewinnen wir 5€. Ist das ein Spiel, das wir spielen können? Oder, anders formuliert, hat dieses Glücksspiel einen positiven Erwartungswert?
+
+Unsere alte Zufallsvariable ist der Würfelwurf, \(X\). Jetzt sind wir aber nicht am Erwartungswert von \(X\) interessiert (der ist 3,5 und unwichtig), sondern am Erwartungswert von unserem Glücksspiel, das wir \(Y\) nennen.
+
+Wir können \(Y\) als Funktion von \(X\) darstellen, und \(Y=g(X)\) dazu sagen. Diese Funktion ist wie folgt definiert:
+
+\[ \begin{aligned} g(1) &= -15 \\ g(2) &= -15 \\ g(3) &= +5 \\ g(4) &= +5 \\ g(5) &= +5 \\ g(6) &= +5 \end{aligned} \]
+
+Die Transformationsregel hilft uns nun, den Erwartungswert von \(Y\) zu berechnen, und ist (**für diskrete Zufallsvariablen**) wie folgt definiert:
+
+\[ \mathbb{E}(Y) = \mathbb{E}(g(X)) = \sum_i g(x_i) f(x_i) \]
+
+Dabei ist \(g(x_i)\) der Wert von \(Y\), also der Gewinn/Verlust des Spiels, und \(f(x_i)\) die zugehörige Wahrscheinlichkeit, die wir von \(X\), also vom Würfelwurf her kennen. Schreiben wir diese Formel für unseren Fall aus:
+
+\[ \mathbb{E}(Y) = (-15)\cdot \frac{1}{6} + (-15)\cdot \frac{1}{6} + 5\cdot \frac{1}{6} + 5\cdot \frac{1}{6} + 5\cdot \frac{1}{6} + 5\cdot \frac{1}{6} \approx -1.667.\]
+
+Somit ist der Erwartungswert dieses Glücksspiels -1.667€, und damit negativ. Es lohnt sich also nicht, zu spielen. Ist auch keine Überraschung, da es ein Casinospiel ist. :-)
+
+**Für stetige Zufallsvariablen** greift genau dasselbe Konzept, aber die Summe wird durch ein Integral ersetzt. Die Formel wird etwas schwieriger zu berechnen und lautet hier
+
+\[ \mathbb{E}(Y) = \mathbb{E}(g(X)) = \int_{-\infty}^\infty g(x) f(x) dx. \]
+
+Die häufigste Anwendung dieser Regel ist wohl bei der Berechnung der Varianz einer Zufallsvariablen (s. Kap. \@ref(sec-duevsz-varianz)) zu finden. Hier können wir den Verschiebungssatz anwenden, und uns bei der Berechnung einiges an Zeit sparen, wenn wir \(\mathbb{E}(X^2)\) berechnen.
+
+### Rechenregeln für die Varianz
+
+#### Lineartransformationen
+
+Die Varianz einer Zufallsvariablen ändert sich nicht, wenn ich zu jeder Realisierung einen festen Wert \(b\), zum Beispiel 4, addiere. Wenn ich die Realisierungen aber mit einem Faktor \(a\) multipliziere, dann wird die Varianz der Zufallsvariable mit \(a^2\) multipliziert. In einer Formel ausgedrückt sieht das so aus:
+
+\[ \mathbb{V}(a\cdot X + b) = a^2 \cdot \mathbb{V}(X) \]
+
+Wenn der Wetterbericht also wie oben in Kap. \@ref(sec-ew-lineartrafo) erklärt, für morgen eine erwartete Temperatur von \(\mathbb{E}(^{\circ}C)=24^{\circ}C\) vorhersagt, und eine Unsicherheit, d.h. Varianz, von \(\mathbb{V}(^{\circ}C)=4\) angibt, dann ist dieselbe Vorhersage in Fahrenheit übersetzt:
+
+\[ \begin{aligned} \mathbb{E}(^{\circ}F) &= 1.8 \cdot 24 + 32 = 75.2 \\ \mathbb{V}(^{\circ}F) &= 1.8^2 \cdot 4 = 12.96 \end{aligned} \]
+
+#### Summe zweier unabhängiger Zufallsvariablen
+
+Möchten wir die Varianz der Summe zweier Zufallsvariablen bestimmen, ist es sehr hilfreich, wenn die beiden Zufallsvariablen voneinander unabhängig sind. Dann ist die Varianz der Summe nämlich gleich der Summe der einzelnen Varianzen:
+
+\[ \mathbb{V}(X + Y) = \mathbb{V}(X) + \mathbb{V}(Y) \]
+
+Falls \(X\) und \(Y\) voneinander abhängig sind, gilt diese Formel nicht mehr. Das sieht man an einem stupiden, aber hoffentlich einleuchtenden Beispiel: Die Zufallsvariable \(X\) ist sehr wohl abhängig von sich selbst, \(X\). Möchten wir die Varianz von \(X+X\) bestimmen, kommt nach dem Abschnitt über Lineartransformationen heraus: \(\mathbb{V}(X+X) = \mathbb{V}(2\cdot X) = 2^2 \cdot \mathbb{V}(X) = 4 \cdot \mathbb{V}(X)\), und das ist nicht dasselbe wie das, was fälschlicherweise hier herauskommen würde, nämlich \(2 \cdot \mathbb{V}(X)\).
+
+#### Der Verschiebungssatz {#sec-verschiebungssatz}
+
+Der Verschiebungssatz ist eine Regel, mit der wir die Varianz einer Zufallsvariablen umformen. Wir können die Varianz dadurch mit einer anderen Formel berechnen, die in den meisten Fällen (auf Papier und im Taschenrechner) viel einfacher geht. Die Varianz ist (für beide Fälle, stetige und diskrete Zufallsvariablen) durch den Verschiebungssatz definiert als
+
+\[ \mathbb{V}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2. \]
+
+Der zweite Teil der Differenz, nämlich \(\mathbb{E}(X)^2\), ist dabei einfacher zu bestimmen: Er ist einfach das Quadrat des Erwartungswertes \(\mu\). Wenn man den also bestimmt hat, quadriert man ihn einfach und setzt ihn dort ein.
+
+Der erste Teil, \(\mathbb{E}(X^2)\) ist komplizierter: Er ist der Erwartungswert einer neuen, transformierten Zufallsvariablen, nämlich \(X^2\). Ihn müssen wir mit der Transformationsregel (s. Kap. \@ref(sec-transformationsregel)) bestimmen. Dieser Teil kommt nun wieder darauf an, ob wir es mit einer diskreten oder stetigen Zufallsvariablen zu tun haben. Er ist aber meistens trotzdem schneller zu berechnen als über die andere, längere Definition der Varianz.
+
+**Beispiel Verschiebungssatz: Varianz eines Würfelwurfs**
+
+Den Verschiebungssatz veranschaulicht man am besten anhand eines Beispiels. Wir können die Varianz eines Würfelwurfs zwar theoretisch einfach durch die Formel der diskreten Gleichverteilung (s. Kap. \@ref(sec-diskrete-gleichverteilung)) berechnen, wie es im verlinkten Artikel geschieht. Aber die allgemeine Formel ist natürlich immer noch gültig. Die ganz allgemeine (aber auch ganz aufwändige) Formel lautet ja
+
+\[ \mathbb{V}(X) = \mathbb{E}[(X-\mu)^2] = \sum_i (x_i - \mu)^2 f(x_i) \]
+
+Wenn wir \(\mathbb{E}(X) = \mu = 3.5\) berechnet haben, können wir die Varianz berechnen:
+
+\[\mathbb{V}(X) = (1 - 3.5)^2 \cdot \frac{1}{6} + \ldots + (6 - 3.5)^2 \cdot \frac{1}{6} = 2.91667 \]
+
+Über den Verschiebungssatz geht das nun auch. In diesem einfachen Beispiel ist das nicht viel schneller, aber sobald der Träger größer ist, d.h. mehr Ausprägungen möglich sind, nimmt das viel Arbeit ab. Wir brauchen also \(\mathbb{E}(X)\) (den haben wir schon, das ist 3.5) und \(\mathbb{E}(X^2)\). Diesen Wert erhalten wir mit Hilfe der oben beschriebenen Transformationsregel, wenn wir nämlich \(g(x) = x^2\) setzen. Ich zeige hier nochmal die Berechnung von \(\mathbb{E}(X)\), und gleich danach die Berechnung von \(\mathbb{E}(X^2)\), um die Parallelen zu betonen:
+
+\[ \mathbb{E}(X) =\frac{1}{6} \cdot 1 +\frac{1}{6} \cdot 2 + \frac{1}{6} \cdot 3 +\frac{1}{6} \cdot 4 +\frac{1}{6} \cdot 5 +\frac{1}{6} \cdot 6 = 3.5\]
+
+\[ \mathbb{E}(X^2) =\frac{1}{6} \cdot 1^2 +\frac{1}{6} \cdot 2^2 + \frac{1}{6} \cdot 3^2 +\frac{1}{6} \cdot 4^2 +\frac{1}{6} \cdot 5^2 +\frac{1}{6} \cdot 6^2 = 15.1667 \]
+
+Schließlich erhalten wir die Varianz, natürlich dasselbe Ergebnis, aber mit einer anderen Methode berechnet:
+
+\[ \mathbb{V}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2 = 15.1667 - 3.5^2 = 2.91667 \]
+
+

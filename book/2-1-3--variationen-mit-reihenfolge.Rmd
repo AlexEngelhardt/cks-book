@@ -1,3 +1,25 @@
-## Variationen - mit Reihenfolge
+## Variationen - mit Reihenfolge {#sec-variationen}
+
+Bei einer Variation zieht man eine Stichprobe während die Reihenfolge, in der die Elemente gezogen werden, beachtet wird. Es macht also einen Unterschied, ob ein Element als erstes oder als zweites, drittes, etc. gezogen wird.
+
 ### Ziehen ohne Zurücklegen
+
+Typische Fragestellungen in diesem Fall sind etwa die folgenden:
+
+- Auf wieviele Arten kann man bei einem Formel-1-Rennen mit 16 Rennfahrern das Siegertreppchen (mit 3 Plätzen) besetzen?
+- Wieviele Möglichkeiten gibt es, ein rotes und ein weißes Auto in 5 Parklücken zu parken?
+
+Bei dem Formel-1-Rennen haben wir 16 mögliche Fahrer, die den ersten Platz belegen können. Danach bleiben uns noch 15 Fahrer übrig, aus denen wir einen für den zweiten Platz aussuchen können, und schließlich 14 mögliche Fahrer für den dritten Platz. Die Formel lautet also
+\[ 16\cdot 15\cdot 14 = \frac{16!}{13!} = 3360. \]
+Verallgemeinert für \(N\) Objekte, aus denen \(k\) ohne Zurücklegen gezogen werden, lautet die Formel
+\[ \frac{N!}{(N-k)!}. \]
+
+Das Problem der beiden Autos, die fünf Parklücken zur Auswahl haben, ist ähnlich dem der 16 Rennfahrer, nur anders herum formuliert. Vergleicht man nämlich die 5 Parkplätze mit den 16 Rennfahrern, und die zwei Autos mit den drei Siegerplätzen, kommen wir auf \(5!/(5-2)! = 20\) mögliche Anordnungen der beiden Autos.
+
 ### Ziehen mit Zurücklegen
+
+Beim Ziehen mit Zurücklegen können wir jedes Mal \(N\) Elemente ziehen. Da die Reihenfolge hier beachtet wird, wird die Anzahl der Möglichkeiten in jedem der \(k\) Versuche mit \(N\) multipliziert. Es gibt in diesem Fall also \(N^k\) Möglichkeiten. Dazu ein Beispiel:
+
+Ein Zahlenschloss für das Fahrrad besteht aus vier Rädern, die jeweils die Ziffern 1--6 enthalten. Wieviele Stellungen hat das Fahrradschloss?
+
+Jedes der \(k=4\) Räder hat \(N=6\) mögliche Stellungen. Die Gesamtzahl der möglichen Kombinationen ist also \(6^4 = 1296\).

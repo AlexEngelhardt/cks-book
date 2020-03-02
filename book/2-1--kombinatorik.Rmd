@@ -1,1 +1,1 @@
-# Kombinatorik {#kombinatorik}
+# Kombinatorik {#sec-kombinatorik}

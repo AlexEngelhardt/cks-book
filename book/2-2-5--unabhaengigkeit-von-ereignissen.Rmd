@@ -1,1 +1,22 @@
 ## Unabhängigkeit von Ereignissen
+
+Wenn zwei Ereignisse \(A\) und \(B\) voneinander abhängig sind, dann liefert das Eintreten von \(A\) hilfreiche Information über die Wahrscheinlichkeit des Eintretens von \(B\). Dazu zwei Bespiele:
+
+Die Augenfarbe und Haarfarbe einer Person sind voneinander abhängig. Wenn ich z.B. weiß, dass Ereignis \(A\): "eine Person hat schwarze Haare", eingetreten ist, dann macht das das Ereignis \(D\): "diese Person hat braune Augen", viel wahrscheinlicher als wenn sie blonde Haare hätte. In diesen Beispiel ist \(A\) von \(D\) *abhängig* (und umgekehrt auch \(D\) von \(A\)).
+
+Ein Beispiel für zwei unabhängige Ereignisse wäre das Ereignis \(A\): "Eine Person hat schwarze Haare" und das Ereignis \(C\): "Diese Person ist über 1,70m groß". Oder, wenn man es auf die Spitze treiben will: das Ereignis \(A\): "eine Person hat schwarze Haare" und Ereignis \(B\): "Gestern hat es geschneit" sind ganz bestimmt voneinander **un**abhängig.
+
+Sobald man mehr als ein Ereignis betrachtet, ist es essentiell zu wissen ob diese Ereignisse voneinander abhängig sind oder nicht. Die *Unabhängigkeit* zweier Ereignisse ist ein wichtiges Konzept, da sie viele Berechnungen immens vereinfacht. Sind zum Beispiel zwei Ereignisse voneinander unabhängig, kann man ihre gemeinsame Wahrscheinlichkeit viel einfacher berechnen als wenn sie abhängig sind.
+
+**Vereinfachungen wenn zwei Ereignisse unabhängig sind**
+
+1. Wenn zwei Ereignisse voneinander unabhängig sind, ist die [bedingte Wahrscheinlichkeit](#sec-bedingte-wsk) gleich der unbedingten Wahrscheinlichkeit:
+\[ \mathbb{P}(A|B) = \mathbb{P}(A) \]
+Dieses Gesetz gilt auch umgekehrt:
+\[ \mathbb{P}(B|A) = \mathbb{P}(B) \]
+Das leuchtet ein, da das Eintreten von \(B\) keine genauere Information über das Eintreten von \(A\) (oder umgekehrt) liefert. Um auf das oben aufgeführte Beispiel zurückzugreifen: Die bedingte Wahrscheinlichkeit dass eine Person schwarze Haare hat, gegeben es hat gestern geregnet, ist genau gleich der unbedingten Wahrscheinlichkeit, dass eine Person schwarze Haare hat. Die Tatsache dass es gestern geregnet hat, liefert keine zusätzliche Information. (Anders wäre es mit Ereignis \(D\): "diese Person hat braune Augen". Das wäre eine hilfreiche Information.)
+2. Außerdem kann man bei zwei unabhängigen Ereignissen die gemeinsame Wahrscheinlichkeit für das Eintreten beider Ereignisse einfach durch das Produkt der einzelnen Wahrscheinlichkeiten berechnen:
+\[ \mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B) \]
+Falls zwei Ereignisse abhängig sind, gilt diese Formel nicht, sondern man verwendet in einem der beiden Faktoren die bedingte Wahrscheinlichkeit:
+\[ \mathbb{P}(A \cap B) = \mathbb{P}(A|B) \cdot \mathbb{P}(B) \]
+Für unabhängige \(A\) und \(B\) reduziert sich der erste Faktor zur unbedingten Wahrscheinlichkeit, da in diesem Fall \(\mathbb{P}(A|B) = \mathbb{P}(A)\) gilt.
