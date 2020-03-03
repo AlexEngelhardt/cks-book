@@ -91,7 +91,7 @@ knitr::include_graphics("img/pictures/f_F_Q.png")
 - Die Quantilsfunktion ist die Umkehrfunktion der Verteilungsfunktion: \[ Q(x) = F^{-1}(x) \]
 - Die Verteilungsfunktion ist die Umkehrfunktion der Quantilsfunktion: \[ F(x) = Q^{-1}(x) \]
 
-### Erwartungswert
+### Erwartungswert {#sec-duevsz-erwartungswert}
 
 Hinter dem Erwartungswert einer stetigen Zufallsvariable steckt genau dieselbe Idee wie im diskreten Fall (s. Kap. \@ref(#sec-duevdz-erwartungswert)). Hier wird lediglich statt der Summe ein Integral verwendet. Im diskreten Fall haben wir über alle möglichen Ausprägungen \(x_i\) multipliziert mit der zugehörigen Dichte \(f(x_i)\) summiert, und hier werden wir stattdessen über alle Ausprägungen \(x\) multipliziert mit der Dichte \(f(x)\) integrieren:
 

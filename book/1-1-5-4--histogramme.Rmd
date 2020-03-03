@@ -1,4 +1,4 @@
-### Histogramme
+### Histogramme {#sec-histogramme}
 
 Histogramme sehen zunächst ähnlich aus wie Balkendiagramme, werden aber für stetige statt diskrete Daten verwendet. Um ein Histogramm zu zeichnen, muss man seine Daten zuerst klassieren, d.h. Gruppen bilden und sie ihnen zuordnen.
 

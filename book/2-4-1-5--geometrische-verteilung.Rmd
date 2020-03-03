@@ -1,4 +1,4 @@
-### Geometrische Verteilung: Der betrunkene Pförtner
+### Geometrische Verteilung: Der betrunkene Pförtner {#sec-geometrische}
 
 **Idee**
 
