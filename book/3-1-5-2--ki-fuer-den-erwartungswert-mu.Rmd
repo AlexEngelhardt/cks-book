@@ -1,3 +1,121 @@
 ### KI für den Erwartungswert $\mu$
+
+Das KI für den Erwartungswert folgt einem ähnlichen Prinzip wie das in Kapitel \@ref(sec-ki-anteil) bereits besprochene KI für einen Anteilswert:
+
+\[ \text{Parameter} \pm \text{Quantil} \cdot \sqrt{\frac{\text{Varianz}}{n}} \]
+
+In den meisten Fällen in der Realität ist die wahre Varianz nicht bekannt, und wird auch einfach aus der Stichprobe geschätzt. In einer Klausur wird der Fall, dass die Varianz \(\sigma^2\) bekannt ist, allerdings noch gefordert - daher betrachten wir ihn hier extra.
+
+Die Formeln für die Konfidenzintervalle der beiden Varianten unterscheiden sich nur minimal:
+
+- Wenn die wahre Varianz \(\sigma^2\) bekannt ist, nehmen wir in der Formel direkt die wahre Varianz \(\sigma^2\) - anderenfalls schätzen wir sie durch die Stichprobenvarianz \(s^2\) und nehmen diesen Wert.
+- Wenn die wahre Varianz \(\sigma^2\) bekannt ist, dann nehmen wir das Quantil der Normalverteilung - anderenfalls nehmen wir das Quantil der t-Verteilung mit \(n-1\) Freiheitsgraden.
+    - Wenn wir allerdings eine ausreichend große Stichprobe haben, z.B. \(n>30\), dann können wir doch wieder das Quantil der Normalverteilung verwenden.
+
+Sehen wir uns die Formeln der beiden KIs also an:
+
 #### Falls $\sigma^2$ bekannt
+
+Für das Konfidenzintervall brauchen wir die folgenden Werte:
+
+- Die Stichprobengröße \(n\)
+- Den Mittelwert der Stichprobe \(\bar{x}\)
+- Die wahre Varianz \(\sigma^2\)
+    - In der Formel brauchen wir allerdings ihre Wurzel, die Standardabweichung, also \(\sigma\). Diese beiden Werte zu verwechseln, ist ein häufiger Fehler in der Klausur.
+- Die gewünschte Irrtumswahrscheinlichkeit \(\alpha\)
+    - Damit berechnen wir das passende \(1-\frac{\alpha}{2}\)-Quantil der Normalverteilung, das wir in der Formel brauchen - also den Wert \(z_{1-\frac{\alpha}{2}}\). Für eine gewünschte Irrtumswahrscheinlichkeit von 5% brauchen wir also später das 97,5%-Quantil (das ist 1.96, wer es nachprüfen möchte).
+
+Die untere Grenze des Intervalls ist dann:
+
+\[ u = \bar{x} - z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\]
+
+Für die obere Grenze ersetzen wir einfach das erste Minus durch ein Plus:
+
+\[ o = \bar{x} + z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\]
+
+Insgesamt lautet das Konfidenzintervall also
+
+\[ \left[ \bar{x} - z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \, \, \bar{x} + z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}} \right] \]
+
+Oder, in Kurzschreibweise mit dem \(\pm\) Zeichen:
+
+\[ \bar{x} \pm z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\]
+
+```{exercise, echo=TRUE}
+
+Der Intelligenzquotient (IQ) ist so erstellt worden, dass er in der Gesamtbevölkerung normalverteilt ist mit einem Mittelwert von 100 und einer Standardabweichung von 15 (d.h. einer Varianz von \(15^2 = 225\). Wir haben nun eine Stichprobe von \(n=35\) Social-Media-Powerusern, die täglich mehr als 3 Stunden in sozialen Netzen unterwegs sind. Ich erspare euch die "Rohdaten", d.h. die einzelnen 35 IQs, und liefere direkt den Mittelwert der Stichprobe:
+
+\(\bar{x} = 93.523\)
+
+Wir können die Varianz in der Gruppe als bekannt annehmen, nämlich als \(\sigma^2 = 225\). Berechne nun ein 95%-Konfidenzintervall (d.h. \(\alpha=0.05\)) für den mittleren IQ in der Grundgesamtheit *aller Social-Media-Poweruser*.
+
+```
+```{solution, echo=TRUE}
+
+Die Formel dafür kennen wir:
+
+\[ \bar{x} \pm z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\]
+
+Dort tragen wir jetzt einfach alle geforderten Werte nacheinander ein. Manche müssen wir berechnen, andere aus einer Tabelle ablesen, und wieder andere einfach einsetzen:
+
+- \(\bar{x} = 93.523\), das steht in der Aufgabe
+- \(\alpha = 0.05\), denn da wir ein 95%-KI brauchen, ist die Irrtumswahrscheinlichkeit 5%, also 0.05.
+- \(z_{1-\frac{\alpha}{2}}\) ist \(z_{0.975}\), also das 97,5%-Quantil der Normalverteilung. Aus der Verteilungstabelle (s. Kap. \@ref(sec-tabelle-normalverteilung)) lesen wir ab, dass das 1.96 ist.
+- \(\sigma\) ist die Standardabweichung (Vorsicht: Die *Wurzel* aus der Varianz! Nicht verwechseln!). Bei uns ist \(\sigma = \sqrt{\sigma^2} = \sqrt{225} = 15\)
+- \(\sqrt{n} = \sqrt{35} = 5.916\)
+
+Damit können wir das Intervall berechnen:
+
+\[ 93.523 \pm 1.96 \cdot \frac{15}{5.916}\]
+
+Das gesuchte Konfidenzintervall ist also \(93.523 \pm 4.97\), also als Intervall geschrieben \([88.553, 98.493]\). Der mittlere IQ unter Social-Media-Powerusern liegt also wahrscheinlich in diesem Bereich.
+
+```
+
 #### Falls $\sigma^2$ unbekannt
+
+Wie bereits erwähnt: Das Prinzip ist hier dasselbe, das KI wird berechnet durch
+
+\[ \text{Parameter} \pm \text{Quantil} \cdot \sqrt{\frac{\text{Varianz}}{n}} \]
+
+Die einzigen beiden Unterschiede sind, dass statt dem \(z\)-Quantil der Normalverteilung nun das der t-Verteilung verwendet wird, und dass nicht mehr die wahre Standardabweichung \(\sigma\) verwendet wird (da sie ja jetzt unbekannt ist), sondern die Stichprobenvarianz \(s^2\), bzw. ihre Wurzel \(s\) verwendet wird. Diese berechnen wir auf die bekannte Art und Weise: \(s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2\).
+
+Die Formel für das Konfidenzintervall ist von der Bedeutung her identisch mit dem Fall, wenn die wahre Varianz \(\sigma^2\) bekannt ist, nur mit den oben besprochenen Unterschieden:
+
+\[ \bar{x} \pm t_{1-\frac{\alpha}{2}}(n-1) \cdot \frac{s}{\sqrt{n}}\]
+
+Die Bezeichnung \(t_{1-\frac{\alpha}{2}}(n-1)\) sieht vielleicht etwas furchteinflößend aus, aber sie ist ganz einfach das \(1-\frac{\alpha}{2}\)-Quantil der t-Verteilung mit \(n-1\) Freiheitsgraden - das ist am Ende nur eine harmlose Dezimalzahl. Ihren Wert findet man in der Tabelle der t-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)).
+
+Anmerkung: Falls die Stichprobe mehr als 30 Beobachtungen hat, kann man im Normalfall doch wieder das \(z\)-Quantil der Normalverteilung (statt dem Quantil der t-Verteilung) verwenden.
+
+```{exercise, echo=TRUE}
+
+Wir interessieren uns für den mittleren Intelligenzquotienten (IQ) in einer Förderschule für Hochbegabte. In der breiten Bevölkerung ist zwar bekannt, dass der IQ normalverteilt ist mit \(\mu=100\) und \(\sigma^2=225\), aber in dieser Untergruppe kann man weder vom selben Mittelwert noch von derselben Varianz ausgehen. Wir erheben also durch einen IQ-Test die Zahlen für eine Stichprobe von \(n=22\) Hochbegabten, und erhalten:
+
+\(\bar{x} = 134.32\)
+\(s^2 = 98.83\)
+
+Berechne nun ein 95%-Konfidenzintervall für den mittleren IQ von Hochbegabten in Förderklassen.
+
+```
+```{solution, echo=TRUE}
+
+Wir verwenden ganz einfach die Formel für das KI, und setzen alle Werte nacheinander ein:
+
+\[ \bar{x} \pm t_{1-\frac{\alpha}{2}}(n-1) \cdot \frac{s}{\sqrt{n}}\]
+
+Die Werte, die wir brauchen sind:
+
+- \(\bar{x} = 134.32\), das steht direkt im Aufgabentext
+- \(\alpha = 0.05\), denn da wir ein 95%-KI brauchen, ist die Irrtumswahrscheinlichkeit 5%, also 0.05.
+- \(t_{1-\frac{\alpha}{2}}(n-1)\) ist das \(1-\frac{\alpha}{2}\)-Quantil, also das 97,5%-Quantil der t-Verteilung mit \(n-1\), also mit 21 Freiheitsgraden. In der Verteilungstabelle (s. Kap. \@ref(sec-tabelle-t-verteilung)) lesen wir ab, dass dieser Wert \(t_{0.975}(21) = 2.080\) ist
+- \(s = \sqrt{s^2} = \sqrt{98.83} = 9.941\)
+- \(\sqrt{n} = \sqrt{21} = 4.583\)
+
+Wir setzen also diese Werte ein und rechnen aus:
+
+\[ 134.32 \pm 2.080 \cdot \frac{9.941}{4.583}\]
+
+Das gesuchte Konfidenzintervall ist also \(134.32 \pm 4.51\), also in Intervallschreibweise \([129.81, 138.83]\). Der IQ unter Förderschülern liegt also ziemlich wahrscheinlich in diesem Bereich.
+
+```

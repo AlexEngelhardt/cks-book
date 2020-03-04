@@ -1,1 +1,35 @@
-## Was kommt in $H_0$ und was in $H_1$?
+## Was kommt in $H_0$ und was in $H_1$? {#sec-h0-h1}
+
+Beim Testen muss man zuallererst die beiden Hypothesen aufstellen. Hier tun sich viele Studenten schwer - auch ich hatte damals Probleme - daher möchte ich hier nochmal genauer erläutern, welcher Teil in welche Hypothese kommt.
+
+**Das Wichtigste: Man kann \(H_0\) nie beweisen!**
+
+Es ist nicht das gleiche, \(H_0\) beizubehalten, und \(H_0\) zu beweisen. Um zurück auf das Beispiel mit dem unschuldigen Angeklagten (aus Kapitel \@ref(sec-wat-tests)) zu kommen:
+
+Wenn ich beweisen möchte, dass der Angeklagte schuldig ist, *muss* ich meine Hypothesen so herum formulieren:
+
+- \(H_0\): Der Angeklagte ist unschuldig.
+- \(H_1\): Der Angeklagte ist schuldig
+
+Wenn ich nun "Daten erhebe", also in der Verhandlung Beweise gesammelt werden, dann tritt einer der folgenden zwei Fälle ein:
+
+- Es gibt genug Beweise für die Schuld des Angeklagten. Dann kann ich \(H_0\) ablehnen und habe \(H_1\) **nachgewiesen**, d.h. der Angeklagte ist (ziemlich sicher) schuldig. Die Antwort in diesem Fall lautet also: "\(H_1\) ist wahr" (natürlich nur zu dem gewählten Signifikanzniveau).
+- Man hat keine (oder nicht genug) Beweise für die Schuld des Angeklagten gefunden. Damit habe ich aber \(H_0\) (also die Unschuld) **nicht bewiesen**! Nur weil keine Beweise für die Schuld gefunden wurden, können wir nicht sagen "wir haben bewiesen dass der Angeklagte unschuldig ist". Die Antwort in dieser Situation lautet stattdessen: **"Wir wissen es nicht"**. In einer statistischen Auswertung sagt man dann zum Beispiel: "Es konnten keine Hinweise auf die Gültigkeit der Alternativhypothese gefunden werden."
+
+Man kann also \(H_0\) nie beweisen, sondern nur \(H_1\). Aus diesem Grund ist es so wichtig, dass man die Hypothesen richtig herum formuliert: Der Fall, den man nachweisen möchte, kommt in die Alternativhypothese. Die Metapher mit der Gerichtsverhandlung ist eine hilfreiche Eselsbrücke, um sich an dieses Vorgehen zu erinnern.
+
+**Ein Beispiel**
+
+Zwei Führungskräfte streiten sich: Kevin behauptet dass die Mitarbeiter ihrer Firma im Durchschnitt weniger als 6 Tage im Jahr krank sind, aber Falk ist davon überzeugt, dass sie mindestens 6 Tage im Jahr krank sind.
+
+Kevin möchte nun Recht bekommen, und nachweisen dass es weniger als 6 Tage sind. Das, was er beweisen möchte, muss in die Alternativhypothese \(H_1\). Die Nullhypothese wird "das Gegenteil" davon, sozusagen der Status quo, von dem Kevin ausgehen muss, solange er nicht ausreichend Beweise für \(H_1\) gesammelt hat. Seine Hypothesen lauten also:
+
+- \(H_0\): Die Mitarbeiter fehlen mindestens 6 Tage pro Jahr
+- \(H_1\): Die Mitarbeiter fehlen weniger als 6 Tage pro Jahr
+
+Wenn aber stattdessen Falk loszieht, Daten sammelt, und seine Vermutung beweisen will, möchte er ja genau das Gegenteil von Kevin beweisen. **Seine Hypothesen werden also genau andersherum formuliert**:
+
+- \(H_0\): Die Mitarbeiter fehlen weniger als 6 Tage pro Jahr
+- \(H_1\): Die Mitarbeiter fehlen mindestens 6 Tage pro Jahr
+
+Wenn man dieses Beispiel verinnerlicht hat, sollte das Aufstellen beliebiger Hypothesen kein Problem mehr sein. Wichtig ist, sich zu merken, dass es bei jedem Hypothesentest zwei mögliche Ergebnisse gibt, und man nur eines davon wirklich beweisen kann. Meistens hat man eine Vorliebe für eines der beiden Ergebnisse (in einer Klausur sollte das auch klar ersichtlich sein), und das wird dann die Alternativhypothese \(H_1\).

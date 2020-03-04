@@ -1,1 +1,39 @@
-## Was sind Hypothesentests?
+## Was sind Hypothesentests? {#sec-wat-tests}
+
+Hypothesentests führt man immer dann durch, wenn man irgendetwas mit Hilfe von erhobenen Daten nachweisen möchte, zum Beispiel dass auf dem Oktoberfest die Maßkrüge nicht ganz vollgemacht werden. Der Grundsatz bei allen statistischen Tests ist hierbei, dass wir das Gegenteil widerlegen müssen - wir müssen also widerlegen, dass der Maßkrug tatsächlich mit einem Liter gefüllt ist.
+
+Um den Grund für dieses Vorgehen zu verstehen, kann man sich eine Gerichtsverhandlung vorstellen, und Parallelen zum Ablauf eines Tests ziehen: Man geht davon aus, dass der Angeklagte unschuldig ist (ohne es genau zu wissen). Bevor man von der Schuld des Angeklagten überzeugt sein kann, muss man ausreichend Beweise gesammelt haben, um zweifelsfrei an die Schuldigkeit glauben zu können. Falls das nicht der Fall ist, muss man davon ausgehen, dass er unschuldig ist. Man könnte diesen Sachverhalt auch in statistischen Hypothesen formulieren:
+
+- \(H_0\): Der Angeklagte ist unschuldig
+- \(H_1\): Der Angeklagte ist schuldig
+
+### Wie läuft ein Test ab?
+
+Jeder Test besteht aus den folgenden sieben Schritten:
+
+1. **Hypothesen aufstellen**:  
+Zuallererst formuliert man seine Fragestellung in ein Hypothesenpaar um, und zwar eine *Nullhypothese* und eine *Alternativhypothese*. Man geht davon aus, dass die Nullhypothese gilt, außer man findet durch die Daten einen starken Hinweis, dass stattdessen die Alternativhypothese wahr ist.
+In diesem Schritt definiert man bereits das Skalenniveau seiner Zielgröße (also z.B. nominal- oder intervallskaliert) und eventuell vorhandener Einflussgrößen.
+2. **Test wählen**:  
+Mit den in Schritt 1 bestimmten Informationen kann man sich jetzt für den für seine Fragestellung richtigen Test entscheiden. In Kapitel \@ref(sec-welchen-test)) wird abhängig von den Skalenniveaus von Zielgröße und Einflussgröße der passende Test vorgeschlagen.
+3. **Signifikanzniveau festlegen**:  
+Man sollte das Signifikanzniveau festlegen, bevor man mit der Analyse beginnt. Es beschreibt die Wahrscheinlichkeit, einen bestimmten Fehler zu machen, nämlich die Nullhypothese abzulehnen, wenn sie in Wirklichkeit doch gilt.
+In einer Klausur ist das Signifikanzniveau meist vorgegeben, und in der Praxis hat sich der Wert 5% dafür eingebürgert.
+4. **Daten sammeln**:  
+Dann sammelt man Daten, also erhebt eine Stichprobe. In Übungen und Klausuren ist das meist schon passiert. Man muss beachten, dass man die Daten in dem Skalenniveau misst, das in Schritt 1. festgelegt wurde.
+5. **Prüfgröße berechnen**:  
+Aus den Daten berechnet man nun eine Prüfgröße, auch Teststatistik genannt. Die gesamte Stichprobe wird also *in eine einzige Zahl* zusammengefasst. Das ist beim klassischen Gaußtest zum Beispiel der Mittelwert der Daten (der mit einigen Faktoren standardisiert wird). Bei manchen anderen Tests ist die Berechnung der Prüfgröße ein wenig aufwändiger, aber die Idee ist überall dieselbe: Man fasst die Daten mit einer Formel in eine Prüfgröße zusammen, die einer bestimmten Verteilung folgt.
+6. **Verteilung der Prüfgröße bestimmen**:  
+Nun bestimmt man die Verteilung der Prüfgröße. Die Kernidee beim Testen ist nämlich, dass diese Prüfgröße, falls die Nullhypothese gilt, eine bestimmte Verteilung hat. Wenn wir diese Verteilung bestimmen, können wir nachsehen ob die Prüfgröße für unsere spezielle Stichprobe dort "gut genug" reinpasst, was für die Nullhypothese sprechen würde, oder eben nicht gut reinpasst, was dann ein starkes Indiz für die Alternativhypothese ist.
+7. **Kritischen Bereich oder p-Wert berechnen**:  
+Ein Test ist nun nichts weiteres als eine mathematische Regel, um zu entscheiden, ob diese Prüfgröße eher auf die Null- oder die Alternativhypothese schließen lässt. Bei der einfachsten Variante bestimmt man einfach einen kritischen Bereich für die Prüfgröße - wenn die Prüfgröße in diesem kritischen Bereich liegt, dann lehnen wir die Nullhypothese ab. Alternativ kann man aus der Prüfgröße auch einen p-Wert berechnen, und dann nachsehen ob er unter oder über dem gewählten Signifikanzniveau liegt.
+8. **Testentscheidung treffen**:  
+Zuletzt treffen wir die Testentscheidung: Wenn der Wert im kritischen Bereich liegt, haben wir einen Nachweis gefunden, dass die Alternativhypothese stimmt. Wenn der Wert der Prüfgröße aber außerhalb dieses kritischen Bereichs liegt, können wir keine sichere Aussage treffen.
+
+### Welche Arten von Tests gibt es?
+
+Die klassischen Tests behandeln Mittelwerte. Sie fragen also, ob der Mittelwert eines gemessenen Merkmals größer (oder kleiner) als ein bestimmter, für uns wichtiger, Wert ist. Das wäre bei dem Maßkrug der Fall, wo wir wissen wollen ob der Inhalt des Kruges gleich einem Liter ist, oder ob weniger als ein Liter abgefüllt wird.
+
+Andere Tests überprüfen, ob sich zwei Merkmale gegenseitig beeinflussen, oder ob sie unabhängig sind. Zum Beispiel könnte man sich dafür interessieren, ob bei einer Wahl Männer und Frauen ein unterschiedliches Wahlverhalten haben. Dann würde man testen, ob die Variable "Geschlecht" und die Variable "gewählte Partei" voneinander unabhängig sind.
+
+Als letztes Beispiel sei die Regression genannt, in der wir Regressionsparameter (die meist \(\beta\) genannt werden) erhalten, die uns den Einfluss einer Variablen auf eine andere beschreiben. Hier möchte man testen, ob der Wert von \(\beta\) ungleich 0 ist, was nämlich belegt, dass ein Einfluss vorhanden ist.

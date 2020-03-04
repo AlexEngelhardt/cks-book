@@ -1,1 +1,44 @@
 ### KI für die Varianz $\sigma^2$
+
+Das Konfidenzintervall für die Varianz eines Merkmals berechnet man mit Hilfe der \(\chi^2\)-Verteilung (s. Kap. \@ref(sec-chisq-verteilung)). Man benötigt zum Berechnen eines Konfidenzintervalls nun zwei Werte aus der Tabelle der \(\chi^2\)-Verteilung (s. Kap \@ref(sec-tabelle-chisq-verteilung)): Falls wir z.B. ein 90%-Konfidenzintervall berechnen möchten, brauchen wir die Schranken zu den äußeren 10% der \(\chi^2\)-Verteilung, das heißt also auf der linken Seite das 5%-Quantil, und auf der rechten Seite das 95%-Quantil.
+
+Allgemein gesagt benötigen wir für ein KI mit der Irrtumswahrscheinlichkeit \(\alpha\) die beiden Quantile \(\chi^2_{\frac{\alpha}{2}}(n-1)\) und \(\chi^2_{1-\frac{\alpha}{2}}(n-1)\). Bei einem 90%-KI ist die Irrtumswahrscheinlichkeit 10%, also ist \(\alpha = 0.1\). In diesem Fall brauchen wir das Quantil \(\chi^2_{0.05}(n-1)\) sowie \(\chi^2_{0.95}(n-1)\). In den Klammern steht die Anzahl der Freiheitsgrade (damit finden wir die relevante Zeile in der Tabelle), und die kommt auf die Stichprobengröße \(n\) an.
+
+Die Formel für das KI der Varianz lautet insgesamt:
+
+\[ \left[ \frac{(n-1) \cdot S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)}, \frac{(n-1) \cdot S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)} \right] \]
+
+Und wie üblich darf man sich von auf den ersten Blick komplizierten Notationen nicht erschrecken lassen: Im Nenner steht jeweils nur eine einzelne Dezimalzahl, nämlich ein Quantil der \(\chi^2\)-Verteilung mit \(n-1\) Freiheitsgraden. Das linke Ende des KIs ist einfach das \(\frac{\alpha}{2}\) Quantil (z.B. das 5%-Quantil), und das rechte Ende das \(1-\frac{\alpha}{2}\) Quantil (z.B. das 95%-Quantil).
+
+Das \(S^2\) im Zähler ist die Stichprobenvarianz, die wir mit der üblichen Formel \(S^2 = \sum_{i=1}^n (x_i - \bar{x})^2\) berechnen.
+
+```{exercise, echo=TRUE}
+
+Wir möchten herausfinden, in welchem Bereich die Varianz der Körpergröße von Männern wohl liegen wird. Dazu befragen wir 14 Männer nach ihrer Größe. Wir erhalten glücklicherweise nicht die rohen Daten, sondern schon die folgenden Zusammenfassungen der Stichprobe:
+
+\(\bar{x} = 174cm\)
+\(S^2 = 97.33\)
+
+Berechne mit diesen Angaben ein 90%-Konfidenzintervall für die Varianz der Körpergröße unter Männern.
+
+```
+```{solution, echo=TRUE}
+
+Wir betrachten einfach die Formel für das Konfidenzintervall, und füllen nacheinander alle fehlenden Zahlen ein:
+
+\[ \left[ \frac{(n-1) \cdot S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)}, \frac{(n-1) \cdot S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)} \right] \]
+
+Wir benötigen also die Werte:
+
+- \(n-1\), das ist 13, denn wir haben \(n=14\) Männer befragt.
+- \(S^2 = 97.33\), das haben wir aus dem Aufgabentext entnommen. (Manchmal muss man aber die Stichprobenvarianz \(S^2\) in einer Klausur erst selbst aus den Rohdaten berechnen.)
+- \(\alpha\) ist die Irrtumswahrscheinlichkeit. Wenn wir ein 90%-Konfidenzintervall suchen, dann ist die Irrtumswahrscheinlichkeit 10% bzw. 0.1, also ist \(\alpha=0.1\)
+- \(\chi^2_{1-\frac{\alpha}{2}}(n-1)\) - das ist das 95%-Quantil (denn \(\alpha = 0.1\)) der \(\chi^2\)-Verteilung mit 13 Freiheitsgraden. Aus der Tabelle (s. Kap. \@ref(sec-tabelle-chisq-verteilung)) lesen wir in der Zeile \(df=13\) und der Spalte \(q=0.95\) ab, dass dieser Wert 22.362 ist.
+- \(\chi^2_{\frac{\alpha}{2}}(n-1)\) - das ist das 5%-Quantil derselben \(\chi^2\)-Verteilung. In der Zeile \(df=13\) und der Spalte \(q=0.05\) lesen wir also den Wert 5.892 ab.
+
+Damit können wir alle Werte in das Intervall einsetzen:
+
+\[ \left[ \frac{13 \cdot 97.33}{22.362}, \frac{13 \cdot 97.33}{5.892} \right] = \left[ 56.58, 214.75 \right] \]
+
+Das 90%-Konfidenzintervall für die Varianz der Körpergrösse von Männern ist also [56.58, 214.75], d.h. die wahre Varianz liegt wahrscheinlich in diesem Bereich.
+```

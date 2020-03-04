@@ -1,1 +1,107 @@
-### Binomialtest: Anteile testen
+### Binomialtest: Anteile testen {#sec-binomialtest}
+
+Der Binomialtest ist in meinen Augen der Test, den man am einfachsten verstehen kann. Ich empfehle daher, sich zuerst mit diesem Test zu beschäftigen, wenn man in das Gebiet der statistischen Tests eintauchen möchte.
+
+Außerdem sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
+
+- Was sind Hypothesentests? (Kap. \@ref(sec-wat-tests))
+- Vorgehen bei Hypothesentests (Kap. \@ref(sec-vorgehen-tests))
+
+In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothesentest durchführt. Dadurch werden die einzelnen Teile in diesem Kapitel verständlicher.
+
+**Wann verwendet man einen Binomialtest?**
+
+Der Binomialtest wird klassischerweise angewendet, wenn man eine Zielgröße mit zwei möglichen Ausprägungen hat (z.B. "ja" und "nein"), und eine Vermutung über den Anteil an "ja" überprüfen möchte.
+
+In Kapitel \@ref(sec-welchen-test) erkläre ich ganz allgemein, wann welcher Test angebracht ist.
+
+**1. Hypothesen aufstellen**
+
+Beim Aufstellen der Hypothesen muss man genau auf seine zu untersuchende Fragestellung achten. Es gibt nämlich drei verschiedene Möglichkeiten, die ich kurz mit den folgenden drei Beispielproblemen illustriere:
+
+1. Dein Freund ist Basketballer, und möchte nachweisen, dass er im Durchschnitt mehr als 60% aller Würfe auf den Korb triffft. Man will also herausfinden, ob der Anteil an Treffern bei diesem Spieler **größer** als 60% ist.
+2. Der öffentliche Nahverkehr geht seit einer Weile von 3% Schwarzfahrern aus. Er hat momentan genau so viele Fahrkartenkontrolleure eingestellt, um mit diesem Anteil an Schwarzfahrern bestmöglich zurechtzukommen. Er möchte nun testen, ob sich der Anteil verringert hat, ob er also **kleiner** als 3% ist, und falls das so ist, die Anzahl der eingesetzten Kontrolleure verringern.
+3. Bei einem Online-Kleidungshandel wurden bisher \(\frac{1}{3}\) aller bestellten Artikel wieder zurückgesendet. Er möchte überprüfen, ob sich in diesem Monat die Retourenquote verändert hat (**ob nach oben oder unten**), ob sie also nicht mehr \(\frac{1}{3}\) ist.
+
+Für diese drei Beispiele sehen die Hypothesen jeweils ein bisschen anders aus:
+
+1. Wir möchten prüfen, ob der Anteil \(p\) an Korbtreffern **größer** ist als 60% (also 0.6). Das heißt dass die Alternativhypothese besagen muss, dass p größer als 60% ist (der Grund dafür wird in Kapitel \@ref(sec-h0-h1) erklärt). Die Nullhypothese ist dann genau das Gegenteil, also insgesamt:
+    - \(H_0: p \leq 0.6\)
+    - \(H_1: p > 0.6\)  
+Bemerkung: Beim Testen gehen wir ja von \(p = 0.6\) aus, also könnte man das auch so (statt mit \(\leq\)) in die Nullhypothese schreiben. Welche der beiden Varianten man wählt, hat aber keinen Einfluss auf den restlichen Test. Es wird in beiden Fällen gleich weitergerechnet, und es kommt am Ende auch das gleiche Ergebnis heraus. Ich bevorzuge die Variante mit \(\leq\), da man so mit den zwei Hypothesen *alle* denkbaren Wahrheiten abbildet, also auch die Fälle, wo \(p\) in Wirklichkeit kleiner als \(0.6\) ist.
+2. Hier interessiert uns, ob der Anteil an Schwarzfahrern **kleiner** ist als 3%. Aus denselben Gründen wie bisher setzen wir also:
+    - \(H_0: p \geq 0.03\)
+    - \(H_1: p < 0.03\)
+3. Dieser Test ist etwas speziell. Er nennt sich **zweiseitiger Test**, denn die Alternativhypothese \(H_1\) zielt in zwei Richtungen ab. Die Nullhypothese ist dann immer nur ein einziger Wert für \(p\) - in unserem Fall:
+    - \(H_0: p = \frac{1}{3}\)
+    - \(H_1: p \neq \frac{1}{3}\)
+
+Im restlichen Kapitel verwende ich das erste Beispiel mit den Schwarzfahrern, und zeige am Ende noch kurz, welche Veränderungen man in den anderen beiden Fällen vornehmen müsste.
+
+**2. Test wählen**
+
+Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref(sec-wat-tests) und \@ref(sec-vorgehen-tests) aufgestellt haben, nehme ich hier den 2. Schritt auch mit auf. Es ist natürlich schon klar, dass wir einen Binomialtest verwenden werden.
+
+**3. Signifikanzniveau festlegen**
+
+Wie in den vorherigen Artikeln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
+
+Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha = 0.05\). In besonders kritischen Fragestellungen, z.B. solchen, die die menschliche Gesundheit betreffen, muß das Signifikanzniveau oft niedriger gewählt werden, der Test wird dann *konservativer*. Hier wählt man z.B. \(\alpha = 0.01\).
+
+Für unsere Beispielaufgabe nehmen wir das übliche Signifikanzniveau von \(\alpha = 0.05\).
+
+**4. Daten sammeln**
+
+In einer Klausur oder Übung gibt es die Daten natürlich meist schon. Wenn man sie aber selber sammelt, müssen die Daten für einen Binomialtest eigentlich nur eine lange Liste von "ja" und "nein"-Antworten sein. Wir fassen diese Daten dann im 5. Schritt zusammen in zwei Werte, in unserem Beispiel erstens *die gesamte Anzahl an Würfen*, \(n\), und zweitens *die Anzahl der Treffer*. Das ist eine Zahl zwischen 0 und \(n\), die wir nun einfach \(x\) nennen. Diese beiden Werte brauchen wir für den Binomialtest.
+
+Wir lassen unseren Freund 10 Bälle werfen, und notieren 7 Treffer.
+
+**5. Prüfgröße berechnen**
+
+Beim Binomialtest ist die Prüfgröße sehr einfach bestimmt: Es ist einfach \(x\), die Anzahl der Treffer. In diesem Beispiel ist \(x=7\).
+
+**6. Verteilung der Prüfgröße bestimmen**
+
+Falls die Nullhypothese gilt, dann ist die Prüfgröße \(x\), die Anzahl der Treffer, binomialverteilt. Wir haben \(n\) Bälle geworfen, und erwarten, falls \(H_0\) gilt, in etwa einen Anteil von \(p=0.6\) Treffern. Unsere Prüfgröße \(x\) hätte also die folgende Binomialverteilung:
+
+\[ x \sim B(n, p) \]
+
+In unserem Fall wäre die Anzahl der Treffer \(B(10, 0.6)\) verteilt.
+
+Die Binomialverteilung ist in Kapitel \@ref(sec-binomialverteilung) genauer erklärt.
+
+**7. Kritischen Bereich (oder p-Wert) berechnen**
+
+Der *kritische Bereich* ist der Bereich für \(x\), ab dem wir nicht mehr an \(H_0\), also an eine Trefferwahrscheinlichkeit von höchstens 60%, glauben können. Wir suchen also eine bestimmte Anzahl an Korbtreffern, die unser Spieler nur sehr unwahrscheinlich erreichen oder überschreiten würde, wenn er in Wahrheit durchschnittlich nur 60% aller Würfe trifft.
+
+Der vorherige Satz in mathematisch (aber mit derselben Bedeutung) lautet: Wir suchen eine Grenze \(k\), die unser Spieler nur mit einer Wahrscheinlichkeit von \(\alpha = 0.05\) erreichen oder überschreiten würde, wenn in Wahrheit die Nullhypothese \(H_0\) gilt.
+
+Und jetzt dasselbe *noch* mathematischer (aber immer noch dieselbe Aussage): Wir suchen ein \(k\), für das gilt, dass \(P(x \geq k)\) höchstens 0.05 ist, unter der Annahme dass \(p = 0.6\).
+
+Und zuletzt die ganz kurze Formulierung derselben Idee: Wir suchen ein \(k\), so dass
+
+\[ P(X \geq k | p = 0.6) \leq 0.05 \]
+
+Die Schreibweise mit dem vertikalen Balken bezeichnet eine bedingte Wahrscheinlichkeit (s. Kap. \@ref(sec-bedingte-wsk)), p=0.6 ist also hier *gegeben*.
+
+Es ist sehr hilfreich, sich im Voraus schon zu überlegen, auf welcher Seite der kritische Bereich liegen muss, denn so kommt man erstens leichter zum nächsten Schritt, und kann zweitens am Ende sein Ergebnis nochmal auf Plausibilität prüfen. Im Beispiel hier geht die Nullhypothese von *wenigen* Treffern aus, und die Alternativhypothese von *vielen*. Es ist also ein *einseitiger* Test. Der kritische Bereich muss also im Bereich von *hohen Treffern für x* liegen. Der kritische Bereich könnte z.B. {8, 9, 10} sein, vielleicht auch nur {9, 10}, aber er wird auf keinen Fall z.B. {1, 2, 9, 10} sein, denn niedrige Ergebnisse wie 1 oder 2 Treffer sprechen in diesem Beispiel nicht für die Alternativhypothese.
+
+Bei der obigen Formulierung \(P(X \geq k)\) müssen wir direkt an die Verteilungsfunktion der Binomialverteilung denken (s. Kap. \@ref(sec-binomialverteilung)). Die Grenze \(k\) können wir herausfinden, indem wir nacheinander die einzelnen Werte für die Dichte der "hohen" Ergebnisse summieren, bis wir insgesamt über 5%, also unser Signfiikanzniveau \(\alpha=0.05\) kommen:
+
+- \(P(X = 10) = {10 \choose 10} \cdot 0.6^{10} \cdot 0.4^{0} = 0.006\). Verstehe, was hier ausgesagt wird: Falls dein Freund nur 60% aller Bälle trifft, dann ist seine Wahrscheinlichkeit, alle 10 von 10 Versuchen zu treffen, nur 0.6%.
+- \(P(X = 9) = {10 \choose 9} \cdot 0.6^{9} \cdot 0.4^{1} = 0.040\). Jetzt wissen wir, dass die Wahrscheinlichkeit für *mindestens* 9 Treffer 0.040 + 0.006, also 0.046 ist. Das ist noch ganz knapp unter dem Signifikanzniveau \(\alpha=0.05\). Eine Grenze von \(k=9\) würde der Basketballer also nur zu 4.6% erreichen oder überschreiten.
+- \(P(X = 8) = {10 \choose 8} \cdot 0.6^{8} \cdot 0.4^{2} = 0.121\). Die Wahrscheinlichkeit für *mindestens* 8 Treffer ist also 0.121 + 0.040 + 0.006 = 0.167. Jetzt können wir aufhören mit dem Dichten berechnen. Denn eine Grenze von \(k=8\) ist zu niedrig gewählt, sie erreicht der Spieler zu 16.7%.
+
+Die Schranke für den kritischen Bereich liegt also bei 9 Körben. Daher ist der kritische Bereich {9, 10}. Die Schlussfolgerung: Wenn unser Spieler bei 10 Würfen mindestens 9 Körbe trifft, dann kann er behaupten, signifikant nachgewiesen zu haben, mehr als 60% aller Körbe zu treffen. Bei z.B. 7 Treffern hat er zwar mehr als 60% getroffen, aber es ist noch viel zu wahrscheinlich, dass er das nur durch Zufall geschafft hätte. Man könnte auch ausrechnen, wie wahrscheinlich es wäre, mindestens 7 Treffer zu erhalten (es passiert zu 38.2%, wer es gerne nachrechnen möchte).
+
+**8. Testentscheidung treffen**
+
+Da unser Spieler 7 Treffer erzielt hat, aber unser kritischer Bereich bei 9 und 10 Treffern liegt, können wir die Nullhypothese nicht ablehnen. Der Basketballer konnte nicht genügend Beweise für die Alternativhypothese liefern.
+
+**Änderungen bei den zwei anderen Beispielen**
+
+Für Beispiel 2, das mit den Schwarzfahrern, und Beispiel 3, das mit den Retouren beim Online-Kleidungshandel, ändern sich nur die Schritte 1 und 6. Wir erstellen andere Hypothesen, und wir berechnen den kritischen Bereich anders.
+
+In Beispiel 2 möchten wir ja nachweisen, dass besonders *wenige* Schwarzfahrer unterwegs sind. Daher ist der kritische Bereich dann nicht am oberen Ende der möglichen Ergebnisse, sondern am unteren Ende. Wir würden beim "Abzählen", das wir im Schritt 6 gemacht haben, nicht oben, bei \(n\), beginnen, sondern eben unten, ab 0. Dann erhalten wir einen Bereich mit "sehr niedrigen" Ergebnissen, die zusammen nur in 5% der Fälle vorkommen würden.
+
+In Beispiel 3 müssen wir etwas umständlicher vorgehen, und *beide* Bereiche abzählen, aber jeweils nur 2.5% (bzw. allgemein \(\frac{\alpha}{2}\)) der Wahrscheinlichkeit verteilen. Wir zählen also unten ab, bis wir bei maximal 2.5% angekommen sind, und dann dasselbe nochmal von oben.

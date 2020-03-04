@@ -1,1 +1,53 @@
-### KI für einen Anteil $p$
+### KI für einen Anteil $p$ {#sec-ki-anteil}
+
+Wenn wir in unserer Stichprobe ein Merkmal mit nur zwei möglichen Ausprägungen haben, zum Beispiel "Student? (ja/nein)", benötigen wir zum Berechnen des Konfidenzintervalls die folgenden Informationen:
+
+- Die Anzahl der Daten \(n\) (Stichprobengröße).
+- Den Parameterschätzer für den Anteilswert \(\hat{p}\). In Kapitel \@ref(sec-parmsch-anteil) haben wir schon gelernt wie man ihn berechnet: \(\hat{p} = \frac{\sum_{i=1}^n x_i}{n}\)
+- Das gewünschte Konfidenzniveau \(1-\alpha\), d.h. die Irrtumswahrscheinlichkeit \(\alpha\). Meistens ist es \(\alpha = 0.05\) oder \(\alpha = 0.01\).
+
+Mit Hilfe der gewünschten Irrtumswahrscheinlichkeit \(\alpha\) müssen wir nun ein Quantil der Normalverteilung bestimmen: Falls wir \(\alpha=0.05\) wählen, also eine Irrtumswahrscheinlichkeit von 5% wünschen, dann müssen wir das 97,5%-Quantil der Normalverteilung bestimmen (das ist 1,96). Falls wir uns noch sicherer sein möchten, und eine nur 1%-ige Irrtumswahrscheinlichkeit möchten, dann müssen wir das 99,5%-Quantil der Normalverteilung bestimmen (das ist 2,58). Allgemein gesagt benötigen wir das \(1-\frac{\alpha}{2}\)-Quantil, also den Wert \(z_{1-\frac{\alpha}{2}}\). Diesen Wert lesen wir in der Klausur aus der Verteilungstabelle der Normalverteilung ab (s. Kap. \@ref(sec-tabelle-normalverteilung)).
+
+Mit diesen Werten können wir nun das Konfidenzintervall berechnen. Die untere Grenze des Intervalls ist:
+
+\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \]
+
+Für die obere Grenze ersetzt man nur das Minus durch ein Plus:
+
+\[ o = \hat{p} + z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \]
+
+Das Konfidenzintervall ist also nun \([u, o]\). In einer Formelsammlung sieht man diese Schritte meist in eine einzige Formel zusammengefasst, die dann erstmal etwas einschüchternd aussieht. Aber sie verpackt die oberen Formeln nur in eine einzelne Zeile. So sieht das Konfidenzintervall als eine Formel aus:
+
+\[ \left[ \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}, \, \, \hat{p} + z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \right] \]
+
+Wenn man nun möchte, kann man das Intervall noch kürzer schreiben, denn in den zwei Formeln für die untere und obere Grenze ist nur ein Plus bzw. ein Minus unterschiedlich. Wenn wir dieses Symbol durch ein \(\pm\) ersetzen, dann lautet das KI einfach:
+
+\[ \hat{p} \pm z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}  \]
+
+Anmerkung: Dieses Konfidenzintervall ist kein exaktes, sondern nur ein approximatives Intervall. Um diese Formel anwenden zu dürfen, sollte man mindestens 30 Beobachtungen in der Stichprobe haben, also  \(n \geq 30\)
+
+```{exercise, echo=TRUE}
+
+Wir berechnen ein KI um diese Formeln zu illustrieren. Angenommen, wir gehen Freitagmittag in die Innenstadt und fragen die ersten 250 Menschen die wir treffen, ob sie bei der letzten Wahl auch wählen gegangen sind. 183 Menschen antworten mit "ja" (was wir mit einer 1 kodieren). Wir möchten nun ein 99%-Konfidenzintervall für die Wahlbeteiligung in der Gesamtbevölkerung berechnen.
+
+```
+```{solution, echo=TRUE}
+
+Dazu brauchen wir die folgenden Werte:
+
+- Die Stichprobengröße \(n\), das ist hier 250.
+- Den Parameterschätzer \(\hat{p}\), das ist bei uns \(\frac{183}{250} = 0.732\)
+- Die Irrtumswahrscheinlichkeit \(\alpha\). Da wir ein 99%-Konfidenzintervall möchten, ist \(\alpha\) bei uns 1-0.99, also 0.01.
+- Das Quantil der Normalverteilung, \(z_{1-\frac{\alpha}{2}}\), ist bei uns also das 99,5%-Quantil, also \(z_{0.995}\). Aus der Tabelle der Normalverteilung (s. Kap. \@ref(sec-tabelle-normalverteilung)) lesen wir dafür den Wert 2,58 ab.
+
+Damit können wir nun die Grenzen des KIs berechnen. Die untere Grenze ist
+
+\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} = 0.732 - 2.58 \cdot \sqrt{\frac{0.732 \cdot (1-0.732)}{250}} = 0.660 \]
+
+Die obere Grenze ist dann
+
+\[ u = \hat{p} + z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} = 0.732 + 2.58 \cdot \sqrt{\frac{0.732 \cdot (1-0.732)}{250}} = 0.804 \]
+
+Unser 99%-Konfidenzintervall ist also gerundet \([0.66, 0.80]\). Wir schätzen also, dass die wahre Wahlbeteiligung ziemlich sicher im Bereich von 66% bis 80% legen wird.
+
+```

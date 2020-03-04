@@ -1,2 +1,32 @@
-## Schätzfunktionen allgemein
+## Schätzfunktionen allgemein {#sec-schaetzfunktionen}
+
+In Kapitel \@ref(sec-wat-parameter) haben wir bereits gelernt, was ein Parameter ist: Als einfachstes Beispiel der prozentuale Anteil in einer Grundgesamtheit, oder aber der Erwartungswert bzw. die Varianz eines Merkmals.
+
+Es gibt noch viele weitere solcher Kennzahlen, die man schätzen kann: Das Minimum eines Merkmals, die Korrelation zweier Merkmale, oder das 5%-Quantil eines Merkmals sind nur einige Beispiele dafür. Ich werde nicht auf alle diese Beispiele eingehen, aber wir sehen uns kurz an, wie ein Parameter *allgemein* geschätzt wird. Dieser Artikel gilt also für alle bisher besprochenen Parameterschätzer, und auch für weitere Schätzer so wie die gerade genannten Beispiele.
+
 ### Wie schätzt man einen Parameter?
+
+Ganz allgemein schätzt man einen beliebigen Parameter, indem man die Daten aus der gesammelten Stichprobe mit einer bestimmten Formel zusammenfasst. Diese Formel nennt man dann **Schätzer oder Schätzfunktion** - die Formel ist eine *Funktion*, weil sie die Stichprobe (meistens \(x\) oder in Langform \((x_1, x_2, \ldots, x_n)\) genannt) in einen Schätzer *transformiert*. Als Beispiele können wir die Schätzfunktionen für den Anteilswert \(p\) betrachten - der Schätzer wird dann meist \(\hat{p}\) ("p-Dach") genannt:
+
+\[\hat{p} = \frac{\sum_{i=1}^n x_i}{n}\]
+
+Mathematisch gesehen ist es wichtig, ob ein Dach über dem \(p\) steht oder nicht: Wir setzen ja voraus, dass es einen *wahren* Anteilswert gibt, den wir nicht kennen, aber schätzen möchten. Und unsere Schätzung nennen wir dann \(\hat{p}\). Es sollte aber klar sein, dass mit einer zufälligen Stichprobe der wahre Wert nie ganz genau getroffen wird, sondern immer ein kleiner Fehler dabei sein wird. Und deswegen gibt es zwei verschiedene Bezeichnungen für den wahren Wert bzw. unsere Schätzung dafür. Wenn in der Statistik über einem Buchstaben ein Dach steht, dann heißt das immer dass dieser Wert ein Schätzer für irgendetwas ist.
+
+Als zweites Beispiel den Schätzer für die Varianz \(\sigma^2\) in einer Grundgesamtheit - der Schätzer heißt dann \(\hat{\sigma}^2\):
+
+\[ \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 \]
+
+Diese beiden beispielhaften Funktionen schätzen zwei ganz unterschiedliche Dinge, aber sie haben beide gemeinsam, dass sie die Daten der gesammelten Stichprobe, also \((x_1, x_2, \ldots, x_n)\), zusammenfassen in einen einzelnen Wert - den *Schätzer*. Man kann diese beiden Beispiele (und alle anderen denkbaren Schätzer) nun zusammenfassen in eine generelle, allgemeingültige Formel:
+
+\[ T = g(x_1, x_2, \ldots, x_n) \]
+
+Das \(T\) steht hierbei für den Parameter den wir schätzen möchten, also z.B. \(\hat{p}\) oder \(\hat{\sigma}^2\). Die Funktion \(g\) nimmt nun die Daten und fasst sie zusammen in ein Ergebnis, den Schätzer.
+
+Die mathematischen Bezeichnungen können da zu Beginn ein wenig verwirren - das ging mir selbst nicht anders. Man muss sich aber vor Augen halten, dass es immer zwei "Welten", bzw. zwei Betrachtungspunkte gibt: die Stichprobe und die Grundgesamtheit. Beide Welten haben ihre eigene Notation:
+
+- Der Mittelwert in der Stichprobe ist \(\bar{x}\)
+- Der gesamte Mittelwert in der Grundgesamtheit ist \(\mu\)
+- Wir können \(\mu\) allerdings nur schätzen, und dieser Wert lautet dann \(\hat{\mu}\)
+- Diesen Wert schätzen wir mit Hilfe des Stichprobenmittelwerts. Also: \(\hat{\mu} = \bar{x}\)
+
+Wenn man so verstanden hat, warum die Formel \(\hat{\mu} = \bar{x}\) Sinn macht und was der Unterschied der beiden Werte ist (obwohl sie ja mathematisch die gleiche Zahl sind), dann hat man das Konzept der Parameterschätzung verstanden :-)

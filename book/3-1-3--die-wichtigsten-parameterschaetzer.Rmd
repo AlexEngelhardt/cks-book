@@ -1,4 +1,90 @@
-## Die wichtigsten Parameterschätzer
-### Prozentualer Anteil $p$
+## Die wichtigsten Parameterschätzer {#sec-wichtigste-parmsch}
+
+Hier greifen wir das Beispiel aus Kapitel \@ref(sec-wat-parameter) wieder auf: Wir gehen auf das Oktoberfest, und möchten schätzen ob ein Maßkrug fair, d.h. mit (mindestens) 1 Liter Bier befüllt ist. Es macht vielleicht Sinn, diesen Artikel vorher nocheinmal zu lesen.
+
+
+In diesem Artikel besprechen wir kurz die wichtigsten Parameterschätzer. Wer bisher gut aufgepasst hat, wird merken, dass die untenstehenden Formeln für diese Punktschätzer dieselben sind wie in der deskriptiven Statistik. Zum Beispiel ist also die Formel für den (deskriptiven!) Mittelwert einer Stichprobe dieselbe wie die Formel für den Punktschätzer für den Erwartungswert.
+
+Die *Idee* hinter der Berechnung ist in den beiden Fällen aber unterschiedlich: Der Mittelwert macht nur eine Aussage über die Stichprobe - wir können also z.B. sagen, dass in 10 geprüften Maßkrügen im Durchschnitt 950ml Bier enthalten waren. Das ist auch kein Schätzwert, sondern ein exakter Wert - aber er gilt nur für diese eine Stichprobe von 10 Bieren.
+
+Der Erwartungswert gilt dagegen für die *Grundgesamtheit*, d.h. über die Stichprobe hinweg für *alle* Maßkrüge auf dem Oktoberfest. Daher können wir den Erwartungswert nie exakt berechnen, sondern immer nur anhand einer Stichprobe *schätzen*.
+
+Es ergibt sich nun mathematisch, dass der Stichprobenmittelwert auch der beste Schätzer für den Erwartungswert in der Grundgesamtheit ist - und genau deswegen sind die beiden Formeln (Stichprobenmittelwert und Erwartungswertschätzer) identisch. Auf dem Weg zur statistischen Erleuchtung ist es aber hilfreich im Hinterkopf zu behalten, dass das zwei unterschiedliche Konzepte sind.
+
+Dieses Konzept erkennt man dann auch an der mathematischen Notation wieder. Der Mittelwert einer Stichprobe wird z.B. einfach \(\bar{x}\) ("x quer") genannt, aber der Schätzer für den Erwartungswert wird mit \(\hat{\mu}\) ("mu Dach") bezeichnet. Das Dach über einem Buchstaben (egal ob griechisch oder nicht) deutet darauf hin, dass der Buchstabe darunter geschätzt wird. \(\hat{\mu}\) ist also ein Schätzwert für den "wahren", aber unbekannten Wert \(\mu\).
+
+### Prozentualer Anteil $p$ {#sec-parmsch-anteil}
+
+Wir schätzen einen prozentualen Anteil, wenn wir ein nominales Merkmal mit nur zwei möglichen Ausprägungen ("ja" und "nein") haben. Dann kodieren wir das Merkmal zuerst in die Zahlen 1 und 0 um. Meistens steht die 1 für "ja". Um nun einen Schätzwert für den Anteil \(p\) an "ja" in der *Grundgesamtheit* zu bekommen, berechnen wir einfach den Anteil an "ja" in der Stichprobe: Wir zählen alle "ja"-Antworten und teilen sie durch die Stichprobengröße \(n\).
+
+Lasst uns 10 Maß Bier trinken, und für jede Maß \(i\) das Merkmal \(x_i\) notieren, eine 0 falls nicht genug Bier drin war, und eine 1 falls es mindestens 1 Liter war:
+
+| Bier \(x_i\) | voll? |
+| ------------ | ----- |
+| \(x_1\)      | 1     |
+| \(x_2\)      | 0     |
+| \(x_3\)      | 0     |
+| \(x_4\)      | 1     |
+| \(x_5\)      | 0     |
+| \(x_6\)      | 0     |
+| \(x_7\)      | 0     |
+| \(x_8\)      | 1     |
+| \(x_9\)      | 0     |
+| \(x_{10}\)   | 0     |
+
+Die Formel für den Schätzer für \(p\) dafür lautet dann:
+
+\[\hat{p} = \frac{\sum_{i=1}^n x_i}{n}\]
+
+Die Summe im Zähler (s. Kap. \@ref(sec-summenzeichen)) bedeutet einfach, dass wir alle Antworten aufsummieren. Da die "nein"-Antworten alle als 0 kodiert wurden, werden sie in der Summe nicht beachtet, und nur die Einser, also die "ja"-Antworten werden gezählt.
+
+Der Schätzer für den Anteil an fair befüllten Krügen *in der Grundgesamtheit* wäre dann also:
+
+\[\hat{p} = \frac{1+0+0+1+0+0+0+1+0+0}{10} = 0.3\]
+
+Mit der 1 bezeichnen wir ja einen voll gefüllten Maßkrug, und mit der 0 einen Krug mit weniger als einem Liter Inhalt. Wir schätzen also, dass 30% aller Krüge auf dem Oktoberfest fair befüllt werden.
+
 ### Erwartungswert $\mu$
+
+Was, wenn wir aber genauer abschätzen wollen, wie voll die Krüge befüllt werden? Dann sollten wir lieber etwas genauer den Erwartungswert des Inhalts schätzen, statt nur die Frage ob genug oder zuwenig Inhalt im Krug ist.
+
+Zum Glück haben wir immer noch Durst, und bestellen nocheinmal 8 Maß Bier. Bei jedem Krug \(i\) wiegen wir nun nach, wieviel Inhalt (also \(x_i\)) genau drin ist.
+
+| Bier \(x_i\) | Inhalt (ml) |
+| ------------ | ----------- |
+| \(x_1\)      | 961         |
+| \(x_2\)      | 1012        |
+| \(x_3\)      | 970         |
+| \(x_4\)      | 940         |
+| \(x_5\)      | 1024        |
+| \(x_6\)      | 868         |
+| \(x_7\)      | 931         |
+| \(x_8\)      | 975         |
+
+Die Formel um den Erwartungswert zu schätzen (also \(\hat{\mu}\) ist dieselbe wie die für den Stichprobenmittelwert, also für \(\bar{x}\)):
+
+\[\hat{\mu} = \frac{1}{n} \cdot \sum_{i=1}^n x_i\]
+
+Bei uns ist es:
+
+\[\begin{aligned}\hat{\mu} = \frac{1}{8} \cdot (& 961+1012+970+940+ \\ &1024+868+931+975) = 960.125 \end{aligned} \]
+
+Durch unsere Stichprobe haben wir also geschätzt, dass in der Grundgesamtheit im Mittel ca. 960ml Bier in einen Krug gefüllt werden.
+
 ### Varianz
+
+Der Schätzer von 960ml gibt uns schon einen Hinweis darauf, dass evtl. systematisch, also absichtlich, zuwenig Bier in die Krüge gefüllt wird. Um das genauer zu untersuchen, sollte man sich aber auch die Varianz der Daten ansehen. Denn es macht einen großen Unterschied ob *jeder* Krug mit ziemlich genau 960ml befüllt wird, oder ob manche Krüge mit 860ml, dafür manch andere mit 1060ml befüllt werden. Im zweiten Fall könnte es einfach auch sein, dass das Zapfpersonal sehr unterschiedlich einschenkt, und der niedrige durchschnittliche Inhalt von 960ml nur durch Zufall enstanden ist.
+
+Unser Verdacht auf absichtlich niedrige Befüllung hängt also nicht nur vom Mittelwert, sondern auch von der Varianz in der Stichprobe ab. Dieses Konzept wird beim Berechnen des Konfidenzintervalls, und auch beim Hypothesentest (s. Kap. \@ref(sec-hypothesentests)) sehr wichtig sein.
+
+Die wahre Varianz wird mit \(\sigma^2\) bezeichnet, der Schätzer dafür lautet also \(\hat{\sigma}^2\). Die Formel ist identisch mit der Formel für die Stichprobenvarianz (s. Kap. \@ref(sec-var-sd)), also für \(s^2\):
+
+\[ \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 \]
+
+Dabei ist \(\bar{x}\) der Mittelwert der Daten. Bei uns ist er 960.125ml. Für dieses Beispiel kommt heraus:
+
+\[\begin{aligned}\hat{\sigma}^2 = \frac{1}{8-1} \cdot (&0.766 + 2691.016 + 97.516 + 405.016 +  \\ &4080.016 + 8487.016 +848.266 + 221.266) = 2404.41 \end{aligned} \]
+
+Die Zahlen in der Summe sind jeweils die einzelnen Terme für \((x_i-\bar{x})^2\), also die erste Zahl, 0.766, haben wir erhalten durch \((x_1-\bar{x})^2 = (961 - 960.125)^2\).
+
+Wir schätzen also, dass die Varianz in der Grundgesamtheit bei 2404.41 liegt.
