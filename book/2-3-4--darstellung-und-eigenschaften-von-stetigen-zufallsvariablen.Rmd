@@ -93,13 +93,13 @@ knitr::include_graphics("img/pictures/f_F_Q.png")
 
 ### Erwartungswert {#sec-duevsz-erwartungswert}
 
-Hinter dem Erwartungswert einer stetigen Zufallsvariable steckt genau dieselbe Idee wie im diskreten Fall (s. Kap. \@ref(#sec-duevdz-erwartungswert)). Hier wird lediglich statt der Summe ein Integral verwendet. Im diskreten Fall haben wir über alle möglichen Ausprägungen \(x_i\) multipliziert mit der zugehörigen Dichte \(f(x_i)\) summiert, und hier werden wir stattdessen über alle Ausprägungen \(x\) multipliziert mit der Dichte \(f(x)\) integrieren:
+Hinter dem Erwartungswert einer stetigen Zufallsvariable steckt genau dieselbe Idee wie im diskreten Fall (s. Kap. \@ref(sec-duevdz-erwartungswert)). Hier wird lediglich statt der Summe ein Integral verwendet. Im diskreten Fall haben wir über alle möglichen Ausprägungen \(x_i\) multipliziert mit der zugehörigen Dichte \(f(x_i)\) summiert, und hier werden wir stattdessen über alle Ausprägungen \(x\) multipliziert mit der Dichte \(f(x)\) integrieren:
 
 \[ \mathbb{E}(X) = \int_{-\infty}^\infty x \cdot f(x) \; dx \]
 
 ### Varianz und Standardabweichung {#sec-duevsz-varianz}
 
-Auch die Varianz ist im stetigen Fall ähnlich aufgebaut wie bei diskreten Zufallsvariablen (s. Kap. \@ref(#sec-duevdz-varianz)):
+Auch die Varianz ist im stetigen Fall ähnlich aufgebaut wie bei diskreten Zufallsvariablen (s. Kap. \@ref(sec-duevdz-var-std)):
 
 \[ \mathbb{V}(X) = \int_{-\infty}^\infty (x-\mu)^2 f(x) dx, \]
 

@@ -42,9 +42,9 @@ Die Verteilungsfunktion ist nun dreiteilig definiert: Links von der unteren Gren
 
 Abbildung \@ref(fig:verteilungen-stetige-gleichverteilung-verteilungsfunktion) zeigt die Verteilungsfunktion aus dem Beispiel der Wartezeit auf den Bus.
 
-(ref:verteilungen-stetige-gleichverteilung-verteilungsfunktion-caption) Die Verteilungsfunktion der stetigen Gleichverteilung, hier mit \(a=0\) und \(b=10\).
+(ref:verteilungen-s-g-v-v-caption) Die Verteilungsfunktion der stetigen Gleichverteilung, hier mit \(a=0\) und \(b=10\).
 
-```{r verteilungen-stetige-gleichverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-stetige-gleichverteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-stetige-gleichverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-s-g-v-v-caption)"}
 knitr::include_graphics("img/verteilungen-stetige-gleichverteilung-verteilungsfunktion.png")
 ```
 

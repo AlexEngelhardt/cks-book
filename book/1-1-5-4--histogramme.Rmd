@@ -32,15 +32,15 @@ Hier ist \(h_i\) die Höhe des \(i\)-ten Histogrammbalkens, \(n_i\) ist die Anza
 
 Am einfachsten erstellt man all diese Daten in einer Tabelle:
 
-| Gruppe | Intervall  | Anzahl an Personen in dieser Gruppe, \(n_i\) | Histogrammhöhe, \(h_i\) |
-| ------ | ---------- | -------------------------------------------- | ----------------------- |
-| 1      | [150, 160) | 3                                            | 0.015                   |
-| 2      | [160, 170) | 4                                            | 0.02                    |
-| 3      | [170, 180) | 8                                            | 0.04                    |
-| 4      | [180, 190) | 4                                            | 0.02                    |
-| 5      | [190, 200) | 1                                            | 0.005                   |
+| Gruppe | Intervall  | Anz. Pers. in d. Gruppe, \(n_i\) | Höhe, \(h_i\) |
+| ------ | ---------- | -------------------------------- | ------------- |
+| 1      | [150, 160) | 3                                | 0.015         |
+| 2      | [160, 170) | 4                                | 0.02          |
+| 3      | [170, 180) | 8                                | 0.04          |
+| 4      | [180, 190) | 4                                | 0.02          |
+| 5      | [190, 200) | 1                                | 0.005         |
 
-Damit kann man nun ein Histogramm zeichen (s. Abb. \@(ref:fig-histogramm-fix)).
+Damit kann man nun ein Histogramm zeichen (s. Abb. \@ref(fig:histogramm-fix)).
 
 ```{r histogramm-fix, fig.cap='Links: Das Histogramm der relativen Dichte. Rechts: Das Histogramm der absoluten Anzahl an Personen. Es unterscheidet sich nur die y-Achse.'}
 knitr::include_graphics("img/histogramm-fix.png")

@@ -52,9 +52,9 @@ Auch hier kann man sich mathematisch exakter, aber auf den ersten Blick etwas un
 
 \[ F(x) = \begin{cases} 1 - \exp (-\lambda x), & x \geq 0 \\ 0, & x<0\end{cases}\]
 
-(ref:verteilungen-exponentialverteilung-verteilungsfunktion-caption) Verteilungsfunktion der Exponentialverteilung mit \(\lambda=0.5\).
+(ref:verteilungen-exp-v-caption) Verteilungsfunktion der Exponentialverteilung mit \(\lambda=0.5\).
 
-```{r verteilungen-exponentialverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-exponentialverteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-exponentialverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-exp-v-caption)"}
 knitr::include_graphics("img/verteilungen-exponentialverteilung-verteilungsfunktion.png")
 ```
 

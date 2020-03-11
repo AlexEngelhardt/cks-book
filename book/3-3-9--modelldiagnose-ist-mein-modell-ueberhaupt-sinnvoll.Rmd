@@ -109,13 +109,13 @@ Der Fachbegriff für diese Situation nennt sich *heteroskedastische Fehler*, d.h
 
 Bei einem multiplen Regressionsmodell, d.h. mit mehr als einer Einflussgröße \(x\), kann man nicht einfach ein Diagramm von x versus y zeichnen. Hier diagnostiziert man heteroskedastische Fehler dann mit derselben Methode die wir schon für nichtlineare Einflüsse verwendet haben: Wir zeichnen in Abbildung \@ref(fig:regression-modelldiagnose-heteroskedastie-diagnose) einen Plot der beobachteten y-Werte vs. der vorhergesagten y-Werte.
 
-(ref:regression-modelldiagnose-heteroskedastie-diagnose-caption) Residuen vs. vorhergesagte y-Werte für die Regression.
+(ref:regression-md-h-d-caption) Residuen vs. vorhergesagte y-Werte für die Regression.
 
-```{r regression-modelldiagnose-heteroskedastie-diagnose, fig.cap="(ref:regression-modelldiagnose-heteroskedastie-diagnose-caption)"}
+```{r regression-modelldiagnose-heteroskedastie-diagnose, fig.cap="(ref:regression-md-h-d-caption)"}
 knitr::include_graphics("img/regression-modelldiagnose-heteroskedastie-diagnose.png")
 ```
 
-*Beheben**
+**Beheben**
 
 Zum Beheben dieser Situation kommt ebenfalls eine Variablentransformation in Frage: Falls die Residuen eher prozentual konstant sind, macht eine log-Transformation der Zielgröße Sinn. Dazu muss die Zielgröße allerdings strikt positiv sein. Im Anschluß an einen Versuch der Transformation sollte man sich wieder die Diagnoseplots ansehen, und entscheiden ob die Situation nun besser geworden ist.
 

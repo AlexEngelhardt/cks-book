@@ -50,9 +50,9 @@ Für die Verteilungsfunktion gibt es hier, wie bei der Binomialverteilung, keine
 
 \[ F(x) = \mathbb{P}(X \leq x) = \sum_{k=0}^x f(k) \]
 
-(ref:verteilungen-hypergeometrische-verteilung-verteilungsfunktion-caption) Die Verteilungsfunktion \(F(x)\) für dieses Beispielexperiment.
+(ref:verteilungen-hg-v-v-caption) Die Verteilungsfunktion \(F(x)\) für dieses Beispielexperiment.
 
-```{r verteilungen-hypergeometrische-verteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-hypergeometrische-verteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-hypergeometrische-verteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-hg-v-v-caption)"}
 knitr::include_graphics("img/verteilungen-hypergeometrische-verteilung-verteilungsfunktion.png")
 ```
 

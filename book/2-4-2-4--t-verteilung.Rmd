@@ -50,8 +50,8 @@ Die Verteilungsfunktion (genauso wie die Dichtefunktion) lässt sich nur sehr ek
 
 Abbildung \@ref(fig:verteilungen-t-verteilung-normalverteilung-verteilungsfunktion) zeigt die Verteilungsfunktionen für verschiedene Freiheitsgrade \(df\).
 
-(ref:verteilungen-t-verteilung-normalverteilung-verteilungsfunktion-caption) Verteilungsfunktionen für drei ausgewählte \(t\)-Verteilungen. Auch die Verteilungsfunktion ähnelt sich mit steigenden Freiheitsgraden immer mehr der Standardnormalverteilung an.
+(ref:verteilungen-t-v-nv-v-caption) Verteilungsfunktionen für drei ausgewählte \(t\)-Verteilungen. Auch die Verteilungsfunktion ähnelt sich mit steigenden Freiheitsgraden immer mehr der Standardnormalverteilung an.
 
-```{r verteilungen-t-verteilung-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-t-verteilung-normalverteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-t-verteilung-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-t-v-nv-v-caption)"}
 knitr::include_graphics("img/verteilungen-t-verteilung-normalverteilung-verteilungsfunktion.png")
 ```

@@ -25,7 +25,7 @@ Abbildung \@ref(fig:verteilungsfunktion-aufgabe) zeigt die Verteilungsfunktion f
 knitr::include_graphics("img/verteilungsfunktion.png")
 ```
 
-In Abbildung \@ref{fig:verteilungsfunktion-aufgabe} sind die Punkte einfach aus der Häufigkeitstabelle übernommen. Der \(x\)-Wert ist das jeweilige Semester, und der \(y\)-Wert das zugehörige \(F_i\), also der Anteil der Studenten, die *höchstens* in diesem Semester sind. Die horizontalen Linien zwischen den Punkten geben nun auch für "krumme" Zahlen einen sinnvollen Prozentsatz an: Möchte man z.B. wissen, welcher Anteil der Studenten mit einer Semesterzahl von höchstens 4.3 geantwortet hat, ist das (also \(F(4.3)\)) derselbe Anteil, der mit höchstens 4.0 geantwortet hat (also \(F(4.0)\)).
+In Abbildung \@ref(fig:verteilungsfunktion-aufgabe) sind die Punkte einfach aus der Häufigkeitstabelle übernommen. Der \(x\)-Wert ist das jeweilige Semester, und der \(y\)-Wert das zugehörige \(F_i\), also der Anteil der Studenten, die *höchstens* in diesem Semester sind. Die horizontalen Linien zwischen den Punkten geben nun auch für "krumme" Zahlen einen sinnvollen Prozentsatz an: Möchte man z.B. wissen, welcher Anteil der Studenten mit einer Semesterzahl von höchstens 4.3 geantwortet hat, ist das (also \(F(4.3)\)) derselbe Anteil, der mit höchstens 4.0 geantwortet hat (also \(F(4.0)\)).
 
 Hier ist dann natürlich zwingend, dass die Verteilungsfunktion immer bei 0 beginnt, und dann kontinuierlich (mathematisch: *monoton*) steigt, und irgendwann bei 1 endet. Die Verteilung kommt immer von \(-\infty\) und geht immer weiter bis \(+\infty\): Der Anteil der Studenten, die höchstens im 7. Semester sind, ist 1; der Anteil derer, die höchstens im 850. Semester sind, ist natürlich immer noch 1.
 

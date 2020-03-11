@@ -65,9 +65,9 @@ Die Verteilungsfunktion der Normalverteilung kann man nicht mit einer Formel im 
 
 Man nimmt daher eine Verteilungstabelle (s. Kap. \@ref(sec-verteilungstabelle)) her, die man häufig am Ende von Statistikbüchern, oder in der Anlage zu Klausuren findet. Wie man die abliest, wird in Kapitel \@ref(sec-tabelle-normalverteilung) erklärt.
 
-(ref:verteilungen-normalverteilung-verteilungsfunktion-caption) Verteilungsfunktion \(\Phi(z)\) der Standardnormalverteilung (also mit \(\mu=0\) und \(\sigma^2=1\)).
+(ref:verteilungen-nv-v-caption) Verteilungsfunktion \(\Phi(z)\) der Standardnormalverteilung (also mit \(\mu=0\) und \(\sigma^2=1\)).
 
-```{r verteilungen-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-normalverteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-nv-v-caption)"}
 knitr::include_graphics("img/verteilungen-normalverteilung-verteilungsfunktion.png")
 ```
 

@@ -12,9 +12,9 @@ Die \(\chi^2\)-Verteilung hat einen Parameter, nämlich die Anzahl der Freiheits
 
 Abbildung \@ref(fig:verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion) zeigt einige beispielhafte \(\chi^2\)-Verteilungen
 
-(ref:verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion-caption) Dichte- und Verteilungsfunktion der \(\chi^2\)-Verteilung für verschiedene beispielhafte Freiheitsgrade.
+(ref:verteilungen-chisq-v-d-u-v-caption) Dichte- und Verteilungsfunktion der \(\chi^2\)-Verteilung für verschiedene beispielhafte Freiheitsgrade.
 
-```{r verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion, fig.cap="(ref:verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion-caption)"}
+```{r verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion, fig.cap="(ref:verteilungen-chisq-v-d-u-v-caption)"}
 knitr::include_graphics("img/verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion.png")
 ```
 

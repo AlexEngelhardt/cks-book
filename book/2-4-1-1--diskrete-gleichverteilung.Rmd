@@ -96,9 +96,9 @@ Die Verteilungsfunktion ist einfach notierbar als:
 
 Abbildung \@ref(fig:verteilungen-diskrete-gleichverteilung-verteilungsfunktion) zeigt diese Verteilungsfunktion.
 
-(ref:verteilungen-diskrete-gleichverteilung-verteilungsfunktion-caption) Verteilungsfunktion der diskreten Gleichverteilung beim Experiment "Werfen eines Würfels"
+(ref:vert-d-g-v-caption) Verteilungsfunktion der diskreten Gleichverteilung beim Experiment "Werfen eines Würfels"
 
-```{r verteilungen-diskrete-gleichverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-diskrete-gleichverteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-diskrete-gleichverteilung-verteilungsfunktion, fig.cap="(ref:vert-d-g-v-caption)"}
 knitr::include_graphics("img/verteilungen-diskrete-gleichverteilung-verteilungsfunktion.png")
 ```
 

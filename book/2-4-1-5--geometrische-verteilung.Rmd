@@ -54,9 +54,9 @@ Die Verteilungsfunktion der geometrischen Verteilung ist also
 
 \[ F(x) = \mathbb{P}(X \leq x) = 1-\mathbb{P}(X > x) = 1-(1-p)^x \]
 
-(ref:verteilungen-geometrische-verteilung-verteilungsfunktion-caption) Die Verteilungsfunktion der geometrischen Verteilung. Ihr Wert nähert sich im Unendlichen der 1 an, erreicht ihn aber nie exakt.
+(ref:verteilungen-g-v-v-caption) Die Verteilungsfunktion der geometrischen Verteilung. Ihr Wert nähert sich im Unendlichen der 1 an, erreicht ihn aber nie exakt.
 
-```{r verteilungen-geometrische-verteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-geometrische-verteilung-verteilungsfunktion-caption)"}
+```{r verteilungen-geometrische-verteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-g-v-v-caption)"}
 knitr::include_graphics("img/verteilungen-geometrische-verteilung-verteilungsfunktion.png")
 ```
 
