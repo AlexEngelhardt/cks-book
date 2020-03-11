@@ -46,7 +46,7 @@ Damit kann man nun ein Histogramm zeichen (s. Abb. \@(ref:fig-histogramm-fix)).
 knitr::include_graphics("img/histogramm-fix.png")
 ```
 
-Das linke Histogramm haben wir gerade berechnet. Das rechte unterscheidet sich nur darin, dass auf der \(y\)-Achse absolute Zahlen verwendet wurden—es wurden also statt den Höhen \(h_i\) die Anzahl an Personen, \(n_i\) gezeichnet. Man sieht hier also direkt, dass in der mittleren Klasse 8 Personen liegen. Aber wie gesagt, für variable Klassenbreiten kann man das dann nicht mehr machen.
+Das linke Histogramm haben wir gerade berechnet. Das rechte unterscheidet sich nur darin, dass auf der \(y\)-Achse absolute Zahlen verwendet wurden - es wurden also statt den Höhen \(h_i\) die Anzahl an Personen, \(n_i\) gezeichnet. Man sieht hier also direkt, dass in der mittleren Klasse 8 Personen liegen. Aber wie gesagt, für variable Klassenbreiten kann man das dann nicht mehr machen.
 
 Der Anteil an Beobachtungen in jeder Gruppe entspricht nun der *Fläche* dieser Balken. In der ersten Gruppe ist ein Anteil von \(10\cdot 0.015 = 0.15\), also 15% der Daten, was bei 20 Personen genau 3 Personen entspricht. Diese Art der Interpretation wird wichtig, wenn wir uns Histogramme mit variablen Gruppenbreiten ansehen:
 

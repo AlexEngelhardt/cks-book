@@ -6,7 +6,7 @@ Die Wahrscheinlichkeit, mit der bei einem Experiment der Erfolg eintritt, wird m
 
 \[ X \sim \text{Be}(p) \]
 
-Weitere Beispiele für bernoulliverteilte Zufallsvariablen sind die Roulettewette auf die Zahl 0 – hier wäre \(X \sim \text{Be}(\frac{1}{37})\) – oder der erste Spielzug im "Mensch ärgere dich nicht", in dem man eine 6 würfeln muss, um eine Figur ins Spiel bringen zu dürfen; hier ist \(X \sim \text{Be}(\frac{1}{6})\).
+Weitere Beispiele für bernoulliverteilte Zufallsvariablen sind die Roulettewette auf die Zahl 0 - hier wäre \(X \sim \text{Be}(\frac{1}{37})\) - oder der erste Spielzug im "Mensch ärgere dich nicht", in dem man eine 6 würfeln muss, um eine Figur ins Spiel bringen zu dürfen; hier ist \(X \sim \text{Be}(\frac{1}{6})\).
 
 **Träger**
 

@@ -8,7 +8,7 @@ Als Beispiel:
 
 Eine Fußballmannschaft, bestehend aus 11 Spielern, verlässt zu Spielbeginn der Reihe nach die Mannschaftskabine. Wie viele Reihenfolgen sind dabei möglich?
 
-Für die 11 Spieler gibt es \(11! = 39916800\) verschiedene Anordnungen, in der sie aus der Kabine laufen können. So schnell wird ihnen also bestimmt nicht langweilig—falls sie dieses Experiment wirklich durchführen möchten.
+Für die 11 Spieler gibt es \(11! = 39916800\) verschiedene Anordnungen, in der sie aus der Kabine laufen können. So schnell wird ihnen also bestimmt nicht langweilig - falls sie dieses Experiment wirklich durchführen möchten.
 
 Ein weiteres Beispiel ist das Mischen eines Kartenspiels. Bei 52 Karten gibt es \(52!\) verschiedene Reihenfolgen für die Karten. Diese Zahl ausgerechnet ist eine 8 mit 67 Nullen hintendran!
 
