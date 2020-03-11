@@ -76,7 +76,7 @@ Das, was in diesem Abschnitt gerade ausführlich erklärt wurde, kann man in ein
 
 \[ \chi^2 = \sum_{i=1}^I \sum_{j=1}^J \frac{(h_{ij}-e_{ij})^2}{e_{ij}} \]
 
-Die einzelnen Buchstaben sind im Kapitel \@ref(sec-kreuztabellen) zu [Kreuztabellen](#sec-kreuztabellen) erklärt. Wenn man die erwarteten Häufigkeiten \(e_{ij}\) nun auch noch ausschreibt (sie sind ja \(e_{ij} = \frac{h_{i\cdot} \cdot h_{\cdot j}}{n}\)), kommt man zur oft gesehenen, aber sehr komplizierten Formel
+Die einzelnen Buchstaben sind im Kapitel \@ref(sec-kreuztabellen) zu Kreuztabellen erklärt. Wenn man die erwarteten Häufigkeiten \(e_{ij}\) nun auch noch ausschreibt (sie sind ja \(e_{ij} = \frac{h_{i\cdot} \cdot h_{\cdot j}}{n}\)), kommt man zur oft gesehenen, aber sehr komplizierten Formel
 
 \[ \chi^2 = \sum_{i=1}^I \sum_{j=1}^J \frac{(h_{ij}-\frac{h_{i\cdot} \cdot h_{\cdot j}}{n})^2}{\frac{h_{i\cdot} \cdot h_{\cdot j}}{n}} \]
 

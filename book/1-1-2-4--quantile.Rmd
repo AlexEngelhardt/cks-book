@@ -4,7 +4,7 @@ Quantile (oder genauer gesagt \(p\)-Quantile) sind Werte, die eine Menge von \(n
 
 Man bezeichnet Quantile entweder durch den Anteil \(p\), oder durch eine Prozentzahl, die allerdings dasselbe aussagen. Ein 0.2-Quantil ist dasselbe wie ein 20%-Quantil.
 
-Wer jetzt aufgepasst hat, dem könnte die Definition vielleicht bekannt vorkommen. Der [Median](#sec-median) ist nämlich nichts anderes als das 50%-Quantil (oder das 0.5-Quantil). Die Quantile können die Daten jetzt aber nicht nur in zwei gleiche Hälften, sondern beliebig aufteilen. Das 0.2-Quantil etwa teilt die Daten in die niedrigen 20% und die hohen 80%. Hierbei steht das \(p\) für die 20% (also die 0.2), und \(1-p\) sind 0.8, also die verbleibenden 80%.
+Wer jetzt aufgepasst hat, dem könnte die Definition vielleicht bekannt vorkommen. Der Median (s. Kap. \@ref(sec-median)) ist nämlich nichts anderes als das 50%-Quantil (oder das 0.5-Quantil). Die Quantile können die Daten jetzt aber nicht nur in zwei gleiche Hälften, sondern beliebig aufteilen. Das 0.2-Quantil etwa teilt die Daten in die niedrigen 20% und die hohen 80%. Hierbei steht das \(p\) für die 20% (also die 0.2), und \(1-p\) sind 0.8, also die verbleibenden 80%.
 
 In manchen Fällen kann man die Daten genau in zwei Anteile \(p\) und \(1-p\) aufteilen, wenn man etwa das 20%-Quantil einer Datenreihe mit 5 Elementen bilden will. Dann ist der untere \(p\)-Anteil - also die unteren 20% - durch das erste Element gegeben, und der obere Anteil durch die restlichen, größten vier Elemente. In diesem Fall kann das 0.2-Quantil jeden Wert zwischen dem ersten und zweiten Element annehmen (s. Abb. \@ref(fig:quantiles)).
 

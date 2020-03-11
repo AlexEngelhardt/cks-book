@@ -10,7 +10,7 @@ Sobald man mehr als ein Ereignis betrachtet, ist es essentiell zu wissen ob dies
 
 **Vereinfachungen wenn zwei Ereignisse unabhängig sind**
 
-1. Wenn zwei Ereignisse voneinander unabhängig sind, ist die [bedingte Wahrscheinlichkeit](#sec-bedingte-wsk) gleich der unbedingten Wahrscheinlichkeit:
+1. Wenn zwei Ereignisse voneinander unabhängig sind, ist die bedingte Wahrscheinlichkeit (s. Kap. \@ref(sec-bedingte-wsk)) gleich der unbedingten Wahrscheinlichkeit:
 \[ \mathbb{P}(A|B) = \mathbb{P}(A) \]
 Dieses Gesetz gilt auch umgekehrt:
 \[ \mathbb{P}(B|A) = \mathbb{P}(B) \]

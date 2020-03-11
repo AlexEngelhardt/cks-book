@@ -1,8 +1,8 @@
 ## Streuungsparameter {#sec-streuungsparameter}
 
-Meist reicht ein [Lageparameter](#lageparameter) als Zusammenfassung einer Datenreihe nicht aus, und man wünscht sich mehr Information. Streuungsparameter sind nun ein Maß dafür, wie sehr die Daten um einen Mittelwert schwanken. Auch hier gibt es verschiedene Möglichkeiten, solche Kennziffern zu berechnen. In der Praxis wird allerdings meist die Varianz bzw. ihre Wurzel, die Standardabweichung benutzt.
+Meist reicht ein Lageparameter (s. Kap. \@ref(lageparameter)) als Zusammenfassung einer Datenreihe nicht aus, und man wünscht sich mehr Information. Streuungsparameter sind nun ein Maß dafür, wie sehr die Daten um einen Mittelwert schwanken. Auch hier gibt es verschiedene Möglichkeiten, solche Kennziffern zu berechnen. In der Praxis wird allerdings meist die Varianz bzw. ihre Wurzel, die Standardabweichung benutzt.
 
-Da (zumindest die gebräuchlichen) Streuungsparameter in ihrer Definition immer irgendwo eine Differenz beinhalten, kann man sie nur für numerische Daten bestimmen, also diskrete oder stetige *Zahlen.* Bei einem [nominal- oder ordinalskalierten Merkmal](#merkmals-und-skalentypen) ist das nicht möglich.
+Da (zumindest die gebräuchlichen) Streuungsparameter in ihrer Definition immer irgendwo eine Differenz beinhalten, kann man sie nur für numerische Daten bestimmen, also diskrete oder stetige *Zahlen.* Bei einem nominal- oder ordinalskalierten Merkmal (s. Kap. \@ref(merkmals-und-skalentypen)) ist das nicht möglich.
 
 **Das Wichtigste in Kürze**
 
@@ -87,7 +87,7 @@ Für den Interquartilsabstand berechnen wir zuerst
 \(x_{(0.25)} = x_{(\lfloor np \rfloor +1)} = x_{(\lfloor 7\cdot 0.25 \rfloor +1)} = x_{(2)} = 1\) und
 \(x_{(0.75)} = x_{(\lfloor np \rfloor +1)}= x_{(\lfloor 7\cdot 0.75 \rfloor +1)} = x_{(6)} = 4\).
 
-(Die Klammern \(\lfloor\) und \(\rfloor\) bedeuten hier [Abrunden](#sec-abrunden))
+(Die Klammern \(\lfloor\) und \(\rfloor\) bedeuten hier Abrunden, s. Kap. \@ref(sec-abrunden))
 
 Der Interquartilsabstand ist nun \(x_{0.75}-x_{0.25}=4-1=3\).
 

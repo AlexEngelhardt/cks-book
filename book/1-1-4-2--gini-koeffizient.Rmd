@@ -1,6 +1,6 @@
 ### Gini-Koeffizient {#sec-gini}
 
-Der Gini-Koeffizient verpackt die grafische Information der [Lorenzkurve](#sec-lorenzkurve) in eine einzelne Zahl. Die Grundidee dazu basiert auf der Fläche, die zwischen der tatsächlichen Lorenzkurve und der Winkelhalbierenden (die "Gerade der perfekten Verteilung") aufgespannt wird; wir nennen sie *Konzentrationsfläche.* Wenn diese Fläche nämlich größer wird, ist das ein Zeichen dafür, dass die Verteilung ungerechter wird. Je größer diese Konzentrationsfläche ist, desto größer ist der dazugehörige Gini-Koeffizient, und desto ungerechter ist die Verteilung des betrachteten Merkmals.
+Der Gini-Koeffizient verpackt die grafische Information der Lorenzkurve (s. Kap. \@ref(sec-lorenzkurve)) in eine einzelne Zahl. Die Grundidee dazu basiert auf der Fläche, die zwischen der tatsächlichen Lorenzkurve und der Winkelhalbierenden (die "Gerade der perfekten Verteilung") aufgespannt wird; wir nennen sie *Konzentrationsfläche.* Wenn diese Fläche nämlich größer wird, ist das ein Zeichen dafür, dass die Verteilung ungerechter wird. Je größer diese Konzentrationsfläche ist, desto größer ist der dazugehörige Gini-Koeffizient, und desto ungerechter ist die Verteilung des betrachteten Merkmals.
 
 Abbildung \@ref(fig:gini-veranschaulichung) zeigt ein paar Beispiele für die Konzentrationsfläche.
 
@@ -27,7 +27,7 @@ Beispielaufgabe
 | Anteil an der Gesamtsumme ($y$-Achse) | 0.086     | 0.2       | 0.343     | 0.486     | 1         |
 | Prozent der Ärmsten ($x$-Achse)       | 20%       | 40%       | 60%       | 80%       | 100%      |
 
-Wir verwenden dieselben Daten der [Aufgabe zur Lorenzkurve](#sec-lorenzkurve), und berechnen hierfür Schritt für Schritt den Gini-Koeffizienten. Visualisiert sind diese Schritte in Abbildung \@ref(fig:gini-schritte).
+Wir verwenden dieselben Daten der Aufgabe zur Lorenzkurve aus Kapitel \@ref(sec-lorenzkurve), und berechnen hierfür Schritt für Schritt den Gini-Koeffizienten. Visualisiert sind diese Schritte in Abbildung \@ref(fig:gini-schritte).
 
 ```{r gini-schritte, fig.cap='Die Schritte zur Berechnung des Gini-Koeffizienten. Oben links: Die Flächen dieser Trapeze werden einzeln ausgerechnet und aufsummiert. Oben rechts: So berechnet man die Fläche eines Trapezes. Unten links: Die "maximal mögliche Fläche" beim einfachen Gini-Koeffizienten. Unten rechts: Die "maximal mögliche Fläche" beim normierten Gini-Koeffizienten.'}
 knitr::include_graphics("img/gini-schritte.png")

@@ -125,7 +125,7 @@ Für diese Dichte werden wir nun
 
 - die Funktion skizzieren
 - nachweisen, dass es sich tatsächlich um eine Dichte handelt
-- ihren [Träger](#sec-duszv-traeger) bestimmen
+- ihren Träger (s. Kap. \@ref(sec-duszv-traeger)) bestimmen
 - den Erwartungswert berechnen
 - die Varianz berechnen
 - ihre Verteilungsfunktion bestimmen

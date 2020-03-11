@@ -1,6 +1,6 @@
 #### Spearman-Korrelation / Rangkorrelation
 
-Mit der Spearman-Korrelation misst man ebenso wie mit der [Pearson-Korrelation](#sec-pearson-korrelation) den Zusammenhang zwischen zwei Variablen. Er nimmt ebenso Werte von -1 (perfekte negative Korrelation) bis +1 (perfekte positive Korrelation) an, und ist nahe bei 0, falls gar keine Korrelation vorliegt.
+Mit der Spearman-Korrelation misst man ebenso wie mit der Pearson-Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) den Zusammenhang zwischen zwei Variablen. Er nimmt ebenso Werte von -1 (perfekte negative Korrelation) bis +1 (perfekte positive Korrelation) an, und ist nahe bei 0, falls gar keine Korrelation vorliegt.
 
 Der Spearman-Korrelationskoeffizient \(r_\text{Sp}\) wird auch Rangkorrelationskoeffizient genannt, weil nur er einen kleinen, aber entscheidenden Unterschied zum klassischen Pearson-Korrelationskoeffizienten \(r\) hat:
 
@@ -48,7 +48,7 @@ Die Formel für die Spearman-Korrelation ist genau dieselbe wie für die Pearson
 
 \[r_\text{Sp} = \frac{\sum_{i=1}^n (\text{rang}(x_i) - \overline{\text{rang}(x)}) (\text{rang}(y_i) - \overline{\text{rang}(y)})}{ \sqrt{\sum_{i=1}^n (\text{rang}(x_i) - \overline{\text{rang}(x)})^2} \cdot \sqrt{\sum_{i=1}^n (\text{rang}(y_i) - \overline{\text{rang}(y)})^2} } \]
 
-Es ist wichtig zu verstehen dass dieser Koeffizient genauso berechnet wird wie die Pearson-Korrelation, und der einzige Unterschied ist, dass die Ränge statt der Originaldaten verwendet werden. Die Formel und das Vorgehen sind aber genau dasselbe wie im Kapitel \@ref(sec-pearson-korrelation) zur [Pearson-Korrelation](#sec-pearson-korrelation) beschrieben.
+Es ist wichtig zu verstehen dass dieser Koeffizient genauso berechnet wird wie die Pearson-Korrelation, und der einzige Unterschied ist, dass die Ränge statt der Originaldaten verwendet werden. Die Formel und das Vorgehen sind aber genau dasselbe wie im Kapitel \@ref(sec-pearson-korrelation) zur Pearson-Korrelation beschrieben.
 
 Zur Übung: Berechne nun die Spearman-Korrelation dieser Daten. Verwende dazu die Ränge \(\text{rang}(x_i)\) und \(\text{rang}(y_i)\) aus der obigen Tabelle. Für die Berechnung kannst du je nach Vorliebe Formel 1 oder Formel 2 aus Kapitel \@ref(sec-pearson-korrelation) zur Pearson-Korrelation verwenden. Der resultierende Wert soll \(r_\text{Sp} = 0.83\) ergeben.
 

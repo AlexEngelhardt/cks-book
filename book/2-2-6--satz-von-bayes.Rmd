@@ -22,7 +22,7 @@ Genau diese Formel wird nun im Zähler ersetzt, und man erhält den **Satz von B
 
 **Falls \(\mathbb{P}(B)\) nicht gegeben ist**
 
-In manchen Aufgaben ist die Wahrscheinlichkeit \(\mathbb{P}(B)\) im Nenner nicht gegeben. Dann muss man sie über einen Umweg mit dem [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) (s. Kap. \@ref(sec-totale-wsk)) herleiten.
+In manchen Aufgaben ist die Wahrscheinlichkeit \(\mathbb{P}(B)\) im Nenner nicht gegeben. Dann muss man sie über einen Umweg mit dem Satz der totalen Wahrscheinlichkeit (s. Kap. \@ref(sec-totale-wsk)) herleiten.
 
 Für den Spezialfall von nur zwei Aufteilungen von \(A\) ersetzt man den Nenner also wie folgt:
 

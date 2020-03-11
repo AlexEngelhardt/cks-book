@@ -10,7 +10,7 @@ In einer Aufgabe sollte man sich immer die folgenden Fragen stellen:
 
 1. Wie groß ist meine Grundgesamtheit? \(\longrightarrow N\)
 2. Wieviele Objekte werden gezogen? \(\longrightarrow k\)
-3. Ist die Reihenfolge der gezogenen Objekte wichtig? (Falls ja: [Variation](#sec-variationen) / Falls nein: [Kombination](#sec-kombinationen))
+3. Ist die Reihenfolge der gezogenen Objekte wichtig? (Falls ja: Variation, s. Kap. \@ref(sec-variationen) / Falls nein: Kombination, s. Kap. \@ref(sec-kombinationen))
 4. Werden die Objekte mit oder ohne Zurücklegen gezogen?
 5. Kommen Objekte in der Grundgesamtheit mehrfach vor?
 
@@ -21,9 +21,9 @@ Durch die Antworten auf die Fragen 3 und 4 wird nun klar, welche der Formeln aus
 | Mit Zurücklegen  | \(N^k\)                                  | \(\frac{(N+k-1)!}{(N-1)!\cdot k!} = {N+k-1 \choose k}\) |
 | Ohne Zurücklegen | \(\frac{N!}{(N-k)!} = {N \choose k}k! \) | \(\frac{N!}{(N-k)!\cdot k!} = {N \choose k}\)           |
 
-Die Schreibweise \({N \choose k}\) beschreibt dabei den [Binomialkoeffizienten](#fakultaet) (s. Kap. \@ref(fakultaet)).
+Die Schreibweise \({N \choose k}\) beschreibt dabei den Binomialkoeffizienten (s. Kap. \@ref(fakultaet)).
 
-Die [Permutation](#sec-permutationen) ist ein Spezialfall der Variation, wenn man \(N=k\) setzt. In Worten ausgedrückt hat man eine Permutation, wenn man wissen will, auf wieviele Arten man \(N\) unterscheidbare Objekte (z.B. eine vierköpfige Familie auf einem Familienfoto) in eine Reihenfolge anordnen kann. Hier ist dann auch die 5. Frage wichtig, denn es kann vorkommen, dass in der Ausgangsmenge manche Elemente gleich sind (in Kapitel \@ref(sec-permutationen) gibt es ein Beispiel dafür).
+Die Permutation (s. Kap. \@ref(sec-permutationen)) ist ein Spezialfall der Variation, wenn man \(N=k\) setzt. In Worten ausgedrückt hat man eine Permutation, wenn man wissen will, auf wieviele Arten man \(N\) unterscheidbare Objekte (z.B. eine vierköpfige Familie auf einem Familienfoto) in eine Reihenfolge anordnen kann. Hier ist dann auch die 5. Frage wichtig, denn es kann vorkommen, dass in der Ausgangsmenge manche Elemente gleich sind (in Kapitel \@ref(sec-permutationen) gibt es ein Beispiel dafür).
 
 Vorsicht: Wenn man \(N=k\) wählt, also z.B. 7 Objekte hat, und davon 7 zieht, dann ergibt sich im Nenner der Term \(0!\), also die [Fakultät](#fakultaet) von Null. Hier muss man wissen, dass \(0!=1\) ist, sonst würde man durch Null dividieren.
 

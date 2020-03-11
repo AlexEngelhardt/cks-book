@@ -16,7 +16,7 @@ Es ist also
 
 In unserem Beispiel der Parkinson-Krankheit hieße das: Die Wahrscheinlichkeit für eine beliebige Person, an Parkinson zu erkranken, setzt sich zusammen als die Summe der Wahrscheinlichkeit, ein Mann zu sein *und* an Parkinson zu erkranken, plus die Wahrscheinlichkeit, eine Frau zu sein *und* an Parkinson zu erkanken.
 
-Meist sind nicht die gemeinsamen Wahrscheinlichkeiten \(\mathbb{P}(A \cap B)\), sondern die [bedingten Wahrscheinlichkeiten](#sec-bedingte-wsk) \(\mathbb{P}(A | B)\) gegeben. Man kann die gemeinsamen Wahrscheinlichkeiten aber erhalten, indem man die Formel der bedingten Wahrscheinlichkeiten etwas umstellt:
+Meist sind nicht die gemeinsamen Wahrscheinlichkeiten \(\mathbb{P}(A \cap B)\), sondern die bedingten Wahrscheinlichkeiten \(\mathbb{P}(A | B)\) (s. Kap. \@ref(sec-bedingte-wsk)) gegeben. Man kann die gemeinsamen Wahrscheinlichkeiten aber erhalten, indem man die Formel der bedingten Wahrscheinlichkeiten etwas umstellt:
 
 \[ \mathbb{P}(A \cap B) = \mathbb{P}(A | B) \cdot \mathbb{P}(B) \]
 

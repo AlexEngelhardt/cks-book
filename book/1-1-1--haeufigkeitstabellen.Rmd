@@ -1,6 +1,6 @@
 ## Häufigkeitstabellen {#sec-haeufigkeitstabellen}
 
-Häufigkeitstabellen fassen Daten in einer Tabelle zusammen, die für jede mögliche Ausprägung zeigt, wie oft diese Ausprägung vorgekommen ist. Diese Tabellen sind nur für [diskrete](#merkmals-und-skalentypen) Daten sinnvoll, da bei stetigen Daten jede Beobachtung einen anderen Wert hat, und die Tabelle dann nichts zusammenfassen würde. Bei gruppierten stetigen Daten kann aber eine Tabelle erstellt werden.
+Häufigkeitstabellen fassen Daten in einer Tabelle zusammen, die für jede mögliche Ausprägung zeigt, wie oft diese Ausprägung vorgekommen ist. Diese Tabellen sind nur für diskrete Daten (s. Kap. \@ref(merkmals-und-skalentypen)) sinnvoll, da bei stetigen Daten jede Beobachtung einen anderen Wert hat, und die Tabelle dann nichts zusammenfassen würde. Bei gruppierten stetigen Daten kann aber eine Tabelle erstellt werden.
 
 Häufigkeitstabellen sind meist ein erster Schritt in der Datenanalyse, da sie die Grundlage für z.B. Balkendiagramme, Lorenzkurven oder Verteilungsfunktionen bilden.
 

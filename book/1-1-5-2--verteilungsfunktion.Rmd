@@ -1,8 +1,8 @@
 ### Verteilungsfunktion
 
-[Häufigkeitstabellen](#sec-haeufigkeitstabellen) kann man auf zweierlei Art visualisieren: Absolute oder relative Häufigkeiten stellt man meist durch [Balkendiagramme](#sec-balkendiagramme) dar. Für *kumulierte Häufigkeiten* ist nun eine Verteilungsfunktion angebracht. Sie zeigt auf der \(x\)-Achse die geordneten Ausprägungen für das Merkmal, und auf der \(y\)-Achse den *Anteil der Daten, der kleiner oder gleich dieser Ausprägung ist*.
+Häufigkeitstabellen (s. Kap. \@ref(sec-haeufigkeitstabellen)) kann man auf zweierlei Art visualisieren: Absolute oder relative Häufigkeiten stellt man meist durch [Balkendiagramme](#sec-balkendiagramme) dar. Für *kumulierte Häufigkeiten* ist nun eine Verteilungsfunktion angebracht. Sie zeigt auf der \(x\)-Achse die geordneten Ausprägungen für das Merkmal, und auf der \(y\)-Achse den *Anteil der Daten, der kleiner oder gleich dieser Ausprägung ist*.
 
-Wenn wir eine Verteilungsfunktion zeichen, sollten wir immer ihr Prinzip im Hinterkopf behalten: Sie zeigt euch für jede Ausprägung den Anteil der Daten, der *kleiner oder gleich* dieser Ausprägung ist. Diese Verteilungsfunktion \(F(x)\) haben wir im Kapitel zu [Häufigkeitstabellen](#sec-haeufigkeitstabellen) schon gesehen, allerdings nur in Tabellenform. Hier zeichnen wir im Prinzip nur die zu der Tabelle passende Grafik.
+Wenn wir eine Verteilungsfunktion zeichen, sollten wir immer ihr Prinzip im Hinterkopf behalten: Sie zeigt euch für jede Ausprägung den Anteil der Daten, der *kleiner oder gleich* dieser Ausprägung ist. Diese Verteilungsfunktion \(F(x)\) haben wir im Kapitel \@ref(sec-haeufigkeitstabellen) zu Häufigkeitstabellen schon gesehen, allerdings nur in Tabellenform. Hier zeichnen wir im Prinzip nur die zu der Tabelle passende Grafik.
 
 ```{exercise, echo=TRUE}
 

@@ -2,7 +2,7 @@
 
 Idee
 
-Die Binomialverteilung entsteht, wenn man ein [Bernoulli-Experiment](#sec-bernoulliverteilung) mehrere Male wiederholt, und an der gesamten Anzahl der Erfolge interessiert ist.
+Die Binomialverteilung entsteht, wenn man ein Bernoulli-Experiment (s. Kap. \@ref(sec-bernoulliverteilung)) mehrere Male wiederholt, und an der gesamten Anzahl der Erfolge interessiert ist.
 
 In Kapitel \@ref(sec-bernoulliverteilung) zur Bernoulliverteilung haben wir ein Beispiel betrachtet, in dem wir auf einem Schießstand am Jahrmarkt einen einmaligen Schuß mit einer Trefferwahrscheinlichkeit von \(p=0.2\) abgeben. Wenn wir nun sechs Schüsse kaufen, folgt die Gesamtzahl der Treffer einer Binomialverteilung mit \(n=6\) und \(p=0.2\), oder:
 \[ X \sim B(6, 0.2) \]

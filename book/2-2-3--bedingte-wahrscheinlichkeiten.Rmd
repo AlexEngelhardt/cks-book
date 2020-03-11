@@ -61,7 +61,7 @@ b) Bestimme die Wahrscheinlichkeit für \(A\), gegeben \(B\) ist bereits eingetr
 
 ```{solution, echo=TRUE}
 
-a) Durch einfaches Abzählen finden wir die [Laplace-Wahrscheinlichkeit](#sec-laplace). Im Zähler steht die Anzahl der "gewünschten" Ergebnisse, das ist die 2, 4, und 6, also insgesamt 3 Ergebnisse. Im Nenner steht die Anzahl aller möglichen Ergebnisse, das ist bei einem Würfel 6:
+a) Durch einfaches Abzählen finden wir die Laplace-Wahrscheinlichkeit (s. Kap. \@ref(sec-laplace)). Im Zähler steht die Anzahl der "gewünschten" Ergebnisse, das ist die 2, 4, und 6, also insgesamt 3 Ergebnisse. Im Nenner steht die Anzahl aller möglichen Ergebnisse, das ist bei einem Würfel 6:
 
 \[\mathbb{P}(A) = \frac{3}{6} = 0.5\]
 

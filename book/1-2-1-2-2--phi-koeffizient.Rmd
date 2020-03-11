@@ -1,6 +1,6 @@
 #### $\phi$-Koeffizient
 
-Der \(\phi\)-Koeffizient ist ein Zusammenhangsmaß für zwei binäre (oder dichotome) Variablen, das heißt zwei Variablen, die jeweils nur zwei mögliche [Ausprägungen](#sec-ggsm) haben. Die resultierenden Daten kann man in einer 2x2-[Kreuztabelle](#sec-kreuztabellen) zusammenfassen. (Für größere Tabellen muss man auf den [Chi-Quadrat- oder den Kontingenzkoeffizienten](#sec-chisq-und-k) ausweichen)
+Der \(\phi\)-Koeffizient ist ein Zusammenhangsmaß für zwei binäre (oder dichotome) Variablen, das heißt zwei Variablen, die jeweils nur zwei mögliche [Ausprägungen](#sec-ggsm) haben. Die resultierenden Daten kann man in einer 2x2-[Kreuztabelle](#sec-kreuztabellen) zusammenfassen. (Für größere Tabellen muss man auf den Chi-Quadrat- oder den Kontingenzkoeffizienten, s. Kap. \@ref(sec-chisq-und-k), ausweichen)
 
 Als Beispiel sehen wir uns eine andere Darstellung der Daten aus Kapitel \@ref(sec-chisq-und-k) zum \(\chi^2\)-Koeffizienten an: Wir betrachten für 180 Züge nur, ob sie (a) unter der Woche oder am Wochenende abfahren, und (b) ob sie pünktlich oder mit Verspätung abfahren. Wir fassen also die letzten beiden Spalten der Tabelle aus Kapitel \@ref(sec-chisq-und-k) zusammen, und erhalten diese Tabelle:
 

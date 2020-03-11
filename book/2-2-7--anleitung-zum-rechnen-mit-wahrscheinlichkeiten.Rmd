@@ -25,7 +25,7 @@ Dazu ist es hilfreich, noch ein paar zusätzliche Regeln zu kennen (wenn sie nic
 - \(\mathbb{P}(\bar{A}) = 1-\mathbb{P}(A)\). Mit \(\bar{A}\) ist die Gegenwahrscheinlichkeit von \(A\) gemeint. Das ist natürlich genau die Wahrscheinlichkeit, die auf die Gesamtsumme von 1 fehlt, denn \(\mathbb{P}(A) + \mathbb{P}(\bar{A}) = 1\).
 - \(\mathbb{P}(A \cup B) =\mathbb{P}(A)+\mathbb{P}(B) -\mathbb{P}(A \cap B)\). Die Wahrscheinlichkeit \(\mathbb{P}(A \cup B)\), dass also entweder \(A\) oder \(B\) eintritt (oder auch beide Ereignisse gleichzeitig), ist deren Summe, minus der Wahrscheinlichkeit dass beide Ereignisse eintreten. Diese Formel kann man sich an einem Venn-Diagramm (s. Kap. \@ref(sec-venn)) gut selbst herleiten.
 
-Ab und zu muss man mit den gegebenen Werten erst ein Zwischenergebnis berechnen, bevor man das letztendliche Ergebnis erhalten kann. Das ist zum Beispiel beim [Satz von Bayes](#sec-bayes) der Fall, wo man im Nenner die Wahrscheinlichkeit \(\mathbb{P}(A)\) erst über den [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) berechnen muss. Die folgende Beispielaufgabe illustriert dieses Vorgehen:
+Ab und zu muss man mit den gegebenen Werten erst ein Zwischenergebnis berechnen, bevor man das letztendliche Ergebnis erhalten kann. Das ist zum Beispiel beim Satz von Bayes (s. Kap. \@ref(sec-bayes)) der Fall, wo man im Nenner die Wahrscheinlichkeit \(\mathbb{P}(A)\) erst über den Satz der totalen Wahrscheinlichkeit (s. Kap. \@ref(sec-totale-wsk)) berechnen muss. Die folgende Beispielaufgabe illustriert dieses Vorgehen:
 
 ```{exercise, echo=TRUE}
 
@@ -54,14 +54,14 @@ Um diese Aufgabe zu lösen, gehen wir wie oben beschrieben Schritt für Schritt 
 - Gegebene Werte
     - Gegeben sind zum Einen die A-priori-Wahrscheinlichkeiten, dass ein beliebiger Soldat von Maschine 1, 2, bzw. 3 kommt. Das sind einfach die Werte \(\mathbb{P}(M_1)=0.15\), \(\mathbb{P}(M_2)=0.40\) und \(\mathbb{P}(M_3)=0.45\). Zusätzlich sind die Anteile fehlerhafter Soldaten die bedingte Wahrscheinlichkeit für \(F\), gegeben der Maschine, also \(\mathbb{P}(F|M_1)=0.10\), \(\mathbb{P}(F|M_2)=0.02\), und \(\mathbb{P}(F|M_3)=0.01\).
 - Hilfreiche Formeln
-    - Wir sehen, dass eine bedingte Wahrscheinlichkeit gesucht ist, und die "andersrum" bedingten Wahrscheinlichkeiten gegeben sind. Das sind Aufgabentypen, die mit dem [Satz von Bayes](#sec-bayes) gelöst werden können:
+    - Wir sehen, dass eine bedingte Wahrscheinlichkeit gesucht ist, und die "andersrum" bedingten Wahrscheinlichkeiten gegeben sind. Das sind Aufgabentypen, die mit dem Satz von Bayes (s. Kap. \@ref(sec-bayes)) gelöst werden können:
 \[ \mathbb{P}(A|B) = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B)} \]
 
 In dieser Aufgabe beginnen wir also mit dem Satz von Bayes und unseren Ereignissen:
 
 \[ \mathbb{P}(M_1|F) = \frac{\mathbb{P}(F|M_1)\mathbb{P}(M_1)}{\mathbb{P}(F)} \]
 
-Alle diese Werte sind aus der Angabe bekannt, bis auf \(\mathbb{P}(F)\), die Wahrscheinlichkeit, dass ein beliebiger Soldat fehlerhaft ist. Um diese Wahrscheinlichkeit aus den gegebenen Werten zu berechnen, bietet sich der [Satz der totalen Wahrscheinlichkeit](#sec-totale-wsk) an:
+Alle diese Werte sind aus der Angabe bekannt, bis auf \(\mathbb{P}(F)\), die Wahrscheinlichkeit, dass ein beliebiger Soldat fehlerhaft ist. Um diese Wahrscheinlichkeit aus den gegebenen Werten zu berechnen, bietet sich der Satz der totalen Wahrscheinlichkeit (s. Kap. \@ref(sec-totale-wsk)) an:
 
 \[\begin{aligned} \mathbb{P}(F) &=\mathbb{P}(F|M_1)\mathbb{P}(M_1) +\mathbb{P}(F|M_2)\mathbb{P}(M_2) +\mathbb{P}(F|M_3)\mathbb{P}(M_3) \\ &= 0.10 \cdot 0.15 + 0.02 \cdot 0.40 + 0.01 \cdot 0.45 \\&= 0.0275 \end{aligned}\]
 

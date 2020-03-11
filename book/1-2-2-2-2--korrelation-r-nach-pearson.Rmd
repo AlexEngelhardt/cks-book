@@ -96,7 +96,7 @@ Die Korrelation ist eigentlich eine standardisierte Version der *Kovarianz* zwei
 
 \[ \text{Cov}(x, y) = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})(y_i-\bar{y})\]
 
-Der Betrag der Kovarianz bewegt sich zwischen \(0\) (bei unkorrelierten Variablen) und \(s_x \cdot s_y\) (bei perfekt korrelierten Variablen). Dabei ist \(s_x\) die [Standardabweichung](#sec-var-sd) von \(X\), und \(s_y\) die von \(Y\). Das Vorzeichen der Kovarianz lässt nun schon erkennen, in welche Richtung der Zusammenhang zweier Variablen geht, genauso wie bei der Korrelation. Aber ihr Wert ist abhängig von der Varianz von \(x\) und \(y\). Daher wird die Kovarianz standardisiert, indem man durch die Standardabweichungen von \(x\) und \(y\) teilt - dadurch erhält man die Korrelation, deren Wertebereich nun von -1 bis 1 geht:
+Der Betrag der Kovarianz bewegt sich zwischen \(0\) (bei unkorrelierten Variablen) und \(s_x \cdot s_y\) (bei perfekt korrelierten Variablen). Dabei ist \(s_x\) die Standardabweichung (s. Kap. \@ref(sec-var-sd)) von \(X\), und \(s_y\) die von \(Y\). Das Vorzeichen der Kovarianz lässt nun schon erkennen, in welche Richtung der Zusammenhang zweier Variablen geht, genauso wie bei der Korrelation. Aber ihr Wert ist abhängig von der Varianz von \(x\) und \(y\). Daher wird die Kovarianz standardisiert, indem man durch die Standardabweichungen von \(x\) und \(y\) teilt - dadurch erhält man die Korrelation, deren Wertebereich nun von -1 bis 1 geht:
 
 \[ r = \frac{\text{Cov}(x, y)}{s_x \cdot s_y} \]
 
