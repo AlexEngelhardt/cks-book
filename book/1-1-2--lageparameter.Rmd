@@ -101,7 +101,7 @@ Schauen wir uns Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir b
 
 Der Mittelwert berechnet sich zu \(\frac{1}{7}(3+2+0+5+1+4+4) \approx 2.714\). Für den Median ordnen wir unsere Daten. Da \(n\) ungerade ist, können wir direkt das mittlere, vierte Element in der geordneten Liste verwenden:
 
-Geordnetes Merkmal: 0	1	2	3	4	4	5
+Geordnetes Merkmal: (0, 1, 2, 3, 4, 4, 5)
 
 Der Median ist also 3. Der Modus ist 4, da diese Ausprägung am häufigsten (zweimal) vorkommt.
 

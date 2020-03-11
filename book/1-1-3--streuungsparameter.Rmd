@@ -78,7 +78,7 @@ Schauen wir uns Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir b
 
 Für Spannweite und Interquartilsabstand brauchen wir zuerst wieder die sortierten Daten:
 
-Geordnetes Merkmal: 0	1	2	3	4	4	5
+Geordnetes Merkmal: (0, 1, 2, 3, 4, 4, 5)
 
 Die Spannweite ist also \(5-0=5\).
 

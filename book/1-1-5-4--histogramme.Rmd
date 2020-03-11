@@ -8,8 +8,9 @@ Am einfachsten sind Histogramme zu zeichnen, wenn diese Gruppen gleich breit sin
 
 Wir bauen nun ein Histogramm für die folgenden zwanzig Körpergrößen:
 
-172	164	160	162	173	180	158	185	171	181  
-162	184	177	175	177	174	158	151	192	177
+172 164 160 162 173 180 158 185 171 181
+
+162 184 177 175 177 174 158 151 192 177
 
 Zuerst müssen wir die Gruppen festlegen, in die wir die Daten zuordnen wollen. Wir zeichnen zuerst ein Histogramm für fünf gleich breite Gruppen:
 

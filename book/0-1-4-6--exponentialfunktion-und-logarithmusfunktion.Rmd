@@ -23,9 +23,9 @@ Falls im Zähler des Bruches eine andere Zahl als 1 steht, ist das die Potenz de
 
 | Regel                                            | Beispiel                                                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| \(x^a \cdot x^b = x^{a+b}\)	                   | \(x^3 \cdot x^2 = x \cdot x \cdot x \cdot x \cdot x = x^5 = x^{2+3}\)                |
-| \(\frac{x^a}{x^b} = x^{a-b}\)	                   | \(\frac{x^4}{x^2} = \frac{x \cdot x \cdot x \cdot x}{x \cdot x} = x^2 = x^{4-2}\)    |
-| \((x^r)^s = x^{r\cdot s}\)	                   | \((x^2)^2 = x^2 \cdot x^2 = x \cdot x \cdot x \cdot x = x^{2\cdot 2}\)               |
+| \(x^a \cdot x^b = x^{a+b}\)                      | \(x^3 \cdot x^2 = x \cdot x \cdot x \cdot x \cdot x = x^5 = x^{2+3}\)                |
+| \(\frac{x^a}{x^b} = x^{a-b}\)                    | \(\frac{x^4}{x^2} = \frac{x \cdot x \cdot x \cdot x}{x \cdot x} = x^2 = x^{4-2}\)    |
+| \((x^r)^s = x^{r\cdot s}\)                       | \((x^2)^2 = x^2 \cdot x^2 = x \cdot x \cdot x \cdot x = x^{2\cdot 2}\)               |
 | \(\left(\frac{x}{y}\right)^r = \frac{x^r}{y^r}\) | \(\left(\frac{x}{y}\right)^3 = \frac{x}{y}\frac{x}{y}\frac{x}{y} = \frac{x^3}{y^3}\) |
 | \((x\cdot y)^r = x^r \cdot y^r\)                 | \((x\cdot y)^2 = (x\cdot y) \cdot (x\cdot y) = x^2 y^2\)                             |
 

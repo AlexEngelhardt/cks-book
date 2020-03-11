@@ -20,7 +20,7 @@ Allgemein notieren kann man eine Tabelle zum Beispiel so:
 | \(a_2\)    | \(h_{21}\)      | \(h_{22}\)      | \(\dots\)  | \(h_{2J}\)      | \(h_{2\cdot}\) |
 | \(\vdots\) | \(\vdots\)      | \(\vdots\)      | \(\ddots\) | \(\vdots\)      | \(\vdots\)     |
 | \(a_I\)    | \(h_{I1}\)      | \(h_{I2}\)      | \(\dots\)  | \(h_{IJ}\)      | \(h_{I\cdot}\) |
-| **Summe**	 | \(h_{\cdot 1}\) | \(h_{\cdot 2}\) | \(\dots\)  | \(h_{\cdot J}\) | \(n\)          |
+| **Summe**  | \(h_{\cdot 1}\) | \(h_{\cdot 2}\) | \(\dots\)  | \(h_{\cdot J}\) | \(n\)          |
 
 Das Merkmal \(X\) ist in den Zeilen dargestellt und kann \(I\) verschiedene Ausprägungen haben, \(a_1\) bis \(a_I\). Im oberen Beispiel war \(X\) das Geschlecht, \(I=2\) und \(a_1\) war "männlich", \(a_2\) war "weiblich". Das zweite Merkmal, \(Y\) läuft über die Spalten und hat \(J\) verschiedene Ausprägungen \(b_1, \ldots, b_J\) (oben waren das die fünf Parteien).
 

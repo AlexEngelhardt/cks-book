@@ -36,11 +36,12 @@ Bestimme mit Hilfe der untenstehenden Tabelle \(\Phi(1)\), \(\Phi(-1)\), und \(\
 
 ```
 
-```{solution, show=TRUE}
+```{solution, echo=TRUE}
 
-\(\Phi(1)=0.8413\)
-\(\Phi(-1) = 1-\Phi(1) = 1-0.8413 = 0.1587\)
-\(\Phi(-1.96) = 1-\Phi(1.96) = 1-0.975 = 0.025\)
+
+- \(\Phi(1)=0.8413\)
+- \(\Phi(-1) = 1-\Phi(1) = 1-0.8413 = 0.1587\)
+- \(\Phi(-1.96) = 1-\Phi(1.96) = 1-0.975 = 0.025\)
 
 ```
 
