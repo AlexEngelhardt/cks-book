@@ -6,7 +6,7 @@ Man interessiert sich also für die Mathematikkenntnisse und den Wortschatz in e
 
 Die folgende Tabelle fasst die Unterschiede nocheinmal zusammen:
 
-```{r grundgesamtheit-stichprobe-merkmale}
+```{r grundgesamtheit-stichprobe-merkmale, results="asis"}
 knitr::kable(
     tibble(
         Begriff = c("Grundgesamtheit", "Stichprobe", "Statistische Einheit", "Merkmal", "Merkmalsausprägung"),

@@ -9,6 +9,7 @@ biblio-style: apalike
 link-citations: yes
 always_allow_html: yes  # need this to render epub. Otherwise error message.
 description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form."
+lang: de  # https://stackoverflow.com/questions/48247787/how-to-change-caption-label-names-in-a-single-document-with-bookdown
 ---
 
 # Willkommen! {-}

@@ -4,13 +4,16 @@ Für die \(\chi^2\)-Verteilung gibt es theoretisch, genauso wie bei der \(t\)-Ve
 
 Haben wir also einen \(\chi^2\)-Test mit 5 Freiheitsgraden, und möchten die kritische Schranke für ein Signifikanzniveau von \(\alpha=0.05\) finden, sehen wir in der Zeile für 5 und der Spalte für 0.95 (das ist 1-0.05) nach, und finden den Wert 11.07. Abbildung \@ref(fig:verteilungen-chisq-verteilung-verteilungstabelle) veranschaulicht den Wert, den wir suchen.
 
-(ref:verteilungen-chisq-verteilung-verteilungstabelle-caption) Ablesebeispiel der \(\chi^2\)-Verteilung mit \(df=5\) Freiheitsgraden. Die Dichte (obere Grafik) hat ab der Stelle \(x=11.07\) noch eine Fläche von 5%. Die Verteilungsfunktion (untere Grafik) an der Stelle \(x=11.07\) hat genau den Wert 0.95.
+(ref:vert-c-v-v-caption) Ablesebeispiel der \(\chi^2\)-Verteilung mit \(df=5\) Freiheitsgraden. Die Dichte (obere Grafik) hat ab der Stelle \(x=11.07\) noch eine Fläche von 5%. Die Verteilungsfunktion (untere Grafik) an der Stelle \(x=11.07\) hat genau den Wert 0.95.
 
-```{r verteilungen-chisq-verteilung-verteilungstabelle, fig.cap="(ref:verteilungen-chisq-verteilung-verteilungstabelle-caption)"}
+```{r verteilungen-chisq-verteilung-verteilungstabelle, fig.cap="(ref:vert-c-v-v-caption)"}
 knitr::include_graphics("img/verteilungen-chisq-verteilung-verteilungstabelle.png")
 ```
 
+
 **Die Tabelle der \(\chi^2\)-Verteilung**
+
+Tabelle \@ref(tab:table-chisq-verteilung) zeigt die Verteilungstabelle der \(\chi^2\)-Verteilung.
 
 (ref:tabelle-chisq-caption) Quantile der \(\chi^2\)-Verteilung mit verschiedenen Freiheitsgraden
 
@@ -20,8 +23,10 @@ knitr::include_graphics("img/verteilungen-chisq-verteilung-verteilungstabelle.pn
 
 ```{r}
 dfs = c(1:30)
-quantiles = c(0.05, 0.10, 0.20, 0.30, 0.50, 0.70, 0.80, 0.90, 0.95, 0.99, 0.999)
-colnames_quantiles = c("0.05", "0.10", "0.20", "0.30", "0.50", "0.70", "0.80", "0.90", "0.95", "0.99", "0.999")
+# quantiles = c(0.05, 0.10, 0.20, 0.30, 0.50, 0.70, 0.80, 0.90, 0.95, 0.99, 0.999)
+# colnames_quantiles = c("0.05", "0.10", "0.20", "0.30", "0.50", "0.70", "0.80", "0.90", "0.95", "0.99", "0.999")
+quantiles = c(0.01, 0.025, 0.05, 0.90, 0.95, 0.975, 0.99)
+colnames_quantiles = c("0.01", "0.025", "0.05", "0.90", "0.95", "0.975", "0.99")
 
 mx = matrix(
     format(round(qchisq(rep(quantiles, times=length(dfs)), df=rep(dfs, each=length(quantiles))), 3), nsmall=3),
@@ -35,16 +40,17 @@ mx = cbind(dfs, mx)
 colnames(mx)[1] = "(ref:tabelle-chisq-colheader)"
 ```
 
-```{r, eval=knitr::is_html_output()}
-# This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
-kable(mx, caption="(ref:tabelle-chisq-caption)") %>%
-    column_spec(1, bold=TRUE) %>%
-    add_header_above(c("", "(ref:tabelle-chisq-rowheader)"=length(quantiles)))
-```
-
-```{r, eval=knitr::is_latex_output()}
-kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-chisq-caption)") %>%
-    add_header_above(c("", "(ref:tabelle-chisq-rowheader)"=length(quantiles)))
+```{r table-chisq-verteilung}
+if(knitr::is_html_output()){
+    # This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
+        kable(mx, caption="(ref:tabelle-chisq-caption)") %>%
+        column_spec(1, bold=TRUE) %>%
+        add_header_above(c("", "(ref:tabelle-chisq-rowheader)"=length(quantiles)))
+} else if(knitr::is_latex_output()){
+    kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-chisq-caption)") %>%
+        add_header_above(c("", "(ref:tabelle-chisq-rowheader)"=length(quantiles))) %>%
+        kableExtra::kable_styling(latex_options = "hold_position")  # Latex's [h!]
+}
 ```
 
 

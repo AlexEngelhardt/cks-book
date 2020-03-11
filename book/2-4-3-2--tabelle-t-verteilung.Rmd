@@ -2,7 +2,7 @@
 
 Der Unterschied der \(t\)-Verteilung (s. Kap. \@ref(sec-t-verteilung)) zur Standardnormalverteilung ist, dass es viele verschiedene \(t\)-Verteilungen gibt - eine für jeden Freiheitsgrad \(df\).
 
-Daher findet man aus Platzgründen  in Büchern und Klausuren nie eine seitenlange Auflistung von je einer vollständigen Verteilungstabelle für jeden Freiheitsgrad, sondern nur die wichtigsten Quantile in einer Spalte.
+Daher findet man aus Platzgründen in Büchern und Klausuren nie eine seitenlange Auflistung von je einer vollständigen Verteilungstabelle für jeden Freiheitsgrad, sondern nur die wichtigsten Quantile in einer Spalte.
 
 Die verbreitete Schreibweise ist für ein t-Quantil dann z.B. \(t_{0.975}(4)\). Das ist das 97,5%-Quantil der t-Verteilung mit 4 Freiheitsgraden. Für dieses Quantil sind die folgenden Aussagen alle wahr und gleichbedeutend:
 
@@ -26,6 +26,8 @@ Versuche zur Übung, den Wert 2,776 in der unten stehenden Verteilungstabelle wi
 Wenn man versteht, dass all diese Sätze äquivalent sind, dann kann man gut mit der Verteilungstabelle umgehen. Die Zeit dafür zu investieren, zahlt sich in der Klausur mit Sicherheit aus.
 
 **Die Tabelle der \(t\)-Verteilung**
+
+Tabelle \@ref(tab:table-t-verteilung) zeigt die Verteilungstabelle der \(t\)-Verteilung.
 
 (ref:tabelle-t-caption) Quantile der \(t\)-Verteilung mit verschiedenen Freiheitsgraden
 
@@ -53,15 +55,16 @@ mx[nrow(mx), 1] = "(ref:infty)"
 colnames(mx)[1] = "(ref:tabelle-t-colheader)"
 ```
 
-```{r, eval=knitr::is_html_output()}
-# This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
-kable(mx, caption="(ref:tabelle-t-caption)") %>%
-    column_spec(1, bold=TRUE) %>%
-    add_header_above(c("", "(ref:tabelle-t-rowheader)"=length(quantiles)))
-```
-
-```{r, eval=knitr::is_latex_output()}
-kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-t-caption)") %>%
-    add_header_above(c("", "(ref:tabelle-t-rowheader)"=length(quantiles)))
+```{r table-t-verteilung}
+if(knitr::is_html_output()){
+    # This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
+    kable(mx, caption="(ref:tabelle-t-caption)") %>%
+        column_spec(1, bold=TRUE) %>%
+        add_header_above(c("", "(ref:tabelle-t-rowheader)"=length(quantiles)))
+} else if(knitr::is_latex_output()){
+    kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-t-caption)") %>%
+        add_header_above(c("", "(ref:tabelle-t-rowheader)"=length(quantiles))) %>%
+        kableExtra::kable_styling(latex_options = "hold_position")  # Latex's [h!]
+}
 ```
 

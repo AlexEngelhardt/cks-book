@@ -3,6 +3,7 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
+      toc_depth: 3
       before: |
         <li><a href="./">Crashkurs Statistik</a></li>
       after: |
@@ -11,6 +12,7 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
+  toc_depth: 3
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes

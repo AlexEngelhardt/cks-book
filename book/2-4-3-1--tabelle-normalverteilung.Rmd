@@ -80,7 +80,9 @@ Das 2.5%-Quantil (nennen wir es \(q_{0.025}\) ist nun \(-q_{1-0.025} = -q_{0.975
 
 **Die Tabelle der Standardnormalverteilung**
 
-in den Spalten ist die erste Nachkommastelle von \(z\) ab, in den Spalten die zweite Nachkommastelle. So ist z.B. der Wert in der Ecke ganz rechts oben der von \(\Phi(0.09) = 0.5359\). Eine Zeile direkt darunter ist der Wert für \(\Phi(0.19) = 0.5753\).
+Tabelle \@ref(tab:table-normalverteilung) zeigt die Verteilungstabelle der Normalverteilung.
+
+In der ersten Spalte findet man die erste Nachkommastelle von \(z\), in der ersten Zeile die zweite Nachkommastelle. So ist z.B. der Wert in der Ecke ganz rechts oben der von \(\Phi(0.09) = 0.5359\). Eine Zeile direkt darunter ist der Wert für \(\Phi(0.19) = 0.5753\).
 
 (ref:tabelle-nv-rowheader) Zweite Nachkommastelle \(\rightarrow\)
 
@@ -103,14 +105,17 @@ mx = cbind(
 
 (ref:tabelle-nv-caption) Tabelle der Standardnormalverteilung \(N(0, 1)\)
 
-```{r, eval=knitr::is_html_output()}
-# This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
-kable(mx, caption="(ref:tabelle-nv-caption)") %>%
-    column_spec(1, bold=TRUE) %>%
-    add_header_above(c("(ref:tabelle-nv-colheader)", "(ref:tabelle-nv-rowheader)"=10))
-```
+```{r table-normalverteilung}
 
-```{r, eval=knitr::is_latex_output()}
-kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-nv-caption)") %>%
-    add_header_above(c("(ref:tabelle-nv-colheader)", "(ref:tabelle-nv-rowheader)"=10))
+if(knitr::is_html_output()){
+    # This chunk is only evaluated (i.e. ran), if we output to HTML, i.e. gitbook or epub
+    kable(mx, caption="(ref:tabelle-nv-caption)") %>%
+        column_spec(1, bold=TRUE) %>%
+        add_header_above(c("(ref:tabelle-nv-colheader)", "(ref:tabelle-nv-rowheader)"=10)) %>%
+        kableExtra::kable_styling(font_size = 12)
+} else if(knitr::is_latex_output()){
+    kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-nv-caption)") %>%
+        add_header_above(c("(ref:tabelle-nv-colheader)", "(ref:tabelle-nv-rowheader)"=10)) %>%
+        kableExtra::kable_styling(font_size = 8, latex_options = "hold_position")  # Latex's [h!]
+}
 ```

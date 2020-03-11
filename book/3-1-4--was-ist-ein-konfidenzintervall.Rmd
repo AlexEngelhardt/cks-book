@@ -1,4 +1,4 @@
-## Was ist ein Konfidenzintervall?
+## Was ist ein Konfidenzintervall? {#sec-was-ki}
 
 ### Wozu braucht man Konfidenzintervalle?
 

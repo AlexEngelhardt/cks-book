@@ -1,4 +1,4 @@
-## Inferenzstatistik: Eine Übersicht
+# Inferenzstatistik: Eine Übersicht {-}
 
 Bisher haben wir uns mit der *deskriptiven* (oder *beschreibenden*) Statistik, sowie mit der Wahrscheinlichkeitsrechnung beschäftigt:
 
