@@ -8,15 +8,15 @@ Wenn wir eine Verteilungsfunktion zeichen, sollten wir immer ihr Prinzip im Hint
 
 Wir haben 80 Studenten befragt, in welchem Semester sie sich befinden, und daraus eine Häufigkeitstabelle erstellt:
 
-| Semester $i$ | $h_i$ | $f_i$  | $F_i$  |
-| ------------ | ----- | ------ | ------ |
-| 1            | 20    | 0.25   | 0.25   |
-| 2            | 4     | 0.05   | 0.3    |
-| 3            | 13    | 0.1625 | 0.4625 |
-| 4            | 9     | 0.1125 | 0.575  |
-| 5            | 21    | 0.2625 | 0.8375 |
-| 6            | 5     | 0.0625 | 0.9    |
-| 7            | 8     | 0.1    | 1      |
+| Semester \(i\) | \(h_i\) | \(f_i\)  | \(F_i\)  |
+| -------------- | ------- | -------- | -------- |
+| 1              | 20      | 0.25     | 0.25     |
+| 2              | 4       | 0.05     | 0.3      |
+| 3              | 13      | 0.1625   | 0.4625   |
+| 4              | 9       | 0.1125   | 0.575    |
+| 5              | 21      | 0.2625   | 0.8375   |
+| 6              | 5       | 0.0625   | 0.9      |
+| 7              | 8       | 0.1      | 1        |
 
 Abbildung \@ref(fig:verteilungsfunktion-aufgabe) zeigt die Verteilungsfunktion für unsere Studentenbefragung (das Semester \(i\) ist die \(x\)-Achse, und die Spalte \(F_i\) ist die \(y\)-Achse).
 ```

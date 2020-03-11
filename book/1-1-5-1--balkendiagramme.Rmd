@@ -8,15 +8,15 @@ Kurz am Rande: Das Balkendiagramm heißt genaugenommen *Säulendiagramm*, da die
 
 Wir benutzen die Daten aus Kapitel \@ref(sec-haeufigkeitstabellen) zu Häufigkeitstabellen:
 
-| Semester $i$ | $h_i$ | $f_i$  | $F_i$  |
-| ------------ | ----- | ------ | ------ |
-| 1            | 20    | 0.25   | 0.25   |
-| 2            | 4     | 0.05   | 0.3    |
-| 3            | 13    | 0.1625 | 0.4625 |
-| 4            | 9     | 0.1125 | 0.575  |
-| 5            | 21    | 0.2625 | 0.8375 |
-| 6            | 5     | 0.0625 | 0.9    |
-| 7            | 8     | 0.1    | 1      |
+| Semester \(i\) | \(h_i\) | \(f_i\) | \(F_i\) |
+| -------------- | ------- | ------- | ------- |
+| 1              | 20      | 0.25    | 0.25    |
+| 2              | 4       | 0.05    | 0.3     |
+| 3              | 13      | 0.1625  | 0.4625  |
+| 4              | 9       | 0.1125  | 0.575   |
+| 5              | 21      | 0.2625  | 0.8375  |
+| 6              | 5       | 0.0625  | 0.9     |
+| 7              | 8       | 0.1     | 1       |
 
 Damit zeichnen wir nun ein Balkendiagramm für die absolute (die Spalte \(h_i\)) und relative (die Spalte \(f_i\)) Häufigkeit für jedes Semester.
 ```

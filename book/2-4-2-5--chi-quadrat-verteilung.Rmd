@@ -1,4 +1,4 @@
-### $\chi^2$-Verteilung {#sec-chisq-verteilung}
+### \(\chi^2\)-Verteilung {#sec-chisq-verteilung}
 
 **Idee**
 

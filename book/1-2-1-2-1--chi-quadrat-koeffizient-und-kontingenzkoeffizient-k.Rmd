@@ -1,4 +1,4 @@
-#### $\chi^2$-Koeffizient und Kontingenzkoeffizient K {#sec-chisq-und-k}
+#### \(\chi^2\)-Koeffizient und Kontingenzkoeffizient K {#sec-chisq-und-k}
 
 Zwei [nominale oder ordinale Merkmale](#merkmals-und-skalentypen) werden immer mit einer Kreuztabelle visualisiert. In Kapitel \@ref(sec-kreuztabellen) gibt es Beispieldaten für die Merkmale "Geschlecht" und "gewählte Partei". Um nun zu beschreiben, wie gross der Zusammenhang zwischen den beiden Variablen ist, gibt es drei Koeffizienten, die in diesem Kapitel vorgestellt werden, wobei die drei Werte am besten nacheinander berechnet werden:
 
@@ -11,11 +11,11 @@ Wird also in einer Klausur nur nach dem \(\chi^2\)-Koeffizienten gefragt, führt
 
 Wir verwenden für die Berechnung als Beispiel eine Stichprobe von Verspätungen von Zügen. Es wurden für \(n=180\) Züge gemessen, ob sie pünktlich, mit einer Verspätung von 1-15 Minuten, oder mit mehr als 15 Minuten Verspätung abgefahren sind. Zusätzlich wurde festgehalten, ob der Zug an einem Wochentag (Montag-Freitag) oder am Wochenende abgefahren ist:
 
-|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
-| ---------- | --------- | --------- | ----------- | ----- |
-| Mo-Fr      | 58        | 46        | 16          | 120   |
-| Wochenende | 32        | 14        | 14          | 60    |
-| Summe      | 90        | 60        | 30          | 180   |
+|            | pünktlich | 1-15 min. | \(>\) 15 min. | Summe |
+| ---------- | --------- | --------- | ------------- | ----- |
+| Mo-Fr      | 58        | 46        | 16            | 120   |
+| Wochenende | 32        | 14        | 14            | 60    |
+| Summe      | 90        | 60        | 30            | 180   |
 
 Um nun zu überprüfen, wie stark der Zusammenhang zwischen dem Wochentag und der Verspätung ist, berechnen wir die Abweichung dieser echten Tabelle von der *Unabhängigkeitstabelle*:
 
@@ -23,12 +23,11 @@ Um nun zu überprüfen, wie stark der Zusammenhang zwischen dem Wochentag und de
 
 Angenommen, man bekommt nicht die Tabelle wie oben angegeben, sondern nur die getrennten Häufigkeiten (in der Tabelle heißen sie Randhäufigkeiten) für die Verspätung, sowie für den Wochentag. Man kann sich dann nur die folgende Tabelle aufstellen:
 
-
-|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
-| ---------- | --------- | --------- | ----------- | ----- |
-| Mo-Fr      |           |           |             | 120   |
-| Wochenende |           |           |             | 60    |
-| Summe      | 90        | 60        | 30          | 180   |
+|            | pünktlich | 1-15 min. | \(>\) 15 min. | Summe |
+| ---------- | --------- | --------- | ------------- | ----- |
+| Mo-Fr      |           |           |               | 120   |
+| Wochenende |           |           |               | 60    |
+| Summe      | 90        | 60        | 30            | 180   |
 
 Unter der Annahme, dass es nun gar keinen Zusammenhang zwischen den zwei Variablen "Wochentag" und "Verspätung" gibt, können wir die erwarteten Häufigkeiten \(e_{ij}\) für die Tabelle berechnen.
 
@@ -42,12 +41,11 @@ Die Formel, die diesen Gedanken ausdrückt, lautet allgemein:
 
 Die Notationen \(h_{i\cdot}\) usw. sind im Kapitel \@ref(sec-kreuztabellen) erklärt. Am oben schon berechneten Beispiel für das Feld \(e_{21}\) schreibt man die Formel aus zu \(e_{21} = \frac{h_{2\cdot} \cdot h_{\cdot 1}}{n} = \frac{60 \cdot 90}{180} = 30\). So kann man nun alle erwarteten Häufigkeiten bestimmen, und landet am Ende bei der folgenden *Unabhängigkeitstabelle*:
 
-|            | pünktlich | 1-15 min. | $>$ 15 min. | Summe |
-| ---------- | --------- | --------- | ----------- | ----- |
-| Mo-Fr      | 60        | 40        | 20          | 120   |
-| Wochenende | 30        | 20        | 10          | 60    |
-| Summe      | 90        | 60        | 30          | 180   |
-
+|            | pünktlich | 1-15 min. | \(>\) 15 min. | Summe |
+| ---------- | --------- | --------- | ------------- | ----- |
+| Mo-Fr      | 60        | 40        | 20            | 120   |
+| Wochenende | 30        | 20        | 10            | 60    |
+| Summe      | 90        | 60        | 30            | 180   |
 
 In der Realität (und in Klausuren) können in den erwarteten Häufigkeiten auch Kommazahlen wie z.B. "32.4 Züge" herauskommen.
 
@@ -59,10 +57,10 @@ Um den \(\chi^2\)-Koeffizienten zu berechnen, wird diese Abweichung nun noch qua
 
 Genau diese Berechnung (Abweichung \(\rightarrow\) quadrieren \(\rightarrow\) durch \(e_{ij}\) teilen) macht man nun für alle 6 Zellen in der Tabelle. Die resultierenden 6 Zahlen schreibt man auf - man kannn sie der Übersicht halber in eine neue Tabelle übertragen. Versucht es als Übung, und prüft, ob ihr diese Werte herausbekommt:
 
-|            | pünktlich | 1-15 min. | $>$ 15 min. |
-| ---------- | --------- | --------- | ----------- |
-| Mo-Fr      | 0.0667    | 0.9       | 0.8         |
-| Wochenende | 0.1333    | 1.8       | 1.6         |
+|            | pünktlich | 1-15 min. | \(>\) 15 min. |
+| ---------- | --------- | --------- | ------------- |
+| Mo-Fr      | 0.0667    | 0.9       | 0.8           |
+| Wochenende | 0.1333    | 1.8       | 1.6           |
 
 Der \(\chi^2\)-Koeffizient ist nun die Summe all dieser Zahlen:
 

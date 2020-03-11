@@ -1,4 +1,4 @@
-### Tabelle $t$-Verteilung {#sec-tabelle-t-verteilung}
+### Tabelle \(t\)-Verteilung {#sec-tabelle-t-verteilung}
 
 Der Unterschied der \(t\)-Verteilung (s. Kap. \@ref(sec-t-verteilung)) zur Standardnormalverteilung ist, dass es viele verschiedene \(t\)-Verteilungen gibt - eine für jeden Freiheitsgrad \(df\).
 

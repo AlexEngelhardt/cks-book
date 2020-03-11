@@ -1,4 +1,4 @@
-### KI für die Varianz $\sigma^2$
+### KI für die Varianz \(\sigma^2\)
 
 Das Konfidenzintervall für die Varianz eines Merkmals berechnet man mit Hilfe der \(\chi^2\)-Verteilung (s. Kap. \@ref(sec-chisq-verteilung)). Man benötigt zum Berechnen eines Konfidenzintervalls nun zwei Werte aus der Tabelle der \(\chi^2\)-Verteilung (s. Kap \@ref(sec-tabelle-chisq-verteilung)): Falls wir z.B. ein 90%-Konfidenzintervall berechnen möchten, brauchen wir die Schranken zu den äußeren 10% der \(\chi^2\)-Verteilung, das heißt also auf der linken Seite das 5%-Quantil, und auf der rechten Seite das 95%-Quantil.
 

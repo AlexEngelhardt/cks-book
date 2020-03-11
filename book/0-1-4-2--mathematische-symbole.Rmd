@@ -14,7 +14,7 @@ Mit \(\bar{x}\) ist der Mittelwert aller \(n\) Werte \(x_i\) im Vektor \(x\) gem
 
 Mit Betragsstrichen sind zweierlei Dinge gemeint:
 
-Steht innerhalb der Betragsstriche eine einzelne Zahl, so wie \(x\) oder \(-2\), so wird mit dem Betrag ihr absoluter Wert bezeichnet. Dieser Wert ist immer positiv. \(|x|\) ist also genau gleich wie \(x\), falls \(x\geq 0\) ist, und \(|x| = -x\), falls \(x <0 \) ist. Ein Beispiel dafür: Sehen wir \( | -10 | \), so ist \(x\), also \(-10\), kleiner als 0, und \(|-10| = - (-10) = 10\).
+Steht innerhalb der Betragsstriche eine einzelne Zahl, so wie \(x\) oder \(-2\), so wird mit dem Betrag ihr absoluter Wert bezeichnet. Dieser Wert ist immer positiv. \(|x|\) ist also genau gleich wie \(x\), falls \(x\geq 0\) ist, und \(|x| = -x\), falls \(x <0 \) ist. Ein Beispiel dafür: Sehen wir \(| -10 |\), so ist \(x\), also \(-10\), kleiner als 0, und \(|-10| = - (-10) = 10\).
 
 Steht innerhalb der Betragsstriche aber eine Menge an Zahlen (man erkennt das an den geschweiften Klammern), so deuten die Betragsstriche an, dass uns die Anzahl der Elemente interessiert. Es ist also \(| \{1,5,\pi, 2\} | = 4\).
 

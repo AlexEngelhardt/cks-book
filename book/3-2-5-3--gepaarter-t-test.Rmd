@@ -1,4 +1,4 @@
-### Gepaarter $t$-Test: Vorher/Nachher-Mittelwertsvergleich {#sec-gepaarter-t-test}
+### Gepaarter \(t\)-Test: Vorher/Nachher-Mittelwertsvergleich {#sec-gepaarter-t-test}
 
 Der *gepaarte* t-Test wird immer dann verwendet, wenn man zwar zwei Stichproben (d.h. zwei "Gruppen") hat, diese aber *verbunden* sind. Verbunden bedeutet in diesem Fall, dass jeder Beobachtung aus der ersten Gruppe direkt eine aus der zweiten Gruppe zugeordnet werden kann, die beiden Beobachtungen gehören also zusammen. In den meisten Fällen ist das der Fall, wenn man einen vorher/nachher-Vergleich machen möchte. Andere Fälle, in denen die Beobachtungen zweier Gruppen "zusammengehören", also verbunden sind, sind zum Beispiel Zwillingsstudien, in denen je ein Zwilling in eine Gruppe kommt, und dann Unterschiede bezüglich Verhalten oder Eigenschaften getestet werden.
 

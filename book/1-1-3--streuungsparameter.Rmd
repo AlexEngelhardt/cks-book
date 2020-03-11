@@ -36,7 +36,7 @@ Man sucht also in den Daten nach dem Maximum und dem Minimum, und zieht das Mini
 knitr::include_graphics("img/interquartilsabstand.png")
 ```
 
-Hier muss man also das 75%-Quantil (\(x_{0.75}\)) und das 25%-Quantil (\(x_{0.25}\)) berechnen, und erhält den Interquartilsabstand durch \( x_{0.75}-x_{0.25} \). Im oberen Bild mit \(n=10\) Datenpunkten ist das 25%-Quantil bestimmt als \(x_{0.25}=x_{(\lfloor np \rfloor + 1)} = x_{(3)}\), und das 75%-Quantil analog als \(x_{(8)}\). Die tatsächlichen Werte der Datenpunkte sind hier nicht berücksichtigt, aber wir nehmen immer den dritten und achten Wert der sortierten Daten.
+Hier muss man also das 75%-Quantil (\(x_{0.75}\)) und das 25%-Quantil (\(x_{0.25}\)) berechnen, und erhält den Interquartilsabstand durch \(x_{0.75}-x_{0.25}\). Im oberen Bild mit \(n=10\) Datenpunkten ist das 25%-Quantil bestimmt als \(x_{0.25}=x_{(\lfloor np \rfloor + 1)} = x_{(3)}\), und das 75%-Quantil analog als \(x_{(8)}\). Die tatsächlichen Werte der Datenpunkte sind hier nicht berücksichtigt, aber wir nehmen immer den dritten und achten Wert der sortierten Daten.
 
 Den Interquartilsabstand interessiert es nun nicht, ob die "äußeren" Daten (also \(x_{(1)}\), \(x_{(2)}\), \(x_{(9)}\) und \(x_{(10)}\)) Ausreißer sind oder nicht, also wenn man sie weiter nach aussen verschieben würde.
 
@@ -87,7 +87,7 @@ Für den Interquartilsabstand berechnen wir zuerst
 \(x_{(0.25)} = x_{(\lfloor np \rfloor +1)} = x_{(\lfloor 7\cdot 0.25 \rfloor +1)} = x_{(2)} = 1\) und
 \(x_{(0.75)} = x_{(\lfloor np \rfloor +1)}= x_{(\lfloor 7\cdot 0.75 \rfloor +1)} = x_{(6)} = 4\).
 
-(Die Klammern \(\lfloor\) und \(\rfloor\) bedeuten hier Abrunden, s. Kap. \@ref(sec-abrunden))
+(Die Klammern \(\lfloor\) und \(\rfloor\) bedeuten hier Abrunden, s. Kap. \@ref(sec-math))
 
 Der Interquartilsabstand ist nun \(x_{0.75}-x_{0.25}=4-1=3\).
 

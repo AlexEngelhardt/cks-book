@@ -101,7 +101,7 @@ In statistischer Sprache formuliert heißt das: Wir würden also die Nullhypothe
 
 Man muss sich vor Durchführung des Tests auf ein Signifikanzniveau, genannt \(\alpha\), festlegen, das die maximale Wahrscheinlichkeit festlegt, mit der uns so ein Fehler passieren darf. Je sicherer wir mit unserer Entscheidung sein wollen, desto niedriger muss diese Fehlerwahrscheinlichkeit gewählt werden. In den allermeisten Fällen, sowohl in der Praxis als auch in Klausuren, ist dieser Wert festgelegt als \(\alpha = 5\%\).
 
-#### $\alpha$- und $\beta$-Fehler
+#### \(\alpha\)- und \(\beta\)-Fehler
 
 Neben dem Fehler, \(H_0\) abzulehnen obwohl sie wahr ist, gibt es eine weitere Fehlentscheidung, die beim Testen passieren kann: Falls tatsächlich im Mittel zuwenig Bier abgefüllt wird, und unser Test dies nicht nachweisen kann. Dann behalten wir die Nullhypothese (genug Bier) bei, obwohl in Wirklichkeit die Alternativhypothese (zuwenig Bier) wahr ist.
 

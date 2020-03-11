@@ -1,4 +1,4 @@
-### KI für einen Anteil $p$ {#sec-ki-anteil}
+### KI für einen Anteil \(p\) {#sec-ki-anteil}
 
 Wenn wir in unserer Stichprobe ein Merkmal mit nur zwei möglichen Ausprägungen haben, zum Beispiel "Student? (ja/nein)", benötigen wir zum Berechnen des Konfidenzintervalls die folgenden Informationen:
 

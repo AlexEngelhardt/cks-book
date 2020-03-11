@@ -1,4 +1,4 @@
-## Was kommt in $H_0$ und was in $H_1$? {#sec-h0-h1}
+## Was kommt in \(H_0\) und was in \(H_1\)? {#sec-h0-h1}
 
 Beim Testen muss man zuallererst die beiden Hypothesen aufstellen. Hier tun sich viele Studenten schwer - auch ich hatte damals Probleme - daher möchte ich hier nochmal genauer erläutern, welcher Teil in welche Hypothese kommt.
 

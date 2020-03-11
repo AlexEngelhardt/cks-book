@@ -1,4 +1,4 @@
-### $t$-Verteilung: Stichprobenmittelwerte {#sec-t-verteilung}
+### \(t\)-Verteilung: Stichprobenmittelwerte {#sec-t-verteilung}
 
 **Idee**
 

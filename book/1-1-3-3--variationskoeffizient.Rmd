@@ -8,13 +8,13 @@ Der Vorteil des Variationskoeffizienten \(v\) gegenüber der Standardabweichung 
 
 Dazu können wir uns beispielhaft die gerade erwähnten Daten anschauen, die Körpergrösse von fünf Personen in Zentimetern und in Metern:
 
-| Person $i$ | Körpergröße in cm | Körpergröße in m |
-| ---------- | ----------------- | ---------------- |
-| 1          | 160               | 1.60             |
-| 2          | 173               | 1.73             |
-| 3          | 177               | 1.77             |
-| 4          | 164               | 1.64             |
-| 5          | 182               | 1.82             |
+| Person \(i\) | Körpergröße in cm | Körpergröße in m |
+| ------------ | ----------------- | ---------------- |
+| 1            | 160               | 1.60             |
+| 2            | 173               | 1.73             |
+| 3            | 177               | 1.77             |
+| 4            | 164               | 1.64             |
+| 5            | 182               | 1.82             |
 
 ```{exercise, echo=TRUE}
 

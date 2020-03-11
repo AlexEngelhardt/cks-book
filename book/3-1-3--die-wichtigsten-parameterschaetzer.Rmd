@@ -12,7 +12,7 @@ Es ergibt sich nun mathematisch, dass der Stichprobenmittelwert auch der beste S
 
 Dieses Konzept erkennt man dann auch an der mathematischen Notation wieder. Der Mittelwert einer Stichprobe wird z.B. einfach \(\bar{x}\) ("x quer") genannt, aber der Schätzer für den Erwartungswert wird mit \(\hat{\mu}\) ("mu Dach") bezeichnet. Das Dach über einem Buchstaben (egal ob griechisch oder nicht) deutet darauf hin, dass der Buchstabe darunter geschätzt wird. \(\hat{\mu}\) ist also ein Schätzwert für den "wahren", aber unbekannten Wert \(\mu\).
 
-### Prozentualer Anteil $p$ {#sec-parmsch-anteil}
+### Prozentualer Anteil \(p\) {#sec-parmsch-anteil}
 
 Wir schätzen einen prozentualen Anteil, wenn wir ein nominales Merkmal mit nur zwei möglichen Ausprägungen ("ja" und "nein") haben. Dann kodieren wir das Merkmal zuerst in die Zahlen 1 und 0 um. Meistens steht die 1 für "ja". Um nun einen Schätzwert für den Anteil \(p\) an "ja" in der *Grundgesamtheit* zu bekommen, berechnen wir einfach den Anteil an "ja" in der Stichprobe: Wir zählen alle "ja"-Antworten und teilen sie durch die Stichprobengröße \(n\).
 
@@ -43,7 +43,7 @@ Der Schätzer für den Anteil an fair befüllten Krügen *in der Grundgesamtheit
 
 Mit der 1 bezeichnen wir ja einen voll gefüllten Maßkrug, und mit der 0 einen Krug mit weniger als einem Liter Inhalt. Wir schätzen also, dass 30% aller Krüge auf dem Oktoberfest fair befüllt werden.
 
-### Erwartungswert $\mu$
+### Erwartungswert \(\mu\)
 
 Was, wenn wir aber genauer abschätzen wollen, wie voll die Krüge befüllt werden? Dann sollten wir lieber etwas genauer den Erwartungswert des Inhalts schätzen, statt nur die Frage ob genug oder zuwenig Inhalt im Krug ist.
 

@@ -33,7 +33,7 @@ Die **Regression** ist nun eine statistische Methode, um die **bestmögliche Ger
 
 Manchmal sieht man übrigens statt \(a + b \cdot x\) auch \(\alpha + \beta \cdot x\) oder \(\beta_0 + \beta_1 \cdot x\), aber das sind nur andere Namen für dieselben Zahlen.
 
-### Berechnen der Parameter $a$ und $b$
+### Berechnen der Parameter \(a\) und \(b\)
 
 Wenn wir also die bestmögliche Gerade finden wollen, die wir durch diese Punktwolke an Daten legen können, ist das gleichbedeutend damit, dass wir die bestmöglichen Werte für \(a\) und \(b\) finden wollen. Und dafür wurden die folgenden beiden Formeln entdeckt:
 

@@ -1,4 +1,4 @@
-### Zweistichproben-$t$-Test: Mittelwerte zweier Gruppen vergleichen {#sec-zweistichproben-t-test}
+### Zweistichproben-\(t\)-Test: Mittelwerte zweier Gruppen vergleichen {#sec-zweistichproben-t-test}
 
 **Grundlagen**
 

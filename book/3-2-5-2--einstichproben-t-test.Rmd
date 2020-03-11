@@ -1,4 +1,4 @@
-### Einstichproben-$t$-Test: Einzelnen Mittelwert testen {#sec-einstichproben-t-test}
+### Einstichproben-\(t\)-Test: Einzelnen Mittelwert testen {#sec-einstichproben-t-test}
 
 **Wann verwendet man einen Einstichproben-t-Test?**
 

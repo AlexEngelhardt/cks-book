@@ -1,4 +1,4 @@
-### Tabelle $\chi^2$-Verteilung {#sec-tabelle-chisq-verteilung}
+### Tabelle \(\chi^2\)-Verteilung {#sec-tabelle-chisq-verteilung}
 
 Für die \(\chi^2\)-Verteilung gibt es theoretisch, genauso wie bei der \(t\)-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)), auch eine riesige Tabelle für jede mögliche Anzahl an Freiheitsgraden. Daher sind in den Verteilungstabellen nur die wichtigsten paar Quantile aufgeführt. Am häufigsten verwendet wird dabei das 95%-Quantil, da das die kritische Schranke für einen \(\chi^2\)-Test mit Signifikanzniveau \(\alpha=0.05\) ist.
 

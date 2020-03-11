@@ -1,4 +1,4 @@
-### KI für den Erwartungswert $\mu$
+### KI für den Erwartungswert \(\mu\)
 
 Das KI für den Erwartungswert folgt einem ähnlichen Prinzip wie das in Kapitel \@ref(sec-ki-anteil) bereits besprochene KI für einen Anteilswert:
 
@@ -14,7 +14,7 @@ Die Formeln für die Konfidenzintervalle der beiden Varianten unterscheiden sich
 
 Sehen wir uns die Formeln der beiden KIs also an:
 
-#### Falls $\sigma^2$ bekannt
+#### Falls \(\sigma^2\) bekannt
 
 Für das Konfidenzintervall brauchen wir die folgenden Werte:
 
@@ -72,7 +72,7 @@ Das gesuchte Konfidenzintervall ist also \(93.523 \pm 4.97\), also als Intervall
 
 ```
 
-#### Falls $\sigma^2$ unbekannt
+#### Falls \(\sigma^2\) unbekannt
 
 Wie bereits erwähnt: Das Prinzip ist hier dasselbe, das KI wird berechnet durch
 

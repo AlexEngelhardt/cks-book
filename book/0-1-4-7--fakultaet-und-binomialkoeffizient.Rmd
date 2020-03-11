@@ -1,4 +1,4 @@
-### Fakultät $N!$ und Binomialkoeffizient $N \choose k$ {#fakultaet}
+### Fakultät \(N!\) und Binomialkoeffizient \(N \choose k\) {#fakultaet}
 
 Diese beiden Konstrukte, die Fakultät sowie der Binomialkoeffizient, werden in der Kombinatorik (s. Kap. \@ref(sec-kombinatorik)) häufiger gebraucht. Es handelt sich im Prinzip nur um abkürzende Schreibweisen.
 
@@ -14,7 +14,7 @@ Mit der Schreibweise des Produktzeichens \(\Pi\) kann man diese Formel noch etwa
 
 Durch das \(\Pi\) spart man sich jetzt die Arbeit, die Zahlen \(1 \cdot 2 \cdot \ldots \cdot 25\) ausschreiben zu müssen.
 
-Ein nützlicher Fakt, mit dem man super ein erstes Date platzen lassen kann, ist dieser: Es gibt genau \( 10! \) Sekunden innerhalb eines Zeitraums von 6 Wochen. Die Herleitung geht so: Die Anzahl der Sekunden in 6 Wochen ist 6 (Wochen) \(\cdot\) 7 (Tage) \(\cdot\) 24 (Stunden) \(\cdot\) 60 (Minuten) \(\cdot\) 60 (Sekunden). Durch Aufteilen mancher Zahlen in kleinere Faktoren erhält man dann:
+Ein nützlicher Fakt, mit dem man super ein erstes Date platzen lassen kann, ist dieser: Es gibt genau \(10!\) Sekunden innerhalb eines Zeitraums von 6 Wochen. Die Herleitung geht so: Die Anzahl der Sekunden in 6 Wochen ist 6 (Wochen) \(\cdot\) 7 (Tage) \(\cdot\) 24 (Stunden) \(\cdot\) 60 (Minuten) \(\cdot\) 60 (Sekunden). Durch Aufteilen mancher Zahlen in kleinere Faktoren erhält man dann:
 
 \[ 6 \cdot 7 \cdot 24 \cdot 60 \cdot 60 =6\cdot 7 \cdot (8 \cdot 3) \cdot (3 \cdot 2 \cdot 10) \cdot ( 1 \cdot 3 \cdot 4 \cdot 5) = 10! \]
 

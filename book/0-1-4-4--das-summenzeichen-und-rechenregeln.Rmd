@@ -1,16 +1,16 @@
-### Das Summenzeichen $\Sigma$ und Rechenregeln {#sec-summenzeichen}
+### Das Summenzeichen \(\Sigma\) und Rechenregeln {#sec-summenzeichen}
 
 Das grosse Sigma \(\Sigma\) wird verwendet, um längere Summen in einer kurzen Schreibweise darzustellen. Meist wird das Zeichen verwendet, wenn man Kennziffern oder Teststatistiken für eine Stichprobe ausrechnet.
 
 Wir werden hier als Beispiel das Lebensalter von fünf ARD-Zuschauern betrachten, und daraus einen Mittelwert berechnen.
 
-| Person $i$ | Alter $x_i$ |
-| ---------- | ----------- |
-| $i=1$      | 87          |
-| $i=2$      | 13          |
-| $i=3$      | 77          |
-| $i=4$      | 97          |
-| $i=5$      | 67          |
+| Person \(i\) | Alter \(x_i\) |
+| ------------ | ------------- |
+| \(i=1\)      | 87            |
+| \(i=2\)      | 13            |
+| \(i=3\)      | 77            |
+| \(i=4\)      | 97            |
+| \(i=5\)      | 67            |
 
 
 Wir messen hier das Merkmal \(x\), welches das Alter darstellen soll. Der Index \(i\) wird benutzt, um das Alter einer einzelnen Person darzustellen, zum Beispiel steht \(x_3\) für das Alter der dritten Person, \(x_3=77\).

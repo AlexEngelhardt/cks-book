@@ -1,4 +1,4 @@
-### Das Produktzeichen $\Pi$ und Rechenregeln
+### Das Produktzeichen \(\Pi\) und Rechenregeln
 
 Das Pendant zum Summenzeichen \(\Sigma\) für die Multiplikation ist das Produktzeichen \(\Pi\), ein großes Pi. Mit diesem Zeichen kann man Multiplikationen über viele Variablen zusammenfassen. Diese Notation sieht für Nicht-Mathematiker auf den ersten Blick immer etwas furchteinflößend aus, aber wenn man versteht, dass es einfach nur eine Abkürzung für eine längere Formel ist, kommt man gut mit dieser Schreibweise zurecht.
 
