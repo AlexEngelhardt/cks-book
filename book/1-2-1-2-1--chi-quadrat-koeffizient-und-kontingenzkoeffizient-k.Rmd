@@ -1,6 +1,6 @@
 #### $\chi^2$-Koeffizient und Kontingenzkoeffizient K {#sec-chisq-und-k}
 
-Zwei [nominale oder ordinale Merkmale](#merkmals-und-skalentypen) werden immer mit einer Kreuztabelle visualisiert. In Kapitel \@ref(sec-kreuztabellen) gibt es Beispieldaten für die Merkmale "Geschlecht" und "gewählte Partei". Um nun zu beschreiben, wie gross der Zusammenhang zwischen den beiden Variablen ist, gibt es drei Koeffizienten, die in diesem Artikel vorgestellt werden, wobei die drei Werte am besten nacheinander berechnet werden:
+Zwei [nominale oder ordinale Merkmale](#merkmals-und-skalentypen) werden immer mit einer Kreuztabelle visualisiert. In Kapitel \@ref(sec-kreuztabellen) gibt es Beispieldaten für die Merkmale "Geschlecht" und "gewählte Partei". Um nun zu beschreiben, wie gross der Zusammenhang zwischen den beiden Variablen ist, gibt es drei Koeffizienten, die in diesem Kapitel vorgestellt werden, wobei die drei Werte am besten nacheinander berechnet werden:
 
 1. Aus der Kreuztabelle berechnet man die Unabhängigkeitstabelle (manchmal auch *Indifferenztabelle* genannt)
 2. Mithilfe derer berechnet man den \(\chi^2\)-Koeffizienten.

@@ -82,7 +82,7 @@ Man kann noch einige andere Parameter schätzen, die hier kurz erwähnt werden s
 
 Für bestimmte Verteilungen schätzt man nicht Erwartungswert oder Varianz, sondern andere, eigene Parameter dieser Verteilung. Für die Exponentialverteilung schätzt man etwa ihren Parameter \(\lambda\).
 
-Es ist sogar möglich, die gesamte Dichte eines Merkmals zu schätzen, ohne eine Annahme über die Verteilung zu treffen. Damit könnte man etwa die Dichte der ersten Grafik in diesem Artikel erstellen, ohne sie vorher zu kennen. Solche Methoden heißen (Kern-)Dichteschätzer, sie sind allerdings eher ein Thema für fortgeschrittene Statistikveranstaltungen.
+Es ist sogar möglich, die gesamte Dichte eines Merkmals zu schätzen, ohne eine Annahme über die Verteilung zu treffen. Damit könnte man etwa die Dichte der Abbildung \@ref(fig:parameterschaetzung-derp-dichte) erstellen, ohne sie vorher zu kennen. Solche Methoden heißen (Kern-)Dichteschätzer, sie sind allerdings eher ein Thema für fortgeschrittene Statistikveranstaltungen.
 
 #### Parameterschätzung bei der Regression
 

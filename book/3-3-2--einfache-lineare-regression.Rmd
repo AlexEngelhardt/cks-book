@@ -178,7 +178,7 @@ Bei der einfachen linearen Regression gibt es ja nur eine Einflussgröße \(x\).
 
 Um eine Vorhersage für die Zielgröße \(y\) zu erhalten, müssen wir also einfach den zugehörigen Wert für \(x\) in die Gleichung einsetzen. Die Werte für \(a\) und \(b\) haben wir zu Beginn dieses Kapitels schon berechnet.
 
-Als Beispiel: Im Beispiel aus dem vorherigen Artikel haben wir die Werte \(a=2.8457\) und \(b=0.2836\) bestimmt. Welche Ringgröße ist nun bei deiner Freundin zu erwarten, wenn sie eine Körpergröße von \(x=\)170cm hat? Dafür berechnen wir:
+Als Beispiel: Im Beispiel aus dem vorherigen Kapitel \@ref(sec-regression-einfuehrung) haben wir die Werte \(a=2.8457\) und \(b=0.2836\) bestimmt. Welche Ringgröße ist nun bei deiner Freundin zu erwarten, wenn sie eine Körpergröße von \(x=\)170cm hat? Dafür berechnen wir:
 
 \[ y = a + b\cdot x = 2.8457 + 0.2836 \cdot 170 = 51.06 \]
 

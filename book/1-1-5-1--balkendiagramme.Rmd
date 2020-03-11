@@ -6,7 +6,7 @@ Kurz am Rande: Das Balkendiagramm heißt genaugenommen *Säulendiagramm*, da die
 
 ```{exercise, echo=TRUE}
 
-Wir benutzen die Daten aus dem Artikel zu [Häufigkeitstabellen](#sec-haeufigkeitstabellen):
+Wir benutzen die Daten aus Kapitel \@ref(sec-haeufigkeitstabellen) zu Häufigkeitstabellen:
 
 | Semester $i$ | $h_i$ | $f_i$  | $F_i$  |
 | ------------ | ----- | ------ | ------ |

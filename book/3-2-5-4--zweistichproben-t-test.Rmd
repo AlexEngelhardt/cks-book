@@ -2,14 +2,14 @@
 
 **Grundlagen**
 
-Zum Einstieg sollte man sich zu Beginn die folgenden beiden Artikel durchlesen:
+Zum Einstieg sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
 - Was sind Hypothesentests? (Kap. \@ref(sec-wat-tests))
 - Vorgehen bei Hypothesentests (Kap. \@ref(sec-vorgehen-tests))
 
 In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothesentest durchführt. Dadurch werden die einzelnen Teile in diesem Kapitel verständlicher.
 
-Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Artikel zum Binomialtest evtl. ausführlicher verständlicher erklärt worden.
+Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Kapitel \@ref(sec-binomialtest) zum Binomialtest evtl. ausführlicher verständlicher erklärt worden.
 
 **Der Zweistichproben-t-Test**
 
@@ -46,7 +46,7 @@ Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref
 
 **3. Signifikanzniveau festlegen**
 
-Wie in den vorherigen Artikeln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
+Wie in den vorherigen Kapiteln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
 
 Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha=0.05\). In besonders kritischen Fragestellungen, z.B. solchen, die die menschliche Gesundheit betreffen, muß das Signifikanzniveau oft niedriger gewählt werden, der Test wird dann *konservativer*. Hier wählt man z.B. \(\alpha=0.01\).
 

@@ -4,7 +4,7 @@
 
 Den Chi-Quadrat-Test gibt es eigentlich nicht. Genauso wie es einige verschiedene t-Tests gibt, so bezeichnet man mit "Chi-Quadrat-Test" (bzw. \(\chi^2\)-Test, das ist der griechische Buchstabe "Chi") auch eine Reihe von verschiedenen Tests. Was sie alle gemeinsam haben, ist dass ihre Prüfgröße eine Chi-Quadrat-Verteilung hat.
 
-Ein häufiger Anwendungsfall für den Chi-Quadrat-Test, den wir auch in diesem Artikel behandeln, ist das Testen ob zwei nominale Variablen voneinander abhängig sind, ob sie sich also gegenseitig beeinflussen. Wir fragen z.B. 80 Personen nach ihrem Geschlecht, und nach der von ihr zuletzt gewählten Partei. Wenn wir nun untersuchen möchten ob Frauen und Männer ein unterschiedliches Wahlverhalten haben, geht das mit dem Chi-Quadrat-Test.
+Ein häufiger Anwendungsfall für den Chi-Quadrat-Test, den wir auch in diesem Kapitel behandeln, ist das Testen ob zwei nominale Variablen voneinander abhängig sind, ob sie sich also gegenseitig beeinflussen. Wir fragen z.B. 80 Personen nach ihrem Geschlecht, und nach der von ihr zuletzt gewählten Partei. Wenn wir nun untersuchen möchten ob Frauen und Männer ein unterschiedliches Wahlverhalten haben, geht das mit dem Chi-Quadrat-Test.
 
 Allgemein formuliert testen wir, ob zwei nominalskalierte Variablen abhängig sind. Falls z.B. das Geschlecht einer Person und die zuletzt gewählte Partei voneinander abhängig sind, und wir die gewählte Partei erraten wollen, dann hilft es uns, von einer bestimmten Person das Geschlecht zu kennen. Bei unabhängigen Variablen würde uns die eine Variable nicht helfen, die andere vorherzusagen. Ein Beispiel für zwei unabhängige Variablen wäre das Geschlecht einer Person, und ihre Augenfarbe. Es hilft uns wahrscheinlich nicht dabei, die Augenfarbe von Person X vorherzusagen, wenn wir erfahren, dass es sich dabei um eine Frau handelt.
 
@@ -12,7 +12,7 @@ Eine weitere Analyse die einen Chi-Quadrat-Test verwendet, wäre das Testen ob e
 
 **Grundlagen**
 
-Zum Einstieg sollte man sich zu Beginn die folgenden beiden Artikel durchlesen:
+Zum Einstieg sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
 - Was sind Hypothesentests? (Kap. \@ref(sec-wat-tests))
 - Vorgehen bei Hypothesentests (Kap. \@ref(sec-vorgehen-tests))

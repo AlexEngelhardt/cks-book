@@ -55,7 +55,7 @@ Damit können wir direkt in Schritt 5 der Abfolge beim Hypothesentest einsteigen
 
 **Ergebnis**
 
-Wer diese Aufgabe selbst zuende rechnen und nachprüfen möchte, für den fasse ich hier die Ergebnisse kurz zusammen. Das Vorgehen ist wie gesagt im entsprechenden Artikel detailliert beschrieben.
+Wer diese Aufgabe selbst zuende rechnen und nachprüfen möchte, für den fasse ich hier die Ergebnisse kurz zusammen. Das Vorgehen ist wie gesagt in Kapitel \@ref(sec-einstichproben-t-test) detailliert beschrieben.
 
 - Mittelwert: \(\bar{x} = -4.444\)
 - Standardabweichung: \(s = 4.531\)

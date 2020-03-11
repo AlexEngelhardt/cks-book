@@ -1,9 +1,8 @@
 ## Die wichtigsten Parameterschätzer {#sec-wichtigste-parmsch}
 
-Hier greifen wir das Beispiel aus Kapitel \@ref(sec-wat-parameter) wieder auf: Wir gehen auf das Oktoberfest, und möchten schätzen ob ein Maßkrug fair, d.h. mit (mindestens) 1 Liter Bier befüllt ist. Es macht vielleicht Sinn, diesen Artikel vorher nocheinmal zu lesen.
+Hier greifen wir das Beispiel aus Kapitel \@ref(sec-wat-parameter) wieder auf: Wir gehen auf das Oktoberfest, und möchten schätzen ob ein Maßkrug fair, d.h. mit (mindestens) 1 Liter Bier befüllt ist. Es macht vielleicht Sinn, Kapitel \@ref(sec-wat-parameter) vorher nocheinmal zu lesen.
 
-
-In diesem Artikel besprechen wir kurz die wichtigsten Parameterschätzer. Wer bisher gut aufgepasst hat, wird merken, dass die untenstehenden Formeln für diese Punktschätzer dieselben sind wie in der deskriptiven Statistik. Zum Beispiel ist also die Formel für den (deskriptiven!) Mittelwert einer Stichprobe dieselbe wie die Formel für den Punktschätzer für den Erwartungswert.
+In diesem Kapitel nun besprechen wir kurz die wichtigsten Parameterschätzer. Wer bisher gut aufgepasst hat, wird merken, dass die untenstehenden Formeln für diese Punktschätzer dieselben sind wie in der deskriptiven Statistik. Zum Beispiel ist also die Formel für den (deskriptiven!) Mittelwert einer Stichprobe dieselbe wie die Formel für den Punktschätzer für den Erwartungswert.
 
 Die *Idee* hinter der Berechnung ist in den beiden Fällen aber unterschiedlich: Der Mittelwert macht nur eine Aussage über die Stichprobe - wir können also z.B. sagen, dass in 10 geprüften Maßkrügen im Durchschnitt 950ml Bier enthalten waren. Das ist auch kein Schätzwert, sondern ein exakter Wert - aber er gilt nur für diese eine Stichprobe von 10 Bieren.
 

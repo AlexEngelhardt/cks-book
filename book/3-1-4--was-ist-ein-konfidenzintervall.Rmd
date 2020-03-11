@@ -49,7 +49,7 @@ Um Konfidenzintervalle in einer Klausur schnell und sicher berechnen zu können,
 
 **Anmerkung**
 
-Ich habe in diesem Artikel die folgende intuitive Erklärung für ein Konfidenzintervall verwendet:
+Ich habe in diesem Kapitel die folgende intuitive Erklärung für ein Konfidenzintervall verwendet:
 
 *Ein 95%-KI ist ein Intervall \([a, b]\), in dem der wahre Parameter, z.B. \(\mu\), mit einer Wahrscheinlichkeit von 95% auch tatsächlich liegt.*
 

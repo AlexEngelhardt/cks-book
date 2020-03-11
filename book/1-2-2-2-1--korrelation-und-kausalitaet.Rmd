@@ -1,6 +1,6 @@
 #### Korrelation und Kausalität {#sec-korrelation-kausalitaet}
 
-Zwischen einem reinem Zusammenhang, d.h. einer Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) zwischen zwei Variablen, und einer tatsächlichen Auswirkung von einer auf die andere Variable, d.h. einer Kausalität, besteht noch ein großer Unterschied, der in diesem Artikel behandelt wird.
+Zwischen einem reinem Zusammenhang, d.h. einer Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) zwischen zwei Variablen, und einer tatsächlichen Auswirkung von einer auf die andere Variable, d.h. einer Kausalität, besteht noch ein großer Unterschied, der in diesem Kapitel behandelt wird.
 
 Sehen wir uns eine Grafik dazu an. Wir befragen \(n=30\) Personen zu ihrer Schuhgröße und ihrem monatlichem Einkommen. Abbildung \@ref(fig:zweivariablen-kausalitaet) zeigt das Streudiagramm mit den Ergebnissen.
 
@@ -38,7 +38,7 @@ Die zu Beginn ignorierte Variable "Geschlecht" ist hier eine Mediator- oder Conf
 
 Das klingt nun vielleicht alles etwas realitätsfern, weil mein Beispiel sehr offensichtlich unklug war. Solche Sachen passieren allerdings in der Realität, und auch unter Experten:
 
-Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz (s. Abb. \@ref(fig:chocolate-nobel)).
+Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064) (Franz H. Messerli: *Chocolate Consumption, Cognitive Function, and Nobel Laureates*), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz (s. Abb. \@ref(fig:chocolate-nobel)).
 
 ```{r chocolate-nobel, fig.cap="Quelle: Messerli, Franz H. (2012). Chocolate Consumption, Cognitive Function, and Nobel Laureates. New England Journal of Medicine, 367:16, 1562-1564."}
 knitr::include_graphics("img/pictures/chocolate_nobel.jpg")

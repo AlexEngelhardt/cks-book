@@ -1,6 +1,6 @@
 ## Kategorien als Einflussgrößen
 
-Die bisherigen Artikel zur linearen Regression haben sich mit einem Beispiel beschäftigt, in dem wir die Ringgröße für eine Freundin möglichst genau schätzen wollen, um ihr unbemerkt einen (passenden!) Ring zu kaufen.
+Die bisherigen Kapitel zur linearen Regression haben sich mit einem Beispiel beschäftigt, in dem wir die Ringgröße für eine Freundin möglichst genau schätzen wollen, um ihr unbemerkt einen (passenden!) Ring zu kaufen.
 
 Zuerst haben wir die Ringgröße anhand ihrer Körpergröße geschätzt (eine einfache lineare Regression, s. Kap. \@ref(sec-regression-einfache)). Danach haben wir zusätzlich ihr Gewicht und ihr Alter verwendet, um mit drei Einflussgrößen eine genauere, sicherere Schätzung zu bekommen (die multiple lineare Regression, s. Kap. \@ref(sec-regression-multiple)).
 

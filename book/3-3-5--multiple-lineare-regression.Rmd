@@ -1,6 +1,6 @@
 ## Multiple lineare Regression {#sec-regression-multiple}
 
-In den bisherigen Artikeln zur Regression ging es nur um die *einfache* lineare Regression. Hier schauen wir uns nun die *multiple* lineare Regression an.
+In den bisherigen Kapiteln zur Regression ging es nur um die *einfache* lineare Regression. Hier schauen wir uns nun die *multiple* lineare Regression an.
 
 Das Wort "multipel" bedeutet, dass wir nun nicht mehr eine, sondern mehrere Einflussgrößen haben. Wichtig: es gibt *mehrere Einflussgrößen*. Die Anzahl der *Zielgrößen* verändert sich nicht, es ist immer noch nur eine Zielgröße.
 

@@ -1,6 +1,6 @@
 ## Anleitung zum Rechnen mit Wahrscheinlichkeiten {#sec-wsk-rechenregeln}
 
-Das Umgehen mit Wahrscheinlichkeiten gehört zum essentiellen Handwerkszeug in den einführenden Statistikklausuren. Die wichtigsten Regeln, die verwendet werden, wurden in früheren Artikeln bereits besprochen:
+Das Umgehen mit Wahrscheinlichkeiten gehört zum essentiellen Handwerkszeug in den einführenden Statistikklausuren. Die wichtigsten Regeln, die verwendet werden, wurden in früheren Kapiteln bereits besprochen:
 
 | Thema | Formel |
 | ------------------------ | -------------------------- |

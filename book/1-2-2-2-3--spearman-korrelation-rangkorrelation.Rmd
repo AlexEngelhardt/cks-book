@@ -50,7 +50,7 @@ Die Formel für die Spearman-Korrelation ist genau dieselbe wie für die Pearson
 
 Es ist wichtig zu verstehen dass dieser Koeffizient genauso berechnet wird wie die Pearson-Korrelation, und der einzige Unterschied ist, dass die Ränge statt der Originaldaten verwendet werden. Die Formel und das Vorgehen sind aber genau dasselbe wie im Kapitel \@ref(sec-pearson-korrelation) zur [Pearson-Korrelation](#sec-pearson-korrelation) beschrieben.
 
-Zur Übung: Berechne nun die Spearman-Korrelation dieser Daten. Verwende dazu die Ränge \(\text{rang}(x_i)\) und \(\text{rang}(y_i)\) aus der obigen Tabelle. Für die Berechnung kannst du je nach Vorliebe Formel 1 oder Formel 2 aus dem Artikel zur Pearson-Korrelation verwenden. Der resultierende Wert soll \(r_\text{Sp} = 0.83\) ergeben.
+Zur Übung: Berechne nun die Spearman-Korrelation dieser Daten. Verwende dazu die Ränge \(\text{rang}(x_i)\) und \(\text{rang}(y_i)\) aus der obigen Tabelle. Für die Berechnung kannst du je nach Vorliebe Formel 1 oder Formel 2 aus Kapitel \@ref(sec-pearson-korrelation) zur Pearson-Korrelation verwenden. Der resultierende Wert soll \(r_\text{Sp} = 0.83\) ergeben.
 
 Zur Interpretation kann man nun sagen, dass mit steigendem Rang des Alters auch der Rang des Platzes ansteigt. Vorsicht. Ein "steigender" Rang heißt hier, dass die Zahl des Platzes höher wird, die Person also langsamer läuft und später ins Ziel kommt! Das heißt in klaren Worten: Ältere Personen werden tendenziell später im Ziel ankommen.
 

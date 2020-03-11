@@ -38,7 +38,7 @@ Angenommen, wir nehmen aus dieser Gruppe Studenten nun eine zufällige Person he
 
 \[ \mathbb{P}(B) = \frac{30}{50} = 0.6 \]
 
-Wenn wir aber nun zusätzlich wissen, dass diese Person gelernt hat, befinden wir uns nur in der ersten Zeile der obigen Kreuztabelle (vergleiche auch Kapitel \@ref(sec-kreuztabellen), die bedingten Häufigkeiten im Artikel zu Kreuztabellen). Von insgesamt 25 Studenten, die auf die Klausur gelernt haben, haben sie 20 Studenten bestanden. Es ist also
+Wenn wir aber nun zusätzlich wissen, dass diese Person gelernt hat, befinden wir uns nur in der ersten Zeile der obigen Kreuztabelle (vergleiche auch Kapitel \@ref(sec-kreuztabellen), die bedingten Häufigkeiten im Kapitel zu Kreuztabellen). Von insgesamt 25 Studenten, die auf die Klausur gelernt haben, haben sie 20 Studenten bestanden. Es ist also
 
 \[ \mathbb{P}(B|L) = \frac{20}{25} = 0.8, \]
 

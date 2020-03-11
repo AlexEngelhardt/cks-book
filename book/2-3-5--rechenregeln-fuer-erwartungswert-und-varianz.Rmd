@@ -104,7 +104,7 @@ Der erste Teil, \(\mathbb{E}(X^2)\) ist komplizierter: Er ist der Erwartungswert
 
 **Beispiel Verschiebungssatz: Varianz eines Würfelwurfs**
 
-Den Verschiebungssatz veranschaulicht man am besten anhand eines Beispiels. Wir können die Varianz eines Würfelwurfs zwar theoretisch einfach durch die Formel der diskreten Gleichverteilung (s. Kap. \@ref(sec-diskrete-gleichverteilung)) berechnen, wie es im verlinkten Artikel geschieht. Aber die allgemeine Formel ist natürlich immer noch gültig. Die ganz allgemeine (aber auch ganz aufwändige) Formel lautet ja
+Den Verschiebungssatz veranschaulicht man am besten anhand eines Beispiels. Wir können die Varianz eines Würfelwurfs zwar theoretisch einfach durch die Formel der diskreten Gleichverteilung berechnen, wie es in Kapitel \@ref(sec-diskrete-gleichverteilung) geschieht. Aber die allgemeine Formel ist natürlich immer noch gültig. Die ganz allgemeine (aber auch ganz aufwändige) Formel lautet ja
 
 \[ \mathbb{V}(X) = \mathbb{E}[(X-\mu)^2] = \sum_i (x_i - \mu)^2 f(x_i) \]
 

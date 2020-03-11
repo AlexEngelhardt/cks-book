@@ -1,6 +1,6 @@
 ## Welchen statistischen Test soll ich wählen? {#sec-welchen-test}
 
-*Dieses Kapitel basiert auf dem allgemeinen Vorgehen bei Hypothesentests in Kapitel \@ref(sec-vorgehen-tests). Ich empfehle, diesen Artikel vorher zu lesen und zu verstehen; das macht den Lesefluss und das Verständnis dieses Artikels hier sehr viel einfacher.*
+*Dieses Kapitel basiert auf dem allgemeinen Vorgehen bei Hypothesentests in Kapitel \@ref(sec-vorgehen-tests). Ich empfehle, Kapitel \@ref(sec-vorgehen-tests) vorher zu lesen und zu verstehen; das macht den Lesefluss und das Verständnis dieses Kapitels hier sehr viel einfacher.*
 
 **Die Tabelle zur Testwahl**
 

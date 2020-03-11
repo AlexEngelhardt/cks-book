@@ -1,6 +1,6 @@
 ### Mathematische Symbole {#sec-math}
 
-Das hier ist eine Übersicht aller mathematischen Schreibweisen, die in diesem Blog auftauchen werden. Man kann sie sich am besten kurz anschauen, dass man sie schonmal gesehen hat, und wieder zurückkommen, wenn die entsprechenden Notationen später wieder auftauchen.
+Das hier ist eine Übersicht aller mathematischen Schreibweisen, die in diesem Buch auftauchen werden. Man kann sie sich am besten kurz anschauen, dass man sie schonmal gesehen hat, und wieder zurückkommen, wenn die entsprechenden Notationen später wieder auftauchen.
 
 **\(\lceil x \rceil\) und \(\lfloor x \rfloor\): Auf- und abrunden**
 
@@ -8,7 +8,7 @@ Diese beiden Schreibweisen bedeuten Abrunden bzw. Aufrunden der eingeklammerten 
 
 **\(\bar{x}\): Der Mittelwert**
 
-Mit \(\bar{x}\) ist der Mittelwert aller \(n\) Werte \(x_i\) im Vektor \(x\) gemeint: \(\frac{1}{n} \sum_{i=1}^n x_i\). Ausgeschrieben bedeutet das: \(\bar{x} = \frac{1}{n} (x_1 + x_2 + \ldots + x_n)\). Siehe hierzu auch den Artikel Das Summenzeichen und Rechenregeln.
+Mit \(\bar{x}\) ist der Mittelwert aller \(n\) Werte \(x_i\) im Vektor \(x\) gemeint: \(\frac{1}{n} \sum_{i=1}^n x_i\). Ausgeschrieben bedeutet das: \(\bar{x} = \frac{1}{n} (x_1 + x_2 + \ldots + x_n)\). Siehe hierzu auch Kapitel \@ref(sec-summenzeichen).
 
 **\(|x|\) und \(|\{1,5,\pi,2\} |\): Betragsstriche**
 

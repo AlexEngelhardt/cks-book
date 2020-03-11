@@ -53,7 +53,7 @@ Die komplette Verteilungsfunktion im Spezialfall Würfelwurf ist \(F(x) = \frac{
 
 ### Quantile {#sec-duevdz-quantile}
 
-Das Quantil einer Zufallsvariablen ist sehr ähnlich zum *empirischen* Quantil von bereits gemessenen Daten (s. Kap. \@ref(sec-quantile)) definiert. So ist etwa das 5%-Quantil einer Zufallsvariable genau der Wert von \(X\), der den Wertebereich so aufteilt, dass \(X\) zu 5% kleiner/gleich diesem Wert ist, und zu 95% größer/gleich. Bei stetigen Zufallsvariablen ist der Wert immer eindeutig, aber bei diskreten Zufallsvariablen kann der Wert ein ganzes Intervall zwischen zwei Ausprägungen annehmen - vergleiche hierzu auch den oben verlinkten Artikel zu empirischen Quantilen.
+Das Quantil einer Zufallsvariablen ist sehr ähnlich zum *empirischen* Quantil von bereits gemessenen Daten (s. Kap. \@ref(sec-quantile)) definiert. So ist etwa das 5%-Quantil einer Zufallsvariable genau der Wert von \(X\), der den Wertebereich so aufteilt, dass \(X\) zu 5% kleiner/gleich diesem Wert ist, und zu 95% größer/gleich. Bei stetigen Zufallsvariablen ist der Wert immer eindeutig, aber bei diskreten Zufallsvariablen kann der Wert ein ganzes Intervall zwischen zwei Ausprägungen annehmen - vergleiche hierzu auch Kapitel \@ref(sec-quantile) zu empirischen Quantilen.
 
 Allgemein ist ein \(p\)-Quantil so definiert: Das \(p\)-Quantil ist jeder Wert \(x_p\) von \(X\), für den \(F(x_p) = \mathbb{P}(X \leq x_p) \geq p\), und gleichzeitig \(\mathbb{P}(X \geq x_p) \geq 1-p\) gilt.
 

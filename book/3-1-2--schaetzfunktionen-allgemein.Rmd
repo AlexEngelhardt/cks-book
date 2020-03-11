@@ -2,7 +2,7 @@
 
 In Kapitel \@ref(sec-wat-parameter) haben wir bereits gelernt, was ein Parameter ist: Als einfachstes Beispiel der prozentuale Anteil in einer Grundgesamtheit, oder aber der Erwartungswert bzw. die Varianz eines Merkmals.
 
-Es gibt noch viele weitere solcher Kennzahlen, die man schätzen kann: Das Minimum eines Merkmals, die Korrelation zweier Merkmale, oder das 5%-Quantil eines Merkmals sind nur einige Beispiele dafür. Ich werde nicht auf alle diese Beispiele eingehen, aber wir sehen uns kurz an, wie ein Parameter *allgemein* geschätzt wird. Dieser Artikel gilt also für alle bisher besprochenen Parameterschätzer, und auch für weitere Schätzer so wie die gerade genannten Beispiele.
+Es gibt noch viele weitere solcher Kennzahlen, die man schätzen kann: Das Minimum eines Merkmals, die Korrelation zweier Merkmale, oder das 5%-Quantil eines Merkmals sind nur einige Beispiele dafür. Ich werde nicht auf alle diese Beispiele eingehen, aber wir sehen uns kurz an, wie ein Parameter *allgemein* geschätzt wird. Dieses Kapitel gilt also für alle bisher besprochenen Parameterschätzer, und auch für weitere Schätzer so wie die gerade genannten Beispiele.
 
 ### Wie schätzt man einen Parameter?
 

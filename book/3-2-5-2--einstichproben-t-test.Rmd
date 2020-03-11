@@ -15,14 +15,14 @@ Dieser Test heißt t-Test, weil die Prüfgröße eine t-Verteilung (s. Kap. \@re
 
 **Grundlagen**
 
-Zum Einstieg sollte man sich zu Beginn die folgenden beiden Artikel durchlesen:
+Zum Einstieg sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
 - Was sind Hypothesentests? (Kap. \@ref(sec-wat-tests))
 - Vorgehen bei Hypothesentests (Kap. \@ref(sec-vorgehen-tests))
 
 In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothesentest durchführt. Dadurch werden die einzelnen Teile in diesem Kapitel verständlicher.
 
-Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Artikel zum Binomialtest evtl. ausführlicher verständlicher erklärt worden.
+Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Kapitel \@ref(sec-binomialtest) evtl. ausführlicher verständlicher erklärt worden.
 
 **1. Hypothesen aufstellen**
 
@@ -38,7 +38,7 @@ Beim t-Test gibt es, genau wie beim Binomialtest, drei verschiedene Möglichkeit
     - \(H_0: \mu = 750g\)
     - \(H_1: \mu \neq 750g\)
 
-Im restlichen Artikel verwende ich das dritte Beispiel mit den Müslipackungen, und zeige am Ende noch kurz, welche Veränderungen man in den anderen beiden Fällen vornehmen müsste.
+Im restlichen Kapitel verwende ich das dritte Beispiel mit den Müslipackungen, und zeige am Ende noch kurz, welche Veränderungen man in den anderen beiden Fällen vornehmen müsste.
 
 **2. Test wählen**
 
@@ -46,7 +46,7 @@ Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref
 
 **3. Signifikanzniveau festlegen**
 
-Wie in den vorherigen Artikeln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
+Wie in den vorherigen Kapiteln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
 
 Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha = 0.05\). In besonders kritischen Fragestellungen, z.B. solchen, die die menschliche Gesundheit betreffen, muß das Signifikanzniveau oft niedriger gewählt werden, der Test wird dann *konservativer*. Hier wählt man z.B. \(\alpha = 0.01\).
 
@@ -126,7 +126,7 @@ In Schritt 5 haben wir \(T = 1.473\) ausgerechnet. Die Prüfgröße liegt also n
 
 **Änderungen bei den zwei anderen Beispielen**
 
-Im Beispiel dieses Artikels haben wir einen *zweiseitigen* t-Test durchgeführt. Falls man einen einseitigen t-Test rechnen möchte, so wie in den anderen beiden Beispielen die oben schon erwähnt wurden, dann ist der kritische Bereich nur auf einer Seite der möglichen Werte für die Prüfgröße \(T\). Im ersten Beispiel, das mit dem misstrauischen Oktoberfestbesucher, ist der kritische Bereich z.B. nur durch zu wenig befüllte Maßkrüge, also durch kleine Werte für die Prüfgröße gegeben. Der kritische Bereich dort wird also das linke Ende der t-Verteilung sein, und zwar die linken 5% (statt der 2,5%, die beim *zweiseitigen* Test verwendet wurden). Die Schranke, die den kritischen Bereich abgrenzt, ist das 5%-Quantil der t-Verteilung (s. Abb. \@ref(fig:hypothesentests-dt9-left)).
+Im Beispiel dieses Kapitels haben wir einen *zweiseitigen* t-Test durchgeführt. Falls man einen einseitigen t-Test rechnen möchte, so wie in den anderen beiden Beispielen die oben schon erwähnt wurden, dann ist der kritische Bereich nur auf einer Seite der möglichen Werte für die Prüfgröße \(T\). Im ersten Beispiel, das mit dem misstrauischen Oktoberfestbesucher, ist der kritische Bereich z.B. nur durch zu wenig befüllte Maßkrüge, also durch kleine Werte für die Prüfgröße gegeben. Der kritische Bereich dort wird also das linke Ende der t-Verteilung sein, und zwar die linken 5% (statt der 2,5%, die beim *zweiseitigen* Test verwendet wurden). Die Schranke, die den kritischen Bereich abgrenzt, ist das 5%-Quantil der t-Verteilung (s. Abb. \@ref(fig:hypothesentests-dt9-left)).
 
 (ref:hypothesentests-dt9-left-caption) Kritischer Bereich bei einem nach links einseitigen \(t\)-Test.
 
