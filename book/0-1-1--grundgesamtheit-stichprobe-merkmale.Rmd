@@ -6,13 +6,23 @@ Man interessiert sich also für die Mathematikkenntnisse und den Wortschatz in e
 
 Die folgende Tabelle fasst die Unterschiede nocheinmal zusammen:
 
-```{r grundgesamtheit-stichprobe-merkmale, results="asis"}
-knitr::kable(
-    tibble(
+```{r grundgesamtheit-stichprobe-merkmale}
+
+tbl <- tibble(
         Begriff = c("Grundgesamtheit", "Stichprobe", "Statistische Einheit", "Merkmal", "Merkmalsausprägung"),
         Erklärung = c("Die Menge an statistischen Einheiten, über die man Aussagen treffen möchte", "Alle untersuchten Einheiten zusammengefasst", "eine einzelne zu untersuchende Einheit", "Die Variablen der statistischen Einheiten, die untersucht werden", "Der gemessene Wert eines bestimmten Merkmals an einer Einheit der Stichprobe"),
         Beispiel = c("alle Viertklässler in München", "drei zufällig ausgewählte Klassen", "einer der befragten Schüler", "Wortschatz, Mathematikkenntnisse", "Wortschatz: 87%")
-    )    
 )
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE) %>%
+        kableExtra::kable_styling(full_width = TRUE)# %>%
+        #kableExtra::column_spec(1, width="8em") %>%
+        #kableExtra::column_spec(2, width="15em")# %>%
+        #kableExtra::column_spec(3, width="15em")
+}
+
 ```
 

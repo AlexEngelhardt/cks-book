@@ -7,6 +7,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
+colorlinks: yes
 always_allow_html: yes  # need this to render epub. Otherwise error message.
 description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form."
 lang: de  # https://stackoverflow.com/questions/48247787/how-to-change-caption-label-names-in-a-single-document-with-bookdown
@@ -29,4 +30,4 @@ palette(
   )
 ```
 
-Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in gedruckter Form.
+Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in Buchform. Auf diesem Blog ist der Inhalt kostenlos zur Verfügung gestellt. Trotzdem gibt es Personen (mich eingeschlossen), die mit Material in gedrucktem Format (oder als e-Book) besser lernen können. Dieses Buch ist für euch bestimmt - ich hoffe ihr habt viel Erfolg damit!
