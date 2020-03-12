@@ -68,10 +68,10 @@ abline(lm(income~shoesize), col=1)
 dev.off()
 
 png(file.path(img_folder, "zweivariablen-kausalitaet-getrennt.png"))
-plot(shoesize, income, col=geschlecht+1, pch=19, main="Einkommen vs. Schuhgrösse, nach Geschlecht getrennt", xlab="Schuhgrösse", ylab="Einkommen")
-legend("topleft", legend=c("Männer", "Frauen"), col=c(2,1), pch=19)
+plot(shoesize, income, col=geschlecht+1, pch=geschlecht+15, main="Einkommen vs. Schuhgrösse, nach Geschlecht getrennt", xlab="Schuhgrösse", ylab="Einkommen")
+legend("topleft", legend=c("Männer", "Frauen"), col=c(2,1), pch=c(16, 15))
 abline(lm(income[male] ~ shoesize[male]), col=2)
-abline(lm(income[female] ~ shoesize[female]), col=1)
+abline(lm(income[female] ~ shoesize[female]), col=1, lty=2)
 dev.off()
 
 ################################################################
@@ -110,7 +110,7 @@ spearmanplot <- function(a, b, main_1="", xlab_1="x", ylab_1="y", main_2="", xla
 set.seed(20150418)
 n <- 6
 Alter <- round(runif(n, 18, 80))
-Zeit <- round(rnorm(n, mean=9+0.1*alter), 2)
+Zeit <- round(rnorm(n, mean=9+0.1*Alter), 2)
 png(file.path(img_folder, "zweivariablen-spearman-bsp.png"), width=2*480)
 spearmanplot(Alter, Zeit,
              "Alter vs. Zeit", "Alter (Jahre)", "Zeit (Sekunden)",

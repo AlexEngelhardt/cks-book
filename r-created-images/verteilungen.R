@@ -314,7 +314,7 @@ png(file.path(img_folder, "verteilungen-t-verteilung-normalverteilung.png"))
 plot(x, dnorm(x), ylab="f(x)", type="l", lwd=2, main="Verschiedene t-Verteilungen und die Normalverteilung")
 for(i in seq_along(dfs)){
     df <- dfs[i]
-    lines(x, dt(x, df), col=i)
+    lines(x, dt(x, df), col=i, lty=i+1)
 }
 legend("topleft",
        legend=c(
@@ -326,8 +326,9 @@ legend("topleft",
            "t(30)"
        ),
        col=c("black", palette()[1:5]),
+       lty=1:6,
        lwd=c(2,1,1,1,1,1)
-       )
+)
 dev.off()
 
 
@@ -336,7 +337,7 @@ png(file.path(img_folder, "verteilungen-t-verteilung-normalverteilung-verteilung
 plot(x, pnorm(x), ylab="F(x)", type="l", lwd=2, main="Verschiedene t-Verteilungen und die Normalverteilung")
 for(i in seq_along(dfs)){
     df <- dfs[i]
-    lines(x, pt(x, df), col=i)
+    lines(x, pt(x, df), col=i, lty=i+1)
 }
 legend("topleft",
        legend=c(
@@ -346,8 +347,9 @@ legend("topleft",
            "t(10)"
        ),
        col=c("black", palette()[1:5]),
+       lty=1:4,
        lwd=c(2,1,1,1,1,1)
-       )
+)
 dev.off()
 
 #### Verteilungstabelle
@@ -400,9 +402,9 @@ plot(x, dchisq(x, 1), type="l", col=1, main="Dichtefunktionen der Chi-Quadrat-Ve
 for(i in seq_along(dfs)){
     col <- i+1
     df <- dfs[i]
-    lines(x, dchisq(x, df), col=col, lwd=2)
+    lines(x, dchisq(x, df), col=col, lwd=2, lty=i+1)
 }
-legend("topright", lty=1, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
+legend("topright", lty=1:5, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
 
 x <- seq(0.01, 10, by=0.01)
 dfs <- c(2, 3, 4, 5)
@@ -410,9 +412,9 @@ plot(x, pchisq(x, 1), type="l", col=1, main="Verteilungsfunktionen der Chi-Quadr
 for(i in seq_along(dfs)){
     col <- i+1
     df <- dfs[i]
-    lines(x, pchisq(x, df), col=col, lwd=2)
+    lines(x, pchisq(x, df), col=col, lwd=2, lty=i+1)
 }
-legend("bottomright", lty=1, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
+legend("bottomright", lty=1:5, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
 
 dev.off()
 
