@@ -83,7 +83,8 @@ Die Nullhypothese ist das genaue Gegenteil davon. Solange wir keinen Unterschied
 
 Wenn wir das durchschnittliche Einstiegsgehalt von Bachelorabsolventen mit \(\mu_B\), und das von Masterabsolventen mit \(\mu_M\) bezeichnen, können wir die Hypothesen kürzer formulieren:
 
-\[ H_0: \; \mu_M \leq \mu_B \\ H_1: \; \mu_M > \mu_B \]
+\[ H_0: \; \mu_M \leq \mu_B \]
+\[ H_1: \; \mu_M > \mu_B \]
 
 ```
 
@@ -149,7 +150,7 @@ Der Test verpackt diese Frage nun in eine mathematische Formel und eine Entschei
 
 \[ T = \sqrt{n} \frac{\bar{x} - \mu_0}{s} \]
 
-Die ganzen Standardisierungen in dieser Formel sind dazu da, dass dem Test egal ist,
+Die ganzen Standardisierungen in dieser Formel sind dazu da, damit dem Test egal ist,
 
 - wie groß die Stichprobe ist (da mit \(\sqrt{n}\) multipliziert wird),
 - welchen Mittelwert wir als Nullhypothese festgelegt haben (da die 1000ml, also \(\mu_0\), wieder abgezogen werden),

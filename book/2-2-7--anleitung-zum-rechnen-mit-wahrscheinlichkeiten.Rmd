@@ -2,15 +2,53 @@
 
 Das Umgehen mit Wahrscheinlichkeiten gehört zum essentiellen Handwerkszeug in den einführenden Statistikklausuren. Die wichtigsten Regeln, die verwendet werden, wurden in früheren Kapiteln bereits besprochen:
 
-| Thema | Formel |
-| ------------------------ | -------------------------- |
-| Laplace-Wahrscheinlichkeit                     | \(\mathbb{P}(A) =\frac{\text{Anzahl der }\mathrm{f\ddot{u}r }A\text{ "}\mathrm{g\ddot{u}nstige}\text{" Ergebnisse}}{\text{Anzahl aller }  \mathrm{m\ddot{o}glichen}\text{ Ergebnisse}}\) |
-| Bedingte Wahrscheinlichkeit                    | \(\mathbb{P}(A\mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}\)          |
-| Totale Wahrscheinlichkeit                      | \(\mathbb{P}(A) =\mathbb{P}(A \mid  B) \cdot \mathbb{P}(B) +\mathbb{P}(A \mid  \bar{B}) \cdot \mathbb{P}(\bar{B})\) |
-| Multiplikationssatz                            | \(\mathbb{P}(A \cap B) =\mathbb{P}(A \mid  B) \cdot\mathbb{P}(B)\) |
-| Multiplikationssatz für unabhängige Ereignisse | \(\mathbb{P}(A \cap B) =\mathbb{P}(A) \cdot\mathbb{P}(B)\) |
-| Satz von Bayes                                 | \(\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \cdot\mathbb{P}(A)}{\mathbb{P}(B)}\) |
+```{r}
+# Im folgenden Block von Text-Referenzen muss ich vorher einen Punkt einfügen, da eine reine Formel, d.h. eine Zeile die mit \( beginnt,
+# nicht geparst wird :(
+```
 
+
+(ref:tab-formeln-1) . \(\mathbb{P}(A) =\frac{\text{Anzahl der }\mathrm{f\ddot{u}r }A\text{ "}\mathrm{g\ddot{u}nstige}\text{" Ergebnisse}}{\text{Anzahl aller }  \mathrm{m\ddot{o}glichen}\text{ Ergebnisse}}\)
+
+(ref:tab-formeln-2) . \(\mathbb{P}(A\mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}\)
+
+(ref:tab-formeln-3) . \(\mathbb{P}(A) =\mathbb{P}(A \mid  B) \cdot \mathbb{P}(B) +\mathbb{P}(A \mid  \bar{B}) \cdot \mathbb{P}(\bar{B})\)
+
+(ref:tab-formeln-4) . \(\mathbb{P}(A \cap B) =\mathbb{P}(A \mid  B) \cdot\mathbb{P}(B)\)
+
+(ref:tab-formeln-5) . \(\mathbb{P}(A \cap B) =\mathbb{P}(A) \cdot\mathbb{P}(B)\)
+
+(ref:tab-formeln-6) . \(\mathbb{P}(A \mid B) = \frac{\mathbb{P}(B \mid A) \cdot\mathbb{P}(A)}{\mathbb{P}(B)}\)
+
+
+```{r}
+tbl <- tibble(
+    Thema = c(
+        "Laplace-Wahrscheinlichkeit",
+        "Bedingte Wahrscheinlichkeit",
+        "Totale Wahrscheinlichkeit",
+        "Multiplikationssatz",
+        "Multiplikationssatz für unabhängige Ereignisse",
+        "Satz von Bayes"
+    ),
+    Formel = c(
+        "(ref:tab-formeln-1)",
+        "(ref:tab-formeln-2)",
+        "(ref:tab-formeln-3)",
+        "(ref:tab-formeln-4)",
+        "(ref:tab-formeln-5)",
+        "(ref:tab-formeln-6)"
+    )
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace") %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped") %>%
+        column_spec(1, width="15em")
+}
+```
 
 
 Welche Formel man in einer bestimmten Situation braucht, kann man herausfinden, indem man die Aufgabe systematisch angeht:

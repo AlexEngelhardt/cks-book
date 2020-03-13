@@ -83,7 +83,7 @@ knitr::include_graphics("img/median.png")
 
 ### Modus
 
-Der Modus oder Modalwert ist nur für nicht-stetige Daten definiert. Er ist die Ausprägung, die in der Stichprobe am häufigsten gezählt wurde. Für unsere Stichprobe zur Kinderanzahl ist der Modus also 1, da drei Familien ein Kind haben. Kein allzu großes Geheimnis.
+Der Modus (oder *Modalwert*) ist nur für nicht-stetige Daten definiert. Er ist die Ausprägung, die in der Stichprobe am häufigsten gezählt wurde. Für unsere Stichprobe zur Kinderanzahl ist der Modus also 1, da drei Familien ein Kind haben. Kein allzu großes Geheimnis.
 
 ```{exercise, echo=TRUE}
 

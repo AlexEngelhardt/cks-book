@@ -24,9 +24,12 @@ Die beiden Streudiagramme in Abbildung \@ref(fig:regression-testen-1) zeigen, da
 
 Wir möchten also, wie oben beschrieben, wissen welche Einflussgrößen bzw. Parameter "wichtig" für unser Regressionsmodell sind.
 
-Die Hypothesen bei einer linearen Regression sind immer gleich. Für jeden berechneten Parameter, z.B. \(a\) und \(b\) bei der einfachen linearen Regression, führen wir einen Test durch, mit zwei Hypothesen. Am Beispiel für den Steigungsparameter \(b\) der Regressionsgeraden lauten sie: \(H_0\): Der Parameter \(b\) ist Null. \(H_1\): Der Parameter \(b\) ist ungleich Null.
+Die Hypothesen bei einer linearen Regression sind immer gleich. Für jeden berechneten Parameter, z.B. \(a\) und \(b\) bei der einfachen linearen Regression, führen wir einen Test durch, mit zwei Hypothesen. Am Beispiel für den Steigungsparameter \(b\) der Regressionsgeraden lauten sie: 
 
-Wenn wir diesen Test durchführen, und als Resultat die Nullhypothese ablehnen, dann können wir sagen, dass der Parameter \(b\) "signifikant ist". Wir meinen damit ausführlich: Der Parameter \(b\) ist signifikant von Null verschieden.
+- \(H_0\): Der Parameter \(b\) ist Null.
+- \(H_1\): Der Parameter \(b\) ist ungleich Null.
+
+Wenn wir diesen Test durchführen, und als Resultat die Nullhypothese ablehnen, dann können wir sagen, dass der Parameter \(b\) "signifikant" ist. Wir meinen damit ausführlich: Der Parameter \(b\) ist signifikant von Null verschieden.
 
 **Signifikanz**
 
@@ -45,7 +48,7 @@ Detailliert wurde der Unterschied dieser beiden Wege in Kapitel \@ref(sec-vorgeh
 - Bei der Berechnung via kritischen Bereich bestimmt man eine Prüfgröße \(T\) und einen kritischen Bereich (meist ein oder zwei Intervalle). Der kritische Bereich hängt auch vom Signifikanzniveau \(\alpha\) ab. Wenn die Prüfgröße im kritischen Bereich liegt, wird die Nullhypothese abgelehnt, anderenfalls nicht.
 - Bei der Berechnung via p-Wert bestimmt man nur eine Zahl, den p-Wert. Wenn dieser kleiner ist als das vorgegebene Signifikanzniveau \(\alpha\), dann wird die Nullhypothese abgelehnt, anderenfalls nicht.
 
-Hier sieht man auch einen weiteren Vorteil an der Variante via p-Wert: Man sieht sofort, zu welchem Signifikanzniveau dieser Test die Nullhypothese ablehen würde. Wenn der p-Wert also zum Beispiel p=0.0832 ist, dann würden wir direkt sehen, dass man zum Niveau  \(\alpha=0.05\) die Nullhypothese nicht ablehnen würde, aber zum Niveau \(\alpha=0.1\) schon - denn 0.0832 ist kleiner als 0.1. Würde man stattdessen mit dem kritischen Bereich rechnen, bekäme man am Anfang nur die Information: "Zum Niveau \(\alpha=0.05\) ist der Test nicht signifikant". Man müsste ihn dann zum Niveau \(\alpha=0.1\) nocheinmal von vorne rechnen.
+Hier sieht man auch einen weiteren Vorteil an der Variante via p-Wert: Man sieht sofort, zu welchem Signifikanzniveau dieser Test die Nullhypothese ablehen würde. Wenn der p-Wert also zum Beispiel p=0.0832 ist, dann würden wir direkt sehen, dass man zum Niveau \(\alpha=0.05\) die Nullhypothese nicht ablehnen würde, aber zum Niveau \(\alpha=0.1\) schon - denn 0.0832 ist kleiner als 0.1. Würde man stattdessen mit dem kritischen Bereich rechnen, bekäme man am Anfang nur die Information: "Zum Niveau \(\alpha=0.05\) ist der Test nicht signifikant". Man müsste ihn dann zum Niveau \(\alpha=0.1\) nocheinmal von vorne rechnen.
 
 Im Kapitel zu Hypothesentests bei Vereteilungsparametern haben wir noch viel mit kritischen Bereichen gerechnet, da diese Variante gut mit der Hand zu berechnen ist, und sie daher in Klausuren immer noch abgefragt wird. In der Realität, und besonders bei komplexeren Hypothesentests, wird die Testentscheidung allerdings fast ausschließlich mit p-Werten berechnet. Das Ergebnis (der p-Wert) ist einfacher zu interpretieren, und gibt etwas detailliertere Informationen zurück als die sture "ja"/"nein"-Entscheidung, wenn man den Weg über den kritischen Bereich geht.
 

@@ -16,7 +16,7 @@ Durch die Darstellung der Daten fallen hier direkt drei Dinge auf:
 
 Eine grafische Darstellung und Exploration eines Datensatzes ist also immer ein sinnvoller erster Schritt, noch vor irgendwelchen statistischen Modellierungen.
 
-Streudiagramme für drei Variablen sind möglich, aber meistens unübersichtlich. Als Beispiel wird in Abbildung \@ref(fig:zweivariablen-streudiagramme-3d) ein Datensatz von verschiedenen Autos visualisiert, in dem drei Variablen (Gewicht, Hubraum, und Benzinverbrauch) dargestellt werden:
+Streudiagramme für drei Variablen sind möglich, aber meistens unübersichtlich. Als Beispiel wird in Abbildung \@ref(fig:zweivariablen-streudiagramme-3d) ein Datensatz von verschiedenen Autos visualisiert, in dem drei Variablen (Gewicht, Hubraum, und Benzinverbrauch) dargestellt werden.
 
 ```{r zweivariablen-streudiagramme-3d, fig.cap="Ein 3d-Streudiagramm."}
 knitr::include_graphics("img/zweivariablen-streudiagramme-3d.png")

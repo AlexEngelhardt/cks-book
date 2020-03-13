@@ -21,17 +21,17 @@ Der Träger (s. Kap. \@ref(sec-duszv-traeger)) \(\mathcal{T}\) der diskreten Gle
 
 Die Dichtefunktion muss in zwei Teile aufgeteilt werden. Beim Roulettespiel ist z.B. die Wahrscheinlichkeit, dass die 17 erscheint, \(\mathbb{P}(X=17) = \frac{1}{37}\), aber die Wahrscheinlichkeit, dass das Ergebnis 1500 ist, \(\mathbb{P}(X=1500) = 0\). Die Dichte für das Roulettespiel ist also
 
-\[ f(x) = \begin{cases} \frac{1}{37}, &amp; x \in \{0, 1, \ldots , 36\} \\ 0, &amp; \text{sonst} \end{cases} \]
+\[ f(x) = \begin{cases} \frac{1}{37}, & x \in \{0, 1, \ldots , 36\} \\ 0, & \text{sonst} \end{cases} \]
 
 Im Allgemeinen haben wir \(n\) verschiedene Ergebnisse für eine Zufallsvariable, die wir mit \(x_1, x_2, \ldots, x_n\) bezeichnen (also wieder alle Zahlen von \(a\) bis \(b\), den Träger). Hier ist die Dichte dann
 
-\[ f(x) = \begin{cases} \frac{1}{n}, &amp; x \in \{ a, a+1, \ldots , b \} \\ 0, &amp; \text{sonst} \end{cases} \]
+\[ f(x) = \begin{cases} \frac{1}{n}, & x \in \{ a, a+1, \ldots , b \} \\ 0, & \text{sonst} \end{cases} \]
 
 **Verteilungsfunktion**
 
 Die Verteilungsfunktion der diskreten Gleichverteilung lautet wie folgt:
 
-\[ F(x) = \begin{cases} 0, &amp; x < a \\ \frac{\lfloor x \rfloor - a + 1}{b-a+1}, &amp; x \in [a,b]\\ 1, &amp; x > b \end{cases}\]
+\[ F(x) = \begin{cases} 0, & x < a \\ \frac{\lfloor x \rfloor - a + 1}{b-a+1}, & x \in [a,b]\\ 1, & x > b \end{cases}\]
 
 "Links" von \(a\) ist die Verteilungsfunktion also immer 0, und "rechts" von \(b\) ist sie immer 1. Mit \(\lfloor x \rfloor\) ist hier die Abrundung von \(x\) gemeint, also ist z.B. \(\lfloor 3.4 \rfloor = 3\) und \(\lfloor 5 \rfloor = 5\).
 
@@ -78,7 +78,7 @@ Die Zufallsvariable \(X\) kann nur die Werte 1, 2, 3, 4, 5, oder 6 annehmen. Als
 
 Die Dichte ist, wenn wir die obige Definition anwenden, einfach bestimmt:
 
-\[ f(x) = \begin{cases} \frac{1}{6}, &amp; x \in \{ 1, 2, 3, 4, 5, 6 \} \\ 0, &amp; \text{sonst} \end{cases} \]
+\[ f(x) = \begin{cases} \frac{1}{6}, & x \in \{ 1, 2, 3, 4, 5, 6 \} \\ 0, & \text{sonst} \end{cases} \]
 
 Abbildung \@ref(fig:verteilungen-diskrete-gleichverteilung-dichte) zeigt diese Dichte.
 

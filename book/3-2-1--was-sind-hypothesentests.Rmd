@@ -9,7 +9,7 @@ Um den Grund für dieses Vorgehen zu verstehen, kann man sich eine Gerichtsverha
 
 ### Wie läuft ein Test ab?
 
-Jeder Test besteht aus den folgenden sieben Schritten:
+Jeder Test besteht aus den folgenden acht Schritten:
 
 1. **Hypothesen aufstellen**:  
 Zuallererst formuliert man seine Fragestellung in ein Hypothesenpaar um, und zwar eine *Nullhypothese* und eine *Alternativhypothese*. Man geht davon aus, dass die Nullhypothese gilt, außer man findet durch die Daten einen starken Hinweis, dass stattdessen die Alternativhypothese wahr ist.
@@ -20,7 +20,7 @@ Mit den in Schritt 1 bestimmten Informationen kann man sich jetzt für den für 
 Man sollte das Signifikanzniveau festlegen, bevor man mit der Analyse beginnt. Es beschreibt die Wahrscheinlichkeit, einen bestimmten Fehler zu machen, nämlich die Nullhypothese abzulehnen, wenn sie in Wirklichkeit doch gilt.
 In einer Klausur ist das Signifikanzniveau meist vorgegeben, und in der Praxis hat sich der Wert 5% dafür eingebürgert.
 4. **Daten sammeln**:  
-Dann sammelt man Daten, also erhebt eine Stichprobe. In Übungen und Klausuren ist das meist schon passiert. Man muss beachten, dass man die Daten in dem Skalenniveau misst, das in Schritt 1. festgelegt wurde.
+Dann sammelt man Daten, also erhebt eine Stichprobe. In Übungen und Klausuren ist das meist schon passiert. Man muss beachten, dass man die Daten in dem Skalenniveau misst, das in Schritt 1 festgelegt wurde.
 5. **Prüfgröße berechnen**:  
 Aus den Daten berechnet man nun eine Prüfgröße, auch Teststatistik genannt. Die gesamte Stichprobe wird also *in eine einzige Zahl* zusammengefasst. Das ist beim klassischen Gaußtest zum Beispiel der Mittelwert der Daten (der mit einigen Faktoren standardisiert wird). Bei manchen anderen Tests ist die Berechnung der Prüfgröße ein wenig aufwändiger, aber die Idee ist überall dieselbe: Man fasst die Daten mit einer Formel in eine Prüfgröße zusammen, die einer bestimmten Verteilung folgt.
 6. **Verteilung der Prüfgröße bestimmen**:  

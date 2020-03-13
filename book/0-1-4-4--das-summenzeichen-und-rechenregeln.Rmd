@@ -47,7 +47,7 @@ Die anderen Regeln kann man auf dieselbe Weise ausschreiben und nachvollziehen.
 
 ```{exercise, echo=TRUE}
 
-Stellen wir uns vor, es steht eine große Torte auf dem Tisch. Nacheinander laufen nun sehr, sehr viele Leute daran vorbei, und jeder nimmt sich die Hälfte von dem, das im Moment noch übrig ist. Die erste Person nimmt sich also die halbe Torte, die zweite Person die Hälfte vom Rest, d.h. eine Viertel Torte, die nächste Person nimmt sich ein Achtel, usw.
+Stellen wir uns vor, es steht eine große Torte auf dem Tisch. Nacheinander laufen nun sehr, sehr viele Leute daran vorbei, und jeder nimmt sich die Hälfte von dem, das im Moment noch übrig ist. Die erste Person nimmt sich also die halbe Torte, die zweite Person die Hälfte vom Rest, d.h. eine Viertel Torte, die nächste Person nimmt sich ein Achtel, usw. (s. Abb. \@ref(fig:summenzeichen-pie))
 
 Die Torte wird nie komplett aufgegessen, aber doch immer kleiner. Den gesamten Anteil der Torte , der nach \(n\) Personen schon gegessen wurde, kann man durch eine Summe ausdrücken:
 

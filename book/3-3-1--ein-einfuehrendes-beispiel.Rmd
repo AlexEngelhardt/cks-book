@@ -8,7 +8,7 @@ Das Ziel der Regression ist es, den Wert einer bestimmten Variablen anhand einer
 
 Du möchtest deiner Freundin einen Verlobungsring kaufen. Dummerweise kennst du aber ihre Ringgröße nicht. Es ist natürlich zu verdächtig, sie direkt zu fragen, weil sie dann Verdacht schöpfen könnte.
 
-Du weißt aber, dass kleinere Frauen tendenziell auch kleinere Ringgrößen haben, und nach ihrer Körpergröße kannst du sie ohne Bedenken fragen. Sie ist 170cm groß. Was nun? Kannst du mit dieser Information dein Problem lösen?
+Du weißt aber, dass kleinere Frauen tendenziell auch kleinere Ringgrößen haben, und größere Frauen eben größere. Und nach ihrer Körpergröße kannst du sie ohne Bedenken fragen. Sie ist 170cm groß. Was nun? Kannst du mit dieser Information dein Problem lösen?
 
 Ja! Die lineare Regression hilft dir in dieser Situation!
 

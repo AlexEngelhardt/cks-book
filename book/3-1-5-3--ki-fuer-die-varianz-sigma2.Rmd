@@ -16,8 +16,8 @@ Das \(S^2\) im Zähler ist die Stichprobenvarianz, die wir mit der üblichen For
 
 Wir möchten herausfinden, in welchem Bereich die Varianz der Körpergröße von Männern wohl liegen wird. Dazu befragen wir 14 Männer nach ihrer Größe. Wir erhalten glücklicherweise nicht die rohen Daten, sondern schon die folgenden Zusammenfassungen der Stichprobe:
 
-\(\bar{x} = 174cm\)
-\(S^2 = 97.33\)
+- \(\bar{x} = 174cm\)
+- \(S^2 = 97.33\)
 
 Berechne mit diesen Angaben ein 90%-Konfidenzintervall für die Varianz der Körpergröße unter Männern.
 

@@ -20,6 +20,6 @@ Meistens ist die Situation allerdings ein bisschen anders, und aufgrund der Anza
 
 Der Spezialfall, in dem man genau einen Anteil \(p\) der Daten bestimmen kann, ist genau dann gegeben, wenn \(n\cdot p\) ganzzahlig ist. In unserem Beispiel mit fünf Datenpunkten und \(p=0.2\) war das der Fall. Die andere Situation, in der wir einen Datenpunkt als Quantil bestimmen, ist gegeben wenn \(n\cdot p\) nicht ganzzahlig ist. Formal wird ein \(p\)-Quantil als \(x_p\) geschrieben, und ist folgendermaßen definiert:
 
-\[ x_p = \begin{cases} \frac{1}{2} (x_{(np)} + x_{(np+1)}) & np \text{ ganzzahlig}\\ x_{(\lfloor np \rfloor +1)} & np \text{ nicht ganzzahlig} \end{cases} \]
+\[ x_p = \begin{cases} \frac{1}{2} (x_{(np)} + x_{(np+1)}) & \text{falls } np \text{ ganzzahlig}\\ x_{(\lfloor np \rfloor +1)} & \text{falls } np \text{ nicht ganzzahlig} \end{cases} \]
 
 Die Klammern \(\lfloor np \rfloor\) bedeuten dabei, dass die Zahl \(np\) auf die nächste ganze Zahl abgerundet wird. Wem das noch ein bisschen kryptisch erscheint, kann ja mit Hilfe der Abbildung oben mal die 20%-Quantile durch diese Formel bestimmen.

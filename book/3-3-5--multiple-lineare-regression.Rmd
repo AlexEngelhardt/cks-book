@@ -4,7 +4,7 @@ In den bisherigen Kapiteln zur Regression ging es nur um die *einfache* lineare 
 
 Das Wort "multipel" bedeutet, dass wir nun nicht mehr eine, sondern mehrere Einflussgrößen haben. Wichtig: es gibt *mehrere Einflussgrößen*. Die Anzahl der *Zielgrößen* verändert sich nicht, es ist immer noch nur eine Zielgröße.
 
-Beispiel
+**Beispiel**
 
 Wir können uns das Beispiel aus den Kapiteln \@ref(sec-regression-einfuehrung) und \@ref(sec-regression-einfache) zur einfachen linearen Regression ansehen, und es etwas weiterführen. Dort haben wir versucht, mit Hilfe der Regression die Ringgröße \(y\) einer Freundin zu schätzen, gegeben man kennt ihre Körpergröße \(x\).
 

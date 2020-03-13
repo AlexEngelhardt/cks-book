@@ -22,6 +22,8 @@ Steht innerhalb der Betragsstriche aber eine Menge an Zahlen (man erkennt das an
 
 Das Ausrufezeichen steht für die Fakultät einer Zahl, womit gemeint ist, dass alle Zahlen von 1 bis \(N\) nacheinander multipliziert werden. Es ist zum Beispiel \(5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120\).
 
+Ein Sonderfall ist die Fakultät von Null, die als 1 definiert wird: \(0! = 1\).
+
 **\({n \choose k}\): Binomialkoeffizient**
 
 Der Binomialkoeffizient wird in der Kombinatorik verwendet. Wenn wir eine Menge von \(n\) Objekten haben, und uns \(k\) Objekte daraus auswählen, so gibt es \(n \choose k\) Möglichkeiten, das zu tun. Berechnen lässt er sich durch die Formel \({N\choose k} = \frac{N!}{(N-k)!\cdot k!}\). Beim Lotto gibt es z.B. \(n=49\) Zahlen, aus denen \(k=6\) ausgewählt werden. Dafür gibt es \({49 \choose 6} = 13983816\) verschiedene Möglichkeiten.

@@ -1,6 +1,6 @@
 ### Binomialverteilung: Zehn Münzwürfe {#sec-binomialverteilung}
 
-Idee
+**Idee**
 
 Die Binomialverteilung entsteht, wenn man ein Bernoulli-Experiment (s. Kap. \@ref(sec-bernoulliverteilung)) mehrere Male wiederholt, und an der gesamten Anzahl der Erfolge interessiert ist.
 
@@ -44,7 +44,7 @@ Berechne für das Beispiel Schießstand die Wahrscheinlichkeit, gar keinen Treff
 ```
 
 ```{solution, echo=TRUE}
-\(\mathbb{P}(X=0) = {6 \choose 0} 0.2^0 0.8^6 = 0.2621\)
+\(\mathbb{P}(X=0) = {6 \choose 0} \cdot 0.2^0 \cdot 0.8^6 = 0.2621\)
 ```
 
 **Verteilungsfunktion**

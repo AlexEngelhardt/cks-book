@@ -10,7 +10,7 @@ Der Erwartungswert gilt dagegen für die *Grundgesamtheit*, d.h. über die Stich
 
 Es ergibt sich nun mathematisch, dass der Stichprobenmittelwert auch der beste Schätzer für den Erwartungswert in der Grundgesamtheit ist - und genau deswegen sind die beiden Formeln (Stichprobenmittelwert und Erwartungswertschätzer) identisch. Auf dem Weg zur statistischen Erleuchtung ist es aber hilfreich im Hinterkopf zu behalten, dass das zwei unterschiedliche Konzepte sind.
 
-Dieses Konzept erkennt man dann auch an der mathematischen Notation wieder. Der Mittelwert einer Stichprobe wird z.B. einfach \(\bar{x}\) ("x quer") genannt, aber der Schätzer für den Erwartungswert wird mit \(\hat{\mu}\) ("mu Dach") bezeichnet. Das Dach über einem Buchstaben (egal ob griechisch oder nicht) deutet darauf hin, dass der Buchstabe darunter geschätzt wird. \(\hat{\mu}\) ist also ein Schätzwert für den "wahren", aber unbekannten Wert \(\mu\).
+Dieses Konzept erkennt man dann auch an der mathematischen Notation wieder. Der Mittelwert einer Stichprobe wird z.B. einfach \(\bar{x}\) ("x quer") genannt, aber der Schätzer für den Erwartungswert wird mit \(\hat{\mu}\) ("mu Dach") bezeichnet. Das Dach über einem Buchstaben (egal ob griechisch oder nicht) deutet darauf hin, dass der Buchstabe darunter geschätzt wird. \(\hat{\mu}\) ist also ein Schätzwert für den "wahren", aber unbekannten Wert \(\mu\).
 
 ### Prozentualer Anteil \(p\) {#sec-parmsch-anteil}
 
@@ -82,7 +82,7 @@ Die wahre Varianz wird mit \(\sigma^2\) bezeichnet, der Schätzer dafür lautet 
 
 Dabei ist \(\bar{x}\) der Mittelwert der Daten. Bei uns ist er 960.125ml. Für dieses Beispiel kommt heraus:
 
-\[\begin{aligned}\hat{\sigma}^2 = \frac{1}{8-1} \cdot (&0.766 + 2691.016 + 97.516 + 405.016 +  \\ &4080.016 + 8487.016 +848.266 + 221.266) = 2404.41 \end{aligned} \]
+\[\begin{aligned}\hat{\sigma}^2 = \frac{1}{8-1} \cdot (&0.766 + 2691.016 + 97.516 + 405.016 + \\ &4080.016 + 8487.016 +848.266 + 221.266) = 2404.41 \end{aligned} \]
 
 Die Zahlen in der Summe sind jeweils die einzelnen Terme für \((x_i-\bar{x})^2\), also die erste Zahl, 0.766, haben wir erhalten durch \((x_1-\bar{x})^2 = (961 - 960.125)^2\).
 

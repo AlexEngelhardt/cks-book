@@ -11,13 +11,13 @@ dev.off()
 png(file.path(img_folder, "grundlagen-explog-polynom.png"))
 pow <- c(1,2,3,4,5)
 x <- seq(-2,3, by=0.01)
-plot(x, x^pow[1], type="l", lty=2, xlab="x", ylab="f(x)", main="Einige Polynome", lwd=2)
+plot(x, x^pow[1], type="l", lty=2, col=1, xlab="x", ylab="f(x)", main="Einige Polynome", lwd=2)
 abline(h=0)
 abline(v=0)
 for(i in 2:length(pow)){
     p <- pow[i]
     LTY <- i+1
-    lines(x, x^pow[i], lty=LTY, lwd=2)
+    lines(x, x^pow[i], lty=LTY, lwd=2, col=i)
 }
 legendtext <- c(
     expression(f(x)==x^1),
@@ -26,18 +26,18 @@ legendtext <- c(
     expression(f(x)==x^4),
     expression(f(x)==x^5)
 )
-legend("bottomright", lty=2:5, legend=legendtext, lwd=2)
+legend("bottomright", lty=2:6, col=1:5, legend=legendtext, lwd=2)
 dev.off()
 
 
 png(file.path(img_folder, "grundlagen-explog-exponential.png"))
 base <- c(1, 2, exp(1), 3)
 x <- seq(-2, 3, by=0.01)
-plot(x, base[1]^x, type="l", lty=2, xlab="x", ylab="f(x)", main="Einige Exponentialfunktionen", ylim=c(-1, 8), lwd=2)
+plot(x, base[1]^x, type="l", lty=2, col=1, xlab="x", ylab="f(x)", main="Einige Exponentialfunktionen", ylim=c(-1, 8), lwd=2)
 abline(h=0)
 abline(v=0)
 for(i in 2:length(base)){
-    lines(x, base[i]^x, lty=i+1, lwd=2)
+    lines(x, base[i]^x, lty=i+1, lwd=2, col=i)
 }
 legendtext <- c(
     expression(f(x)==1^x),
@@ -45,7 +45,7 @@ legendtext <- c(
     expression(f(x)==e^x),
     expression(f(x)==3^x)
 )
-legend("topleft", lty=2:6, legend=legendtext, lwd=2)
+legend("topleft", lty=2:5, col=1:4, legend=legendtext, lwd=2)
 dev.off()
 
 png(file.path(img_folder, "grundlagen-explog-log.png"), width=2*480)

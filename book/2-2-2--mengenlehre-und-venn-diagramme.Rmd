@@ -92,7 +92,7 @@ Diese Menge \(A \cap \bar{B}\) enthält die Zahlen 4 und 6, da das die geraden Z
 Eine weitere Möglichkeit, diese Menge darzustellen, ist mit dem Differenzoperator \(\setminus\). Es bedeutet also \(A \setminus B\) "A ohne B", also dasselbe wie \(A \cap \bar{B}\).
 
 ```{exercise, echo=TRUE}
-**Zwei abschließende Aufgaben zum Verständnis**
+
 
 a) Zeichne die Menge \(B \cup \bar{A}\) in einem Venn-Diagramm und bestimme, um welche Zahlen auf dem Würfel es sich in unserem Beispiel handelt.
 b) Zeichne die Menge \(\bar{A} \cap \bar{B}\) und bestimme ebenso die resultierende Menge im Beispiel.
@@ -100,6 +100,7 @@ b) Zeichne die Menge \(\bar{A} \cap \bar{B}\) und bestimme ebenso die resultiere
 ```
 
 ```{solution, echo=TRUE}
+
 
 a) Hier handelt es sich um alle Zahlen, die in \(B\) enthalten sind, oder nicht in \(A\). In \(B\) sind die Zahlen 1, 2, und 3, und in \(\bar{A}\) sind die Zahlen 1, 3, und 5 enthalten. Die Vereinigungsmenge daraus ist also \(B \cup \bar{A} = \{1, 2, 3, 5\}\). Abbildung \@ref(fig:venn-B-oder-nicht-A) zeigt dieses Venn-Diagramm.
 b) Die Menge \(\bar{A} \cap \bar{B}\) bezeichnet alle Elemente, die weder in \(A\), noch in \(B\) enthalten sind. Das ist nur die Zahl 5 (s. Abb. \@ref(fig:venn-nicht-A-und-nicht-B)).

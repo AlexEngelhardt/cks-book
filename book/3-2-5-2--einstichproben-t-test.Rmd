@@ -28,7 +28,7 @@ Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu
 
 Beim t-Test gibt es, genau wie beim Binomialtest, drei verschiedene Möglichkeiten, seine Hypothesen zu formulieren. Welche Variante man verwenden muss, hängt von der Fragestellung ab, die man untersucht. Dazu drei Beispiele:
 
-1. Ein misstrauischer Oktoberfestbesucher möchte nachweisen, dass in den Maßkrügen im Durchschnitt weniger als 1 Liter Bier eingeschenkt wurde. Die Alternativhypothese muss also sagen, dass der MIttelwert kleiner als 1000ml ist. Insgesamt also:  
+1. Ein misstrauischer Oktoberfestbesucher möchte nachweisen, dass in den Maßkrügen im Durchschnitt weniger als 1 Liter Bier eingeschenkt wurde. Die Alternativhypothese muss also sagen, dass der Mittelwert kleiner als 1000ml ist. Insgesamt also:  
     - \(H_0: \mu \geq 1000ml\)
     - \(H_1: \mu < 1000ml\)
 2. Ein Dorf behauptet, dass seine Bewohner im Mittel über 100 Jahre alt werden. Um das nachzuweisen, muss der Fall "erreichtes Lebensalter (\(\mu\)) ist über 100 Jahre" in die Alternativhypothese \(H_1\) (warum das so ist, wird in Kapitel \@ref(sec-h0-h1) beschrieben). Die Hypothesen lauten also:  
@@ -102,7 +102,7 @@ Bei unserem Beispiel ist \(n=10\), wir verwenden also die t-Verteilung mit \(n-1
 
 **7. Kritischen Bereich (oder p-Wert) berechnen**
 
-Den kritischen Bereich erhalten wir mit Hilfe der Tabelle der t-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)). Wir suchen einen kritischen Bereich, in dem unser Ergebnis (d.h. die Prüfgröße \(T\)) nur zu 5% (das ist das SIgnifikanzniveau \(\alpha\)) fallen würde, falls die Nullhypothese gilt. Da wir hier einen zweiseitigen Test verwenden, teilen wir diese 5% auf in jeweils 2.5% links und 2.5% rechts. Man kann sich das so vorstellen, dass sowohl besonders kleine, als auch besonders große Werte von \(\bar{x}\) (und somit auch von \(T\)) gegen die Nullhypothese sprechen.
+Den kritischen Bereich erhalten wir mit Hilfe der Tabelle der t-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)). Wir suchen einen kritischen Bereich, in dem unser Ergebnis (d.h. die Prüfgröße \(T\)) nur zu 5% (das ist das Signifikanzniveau \(\alpha\)) fallen würde, falls die Nullhypothese gilt. Da wir hier einen zweiseitigen Test verwenden, teilen wir diese 5% auf in jeweils 2.5% links und 2.5% rechts. Man kann sich das so vorstellen, dass sowohl besonders kleine, als auch besonders große Werte von \(\bar{x}\) (und somit auch von \(T\)) gegen die Nullhypothese sprechen.
 
 Mir hat es zum Verständnis immer geholfen, ein Diagramm zu zeichnen, um zu verstehen welche Werte wir suchen (s. Abb. \@ref(fig:hypothesentests-dt9)).
 

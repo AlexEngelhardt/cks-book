@@ -44,7 +44,7 @@ Das ist dann auch schon fast das ganze Geheimnis hinter kategorialen Einflussgr�
 
 Wir haben ja in Kapitel \@ref(sec-regression-multiple) schon ein Regressionsmodell mit mehreren Einflussgrößen gesehen, die multiple Regression. Wir können die eben betrachtete kategoriale Einflussgröße nun genauso wie eine stetige Einflussgröße zusätzlich in das Modell aufnehmen.
 
-Nennen wir die Einflussgröße für die Frage "Handwerker?" \(x_1\), und die bereits bekannte EInflussgröße für die Körpergröße \(x_2\). Dann haben wir das folgende Regressionsmodell:
+Nennen wir die Einflussgröße für die Frage "Handwerker?" \(x_1\), und die bereits bekannte Einflussgröße für die Körpergröße \(x_2\). Dann haben wir das folgende Regressionsmodell:
 
 \[y = a + b_1 x_1 + b_2 x_2\]
 
@@ -64,7 +64,7 @@ Ein Beispiel: Eine neue Einflussgröße "Sport". Für die Ringgröße ist wohl w
 
 Es wäre falsch, nun einfach *eine* Variable \(x_1\) anzulegen, die für diese Sportarten die Werte "kein Sport = 0", "Joggen = 1", "Klettern = 2", und "Gewichtheben = 3" annehmen kann. Das Problem ist, dass wir dann nur einen Parameter \(b_1\) erhalten, und z.B. der Unterschied zwischen "kein Sport" und "joggen" genauso groß sein muss wie der zwischen "Joggen" und "Klettern". Das kann man nachprüfen, indem man für Nichtsportler \(0\cdot b_1\) vergleicht mit \(1\cdot b_1\) für Jogger und \(2\cdot b_1\) für Kletterer. Falls sich aber die Ringgröße z.B. zwischen Joggern und Kletterern gar nicht unterscheidet, könnte unser Modell das gar nicht abbilden. Fachlich heißt das: Wir unterstellen einen linearen Zusammenhang, wo es gar keinen gibt.
 
-WIe lösen wir dieses Problem nun am besten?
+Wie lösen wir dieses Problem nun am besten?
 
 Wir müssen einen kleinen Umweg gehen, indem wir die eine Einflussgröße mit vier Kategorien aufteilen in *drei* separate Einflussgrößen mit jeweils zwei Kategorien "ja/nein":
 

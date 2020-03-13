@@ -20,16 +20,26 @@ Nehmen wir zur Vereinfachung ein Land mit 5 Einwohnern an. Die fünf Personen ve
 
 Zuerst müssen dazu die Merkmalsausprägungen der Einheiten nach der Größe sortiert werden. Das weitere Vorgehen wird anhand der folgenden Tabelle Zeile für Zeile gezeigt.
 
-| Einheit \(i\)                           | Einheit 1 | Einheit 2 | Einheit 3 | Einheit 4 | Einheit 5 |
-| --------------------------------------- | --------- | --------- | --------- | --------- | --------- |
-| Einkommen                               | 3         | 4         | 5         | 5         | 18        |
-| Aufsummiertes Einkommen                 | 3         | 7         | 12        | 17        | **35**    |
-| Anteil an der Gesamtsumme (\(y\)-Achse) | 0.086     | 0.2       | 0.343     | 0.486     | 1         |
-| Prozent der Ärmsten (\(x\)-Achse)       | 20%       | 40%       | 60%       | 80%       | 100%      |
+```{r}
+tbl = tibble(
+   `Einheit i` = 1:5,
+   Einkommen = c(3, 4, 5, 5, 18),
+   `Aufsummiertes Einkommen` = c(3, 7, 12, 17, 35),
+   `Anteil an der Gesamtsumme (y-Achse)` = c(0.086, 0.2, 0.343, 0.486, 1),
+   `Prozent der Ärmsten (x-Achse)` = c("20%", "40%", "60%", "80%", "100%")
+)
 
-Zeile für Zeile werden hier die benötigten Punkte für die Lorenzkurve erstellt. In der Konzentrationsmessung dreht sich alles um die sogenannte *Merkmalssumme*, die in unserem Beispiel das gesamte aufsummierte Einkommen, also 35€ ist (die fettgedruckte Zelle). In der ersten Zeile steht das tatsächliche Einkommen der jeweiligen Person.
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE) %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped")
+}
+```
 
-In der zweiten Zeile wird nun Stück für Stück das Einkommen aufsummiert. Für Einheit 3 steht hier z.B. die bisherige Teilsumme von 3€ + 4€ + 5€, also 12€. In der letzten Zelle dieser Zeile sieht man die gesamte Merkmalssumme. Es werden also die kumulierten Häufigkeiten (s. Kap. \@ref(sec-haeufigkeitstabellen)) gebildet. Die dritte Zeile ist nichts anderes als die zweite Zeile, geteilt durch die gesamte Merkmalssumme. Hier sieht man also, welcher Anteil des gesamten Einkommens jeweils auf einen Anteil der Bevölkerung abfällt. Diese Zeile wird die \(y\)-Achse in der Lorenzkurve. Die \(x\)-Achse ist in der letzten Zeile abgebildet; sie ist der jeweilige Anteil der Bevölkerung \(\frac{i}{n}\), also bei fünf Einheiten 20%, 40%, 60%, 80% und 100%.
+Spalte für Spalte werden hier die benötigten Punkte für die Lorenzkurve erstellt. In der Konzentrationsmessung dreht sich alles um die sogenannte *Merkmalssumme*, die in unserem Beispiel das gesamte aufsummierte Einkommen, also 35€ ist. In der ersten Spalte steht das tatsächliche Einkommen der jeweiligen Person.
+
+In der zweiten Spalte wird nun Stück für Stück das Einkommen aufsummiert. Für Einheit 3 steht hier z.B. die bisherige Teilsumme von 3€ + 4€ + 5€, also 12€. In der letzten Zelle dieser Spalte sieht man die gesamte Merkmalssumme. Es werden also die kumulierten Häufigkeiten (s. Kap. \@ref(sec-haeufigkeitstabellen)) gebildet. Die dritte Spalte ist nichts anderes als die zweite Spalte, geteilt durch die gesamte Merkmalssumme. Hier sieht man also, welcher Anteil des gesamten Einkommens jeweils auf einen Anteil der Bevölkerung abfällt. Diese Spalte wird die \(y\)-Achse in der Lorenzkurve. Die \(x\)-Achse ist in der letzten Spalte abgebildet; sie ist der jeweilige Anteil der Bevölkerung \(\frac{i}{n}\), also bei fünf Einheiten 20%, 40%, 60%, 80% und 100%.
 
 Um die Lorenzkurve zu zeichnen, werden nun einfach diese Punkte in einen Graphen gezeichnet. In Abbildung \@ref(fig:lorenzkurve-bsp1) sind die schwarzen Punkte genau die, die aus der oberen Tabelle hervorgehen.
 

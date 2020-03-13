@@ -10,7 +10,7 @@ Mit Hilfe der gewünschten Irrtumswahrscheinlichkeit \(\alpha\) müssen wir nun 
 
 Mit diesen Werten können wir nun das Konfidenzintervall berechnen. Die untere Grenze des Intervalls ist:
 
-\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \]
+\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \]
 
 Für die obere Grenze ersetzt man nur das Minus durch ein Plus:
 
@@ -18,13 +18,13 @@ Für die obere Grenze ersetzt man nur das Minus durch ein Plus:
 
 Das Konfidenzintervall ist also nun \([u, o]\). In einer Formelsammlung sieht man diese Schritte meist in eine einzige Formel zusammengefasst, die dann erstmal etwas einschüchternd aussieht. Aber sie verpackt die oberen Formeln nur in eine einzelne Zeile. So sieht das Konfidenzintervall als eine Formel aus:
 
-\[ \left[ \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}, \, \, \hat{p} + z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \right] \]
+\[ \left[ \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}, \, \, \hat{p} + z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \right] \]
 
 Wenn man nun möchte, kann man das Intervall noch kürzer schreiben, denn in den zwei Formeln für die untere und obere Grenze ist nur ein Plus bzw. ein Minus unterschiedlich. Wenn wir dieses Symbol durch ein \(\pm\) ersetzen, dann lautet das KI einfach:
 
-\[ \hat{p} \pm z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}}  \]
+\[ \hat{p} \pm z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} \]
 
-Anmerkung: Dieses Konfidenzintervall ist kein exaktes, sondern nur ein approximatives Intervall. Um diese Formel anwenden zu dürfen, sollte man mindestens 30 Beobachtungen in der Stichprobe haben, also  \(n \geq 30\)
+Anmerkung: Dieses Konfidenzintervall ist kein exaktes, sondern nur ein approximatives Intervall. Um diese Formel anwenden zu dürfen, sollte man mindestens 30 Beobachtungen in der Stichprobe haben, also \(n \geq 30\)
 
 ```{exercise, echo=TRUE}
 
@@ -42,7 +42,7 @@ Dazu brauchen wir die folgenden Werte:
 
 Damit können wir nun die Grenzen des KIs berechnen. Die untere Grenze ist
 
-\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} = 0.732 - 2.58 \cdot \sqrt{\frac{0.732 \cdot (1-0.732)}{250}} = 0.660 \]
+\[ u = \hat{p} - z_{1-\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p} (1 - \hat{p})}{n}} = 0.732 - 2.58 \cdot \sqrt{\frac{0.732 \cdot (1-0.732)}{250}} = 0.660 \]
 
 Die obere Grenze ist dann
 

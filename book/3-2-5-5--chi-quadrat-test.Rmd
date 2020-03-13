@@ -115,7 +115,7 @@ Und die fertige Prüfgröße \(\chi^2\) ist jetzt einfach die Summe dieser 10 We
 
 Die Prüfgröße heißt \(\chi^2\), und sie hat passenderweise auch eine \(\chi^2\)-Verteilung (s. Kap. \@ref(sec-chisq-verteilung)). Wir müssen zum richtigen Ablesen der kritischen Werte allerdings noch die Anzahl der Freiheitsgrade bestimmen. Was damit gemeint ist, ist für einführende Statistikveranstaltungen nicht so wichtig - man darf nur nicht vergessen, diesen Wert zu berechnen, und dann in der Verteilungstabelle auch am richtigen Ort nachzusehen.
 
-Die Prüfgröße ist also \(\chi^2\)-verteilt, und zwar  mit \((I-1)\cdot (J-1)\) Freiheitsgraden. Dabei ist mit \(I\) die Anzahl der Zeilen in der Kreuztabelle gemeint, und mit \(J\) die Anzahl der Spalten.
+Die Prüfgröße ist also \(\chi^2\)-verteilt, und zwar mit \((I-1)\cdot (J-1)\) Freiheitsgraden. Dabei ist mit \(I\) die Anzahl der Zeilen in der Kreuztabelle gemeint, und mit \(J\) die Anzahl der Spalten.
 
 Bei unserem Beispiel sind es also \((2-1) \cdot (5-1) = 4\) Freiheitsgrade.
 

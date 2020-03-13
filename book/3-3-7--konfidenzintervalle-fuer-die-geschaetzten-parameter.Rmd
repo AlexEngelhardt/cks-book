@@ -1,4 +1,4 @@
-## Konfidenzintervalle für die geschätzten Parameter
+## Konfidenzintervalle für geschätzte Parameter
 
 Stell dir vor, du möchtest den Zusammenhang zwischen den beiden Variablen \(x = \) Körpergröße und \(y = \) Körpergewicht erforschen, und du befrägst \(n=6\) Personen nach diesen beiden Werten. Du erhältst ein Regressionsmodell mit der geschätzten Geraden \(y = 17.2 + 0.48 \cdot x\) (s. Abb. \@ref(fig:regression-ki-1)). Für eine 180cm große Person schätzt dieses Modell also ein Körpergewicht von \(17.2 + 0.48 \cdot 180 = 103.6kg\).
 

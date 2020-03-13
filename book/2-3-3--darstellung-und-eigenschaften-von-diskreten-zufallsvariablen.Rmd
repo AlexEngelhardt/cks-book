@@ -1,4 +1,4 @@
-## Darstellung und Eigenschaften von diskreten Zufallsvariablen {#sec-duevdz}
+## Diskrete Zufallsvariablen {#sec-duevdz}
 
 Dieses Kapitel beschreibt Eigenschaften, die allen Zufallsvariablen mit diskreten Verteilungen zugrunde liegen. Für Eigenschaften spezieller Verteilungen, z.B. der Poissonverteilung, siehe Kapitel \@ref(sec-verteilungen).
 

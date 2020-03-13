@@ -67,7 +67,9 @@ Eine weitere Möglichkeit der Unterscheidung kann man anhand der Skala vornehmen
 
 Bei der Verhältnisskala gibt es nun so einen Nullpunkt. Die meisten stetigen Daten sind verhältnisskaliert, da es dort eine Null gibt. Beispiele hierfür sind das Einkommen, Zeiten, Längen bzw. Größen, uvm. Mit solchen Daten kann man nun wirkliche Verhältnisse bilden, also "doppelt so lang" oder "ein doppelt so hohes Einkommen" sagen.
 
+
 ```{exercise, echo=TRUE}
+
 
 Entscheide für die folgenden Merkmale, ob sie stetig oder diskret sind, und ordne sie der entsprechenden Skala (Nominal-, ordinal-, intervall- oder verhältnisskaliert) zu.
 
@@ -81,9 +83,13 @@ g) Kleidergröße (S, M, L, XL)
 h) Jahreszahlen auf einem Kalender
 i) Produzierte Menge Kaffee in Südamerika pro Jahr
 
+
 ```
 
+
 ```{solution, echo=TRUE}
+
+
 a) Diskret, ordinalskaliert
 b) Stetig, intervallskaliert. Der IQ wurde so konstruiert, dass dessen Verteilung eine Normalverteilung mit Mittelwert 100 und Standardabweichung 10 hat. Der durchschnittliche Mensch hat also einen IQ von 100. Hier kann man auch keine Verhältnisse bilden: Eine Aussage wie "doppelt so klug" ginge zwar mathematisch, macht aber (wie bei der Temperatur in Celsius) keinen Sinn.
 c) Diskret, nominalskaliert
@@ -93,4 +99,5 @@ f) Diskret, nominalskaliert
 g) Diskret, ordinalskaliert. Die Reihenfolge der Größen ist klar, aber es gibt keine klar definierten Abstände zwischen den Größen. Selbst wenn es eine "Übersetzungstabelle" gibt, in der steht, dass eine Hose der Größe L z.B. 90cm lang ist: Man kann keinen Mittelwert aus "L" und "M" berechnen.
 h) Diskret, intervallskaliert. Der Nullpunkt, also "Jahr null", ist auf einem Kalender willkürlich gewählt, und unterscheidet sich ja in verschiedenen Religionen. Man könnte eventuell argumentieren, dass ein Kalender, der beim Urknall beginnt, als verhältnisskaliert angesehen werden kann, aber bei unserem Kalender ist auf jeden Fall nur eine Intervallskala gegeben. Das Jahr 1000 n. Chr. ist ja nicht "doppelt so spät" wie das Jahr 500 n. Chr.
 i) Stetig, verhältnisskaliert. Das ist eine klare, physikalisch messbare Menge mit Nullpunkt.
+
 ```

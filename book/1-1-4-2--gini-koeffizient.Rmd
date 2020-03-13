@@ -18,16 +18,26 @@ Es gibt nun wirklich eine Vielzahl von Formeln, um diesen Koeffizienten zu berec
 - Die Konzentrationsfläche ist \(\frac{1}{2}\) minus der Fläche unter der Lorenzkurve
 - Der Gini-Koeffizient ist nun die Konzentrationsfläche geteilt durch die maximal mögliche Konzentrationsfläche
 
-Beispielaufgabe
-
-| Einheit \(i\)                           | Einheit 1 | Einheit 2 | Einheit 3 | Einheit 4 | Einheit 5 |
-| --------------------------------------- | --------- | --------- | --------- | --------- | --------- |
-| Einkommen                               | 3         | 4         | 5         | 5         | 18        |
-| Aufsummiertes Einkommen                 | 3         | 7         | 12        | 17        | **35**    |
-| Anteil an der Gesamtsumme (\(y\)-Achse) | 0.086     | 0.2       | 0.343     | 0.486     | 1         |
-| Prozent der Ärmsten (\(x\)-Achse)       | 20%       | 40%       | 60%       | 80%       | 100%      |
-
+```{exercise, echo=TRUE}
 Wir verwenden dieselben Daten der Aufgabe zur Lorenzkurve aus Kapitel \@ref(sec-lorenzkurve), und berechnen hierfür Schritt für Schritt den Gini-Koeffizienten. Visualisiert sind diese Schritte in Abbildung \@ref(fig:gini-schritte).
+```
+
+```{r}
+tbl = tibble(
+   `Einheit i` = 1:5,
+   Einkommen = c(3, 4, 5, 5, 18),
+   `Aufsummiertes Einkommen` = c(3, 7, 12, 17, 35),
+   `Anteil an der Gesamtsumme (y-Achse)` = c(0.086, 0.2, 0.343, 0.486, 1),
+   `Prozent der Ärmsten (x-Achse)` = c("20%", "40%", "60%", "80%", "100%")
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE) %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped")
+}
+```
 
 ```{r gini-schritte, fig.cap='Die Schritte zur Berechnung des Gini-Koeffizienten. Oben links: Die Flächen dieser Trapeze werden einzeln ausgerechnet und aufsummiert. Oben rechts: So berechnet man die Fläche eines Trapezes. Unten links: Die "maximal mögliche Fläche" beim einfachen Gini-Koeffizienten. Unten rechts: Die "maximal mögliche Fläche" beim normierten Gini-Koeffizienten.'}
 knitr::include_graphics("img/gini-schritte.png")

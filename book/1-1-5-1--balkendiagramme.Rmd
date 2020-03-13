@@ -18,7 +18,7 @@ Wir benutzen die Daten aus Kapitel \@ref(sec-haeufigkeitstabellen) zu Häufigkei
 | 6              | 5       | 0.0625  | 0.9     |
 | 7              | 8       | 0.1     | 1       |
 
-Damit zeichnen wir nun ein Balkendiagramm für die absolute (die Spalte \(h_i\)) und relative (die Spalte \(f_i\)) Häufigkeit für jedes Semester.
+Damit zeichnen wir nun ein Balkendiagramm für die absolute (die Spalte \(h_i\)) und relative (die Spalte \(f_i\)) Häufigkeit für jedes Semester. Abbildung \@ref(fig:balkendiagramm) zeigt dieses Diagramm.
 ```
 
 (ref:balkendiagramm-caption) Hier sieht man, dass sich nur die Skalierung der \(y\)-Achse ändert; die (relativen) Höhen der Balken bleiben gleich.

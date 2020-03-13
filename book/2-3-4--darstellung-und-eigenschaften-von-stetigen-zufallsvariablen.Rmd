@@ -1,4 +1,4 @@
-## Darstellung und Eigenschaften von stetigen Zufallsvariablen {#sec-duevsz}
+## Stetige Zufallsvariablen {#sec-duevsz}
 
 In diesem Kapitel schauen wir uns stetige Zufallsvariablen im Allgemeinen an. Spezielle Verteilungen wie die Exponentialverteilung oder Normalverteilung findet man im Kapitel \@ref(sec-verteilungen).
 

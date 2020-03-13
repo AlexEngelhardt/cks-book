@@ -44,7 +44,7 @@ Den Interquartilsabstand interessiert es nun nicht, ob die "äußeren" Daten (al
 
 Für die **Varianz** einer Reihe von Daten gibt es dummerweise zwei ähnliche, aber verschiedene Formeln. Zu allem Übel gibt es für die beiden Formeln keine einheitliche Bezeichnung. Welche man verwendet, hängt von der Art der Daten ab, die man ansieht.
 
-Die Idee hinter der Varianz ist grob ausgedrückt die folgende: Man will wissen, wie weit die Daten \((x_1, x_2, \ldots, x_n)\) normalerweise vom Mittelwert \(\mu\) abweichen - das ist die Distanz \((x_i-\mu)\). Dabei ist egal, ob die Abweichung nach oben oder nach unten ist, daher quadriert man die Distanz (Man könnte hier natürlich auch den Betrag der Distanz statt dem Quadrat nehmen. Allerdings macht es später vieles einfacher, wenn wir das Quadrat nehmen, z.B. die Maximum-Likelihood-Schätzung oder die Regression. So gesehen ist es rein willkürlich, dass man den quadratischen Abstand verwendet.): \((x_i-\mu)^2\). Und genau aus diesem quadratischen Abstand wird nun der Mittelwert über alle Daten, d.h. alle \(x_i\) gebildet: \(\frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2\).
+Die Idee hinter der Varianz ist grob ausgedrückt die folgende: Man will wissen, wie weit die Daten \((x_1, x_2, \ldots, x_n)\) normalerweise vom Mittelwert \(\mu\) abweichen - das ist die Distanz \((x_i-\mu)\). Dabei ist egal, ob die Abweichung nach oben oder nach unten ist, daher quadriert man die Distanz (Man könnte hier natürlich auch den Betrag der Distanz statt dem Quadrat nehmen. Allerdings macht es später vieles einfacher, wenn wir das Quadrat nehmen, z.B. die Formeln in der Regression. So gesehen ist es rein willkürlich, dass man den quadratischen Abstand verwendet.): \((x_i-\mu)^2\). Und genau aus diesem quadratischen Abstand wird nun der Mittelwert über alle Daten, d.h. alle \(x_i\) gebildet: \(\frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2\).
 
 Ist der wahre Mittelwert der Daten bekannt, benutzt man die empirische Varianz, \(\tilde{s}^2\). Wenn die Daten die komplette *Grundgesamtheit* widerspiegeln, ist dies der Fall, da man den wahren Mittelwert ja ausrechnen kann, wenn einem alle Daten zur Verfügung stehen. Die empirische Varianz ist für eine Datenreihe \(x_1, x_2, \ldots, x_n\) und deren Mittelwert \(\mu\) folgendermaßen bestimmt:
 \[ \tilde{s}^2 = \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 \]
@@ -54,9 +54,13 @@ Meistens ist der wahre Mittelwert der unterliegenden Grundgesamtheit allerdings 
 
 Der Unterschied zu der empirischen Varianz \(\tilde{s}^2\) ist, dass in der Summe jeweils das Stichprobenmittel \(\bar{x}\) abgezogen wird, und dass vor der Summe durch \(n-1\) statt \(n\) geteilt wird. Für größere Stichproben wird der Unterschied zwischen \(s^2\) und \(\tilde{s}^2\) immer kleiner, da für sehr grosse \(n\) erstens der Unterschied zwischen \(n\) und \(n-1\) nicht mehr so wichtig ist, und zum anderen das Stichprobenmittel \(\bar{x}\) immer näher an den wahren Mittelwert \(\mu\) der Grundgesamtheit kommt (Der Grund für dieses Verhalten ist das Gesetz der großen Zahlen, das wir uns später noch anschauen werden).
 
-Die Berechnung der Varianz mit dem Taschenrechner ist ziemlich nervig. Als kleine Hilfestellung dafür gibt es den sogenannten **Verschiebungssatz**. Nach ihm kann man die Formel der empirischen bzw. Stichproben-Varianz folgendermaßen umschreiben:
+Die Berechnung der Varianz mit dem Taschenrechner ist ziemlich nervig. Als kleine Hilfestellung dafür gibt es den sogenannten **Verschiebungssatz**. Nach ihm kann man die Formel der empirischen Varianz folgendermaßen umschreiben:
 
-\[ \begin{array}{rclcl} \tilde{s}^2 & = & \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 & = & \left( \frac{1}{n}\sum_{i=1}^n x_i^2 \right)-\mu^2 \\ s^2 & = & \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 & = & \left( \frac{1}{n-1}\sum_{i=1}^n x_i^2 \right)-\frac{n}{n-1}\bar{x}^2 \end{array} \]
+\[\tilde{s}^2 = \frac{1}{n} \sum_{i=1}^n (x_i-\mu)^2 = \left( \frac{1}{n}\sum_{i=1}^n x_i^2 \right)-\mu^2\]
+
+Für die Stichprobenvarianz sieht die Formel ähnlich aus:
+
+\[s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 = \left( \frac{1}{n-1}\sum_{i=1}^n x_i^2 \right)-\frac{n}{n-1}\bar{x}^2\]
 
 Die jeweils rechte Seite der Gleichung ist nun die neue Formel. Sie ist bei der Berechnung von Hand angenehmer, weil man nicht erst den Mittelwert ausrechnen muss. Außerdem hat die zweite Formel den Vorteil, dass sie nicht nochmal komplett von vorne berechnet werden muss, wenn ein neuer Datenpunkt zu den Daten dazukommt. Man kann dann nämlich zur gesamten Summe der \(x_i\) und \(x_i^2\) den neuen Wert einfach addieren, und \(n\) um eins erhöhen. In der alten Formel müsste man jede Teilsumme \((x_i-\bar{x})^2\) nochmal ausrechnen, da sich ja durch den neuen Datenpunkt das Stichprobenmittel \(\bar{x}\) bzw. der Erwartungswert \(\mu\) verändert hat.
 
