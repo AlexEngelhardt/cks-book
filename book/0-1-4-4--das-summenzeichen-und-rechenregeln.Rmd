@@ -56,8 +56,9 @@ Die Torte wird nie komplett aufgegessen, aber doch immer kleiner. Den gesamten A
 Um den Umgang mit dem Summenzeichen zu erlernen, bestimme, welcher Anteil der Torte nach \(n=3\) Personen aufgegessen wurde (s. Abb. \@ref(fig:summenzeichen-pie)).
 ```
 
-```{r summenzeichen-pie, fig.cap="Wieviel wurde schon gegessen, nachdem Person 1, 2, und 3 sich nacheinander die Hälfte vom Rest abgeschnitten haben?"}
+```{r summenzeichen-pie, fig.cap="Wieviel Kuchen wurde schon gegessen, nachdem Person 1, 2, und 3 sich nacheinander die Hälfte vom Rest abgeschnitten haben?"}
 knitr::include_graphics("img/summenzeichen-kuchen.png")
+# pie(c(4,2,1,1), labels=c(1,2,3,NA))
 ```
 
 

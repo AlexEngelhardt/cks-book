@@ -1,0 +1,20 @@
+Format: Groß-Oktav
+377 Seiten
+
+Buchrückenbreite: 2.157cm
+Einbandgröße: 40.60 x 25.220459cm
+Buchrückenbeginn: 19.223986cm
+
+--------------------------
+
+Ganzflächiges Cover:
+
+
+Voraussetzungen für vollflächige Cover:
+
+    Ihre Datei muss im Format PDF, JPG, GIF, oder PNG sein
+    Buchrücken Breite: 61.297 Postscript Points breit (2.162 cm) (255 px)
+    Buchrücken beginnt 545 Postscriptpunkte (19.224 cm) (2271 px) von der linken Seite.
+    Gesamte Cover-Breite: 1151.297 X 715 Postscript Points (40.610 cm X 25.220 cm) (4797px X 2979px)
+    Wenn Sie ein Bild verwenden, soll seine Auflösung auf 300dpi eingestellt sein.
+
