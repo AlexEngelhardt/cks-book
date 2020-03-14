@@ -1,9 +1,9 @@
 --- 
-# title: "Crashkurs Statistik"  # If title is left out, bookdown will not create a title page: https://stackoverflow.com/questions/48433243/r-bookdown-custom-title-page
+title: "Crashkurs Statistik"  # If title is left out, bookdown will not create a title page: https://stackoverflow.com/questions/48433243/r-bookdown-custom-title-page
 author: "Alexander Engelhardt"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: scrbook  # scrbook and amsbook makes it +10% in number of pages compared to book
+documentclass: book  # scrbook and amsbook makes it +10% in number of pages compared to book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes

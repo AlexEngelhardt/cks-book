@@ -13,7 +13,7 @@ bookdown::pdf_book:
   # the documentclass is specified in index.Rmd
   includes:
     in_header: preamble.tex
-    before_body: first_pages.tex
+    # before_body: first_pages.tex  # DO NOT USE before_body, it screws up the page size, header font sizes and much more!
   toc_depth: 3
   latex_engine: xelatex
   citation_package: natbib
