@@ -1,10 +1,10 @@
 ## Ein einführendes Beispiel {#sec-regression-einfuehrung}
 
-**Idee der Regression**
+#### Idee der Regression {-}
 
 Das Ziel der Regression ist es, den Wert einer bestimmten Variablen anhand einer oder mehrerer bekannter Werte vorherzusagen.
 
-**Beispiel**
+#### Beispiel {-}
 
 Du möchtest deiner Freundin einen Verlobungsring kaufen. Dummerweise kennst du aber ihre Ringgröße nicht. Es ist natürlich zu verdächtig, sie direkt zu fragen, weil sie dann Verdacht schöpfen könnte.
 

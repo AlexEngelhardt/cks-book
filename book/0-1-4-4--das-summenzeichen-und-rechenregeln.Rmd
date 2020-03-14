@@ -2,12 +2,12 @@
 
 Das grosse Sigma \(\Sigma\) wird verwendet, um längere Summen in einer kurzen Schreibweise darzustellen. Meist wird das Zeichen verwendet, wenn man Kennziffern oder Teststatistiken für eine Stichprobe ausrechnet.
 
-Wir werden hier als Beispiel das Lebensalter von fünf ARD-Zuschauern betrachten, und daraus einen Mittelwert berechnen.
+Wir werden in der folgenden Tabelle als Beispiel das Lebensalter von fünf ARD-Zuschauern betrachten, und daraus einen Mittelwert berechnen.
 
 | Person \(i\) | Alter \(x_i\) |
 | ------------ | ------------- |
 | \(i=1\)      | 87            |
-| \(i=2\)      | 13            |
+| \(i=2\)      | 134           |
 | \(i=3\)      | 77            |
 | \(i=4\)      | 97            |
 | \(i=5\)      | 67            |
@@ -23,7 +23,7 @@ Das bedeutet nun, dass \(i\) eine Zählvariable ist, die von 1 bis \(n\) läuft 
 
 \[ \begin{aligned} \frac{1}{n} \sum_{i=1}^5 x_i & = \frac{1}{n} (x_1+x_2+x_3+x_4+x_5) \\ & = \frac{1}{5} (87+134+77+97+68) \\ & = 92.6 \end{aligned} \]
 
-**Rechenregeln mit dem Summenzeichen**
+#### Rechenregeln mit dem Summenzeichen {-}
 
 Man sollte vielleicht im Hinterkopf halten, dass Summen manchmal in einer abgekürzten Schreibweise aufgeschrieben werden. Wenn klar ist, über welche Zahlen die Zählvariable \(i\) laufen soll, findet man das Summenzeichen oft in Kurzform, zum Beispiel
 

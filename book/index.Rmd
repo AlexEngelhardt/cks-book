@@ -3,7 +3,7 @@ title: "Crashkurs Statistik"
 author: "Alexander Engelhardt"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: book
+documentclass: scrbook  # scrbook and amsbook makes it +10% in number of pages compared to book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
@@ -13,7 +13,7 @@ description: "Dieses Buch enthält die Artikel von https://www.crashkurs-statist
 lang: de  # https://stackoverflow.com/questions/48247787/how-to-change-caption-label-names-in-a-single-document-with-bookdown
 ---
 
-# Willkommen! {-}
+# Vorwort {-}
 
 ```{r global-options, echo=FALSE, message=FALSE}
 library(tidyverse)
@@ -30,4 +30,12 @@ palette(
   )
 ```
 
-Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de in Buchform. Auf diesem Blog ist der Inhalt kostenlos zur Verfügung gestellt. Trotzdem gibt es Personen (mich eingeschlossen), die mit Material in gedrucktem Format (oder als e-Book) besser lernen können. Dieses Buch ist für euch bestimmt - ich hoffe ihr habt viel Erfolg damit!
+Ich habe während meines Statistikstudiums als Nachhilfelehrer gearbeitet. Dort habe ich gemerkt, dass Mathematiker ihre Konzepte oft anders verstehen und erklären als Nichtmathematiker, und habe dann experimentiert, wie man den Stoff möglichst unkompliziert und verständlich vermittelt. Das Ergebnis habe ich in diesem Buch zusammengestellt.
+
+Der Inhalt soll thematisch die Vorlesungen "Statistik I" und "Statistik II" abdecken, wie sie an den meisten Universitäten gelehrt werden. Das Buch ist hauptsächlich an Studenten gerichtet, die diese Vorlesungen hören müssen und oft Schwierigkeiten mit dem Stoff haben, odder das Wissen zusammengefasst vor der Klausur nachholen möchten.
+
+Ich habe Wert darauf gelegt, die Erklärungen möglichst einfach zu halten, und den Stoff verständlicher und mit mehr Beispielen rüberzubringen, als es in den meisten Skripten oder Büchern passiert.
+
+Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de überarbeitet und in Buchform. Auf diesem Blog ist der Inhalt kostenlos zur Verfügung gestellt. Trotzdem gibt es Personen (mich eingeschlossen), die mit Material in gedrucktem Format (oder als e-Book) besser lernen können. Dieses Buch ist für euch bestimmt - ich hoffe, ihr habt viel Erfolg damit!
+
+Für Feedback, Anregungen und Verbesserungsvorschläge kann man mich per E-Mail unter alex@crashkurs-statistik.de erreichen.

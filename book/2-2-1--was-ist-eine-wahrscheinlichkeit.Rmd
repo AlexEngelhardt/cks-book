@@ -10,11 +10,11 @@ Wahrscheinlichkeiten können ausgedrückt werden durch
 
 Alle drei Darstellungen bedeuten dasselbe, und sind daher auch richtig. Welche man verwendet, bleibt einem selbst überlassen.
 
-**Verschiedene Definitionen der Wahrscheinlichkeit**
+#### Verschiedene Definitionen der Wahrscheinlichkeit {-}
 
 Eine immer wieder gesehene Klausuraufgabe frägt nach den verschiedenen Auffassungen bzw. Definitionen der Wahrscheinlichkeit. Für die gibt es nämlich keine eindeutige Beschreibung, sondern mehrere. Vier davon sehen wir uns hier an:
 
-**Laplace-Wahrscheinlichkeit**
+#### Laplace-Wahrscheinlichkeit {-}
 
 Diese Definition der Wahrscheinlichkeit setzt voraus, dass alle elementaren Ergebnisse die gleiche Wahrscheinlichkeit haben. Es ist also möglich bei Zufallsexperimenten wie einem Münzwurf (Kopf und Zahl je mit Wahrscheinlichkeit 0.5), oder einem Rouletterad (die Zahlen 0 bis 36 mit jeweils einer Wahrscheinlichkeit von 1/37).
 
@@ -34,19 +34,19 @@ knitr::include_graphics("img/pictures/Roulette_frz.png")
 Das Ereignis \(E =\) "schwarze Zahl" hat 18 Ergebnisse. Insgesamt gibt es 37 mögliche Ergebnisse. Die Laplace-Wahrscheinlichkeit ist also \(\mathbb{P}(E) = \frac{18}{37} = 48.6\%\).
 ```
 
-**Objektive oder frequentistische Wahrscheinlichkeit**
+#### Objektive oder frequentistische Wahrscheinlichkeit {-}
 
 Wenn man ein Experiment beliebig oft wiederholen kann (man lässt zum Beispiel ein Reiskorn auf ein Schachbrett fallen, und will wissen, mit welcher Wahrscheinlichkeit man im oberen linken Feld landet), kann man die relative Häufigkeit berechnen, indem man einfach die Anzahl der Treffer durch die Anzahl der gesamten Versuche teilt. Der *Grenzwert* dieses Bruchs, also der Wert der herauskommt wenn die Anzahl der Versuche unendlich groß wird, ist nun die gesuchte Wahrscheinlichkeit.
 
 Dieses Konzept beschreibt die objektive, oder frequentistische Definition der Wahrscheinlichkeit.
 
-**Subjektive Wahrscheinlichkeit**
+#### Subjektive Wahrscheinlichkeit {-}
 
 Manchmal kann man Experimente nicht beliebig oft wiederholen. Die Aussage "Die Klausur bestehe ich zu 80%" basiert z.B. auf einer subjektiven Wahrscheinlichkeitsauffassung, da sie *geschätzt* und nicht *berechnet* wurde.
 
 Diese Wahrscheinlichkeit kann man auch als *Grad persönlicher Überzeugung* auffassen, so wie es der Bayes'sche Wahrscheinlichkeitsbegriff tut.
 
-**Axiomatische Definition (nach Kolmogorov)**
+#### Axiomatische Definition (nach Kolmogorov) {-}
 
 Axiome sind Aussagen, die nicht bewiesen werden, sondern ohne Beweis vorausgesetzt werden. Mathematische Gebiete beruhen oft auf einigen wenigen Axiomen, mithilfe derer dann alles andere bewiesen wird.
 

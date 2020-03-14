@@ -1,6 +1,6 @@
 ### Geometrische Verteilung: Der betrunkene Pförtner {#sec-geometrische}
 
-**Idee**
+#### Idee {-}
 
 Bei der geometrischen Verteilung liegt folgender Gedanke zugrunde: Wir haben ein Bernoulli-Experiment (s. Kap. \@ref(sec-bernoulliverteilung)) mit einer Erfolgswahrscheinlichkeit von \(p\). Nun fragen wir uns, wie oft wir dieses Experiment ausführen müssen, bis der erste Erfolg eintritt.
 
@@ -10,7 +10,7 @@ Jeder einzelne Versuch ist also ein neues Bernoulli-Experiment mit der Erfolgswa
 
 Mit der geometrischen Verteilung können wir dieses Experiment nun beschreiben, und die Wahrscheinlichkeiten dafür bestimmen, dass er zum Beispiel genau einen Versuch, genau vier Versuche, oder höchstens fünf Versuche benötigt.
 
-**Parameter**
+#### Parameter {-}
 
 Die geometrische Verteilung hat nur einen Parameter, nämlich \(p\), die Erfolgswahrscheinlichkeit bei einem einzelnen Versuch. Im Beispiel des betrunkenen Pförtners ist \(p=\frac{1}{8}\). Benennen wir die Zufallsvariable für das Experiment mit \(X\), wird die geometrische Verteilung dargestellt durch
 
@@ -20,13 +20,13 @@ in unserem Beispiel
 
 \[ X \sim \text{G}(\frac{1}{8}). \]
 
-**Träger**
+#### Träger {-}
 
 Es gibt theoretisch keine Obergrenze für die Anzahl der Versuche, die der Pförtner benötigt. Jeder neue Versuch gelingt nur mit einer Wahrscheinlichkeit von \(\frac{1}{p}\), daher kann \(X\) jede natürliche Zahl von 0 bis unendlich annehmen:
 
 \[ \mathcal{T} = \{ 0, 1, 2, \ldots \} \]
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte der geometrischen Verteilung lautet
 
@@ -40,7 +40,7 @@ Diese Dichte kann man sich leicht veranschaulichen: Um die Wahrscheinlichkeit zu
 knitr::include_graphics("img/verteilungen-geometrische-verteilung-dichte.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion lässt sich mit Hilfe einer Rechenregel für Wahrscheinlichkeiten herleiten. Wir suchen nämlich gemäß der Definition der Verteilungsfunktion den Wert \(\mathbb{P}(X \leq x)\), also die Wahrscheinlichkeit, dass der Pförtner maximal \(x\) Versuche benötigt, um das Tor zu öffnen. Dieser Wert ist nur über eine Summe der Dichten von \(f(0)\) bis \(f(x)\) zu erhalten. Aber die Gegenwahrscheinlichkeit ist einfach:
 
@@ -61,7 +61,7 @@ knitr::include_graphics("img/verteilungen-geometrische-verteilung-verteilungsfun
 ```
 
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert der geometrischen Verteilung ist
 
@@ -69,12 +69,12 @@ Der Erwartungswert der geometrischen Verteilung ist
 
 Bei 8 Schlüsseln, also \(p=\frac{1}{8}\), braucht der Pförtner also im Durchschnitt 8 Versuche, um das Tor zu öffnen.
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz der geometrischen Verteilung berechnet man durch
 
 \[ \mathbb{V}(X) = \frac{1}{p^2} - \frac{1}{p} \]
 
-**Alternative Darstellung**
+#### Alternative Darstellung {-}
 
 In manchen Büchern bzw. Skripten begegnet man auch einer alternativen Darstellung der geometrischen Verteilung. Hier ist mit \(X\) nicht wie hier die Anzahl der Versuche bis (inklusive!) zum ersten Treffer gemeint, sondern die Anzahl der Fehlversuche *vor dem ersten Treffer*. Wenn ich also modellieren will, dass der betrunkene Pförtner drei Fehlversuche macht, bis er im vierten Versuch das Tor öffnet, so berechne ich in der hier besprochenen Darstellung \(f(4)\), aber in dieser alternativen Darstellung wäre es stattdessen \(f(3)\). Die Formeln für Dichte, Verteilungsfunktion, und Erwartungswert verändern sich natürlich entsprechend, so dass dieselben Wahrscheinlichkeiten herauskommen.

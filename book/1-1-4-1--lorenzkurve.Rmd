@@ -1,12 +1,12 @@
 ### Lorenzkurve {#sec-lorenzkurve}
 
-**Das Wichtigste in Kürze**
+#### Das Wichtigste in Kürze {-}
 
 Die grundlegende Frage, die durch die Lorenzkurve beantwortet wird, ist die folgende: Welcher Anteil der sortierten Grundgesamtheit besitzt welchen Anteil an der Merkmalssumme?
 
 Um die Kurve zu zeichnen, benötigt man also eine Liste von Anteilen (das wird die \(x\)-Achse), und eine Liste der kumulierten Merkmalssummen, die diesen Anteilen gehören (das wird die \(y\)-Achse).
 
-**Idee der Lorenzkurve**
+#### Idee der Lorenzkurve {-}
 
 Die Lorenzkurve ist ein beliebtes grafisches Mittel, um so eine Ungleichmäßigkeit zu visualisieren. An ihr kann man ablesen, wie sehr eine Verteilung von einer völlig gerechten Gleichverteilung abweicht (s. Abb. \@ref(fig:lorenzkurve-idee))
 
@@ -14,7 +14,7 @@ Die Lorenzkurve ist ein beliebtes grafisches Mittel, um so eine Ungleichmäßigk
 knitr::include_graphics("img/pictures/lorenz.png")
 ```
 
-**Erstellen einer Lorenzkurve**
+#### Erstellen einer Lorenzkurve {-}
 
 Nehmen wir zur Vereinfachung ein Land mit 5 Einwohnern an. Die fünf Personen verdienen 3€, 4€, 5€, 5€ bzw. 18€. Zugegeben, das ist ein sehr kleines Land mit sehr niedrigem Lohn - aber wir möchten es ja einfach halten. Wir möchten nun für diese Einwohner und ihre Einkommensverteilung eine Lorenzkurve bilden.
 
@@ -59,7 +59,7 @@ Das andere Extrem wäre eine Verteilung, bei der eine einzelne Person das komple
 knitr::include_graphics("img/vierlorenzkurven.png")
 ```
 
-**Mathematische Definition der Lorenzkurve**
+#### Mathematische Definition der Lorenzkurve {-}
 
 Wenn man seine Studenten ärgern möchte, definiert man die Lorenzkurve so:
 

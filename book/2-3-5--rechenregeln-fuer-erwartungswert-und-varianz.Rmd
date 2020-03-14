@@ -102,7 +102,7 @@ Der zweite Teil der Differenz, nämlich \(\mathbb{E}(X)^2\), ist dabei einfacher
 
 Der erste Teil, \(\mathbb{E}(X^2)\) ist komplizierter: Er ist der Erwartungswert einer neuen, transformierten Zufallsvariablen, nämlich \(X^2\). Ihn müssen wir mit der Transformationsregel (s. Kap. \@ref(sec-transformationsregel)) bestimmen. Dieser Teil kommt nun wieder darauf an, ob wir es mit einer diskreten oder stetigen Zufallsvariablen zu tun haben. Er ist aber meistens trotzdem schneller zu berechnen als über die andere, längere Definition der Varianz.
 
-**Beispiel Verschiebungssatz: Varianz eines Würfelwurfs**
+#### Beispiel Verschiebungssatz: Varianz eines Würfelwurfs {-}
 
 Den Verschiebungssatz veranschaulicht man am besten anhand eines Beispiels. Wir können die Varianz eines Würfelwurfs zwar theoretisch einfach durch die Formel der diskreten Gleichverteilung berechnen, wie es in Kapitel \@ref(sec-diskrete-gleichverteilung) geschieht. Aber die allgemeine Formel ist natürlich immer noch gültig. Die ganz allgemeine (aber auch ganz aufwändige) Formel lautet ja
 

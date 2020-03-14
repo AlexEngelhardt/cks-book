@@ -55,7 +55,7 @@ Für beide Formeln müssen wir zuerst die Mittelwerte \(\bar{x}\) und \(\bar{y}\
 
 \[ \bar{y} = \frac{1}{7} \cdot (70+63+82+65+61+74+84) = 71.29\]
 
-**Formel 1**
+#### Formel 1 {-}
 
 Am einfachsten ist es, die Formel in drei Schritten zu berechnen, und die Zwischenergebnisse aufzuschreiben, und am Ende den gesamten Bruch auszurechen. Beginnen wir mit dem Zähler:
 
@@ -71,7 +71,7 @@ Zusammen in die Formel von oben eingesetzt ergibt sich die Korrelation:
 
 \[ r= \frac{-289.14}{17.43 \cdot 22.35} = -0.74 \]
 
-**Formel 2**
+#### Formel 2 {-}
 
 Mit diesem Weg hat man mehr Zwischenergebnisse als mit Formel 1, und kann sich im Taschenrechner nicht so leicht vertippen. Man berechnet nacheinander die folgenden fünf Werte:
 

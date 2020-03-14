@@ -8,11 +8,11 @@ Die Wahrscheinlichkeit, mit der bei einem Experiment der Erfolg eintritt, wird m
 
 Weitere Beispiele für bernoulliverteilte Zufallsvariablen sind die Roulettewette auf die Zahl 0 - hier wäre \(X \sim \text{Be}(\frac{1}{37})\) - oder der erste Spielzug im "Mensch ärgere dich nicht", in dem man eine 6 würfeln muss, um eine Figur ins Spiel bringen zu dürfen; hier ist \(X \sim \text{Be}(\frac{1}{6})\).
 
-**Träger**
+#### Träger {-}
 
 Da es bei diesem Experiment nur zwei Ausgänge, nämlich "Erfolg" (kodiert durch eine 1) und "Mißerfolg" (kodiert durch eine 0) gibt, ist der Träger \(\mathcal{T}\) der Bernoulliverteilung die Menge \(\mathcal{T} = \{0,1\}\).
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte besteht aus drei Teilen: Der Wahrscheinlichkeit für einen Erfolg, also \(\mathbb{P}(X=1)\) (das ist \(p\)), der Wahrscheinlichkeit für einen Mißerfolg, also \(\mathbb{P}(X=0)\) (das ist die Gegenwahrscheinlichkeit \(1-p\)), und einer 0 für alle anderen Werte von \(X\), d.h. überall anders:
 
@@ -26,7 +26,7 @@ Abbildung \@ref(fig:verteilungen-bernoulliverteilung-dichte) zeigt diese Dichte.
 knitr::include_graphics("img/verteilungen-bernoulliverteilung-dichte.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion ist \(F(x) = \mathbb{P}(X \leq x)\). In Worten heißt das: Die Wahrscheinlichkeit, dass das Ergebnis des Experiments kleiner oder gleich dem Wert \(x\) ist. Sie ist definiert in drei Abschnitten:
 
@@ -44,7 +44,7 @@ Die dritte Stufe ist alles über \(x=1\). Da nur die Ergebnisse 0 oder 1 rauskom
 knitr::include_graphics("img/verteilungen-bernoulliverteilung-verteilungsfunktion.png")
 ```
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert der Bernoulliverteilung ist einfach: \(\mathbb{E}(X) = p\).
 
@@ -54,7 +54,7 @@ Das kann man sich über die Formel, die den Erwartungswert definiert (s. Kap. \@
 
 Hier verwenden wir die beiden möglichen Ausprägungen \(x_1=0\) und \(x_2 = 1\), sowie deren Wahrscheinlichkeiten \(f(x_1) = 1-p\) (für Mißerfolg) und \(f(x_2) = p\) (für Erfolg).
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz bei der Bernoulliverteilung ist \(\mathbb{V}(X) = p(1-p)\). Sie ist mit Hilfe ihrer Definition (s. Kap. \@ref(sec-duevdz-var-std)) etwas aufwändiger zu bestimmen, aber auch noch machbar:
 

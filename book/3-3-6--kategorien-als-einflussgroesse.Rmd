@@ -8,7 +8,7 @@ Alle diese Variablen waren verhältnisskaliert (s. Kap. \@ref(merkmals-und-skale
 
 Diese Information ist sicher hilfreich für uns, und wir möchten sie in unserer Regression berücksichtigen.
 
-**Wie behandelt man eine ja/nein-Einflussgröße?**
+#### Wie behandelt man eine ja/nein-Einflussgröße? {-}
 
 Denken wir nochmal kurz zürück an das Beispiel aus Kapitel \@ref(sec-regression-einfache): Wir haben eine Einflussgröße \(x\), die Körpergröße, die *stetig* und *intervallskaliert* ist. Die Zielgröße \(y\), die Ringgröße, sagen wir nun vorher durch eine Gerade (s. Abb. \@ref(fig:regression-gerade2)).
 
@@ -40,7 +40,7 @@ Dieses Modell ist auch sehr einfach zu interpretieren: Die Vorhersage für Nicht
 
 Das ist dann auch schon fast das ganze Geheimnis hinter kategorialen Einflussgrößen.
 
-**Stetige und kategoriale Einflussgrößen gemischt**
+#### Stetige und kategoriale Einflussgrößen gemischt {-}
 
 Wir haben ja in Kapitel \@ref(sec-regression-multiple) schon ein Regressionsmodell mit mehreren Einflussgrößen gesehen, die multiple Regression. Wir können die eben betrachtete kategoriale Einflussgröße nun genauso wie eine stetige Einflussgröße zusätzlich in das Modell aufnehmen.
 
@@ -56,7 +56,7 @@ Wenn wir nun Daten sammeln, und daraus die Parameter \(a, b_1, b_2\) schätzen w
 
 Für eine Person mit \(x_1=168\text{cm}\) Körpergröße und einem Job als Handwerker (\(x_2=1\)) prognostizieren wir also eine Ringgröße von \(y=0.16+0.28\cdot 168 + 0.94\cdot 1 = 48.14\) - also sollte ein Ring der Größe 48 hoffentlich passen.
 
-**Einflussgrößen mit mehr als zwei Kategorien**
+#### Einflussgrößen mit mehr als zwei Kategorien {-}
 
 Ein Problem gibt es noch: Wie gehen wir mit einer Einflussgröße vor, die nicht nur zwei mögliche Ausprägungen "ja/nein", hat, sondern mehrere?
 

@@ -1,6 +1,6 @@
 ### Einstichproben-\(t\)-Test: Einzelnen Mittelwert testen {#sec-einstichproben-t-test}
 
-**Wann verwendet man einen Einstichproben-t-Test?**
+#### Wann verwendet man einen Einstichproben-t-Test? {-}
 
 Der t-Test ist wohl der bekannteste und am häufigsten verwendete Hypothesentest. Er kommt immer dann zum Einsatz, wenn man Hypothesen prüfen möchte, die Aussagen über einen *Mittelwert* treffen. Zwei Beispiele:
 
@@ -13,7 +13,7 @@ Der einfachere Spezialfall unter den t-Tests ist nun der Einstichproben-t-Test. 
 
 Dieser Test heißt t-Test, weil die Prüfgröße eine t-Verteilung (s. Kap. \@ref(sec-t-verteilung)) hat.
 
-**Grundlagen**
+#### Grundlagen {-}
 
 Zum Einstieg sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
@@ -24,7 +24,7 @@ In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothe
 
 Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Kapitel \@ref(sec-binomialtest) evtl. ausführlicher verständlicher erklärt worden.
 
-**1. Hypothesen aufstellen**
+#### 1. Hypothesen aufstellen {-}
 
 Beim t-Test gibt es, genau wie beim Binomialtest, drei verschiedene Möglichkeiten, seine Hypothesen zu formulieren. Welche Variante man verwenden muss, hängt von der Fragestellung ab, die man untersucht. Dazu drei Beispiele:
 
@@ -40,11 +40,11 @@ Beim t-Test gibt es, genau wie beim Binomialtest, drei verschiedene Möglichkeit
 
 Im restlichen Kapitel verwende ich das dritte Beispiel mit den Müslipackungen, und zeige am Ende noch kurz, welche Veränderungen man in den anderen beiden Fällen vornehmen müsste.
 
-**2. Test wählen**
+#### 2. Test wählen {-}
 
 Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref(sec-wat-tests) und \@ref(sec-vorgehen-tests) aufgestellt haben, nehme ich hier den 2. Schritt auch mit auf. Es ist natürlich schon klar, dass wir einen Einstichproben-t-Test verwenden werden.
 
-**3. Signifikanzniveau festlegen**
+#### 3. Signifikanzniveau festlegen {-}
 
 Wie in den vorherigen Kapiteln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
 
@@ -52,7 +52,7 @@ Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha = 0.05\). In besonde
 
 Für unsere Beispielaufgabe nehmen wir das übliche Signifikanzniveau von \(\alpha = 0.05\).
 
-**4. Daten sammeln**
+#### 4. Daten sammeln {-}
 
 In einer Klausur oder Übung gibt es die Daten natürlich meist schon. Wenn man sie aber selber sammelt, müssen die Daten für einen Einstichproben-t-Test eigentlich nur eine lange Liste von Dezimalzahlen sein. Wir fassen diese Daten dann im 5. Schritt zusammen in zwei Werte, in unserem Beispiel erstens *den Mittelwert der Daten*, \(\bar{x}\), und zweitens *die Standardabweichung*, \(s\). Diese beiden Werte brauchen wir für den Einstichproben-t-Test.
 
@@ -71,7 +71,7 @@ In unserem Beispiel betrachten wir zehn Müslipackungen und wiegen ihren exakten
 | 9               | 757        |
 | 10              | 757        |
 
-**5. Prüfgröße berechnen**
+#### 5. Prüfgröße berechnen {-}
 
 Die Prüfgröße beim t-Test heißt \(T\), und setzt sich aus vier Zahlen zusammen:
 
@@ -90,7 +90,7 @@ Bei uns setzen wir also ein:
 
 Unsere Prüfgröße ist also \(T = 1.473\).
 
-**6. Verteilung der Prüfgröße bestimmen**
+#### 6. Verteilung der Prüfgröße bestimmen {-}
 
 Falls in Wirklichkeit tatsächlich durchschnittlich 750g in einer Müslipackung sind, dann ist der Mittelwert t-verteilt mit \(n-1\) Freiheitsgraden. Da unsere Prüfgröße \(T\) schon *standardisiert* ist, ist es ab jetzt egal, welchen Mittelwert \(\mu_0\) wir unterstellen, und welche Standardabweichung die Daten haben.
 
@@ -100,7 +100,7 @@ Bei unserem Beispiel ist \(n=10\), wir verwenden also die t-Verteilung mit \(n-1
 
 \[ T \sim t(9) \]
 
-**7. Kritischen Bereich (oder p-Wert) berechnen**
+#### 7. Kritischen Bereich (oder p-Wert) berechnen {-}
 
 Den kritischen Bereich erhalten wir mit Hilfe der Tabelle der t-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)). Wir suchen einen kritischen Bereich, in dem unser Ergebnis (d.h. die Prüfgröße \(T\)) nur zu 5% (das ist das Signifikanzniveau \(\alpha\)) fallen würde, falls die Nullhypothese gilt. Da wir hier einen zweiseitigen Test verwenden, teilen wir diese 5% auf in jeweils 2.5% links und 2.5% rechts. Man kann sich das so vorstellen, dass sowohl besonders kleine, als auch besonders große Werte von \(\bar{x}\) (und somit auch von \(T\)) gegen die Nullhypothese sprechen.
 
@@ -118,13 +118,13 @@ Die genauen Werte erhalten wir aus der Tabelle der t-Verteilung (s. Kap. \@ref(s
 
 Die linke Schranke ist -2,262, denn da die t-Verteilung symmetrisch um 0 ist, können wir einfach den negativen Wert von der rechten Schranke (2,262) nehmen. Der kritische Bereich ist also der in der Grafik rot eingefärbte Bereich, es ist der Bereich *außerhalb* der beiden Schranken.
 
-**8. Testentscheidung treffen**
+#### 8. Testentscheidung treffen {-}
 
 Insgesamt wissen wir nun: Wenn unsere Prüfgröße \(T\) *innerhalb* des Bereichs [-2,262, 2,262] liegt, dann spricht das für die Nullhypothese. Liegt \(T\) aber *außerhalb* (also im kritischen, roten Bereich), dann können wir die Nullhypothese ablehnen, und unsere Testentscheidung fällt zugunsten der Alternativhypothese \(H_1\) aus.
 
 In Schritt 5 haben wir \(T = 1.473\) ausgerechnet. Die Prüfgröße liegt also nicht im kritischen Bereich. Es ist also "alles in Ordnung": Wir können weiterhin von der Nullhypothese ausgehen, und haben keinen Anlass dafür den Abfüllmechanismus in der Müslifabrik zu reparieren.
 
-**Änderungen bei den zwei anderen Beispielen**
+#### Änderungen bei den zwei anderen Beispielen {-}
 
 Im Beispiel dieses Kapitels haben wir einen *zweiseitigen* t-Test durchgeführt. Falls man einen einseitigen t-Test rechnen möchte, so wie in den anderen beiden Beispielen die oben schon erwähnt wurden, dann ist der kritische Bereich nur auf einer Seite der möglichen Werte für die Prüfgröße \(T\). Im ersten Beispiel, das mit dem misstrauischen Oktoberfestbesucher, ist der kritische Bereich z.B. nur durch zu wenig befüllte Maßkrüge, also durch kleine Werte für die Prüfgröße gegeben. Der kritische Bereich dort wird also das linke Ende der t-Verteilung sein, und zwar die linken 5% (statt der 2,5%, die beim *zweiseitigen* Test verwendet wurden). Die Schranke, die den kritischen Bereich abgrenzt, ist das 5%-Quantil der t-Verteilung (s. Abb. \@ref(fig:hypothesentests-dt9-left)).
 

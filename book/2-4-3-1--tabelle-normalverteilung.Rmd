@@ -1,6 +1,6 @@
 ### Tabelle Normalverteilung {#sec-tabelle-normalverteilung}
 
-**Wie man die Verteilungstabelle abliest**
+#### Wie man die Verteilungstabelle abliest {-}
 
 Weil die Standardnormalverteilung so eine zentrale Rolle spielt (und, damit man sie nicht mit der Verteilungsfunktion von unstandardisierten Zufallsvariablen verwechselt), bekommt diese Verteilung meist einen eigenen Buchstaben, das griechische grosse *Phi.* Statt \(F(x)\) schreibt man in den meisten Büchern und Vorlesungen dann \(\Phi(z)\), wobei \(z\) für den standardisierten Wert steht.
 
@@ -45,7 +45,7 @@ Bestimme mit Hilfe der untenstehenden Tabelle \(\Phi(1)\), \(\Phi(-1)\), und \(\
 
 ```
 
-**Sehr große Zahlen**
+#### Sehr große Zahlen {-}
 
 Für Zahlen, die so groß (oder so klein im Negativen) sind, dass man sie nicht mehr in der Tabelle findet, kann man näherungsweise als Wahrscheinlichkeit "fast Null" oder "fast Eins" nehmen. An der Grafik der Verteilung oben kann man intuitiv verstehen, warum das so ist. Die Funktion nähert sich für sehr große Zahlen der 1 an, und für sehr kleine Zahlen der 0.
 
@@ -55,7 +55,7 @@ Als Formel ausgedrückt, falls man z.B: \(\Phi(15)\) berechnen will:
 
 \[\Phi(-15) \approx 0\]
 
-**Quantile ablesen**
+#### Quantile ablesen {-}
 
 Quantile liest man genau andersherum aus der Verteilungstabelle ab, da die Quantilsfunktion ja genau die Umkehrfunktion der Verteilungsfunktion ist.
 
@@ -79,7 +79,7 @@ Das 2.5%-Quantil (nennen wir es \(q_{0.025}\) ist nun \(-q_{1-0.025} = -q_{0.975
 
 ```
 
-**Die Tabelle der Standardnormalverteilung**
+#### Die Tabelle der Standardnormalverteilung {-}
 
 Tabelle \@ref(tab:table-normalverteilung) zeigt die Verteilungstabelle der Normalverteilung.
 

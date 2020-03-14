@@ -9,13 +9,13 @@ Außerdem sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
 In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothesentest durchführt. Dadurch werden die einzelnen Teile in diesem Kapitel verständlicher.
 
-**Wann verwendet man einen Binomialtest?**
+#### Wann verwendet man einen Binomialtest? {-}
 
 Der Binomialtest wird klassischerweise angewendet, wenn man eine Zielgröße mit zwei möglichen Ausprägungen hat (z.B. "ja" und "nein"), und eine Vermutung über den Anteil an "ja" überprüfen möchte.
 
 In Kapitel \@ref(sec-welchen-test) erkläre ich ganz allgemein, wann welcher Test angebracht ist.
 
-**1. Hypothesen aufstellen**
+#### 1. Hypothesen aufstellen {-}
 
 Beim Aufstellen der Hypothesen muss man genau auf seine zu untersuchende Fragestellung achten. Es gibt nämlich drei verschiedene Möglichkeiten, die ich kurz mit den folgenden drei Beispielproblemen illustriere:
 
@@ -38,11 +38,11 @@ Bemerkung: Beim Testen gehen wir ja von \(p = 0.6\) aus, also könnte man das au
 
 Im restlichen Kapitel verwende ich das erste Beispiel mit den Schwarzfahrern, und zeige am Ende noch kurz, welche Veränderungen man in den anderen beiden Fällen vornehmen müsste.
 
-**2. Test wählen**
+#### 2. Test wählen {-}
 
 Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref(sec-wat-tests) und \@ref(sec-vorgehen-tests) aufgestellt haben, nehme ich hier den 2. Schritt auch mit auf. Es ist natürlich schon klar, dass wir einen Binomialtest verwenden werden.
 
-**3. Signifikanzniveau festlegen**
+#### 3. Signifikanzniveau festlegen {-}
 
 Wie in den vorherigen Kapiteln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
 
@@ -50,17 +50,17 @@ Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha = 0.05\). In besonde
 
 Für unsere Beispielaufgabe nehmen wir das übliche Signifikanzniveau von \(\alpha = 0.05\).
 
-**4. Daten sammeln**
+#### 4. Daten sammeln {-}
 
 In einer Klausur oder Übung gibt es die Daten natürlich meist schon. Wenn man sie aber selber sammelt, müssen die Daten für einen Binomialtest eigentlich nur eine lange Liste von "ja" und "nein"-Antworten sein. Wir fassen diese Daten dann im 5. Schritt zusammen in zwei Werte, in unserem Beispiel erstens *die gesamte Anzahl an Würfen*, \(n\), und zweitens *die Anzahl der Treffer*. Das ist eine Zahl zwischen 0 und \(n\), die wir nun einfach \(x\) nennen. Diese beiden Werte brauchen wir für den Binomialtest.
 
 Wir lassen unseren Freund 10 Bälle werfen, und notieren 7 Treffer.
 
-**5. Prüfgröße berechnen**
+#### 5. Prüfgröße berechnen {-}
 
 Beim Binomialtest ist die Prüfgröße sehr einfach bestimmt: Es ist einfach \(x\), die Anzahl der Treffer. In diesem Beispiel ist \(x=7\).
 
-**6. Verteilung der Prüfgröße bestimmen**
+#### 6. Verteilung der Prüfgröße bestimmen {-}
 
 Falls die Nullhypothese gilt, dann ist die Prüfgröße \(x\), die Anzahl der Treffer, binomialverteilt. Wir haben \(n\) Bälle geworfen, und erwarten, falls \(H_0\) gilt, in etwa einen Anteil von \(p=0.6\) Treffern. Unsere Prüfgröße \(x\) hätte also die folgende Binomialverteilung:
 
@@ -70,7 +70,7 @@ In unserem Fall wäre die Anzahl der Treffer \(B(10, 0.6)\) verteilt.
 
 Die Binomialverteilung ist in Kapitel \@ref(sec-binomialverteilung) genauer erklärt.
 
-**7. Kritischen Bereich (oder p-Wert) berechnen**
+#### 7. Kritischen Bereich (oder p-Wert) berechnen {-}
 
 Der *kritische Bereich* ist der Bereich für \(x\), ab dem wir nicht mehr an \(H_0\), also an eine Trefferwahrscheinlichkeit von höchstens 60%, glauben können. Wir suchen also eine bestimmte Anzahl an Korbtreffern, die unser Spieler nur sehr unwahrscheinlich erreichen oder überschreiten würde, wenn er in Wahrheit durchschnittlich nur 60% aller Würfe trifft.
 
@@ -94,11 +94,11 @@ Bei der obigen Formulierung \(P(X \geq k)\) müssen wir direkt an die Verteilung
 
 Die Schranke für den kritischen Bereich liegt also bei 9 Körben. Daher ist der kritische Bereich {9, 10}. Die Schlussfolgerung: Wenn unser Spieler bei 10 Würfen mindestens 9 Körbe trifft, dann kann er behaupten, signifikant nachgewiesen zu haben, mehr als 60% aller Körbe zu treffen. Bei z.B. 7 Treffern hat er zwar mehr als 60% getroffen, aber es ist noch viel zu wahrscheinlich, dass er das nur durch Zufall geschafft hätte. Man könnte auch ausrechnen, wie wahrscheinlich es wäre, mindestens 7 Treffer zu erhalten (es passiert zu 38.2%, wer es gerne nachrechnen möchte).
 
-**8. Testentscheidung treffen**
+#### 8. Testentscheidung treffen {-}
 
 Da unser Spieler 7 Treffer erzielt hat, aber unser kritischer Bereich bei 9 und 10 Treffern liegt, können wir die Nullhypothese nicht ablehnen. Der Basketballer konnte nicht genügend Beweise für die Alternativhypothese liefern.
 
-**Änderungen bei den zwei anderen Beispielen**
+#### Änderungen bei den zwei anderen Beispielen {-}
 
 Für Beispiel 2, das mit den Schwarzfahrern, und Beispiel 3, das mit den Retouren beim Online-Kleidungshandel, ändern sich nur die Schritte 1 und 6. Wir erstellen andere Hypothesen, und wir berechnen den kritischen Bereich anders.
 

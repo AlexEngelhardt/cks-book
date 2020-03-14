@@ -25,7 +25,7 @@ Versuche zur Übung, den Wert 2,776 in der unten stehenden Verteilungstabelle wi
 
 Wenn man versteht, dass all diese Sätze äquivalent sind, dann kann man gut mit der Verteilungstabelle umgehen. Die Zeit dafür zu investieren, zahlt sich in der Klausur mit Sicherheit aus.
 
-**Die Tabelle der \(t\)-Verteilung**
+#### Die Tabelle der \(t\)-Verteilung {-}
 
 Tabelle \@ref(tab:table-t-verteilung) zeigt die Verteilungstabelle der \(t\)-Verteilung.
 

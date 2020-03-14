@@ -1,6 +1,6 @@
 ### \(t\)-Verteilung: Stichprobenmittelwerte {#sec-t-verteilung}
 
-**Idee**
+#### Idee {-}
 
 Die \(t\)-Verteilung wird insbesondere für Hypothesentests und Konfidenzintervalle benötigt. In beiden Situationen interessiert uns nämlich die *Verteilung des Stichprobenmittelwerts*.
 
@@ -16,7 +16,7 @@ Die Standardisierung, d.h. das Subtrahieren von \(\mu_0\) und das Teilen durch \
 
 Als kurze Anmerkung sei erwähnt, dass für größere Stichproben (Faustregeln sprechen oft von \(n>50\) oder \(df>50\)) statt der \(t\)-Verteilung als Approximation auch die Normalverteilung verwendet werden kann. Die Kurven der Dichte und Verteilungsfunktion der Normalverteilung und \(t\)-Verteilung mit sehr vielen Freiheitsgraden sind nämlich ähnlich genug, dass es fast keinen Unterschied macht, welche man verwendet.
 
-**Parameter**
+#### Parameter {-}
 
 Je größer die Stichprobe wird, desto größer wird die Anzahl der Freiheitsgrade, und desto mehr ähnelt die zugehörige \(t\)-Verteilung dann der Normalverteilung. Abbildung \@ref(fig:verteilungen-t-verteilung-normalverteilung) veranschaulicht den Einfluss des Parameters \(df\):
 
@@ -32,19 +32,19 @@ Für eine \(t\)-verteilte Zufallsvariable \(X\) mit \(df\) Freiheitsgraden schre
 
 \[ X \sim t(df) \]
 
-**Träger**
+#### Träger {-}
 
 Die \(t\)-Verteilung geht genauso wie die Normalverteilung über die gesamten reellen Zahlen. Ihr Träger ist also
 
 \[ \mathcal{T} = \mathbb{R} \]
 
-**Erwartungswert, Varianz und Dichte**
+#### Erwartungswert, Varianz und Dichte {-}
 
 Man benötigt in der Praxis eigentlich nur die Verteilungsfunktion der \(t\)-Verteilung, wie vorher schon erwähnt, um Hypothesentests und Konfidenzintervalle rechnen zu können. Es wird also in der Statistik (und in Klausuren) in den allermeisten Fällen weder die Dichtefunktion, noch Erwartungswert und Varianz vorkommen.
 
 Der Vollständigkeit halber sei aber erwähnt, dass für eine \(t\)-verteilte Zufallsvariable der Erwartungswert \(\mathbb{E}(X) = 0\), und die Varianz \(\mathbb{V}(X) = \frac{df}{df-2}\) ist.
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion (genauso wie die Dichtefunktion) lässt sich nur sehr eklig als Formel notieren. Das Ausrechnen dieser Funktion ist wohl niemandem zuzumuten, weshalb es für die \(t\)-Verteilung auch eine Verteilungstabelle (s. Kap. \@ref(sec-tabelle-t-verteilung)) gibt, in der man die wichtigsten Werte nachschlagen kann.
 

@@ -2,7 +2,7 @@
 
 Der Satz von Bayes ist eine hilfreiche Regel, um bedingte Wahrscheinlichkeiten der Form \(\mathbb{P}(A|B)\) auszurechnen, wenn nur "andersherum" bedingte Wahrscheinlichkeiten der Form \(\mathbb{P}(B|A)\) gegeben sind.
 
-**Herleitung des Satzes von Bayes**
+#### Herleitung des Satzes von Bayes {-}
 
 Der Satz von Bayes erweitert die bekannte Formel für bedingte Wahrscheinlichkeiten:
 
@@ -20,7 +20,7 @@ Genau diese Formel wird nun im Zähler ersetzt, und man erhält den **Satz von B
 
 \[ \mathbb{P}(A|B) = \frac{\mathbb{P}(B | A) \cdot\mathbb{P}(A)}{\mathbb{P}(B)} \]
 
-**Falls \(\mathbb{P}(B)\) nicht gegeben ist**
+#### Falls \(\mathbb{P}(B)\) nicht gegeben ist {-}
 
 In manchen Aufgaben ist die Wahrscheinlichkeit \(\mathbb{P}(B)\) im Nenner nicht gegeben. Dann muss man sie über einen Umweg mit dem Satz der totalen Wahrscheinlichkeit (s. Kap. \@ref(sec-totale-wsk)) herleiten.
 

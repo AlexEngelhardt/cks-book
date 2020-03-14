@@ -1,8 +1,8 @@
 ## Lageparameter {#lageparameter}
 
-**Das Wichtigste in Kürze**
+#### Das Wichtigste in Kürze {-}
 
-Lageparameter beschreiben grob gesagt, wo auf einer Skala sich die Daten befinden. Dabei gibt es verschiedene Methoden der Berechnung, die für verschiedene Merkmalstypen mehr oder weniger Sinn machen. Eine kurze Übersicht sieht man in der Tabelle unten. Da der Median ein bestimmtes [Quantil](#sec-quantile) ist (nämlich das 50%-Quantil), sind die beiden Spalten gleich. Mit "Diskret" sind in dieser Tabelle Zähldaten wie etwa die Kinderzahl gemeint.
+Lageparameter beschreiben grob gesagt, wo auf einer Skala sich die Daten befinden. Dabei gibt es verschiedene Methoden der Berechnung, die für verschiedene Merkmalstypen mehr oder weniger Sinn machen. Eine kurze Übersicht sieht man in der folgenden Tabelle. Da der Median ein bestimmtes [Quantil](#sec-quantile) ist (nämlich das 50%-Quantil), sind die beiden Spalten gleich. Mit "Diskret" sind in dieser Tabelle Zähldaten wie etwa die Kinderzahl gemeint.
 
 |                  | Modus | Median | Quantile | Mittelwert |
 | ---------------- | ----- | ------ | -------- | ---------- |
@@ -18,7 +18,7 @@ Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelw
 
 \[ \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i \]
 
-Angenommen, wir befragen 7 Familien nach der Kinderzahl im Haushalt und bekommen folgende Antworten:
+Angenommen, wir befragen 7 Familien nach der Kinderzahl im Haushalt und bekommen die in der folgenden Tabelle dargestellten Antworten.
 
 | Familie | Merkmal | Kinder |
 | ------- | ------- | ------ |
@@ -55,7 +55,8 @@ Nun brauchen wir eine Zahl (das muss, genau wie beim Mittelwert, nicht unbedingt
 
 Würden wir die Zahl 1 nehmen, sind \(\frac{3}{7}\), also ca. 43% der Daten kleiner/gleich der 1, und 100% der Daten größer/gleich der 1. Hätten wir z.B. die Zahl 1.5 gewählt, wären immer noch 43% der Daten kleiner/gleich der 1.5, aber jetzt sind nur noch \(\frac{4}{7}\), also ca. 57\% der Daten größer/gleich der 1.5. Nehmen wir jetzt die Zahl 2 als möglichen Median. Es sind nun \(\frac{5}{7}\), also ca 71% kleiner/gleich der 2, und \(\frac{4}{7}\), also ca. 57% größer/gleich der 2. Wir haben unseren Median gefunden.
 
-Der Median ist übrigens ein *robuster* Lageparameter, da er auf Ausreißer in den Daten nicht so stark reagiert wie z.B. der Mittelwert. Falls die Familie Kandl einen unerwarteten Kinderschub bekommt, könnte unsere Urliste auf einmal wie folgt aussehen:
+Der Median ist übrigens ein *robuster* Lageparameter, da er auf Ausreißer in den Daten nicht so stark reagiert wie z.B. der Mittelwert. Falls die Familie Kandl einen unerwarteten Kinderschub bekommt, könnte unsere Urliste auf einmal wie in der folgenden Tabelle aussehen:
+
 
 | Merkmal     | Kinder |
 | ----------- | ------ |
@@ -87,7 +88,7 @@ Der Modus (oder *Modalwert*) ist nur für nicht-stetige Daten definiert. Er ist 
 
 ```{exercise, echo=TRUE}
 
-Schauen wir uns Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir berechnen für diese Datenreihe den Mittelwert, Median, Modus, und das 75%-Quantil.
+Schauen wir uns in der folgende Tabelle Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir berechnen für diese Datenreihe den Mittelwert, Median, Modus, und das 75%-Quantil.
 
 | Person | Merkmal |
 | ------ | ------- |

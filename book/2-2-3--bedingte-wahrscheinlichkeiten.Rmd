@@ -8,7 +8,7 @@ Dazu ein Beispiel: Möchten wir an einem Junitag die Wahrscheinlichkeit \(\mathb
 
 Man spricht diese Schreibweise aus als "Die Wahrscheinlichkeit von \(A\), gegeben \(B\)".
 
-**Veranschaulichung an Venn-Diagrammen**
+#### Veranschaulichung an Venn-Diagrammen {-}
 
 Die Tatsache, dass man durch die Kenntnis des Eintretens von Ereignis \(B\) eine genauere Aussage über die Wahrscheinlichkeit des Eintretens von \(A\) machen kann, kann man mit Hilfe eines Venn-Diagramms (s. Kap. \@ref(sec-venn)) veranschaulichen. Wenn wir wissen, dass \(B\) eingetreten ist, reduziert sich der gesamte Ergebnisraum \(\Omega\) auf \(B\) (s. Abb. \@ref(fig:venn-bedingteWsk)).
 
@@ -20,7 +20,7 @@ knitr::include_graphics("img/pictures/BedingteWahrscheinlichkeiten/venn_bedingte
 
 Die Idee hinter bedingten Wahrscheinlichkeiten ist einfach, aber deren Berechnung kann zu Beginn oft kompliziert sein. Mit etwas Übung ist dieses Thema aber auch leicht zu bewältigen.
 
-**Etwas Übung**
+#### Etwas Übung {-}
 
 Sehen wir uns für eine Beispielrechnung die Studenten einer Statistikvorlesung an. Wir beobachten, wieviele der Studenten auf die Klausur lernen bzw. nicht lernen, und wieviele der Studenten die Klausur bestehen. Uns interessiert am Ende die Wahrscheinlichkeit, die Klausur zu bestehen, gegeben man hat auf sie gelernt.
 

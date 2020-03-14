@@ -1,12 +1,12 @@
 ### Stetige Gleichverteilung: Wartezeit auf den Bus
 
-**Idee**
+#### Idee {-}
 
 Die stetige Gleichverteilung ist quasi eine Verallgemeinerung der diskreten Gleichverteilung (s. Kap. \@ref(sec-diskrete-gleichverteilung)). Während bei der diskreten Gleichverteilung jede ganze Zahl zwischen \(a\) und \(b\) möglich ist (beim Würfelwurf ist z.B. \(a=1\) und \(b=6\)), so ist bei der *stetigen* Gleichverteilung nun jede reelle Zahl im Intervall von \(a\) bis \(b\) ein mögliches Ergebnis.
 
 Ein einleuchtendes Beispiel für eine stetig gleichverteilte Zufallsvariable ist die Wartezeit auf einen Bus. Wenn ich weiß, dass der Bus alle 10 Minuten abfährt, aber den Fahrplan nicht im Kopf habe, sondern einfach an die Haltestelle laufe, dann folgt meine Wartezeit an der Haltestelle einer stetigen Gleichverteilung zwischen \(a=0\) und \(b=10\) Minuten. Hier ist nun jede reelle Zahl als Wartezeit möglich, z.B. auch 4.325 Minuten. Durch die Modellierung der Wartezeit als stetige Gleichverteilung kann ich nun zum Beispiel die durchschnittliche Wartezeit sowie ihre Varianz berechnen.
 
-**Parameter**
+#### Parameter {-}
 
 Die stetige Gleichverteilung hat zwei Parameter, \(a\) und \(b\). Das sind die Intervallgrenzen. Es ist also \(a\) das kleinste mögliche Ergebnis der Zufallsvariablen, und \(b\) das größte mögliche. Eine Zufallsvariable \(X\), die stetig gleichverteilt ist, bezeichnet man durch
 
@@ -14,11 +14,11 @@ Die stetige Gleichverteilung hat zwei Parameter, \(a\) und \(b\). Das sind die I
 
 Das U kommt aus dem Englischen "uniform", denn die Gleichverteilung heißt dort *uniform distribution*. Die Wartezeit in Minuten auf den nächsten Bus bezeichnet man etwa durch \(X \sim \text{U}(0,10)\).
 
-**Träger**
+#### Träger {-}
 
 Aus der Beschreibung der Parameter geht hervor, dass der Träger der stetigen Gleichverteilung genau das Intervall \([a,b]\) ist. Der Träger ist also \(\mathcal{T} = [a,b]\). An der Bushaltestelle sind so alle Wartezeiten zwischen 0 und 10 Minuten denkbar.
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte setzt sich aus zwei Teilen zusammen: Außerhalb des Intervalls von \(a\) bis \(b\) ist sie überall 0, und innerhalb des Trägers \([a,b]\) ein gleichbleibender (konstanter) Wert, der abhängig von der Breite des Intervalls ist.
 
@@ -36,7 +36,7 @@ Der \(y\)-Wert der Dichtefunktion an der Stelle \(x\) ist also, falls \(x\) zwis
 knitr::include_graphics("img/verteilungen-stetige-gleichverteilung-dichte.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion ist nun dreiteilig definiert: Links von der unteren Grenze \(a\) ist sie überall null, da die Wahrscheinlichkeit, dass \(X\) einen Wert kleiner als \(a\) annimmt, null ist: \(\mathbb{P}(X \leq a) = 0\). Rechts von der oberen Grenze \(b\) ist sie konstant 1, da auf jeden Fall ein Wert kleiner oder gleich \(b\) herauskommt: \(\mathbb{P}(X \leq b) = 1\).
 
@@ -62,7 +62,7 @@ Bei der Wartezeit auf den Bus, mit \(a=0\) und \(b=10\), können wir also zum Be
 - Wie in Kapitel \@ref(sec-duevsz-verteilungsfunktion) beschrieben, können wir auch die Wahrscheinlichkeit berechnen, zwischen 3 und 5 Minuten auf den Bus zu warten. Das ist nämlich \(\mathbb{P}(3 < x \leq 5) =\mathbb{P}(x \leq 5) -\mathbb{P}(x \leq 3) = F(5)-F(3) = 0.5 - 0.3 = 0.2\).
 - Die Wahrscheinlichkeit, dass wir höchstens 30 Minuten warten, ist 1, denn der Bus kommt alle 10 Minuten (wir modellieren hier keine außergewöhnlichen Verspätungen): \(\mathbb{P}(X \leq 30) = F(30) = 1\).
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert bei der Gleichverteilung ist genau die Mitte zwischen \(a\) und \(b\):
 
@@ -70,7 +70,7 @@ Der Erwartungswert bei der Gleichverteilung ist genau die Mitte zwischen \(a\) u
 
 Auf den Bus, der alle zehn Minuten kommt, warten wir also durchschnittlich \(\frac{0+10}{2} = 5\) Minuten.
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz berechnet sich zu
 

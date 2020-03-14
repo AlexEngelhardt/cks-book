@@ -45,7 +45,7 @@ Die Formel für \(a\) ist einfacher, aber wir müssen vorher das Ergebnis für \
 
 Die Werte \(\bar{x}\) und \(\bar{y}\) sind jeweils die Mittelwerte (s. Kap. \@ref(sec-mittelwert)) der gemessenen Daten \(x\) und \(y\).
 
-**Eine kürzere Formel für die Berechnung von \(b\)**
+#### Eine kürzere Formel für die Berechnung von \(b\) {-}
 
 Die Formel für \(b\) ist recht chaotisch, aber es gibt eine Möglichkeit, sie kürzer darzustellen, während sie immernoch dasselbe Ergebnis liefert:
 
@@ -71,7 +71,7 @@ Genauso erhält man dann auch
 
 Zum Berechnen von \(b\) könnte man nun sofort loslegen, alles in den Taschenrechner einzutippen. Das ist aber anfällig für Leichtsinnsfehler, und oft reicht auch der Platz im Taschenrechner nicht für diese große Formel aus. Ich schlage also vor, in mehreren Schritten vorzugehen:
 
-**Bestimmen der Werte \((x_i-\bar{x})\) und \((y_i-\bar{y})\)**
+#### Bestimmen der Werte \((x_i-\bar{x})\) und \((y_i-\bar{y})\) {-}
 
 Zuerst brauchen wir Zwischenergebnisse, wo wir von jedem Wert den zugehörigen Mittelwert abziehen. Aus der Tabelle
 
@@ -105,7 +105,7 @@ werden also die folgenden Werte berechnet:
 
 Als Beispiel: Der erste Wert für \((x_i-\bar{x})\) ist einfach \(156.3 - 162.85 = - 6.55\).
 
-**Berechnen von \(b\)**
+#### Berechnen von \(b\) {-}
 
 Jetzt sind wir nicht weit vom Ergebnis entfernt. Wir brauchen im Zähler der Formel für \(b\) nun für jede Person \(i\) das Produkt der beiden Werte \((x_i-\bar{x})\) und \((y_i-\bar{y})\), für die erste Person also z.B. \((-6.55 \cdot -1.93) = 12.6415\).
 
@@ -138,13 +138,13 @@ Somit können wir also \(b\) berechnen:
 
 \[ b =\frac{\sum_{i=1}^n (x_i - \bar{x}) \cdot (y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{131.39}{463.2} = 0.2836 \]
 
-**Berechnen von \(a\)**
+#### Berechnen von \(a\) {-}
 
 Der Wert \(a\) ist nun mit diesem Ergebnis ganz einfach zu erhalten:
 
 \[ a = \bar{y} - b\cdot \bar{x} = 49.03 - 0.2836 \cdot 162.85 = 2.8457 \]
 
-**Einzeichnen der Regressionsgerade**
+#### Einzeichnen der Regressionsgerade {-}
 
 Wir haben also nun die letztendliche Regressionsgerade berechnen können:
 

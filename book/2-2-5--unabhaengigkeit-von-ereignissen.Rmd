@@ -8,7 +8,7 @@ Ein Beispiel für zwei unabhängige Ereignisse wäre das Ereignis \(A\): "Eine P
 
 Sobald man mehr als ein Ereignis betrachtet, ist es essentiell zu wissen ob diese Ereignisse voneinander abhängig sind oder nicht. Die *Unabhängigkeit* zweier Ereignisse ist ein wichtiges Konzept, da sie viele Berechnungen immens vereinfacht. Sind zum Beispiel zwei Ereignisse voneinander unabhängig, kann man ihre gemeinsame Wahrscheinlichkeit viel einfacher berechnen als wenn sie abhängig sind.
 
-**Vereinfachungen wenn zwei Ereignisse unabhängig sind**
+#### Vereinfachungen wenn zwei Ereignisse unabhängig sind {-}
 
 1. Wenn zwei Ereignisse voneinander unabhängig sind, ist die bedingte Wahrscheinlichkeit (s. Kap. \@ref(sec-bedingte-wsk)) gleich der unbedingten Wahrscheinlichkeit:
 \[ \mathbb{P}(A|B) = \mathbb{P}(A) \]

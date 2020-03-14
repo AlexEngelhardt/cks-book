@@ -4,7 +4,7 @@ Meist reicht ein Lageparameter (s. Kap. \@ref(lageparameter)) als Zusammenfassun
 
 Da (zumindest die gebräuchlichen) Streuungsparameter in ihrer Definition immer irgendwo eine Differenz beinhalten, kann man sie nur für numerische Daten bestimmen, also diskrete oder stetige *Zahlen.* Bei einem nominal- oder ordinalskalierten Merkmal (s. Kap. \@ref(merkmals-und-skalentypen)) ist das nicht möglich.
 
-**Das Wichtigste in Kürze**
+#### Das Wichtigste in Kürze {-}
 
 Für gemessene Daten \(x_1, x_2, \ldots, x_n\):
 

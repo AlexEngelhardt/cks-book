@@ -56,7 +56,7 @@ Zur Interpretation kann man nun sagen, dass mit steigendem Rang des Alters auch 
 
 Eine kurze Bemerkung noch: Die Ränge könnte man auch andersrum vergeben, dass also die älteste Person (oder die langsamste Person) den Rang 1 bekommt. Dann würde sich der Spearman-Koeffizient nur im Vorzeichen ändern, aus \(r_\text{Sp} = 0.83\) würde also \(r_\text{Sp} = -0.83\) werden. Die Interpretation würde dann etwas anders ablaufen, aber zum selben Ziel kommen: Die negative Korrelation bedeutet, dass mit steigendem Rang des Alters (d.h. jüngere Personen) der Rang der Platzierung *sinkt* (d.h. die Person schneller im Ziel ankommt). Hier also in klaren Worten: Je jünger eine Person wird, desto schneller kommt sie im Ziel an. Und daher genau dasselbe wie vorher.
 
-**Was ist der Effekt davon, die Ränge statt der Originaldaten zu nehmen?**
+#### Was ist der Effekt davon, die Ränge statt der Originaldaten zu nehmen? {-}
 
 Da bei der Spearman-Korrelation die Ränge verwendet werden, sind dort die tatsächlichen Abstände zwischen z.B. Platz 1 und Platz 2 egal. Die Spearman-Korrelation ist immer dann 1, wenn der niedrigste Wert für \(x\) gepaart ist mit dem niedrigsten Wert von \(y\), usw.
 
@@ -68,7 +68,7 @@ knitr::include_graphics("img/zweivariablen-spearman-r1.png")
 
 Mathematisch sagt man: Die Spearman-Korrelation misst den *monotonen* Zusammenhang, während die Pearson-Korrelation den *linearen* Zusammenhang misst.
 
-**Was passiert bei gleichen Rängen, also "Unentschieden"?**
+#### Was passiert bei gleichen Rängen, also "Unentschieden"? {-}
 
 Es kann passieren, dass z.B. zwei oder mehr Werte für \(x\) denselben Wert annehmen. In diesem Fall wird den entsprechenden Werten der Durchschnittsrang zugewiesen. Hierzu drei Beispiele, hätten die Personen aus dem obigen 100-Meter-Sprint stattdessen ein anderes Alter gehabt:
 
@@ -94,7 +94,7 @@ In der obigen Tabelle haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 w
 
 Hier haben drei Personen dasselbe Alter. Deren Ränge wären 3, 4, und 5. Der resultierende Durchschnittsrang für alle drei Personen ist also 4.
 
-**Eine kürzere Formel für die Spearman-Korrelation**
+#### Eine kürzere Formel für die Spearman-Korrelation {-}
 
 Das oben angegebene Vorgehen zur Berechnung von \(r_\text{Sp}\) ist zwar (hoffentlich) einleuchtend und nachvollziehbar, aber die Formel ist doch sehr aufwändig auszurechnen. Es gibt zum Glück eine kürzere Formel, mit der die Spearman-Korrelation schneller ausgerechnet werden kann.
 

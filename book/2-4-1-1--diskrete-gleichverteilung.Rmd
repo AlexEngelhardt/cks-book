@@ -7,17 +7,17 @@ Die diskrete Gleichverteilung liegt vor, wenn eine Zufallsvariable
 
 Zwei schöne Beispiele hierfür sind der Münzwurf mit \(n=2\) möglichen Ergebnissen, Kopf oder Zahl, wo jedes mit der gleichen Wahrscheinlichkeit, \(\frac{1}{2}\), auftritt, und das Rouletterad mit \(n=37\) möglichen Ergebnissen (der Null und die Zahlen 1 bis 36), wo jede Zahl mit der Wahrscheinlichkeit \(\frac{1}{37}\) auftritt.
 
-**Parameter**
+#### Parameter {-}
 
 Die möglichen Ergebnisse werden bezeichnet mit den Variablen \(x_1, x_2, \ldots, x_n\). Für das Beispiel des Münzwurfs können wir also "Kopf" mit 1 kodieren, und "Zahl" mit 2, und erhalten die möglichen Ergebnisse \(x_1=1, x_2=2\) (wir müssen diese Ereignisse in Zahlen umwandeln, der Grund ist in Kapitel \@ref(sec-was-sind-zv) oben erklärt). Für das Roulette-Beispiel erhalten wir \(x_1=0, x_2=1, x_3=2, \ldots, x_{37}=36\).
 
 Wir beschränken uns hier aber auf einen Spezialfall, nämlich Zufallsexperimente, deren Ergebnis jede Ganzzahl zwischen \(a\) und \(b\) sein kann. Beim Münzwurf haben wir also eine Gleichverteilung mit den zwei Parametern \(a=1\) und \(b=2\), und beim Roulettespiel eine Gleichverteilung mit \(a=0\) und \(b=36\). Mit dieser Art der Modellierung können wir die allermeisten Situationen modellieren, bis auf manche Sonderfälle, zum Beispiel das Punkteergebnis eines Fußballspiels, in dem ein Verein entweder 0, 1, oder 3 Punkte bekommt.
 
-**Träger**
+#### Träger {-}
 
 Der Träger (s. Kap. \@ref(sec-duszv-traeger)) \(\mathcal{T}\) der diskreten Gleichverteilung sind die einzelnen Ausprägungen \({x_1, x_2, \ldots, x_n}\), also alle ganzen Zahlen zwischen \(a\) und \(b\). Beim Roulettespiel sind das z.B. die Zahlen \({0, 1, 2, \ldots, 36}\). Andere Ergebnisse sind in diesem Beispiel nicht möglich: Das Rouletterad kann zum Beispiel keine 52, oder keine 3,5 zeigen.
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichtefunktion muss in zwei Teile aufgeteilt werden. Beim Roulettespiel ist z.B. die Wahrscheinlichkeit, dass die 17 erscheint, \(\mathbb{P}(X=17) = \frac{1}{37}\), aber die Wahrscheinlichkeit, dass das Ergebnis 1500 ist, \(\mathbb{P}(X=1500) = 0\). Die Dichte für das Roulettespiel ist also
 
@@ -27,7 +27,7 @@ Im Allgemeinen haben wir \(n\) verschiedene Ergebnisse für eine Zufallsvariable
 
 \[ f(x) = \begin{cases} \frac{1}{n}, & x \in \{ a, a+1, \ldots , b \} \\ 0, & \text{sonst} \end{cases} \]
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion der diskreten Gleichverteilung lautet wie folgt:
 
@@ -46,13 +46,13 @@ Versuche, mit dieser Definition für das Beispiel Würfelwurf zu bestimmen:
 - \(F(0)\)
 - \(F(1500)\)
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert ist bei der diskreten Gleichverteilung einfach der Mittelwert von \(a\) und \(b\):
 
 \[ \mathbb{E}(X) = \frac{a+b}{2} \]
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz dieser Verteilung lautet:
 
@@ -70,11 +70,11 @@ Schauen wir uns die Zufallsvariable "\(X\) = ein Würfelwurf" an, und bestimmen 
 
 ```
 
-**Träger**
+#### Träger {-}
 
 Die Zufallsvariable \(X\) kann nur die Werte 1, 2, 3, 4, 5, oder 6 annehmen. Also ist der Träger \(\{ 1, 2, 3, 4, 5, 6 \}\).
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte ist, wenn wir die obige Definition anwenden, einfach bestimmt:
 
@@ -88,7 +88,7 @@ Abbildung \@ref(fig:verteilungen-diskrete-gleichverteilung-dichte) zeigt diese D
 knitr::include_graphics("img/verteilungen-diskrete-gleichverteilung-dichte.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion ist einfach notierbar als:
 
@@ -102,13 +102,13 @@ Abbildung \@ref(fig:verteilungen-diskrete-gleichverteilung-verteilungsfunktion) 
 knitr::include_graphics("img/verteilungen-diskrete-gleichverteilung-verteilungsfunktion.png")
 ```
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert eines Würfelwurfs ist
 
 \[ \mathbb{E}(X) = \frac{1}{2} (6 + 1) = 3.5 \]
 
-**Varianz**
+#### Varianz {-}
 
 Auch hier sind wir schnell am Ziel. Die Formel angewendet lautet
 

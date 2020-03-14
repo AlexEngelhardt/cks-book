@@ -2,7 +2,7 @@
 
 Histogramme sehen zunächst ähnlich aus wie Balkendiagramme, werden aber für stetige statt diskrete Daten verwendet. Um ein Histogramm zu zeichnen, muss man seine Daten zuerst klassieren, d.h. Gruppen bilden und sie ihnen zuordnen.
 
-**Einfacher: Histogramme für gleich breite Gruppen**
+#### Einfacher: Histogramme für gleich breite Gruppen {-}
 
 Am einfachsten sind Histogramme zu zeichnen, wenn diese Gruppen gleich breit sind. Mißt man zum Beispiel die Körpergröße von 20 Personen, könnte man diese Gruppen in 10cm-Abständen bilden, also von 150-159cm, von 160-169cm, und so weiter.
 
@@ -50,7 +50,7 @@ Das linke Histogramm haben wir gerade berechnet. Das rechte unterscheidet sich n
 
 Der Anteil an Beobachtungen in jeder Gruppe entspricht nun der *Fläche* dieser Balken. In der ersten Gruppe ist ein Anteil von \(10\cdot 0.015 = 0.15\), also 15% der Daten, was bei 20 Personen genau 3 Personen entspricht. Diese Art der Interpretation wird wichtig, wenn wir uns Histogramme mit variablen Gruppenbreiten ansehen:
 
-**Komplizierter: Histogramme für variable Gruppenbreiten**
+#### Komplizierter: Histogramme für variable Gruppenbreiten {-}
 
 Diese Art von Histogramm sieht man in der Realität so gut wie nie - zumindest ich bin noch nie einem begegnet. Ich habe aber in einer Klausur mal ein solches Histogramm zeichnen müssen, daher zeige ich hier auch, wie man diese Art erstellt.
 

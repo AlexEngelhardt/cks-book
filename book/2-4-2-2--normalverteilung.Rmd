@@ -1,6 +1,6 @@
 ### Normalverteilung: Körpergrösse
 
-**Idee**
+#### Idee {-}
 
 Die Normalverteilung ist aus vielen Gründen die wichtigste Verteilung in der Statistik:
 
@@ -8,7 +8,7 @@ Die Normalverteilung ist aus vielen Gründen die wichtigste Verteilung in der St
 - Der Durchschnitt einer Stichprobe mit **beliebiger Verteilung** folgt einer Normalverteilung. Das ist weitaus wichtiger als es beim ersten Mal lesen klingt. Ich kann 100 Zufallszahlen aus irgendeiner Verteilung (stetig oder diskret, auch selbstgebastelte Verteilungen mit irgendeiner Dichte) ziehen, und ihr Mittelwert folgt immer einer Normalverteilung. Dieses Phänomen ist als *zentraler Grenzwertsatz* bekannt, und wird z.B. beim klassischen \(t\)-Test wichtig. Dort bildet man nämlich einen Stichprobenmittelwert und nutzt aus, dass er annähernd normalverteilt ist.
 - Viele natürliche Merkmale folgen einer Normalverteilung. Besonders wenn es ein Merkmal ist, dass aus dem Durchschnitt vieler einzelner Eigenschaften gebildet wird, ist das Resultat am Ende zumindest annähernd normalverteilt. Die Körpergrösse einer Person ist zum Beispiel das Ergebnis (der "Durchschnitt") vieler verschiedener genetischen Faktoren, und kann für ein gegebenes Geschlecht auch sehr gut mit einer Normalverteilung modelliert werden.
 
-**Parameter**
+#### Parameter {-}
 
 Die Glockenkurve der Normalverteilung ist abhängig von zwei Parametern: Dem Mittelwert \(\mu\) und der Varianz \(\sigma^2\). Man notiert eine normalverteilte Zufallsvariable \(X\) als
 
@@ -24,7 +24,7 @@ knitr::include_graphics("img/verteilungen-normalverteilung-mu-sigma.png")
 
 Vorsicht: Der Parameter ist meist die Varianz, also \(\sigma^2\). Beim Rechnen mit der Normalverteilung (zum Beispiel beim Standardisieren der Zufallsvariablen oder bei Hypothesentests) wird oft mit der Standardabweichung \(\sigma\), also der Wurzel der Varianz, gearbeitet. Hier muss man immer genau hinschauen, welche Variante verwendet wird, und gegebenenfalls zwischen den beiden Werten umrechnen.
 
-**Träger**
+#### Träger {-}
 
 Bei jeder Normalverteilung, also egal welche Parameter \(\mu\) und \(\sigma^2\) sie hat, sind theoretisch alle Realisationen aus den positiven und negativen reellen Zahlen möglich. Der Träger einer Normalverteilung ist also
 
@@ -35,15 +35,15 @@ Das erscheint vielleicht etwas seltsam, da man die Normalverteilung oft auch daz
 - Bei der Modellierung der Körpergrösse wird zum Beispiel eine Normalverteilung mit \(\mu=165\)cm und \(\sigma^2=100\) verwendet. Da liegt die Wahrscheinlichkeit, dass eine Realisation kleiner als 0 herauskommt, bei ungefähr \(2\cdot 10^{-61}\). Diese Zahl ist eine Null, ein Komma, 60 Nullen, und dann erst eine zwei. Das ist so vernachlässigbar klein, dass in der gesamten Geschichte der Menschheit keine Person in diesem Bereich erwartet wird.
 - Die Normalverteilung ist natürlich nur ein "gut genug" passendes Modell, das zur Beschreibung der Körpergrösse verwendet wird. Die wahre Verteilung der Körpergrösse von Menschen sieht anders aus (und hat natürlich nur einen positiven Träger), aber niemand kennt diese Verteilung, und sie lässt sich wohl auch nicht durch eine so einfache Formel hinschreiben. Daher verwendet man bekannte Verteilungen als *Approximation*. Man sagt, dass eine bestimmte Verteilung gut genug zur Modellierung ist, und nimmt solche, mit denen man besonders einfach rechnen kann.
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert ist direkt der erste Parameter, \(\mu\). Bei einer Normalverteilung mit \(\mu=4\) erwartet man also im Durchschnitt eine Realisation von 4, egal wie groß die Varianz \(\sigma^2\) ist.
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz der Normalverteilung ist der zweite Parameter, \(\sigma^2\). In der Hinsicht ist die Normalverteilung ein Sonderfall, da ihre beiden Parameter direkt der Erwartungswert und die Varianz sind - sehr bequem.
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichtefunktion einer normalverteilten Zufallsvariablen \(X\) mit Parametern \(\mu\) und \(\sigma^2\) lautet
 
@@ -57,7 +57,7 @@ Wenn man sich statt der Varianz \(\sigma^2\) die Standardabweichung \(\sigma\), 
 knitr::include_graphics("img/verteilungen-normalverteilung-skizze.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion der Normalverteilung kann man nicht mit einer Formel im Taschenrechner berechnen. Das Integral über die Dichtefunktion lässt sich nämlich nicht mit Stift und Papier lösen:
 
@@ -71,7 +71,7 @@ Man nimmt daher eine Verteilungstabelle (s. Kap. \@ref(sec-verteilungstabelle)) 
 knitr::include_graphics("img/verteilungen-normalverteilung-verteilungsfunktion.png")
 ```
 
-**Zum Ablesen von Verteilungstabellen**
+#### Zum Ablesen von Verteilungstabellen {-}
 
 Nun hat man das Problem, dass es unendlich viele Normalverteilungen gibt, mit jeweils unterschiedlichen Parametern \(\mu\) und \(\sigma^2\). Man bräuchte also eine Tabelle für die Verteilung \(\text{N}(10, 1)\), eine für \(\text{N}(10, 1.4)\), und so weiter. Man hilft sich hier dadurch, indem man nur eine Tabelle verwendet, und zwar für die **Standardnormalverteilung**, also \(X\sim \text{N}(0,1)\), mit \(\mu=0\) und \(\sigma^2=1\). Nun kann man eine beliebige Normalverteilung *standardisieren*, und dann deren Wert anhand der Verteilungstabelle bestimmen.
 

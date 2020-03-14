@@ -2,7 +2,7 @@
 
 *Dieses Kapitel basiert auf dem allgemeinen Vorgehen bei Hypothesentests in Kapitel \@ref(sec-vorgehen-tests). Ich empfehle, Kapitel \@ref(sec-vorgehen-tests) vorher zu lesen und zu verstehen; das macht den Lesefluss und das Verständnis dieses Kapitels hier sehr viel einfacher.*
 
-**Die Tabelle zur Testwahl**
+#### Die Tabelle zur Testwahl {-}
 
 Die Tabelle in Abbildung \@ref(fig:WelchenTest) zeigt dir, welcher der geeignete Test für ein bestimmtes Skalenniveau der Ziel- und Einflussgrößen ist.
 
@@ -18,13 +18,13 @@ knitr::include_graphics("img/pictures/WelchenTest.png")
 
 In dieser Tabelle habe ich Tests gesammelt, die für einen bestimmten Datensatz in meinen Augen entweder die einfachste, oder die beste Lösung sind - wichtig ist, im Hinterkopf zu behalten, dass das nicht heißt, andere Tests sind automatisch falsch oder schlechter.
 
-**Die Erklärung zur Tabelle**
+#### Die Erklärung zur Tabelle {-}
 
 Es gibt eine ganze Menge an Testverfahren, die auf den ersten Blick gerne mal überwältigend sind. Welchen Test man in einer bestimmten Situation genau wählen muss, hängt von einigen Fragen ab, die in jeder Situation erneut beantwortet werden müssen.
 
 Eine Google-Bildersuche für "which statistical test" bzw. "welcher statistische test" liefert viele verschiedene Diagramme, die unterschiedlich detailliert sind, und auch unterschiedlich beginnen. Manche sind zielorientiert, d.h. die erste Frage lautet "Was möchte ich erreichen?", und die möglichen Ziele sind z.B. "Einen Mittelwert mit einem hypothetischen Wert vergleichen". Andere Diagramme orientieren sich an den Eigenschaften der Daten. Hier beginnt man mit der Frage "Welcher Art ist die Zielgröße?", ob sie z.B. nominal oder stetig ist. Das ist für den Anfang in meinen Augen leichter, weswegen wir uns diese zwei Fragen stellen:
 
-**1.) Welcher Art ist die Zielgröße?**
+#### 1.) Welcher Art ist die Zielgröße? {-}
 
 Die Zielgröße ist das Merkmal, das sich durch die Wirkung von Einflussgrößen verändern wird. Sie ist abhängig von den Einflussgrößen. Möchte ich z.B. die blutdrucksenkende Wirkung eines neuen Medikaments nachweisen, dann ist meine Zielgröße der Blutdruck, und die Einflussgröße ist das Medikament (man hätte z.B. zwei Gruppen, einmal Personen ohne Medikament und einmal Personen mit Medikament).
 
@@ -35,7 +35,7 @@ Bestimme nun, von welcher Art (welches Skalenniveau, s. Kap. \@ref(merkmals-und-
 3. **Stetig und intervall- oder verhältnisskaliert?** Stetige Zielgrößen sind z.B. das Einkommen einer Person, oder die Außentemperatur. Man kann hier oft auch Zähldaten mit aufnehmen, wenn die Skala "weit genug" reicht. Zum Beispiel kann man "Anzahl der Anrufe in einer Telefonzentrale" sehr gut verwenden, da es da wohl um größere und breit gestreute Zahlen geht, vielleicht 1000 bis 5000 Anrufe. Aber "Anzahl Autos in einem Haushalt" wäre ein anderes Extrem, da die Antworten hier wohl meist im Bereich von 0 bis 2 liegen. Dann wäre es vielleicht sogar besser, die Zielgröße als ordinal zu betrachten.
 4. **Normalverteilt?** Eine stetige Zielgröße die (annähernd) durch eine Normalverteilung beschrieben werden kann. Das klassische Beispiel hierfür ist die Körpergröße einer Person. Eine normalverteilte Zielgröße ist von Vorteil, denn erstens macht das das Testverfahren oft ein bisschen einfacher als bei nicht-normalverteilten Daten, und zweitens können diese Tests einen tatsächlich vorhandenen Effekt schneller, d.h. mit einer geringeren Stichprobengröße, erkennen. Man sagt, diese Tests haben eine höhere *Power* (oder *Güte*).
 
-**2.) Wie sehen eventuelle Einflussgrößen aus?**
+#### 2.) Wie sehen eventuelle Einflussgrößen aus? {-}
 
 Als zweites müssen wir bestimmen, ob wir überhaupt eine Einflussgröße haben, und wenn ja, welchen Skalentyp sie hat.
 

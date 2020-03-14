@@ -19,7 +19,7 @@ Falls im Zähler des Bruches eine andere Zahl als 1 steht, ist das die Potenz de
 
 **Reelle Exponenten**, also zum Beispiel \(3^{3.1415926\ldots}\), sind nicht mehr ganz so intuitiv zu erklären. Man kann sich den Exponenten am besten als Interpolation zweier ihm nahe liegender Brüche vorstellen.
 
-**Rechenregeln für Potenzen** gibt es einige. Die wichtigsten sind in der folgenden Übersicht zusammengefasst - links die allgemeine Regel, rechts ein veranschaulichendes Beispiel:
+**Rechenregeln für Potenzen** gibt es einige. Die wichtigsten sind in der folgenden Tabelle zusammengefasst - links die allgemeine Regel, rechts ein veranschaulichendes Beispiel.
 
 | Regel                                            | Beispiel                                                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------ |
@@ -95,7 +95,7 @@ knitr::include_graphics("img/grundlagen-explog-einwohner.png")
 
 Da das Ergebnis einer Exponentialfunktion nur positiv sein kann, kann man umgekehrt den Logarithmus auch nur von einer positiven Zahl nehmen. Ein Wert wie z.B. \(\log (-3)\) ist nicht definiert. Der Definitionsbereich für die Logarithmusfunktion ist also \(\mathbb{R}^+\), die gesamten positiven reellen Zahlen. Der Wertebereich hingegen sind die gesamten reellen Zahlen \(\mathbb{R}\).
 
-**Rechenregeln für den Logarithmus** gibt es natürlich auch. Die wichtigsten sind in der folgenden Tabelle zusammengefasst, wobei links die allgemeine Regel, und rechts eine Anwendung der Regel steht:
+**Rechenregeln für den Logarithmus** gibt es natürlich auch. Die wichtigsten sind in der folgenden Tabelle zusammengefasst, wobei links die allgemeine Regel, und rechts eine Anwendung der Regel steht.
 
 | Regel                                          | Beispiel                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------- |

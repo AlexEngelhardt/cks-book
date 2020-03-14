@@ -47,7 +47,7 @@ Das zentrale Prinzip für alle Konfidenzintervalle ist, dass man zuerst einen Pu
 
 Um Konfidenzintervalle in einer Klausur schnell und sicher berechnen zu können, muss man fit darin sein, Quantile der Normalverteilung (s. Kap. \@ref(sec-tabelle-normalverteilung)) und der t-Verteilung (s. Kap. \@ref(sec-tabelle-t-verteilung)) aus einer Verteilungstabelle ablesen zu können. In der Realität machen das später meistens Statistikprogramme, aber für die Klausur ist der geübte Umgang mit diesen Tabellen von zentraler Bedeutung.
 
-**Anmerkung**
+#### Anmerkung {-}
 
 Ich habe in diesem Kapitel die folgende intuitive Erklärung für ein Konfidenzintervall verwendet:
 

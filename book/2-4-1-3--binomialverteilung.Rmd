@@ -1,18 +1,18 @@
 ### Binomialverteilung: Zehn Münzwürfe {#sec-binomialverteilung}
 
-**Idee**
+#### Idee {-}
 
 Die Binomialverteilung entsteht, wenn man ein Bernoulli-Experiment (s. Kap. \@ref(sec-bernoulliverteilung)) mehrere Male wiederholt, und an der gesamten Anzahl der Erfolge interessiert ist.
 
 In Kapitel \@ref(sec-bernoulliverteilung) zur Bernoulliverteilung haben wir ein Beispiel betrachtet, in dem wir auf einem Schießstand am Jahrmarkt einen einmaligen Schuß mit einer Trefferwahrscheinlichkeit von \(p=0.2\) abgeben. Wenn wir nun sechs Schüsse kaufen, folgt die Gesamtzahl der Treffer einer Binomialverteilung mit \(n=6\) und \(p=0.2\), oder:
 \[ X \sim B(6, 0.2) \]
 
-**Träger**
+#### Träger {-}
 
 Bei sechs Schüssen auf dem Schießstand können wir zwischen 0 und 6 jede Trefferzahl haben. Man darf hier die Null nicht vergessen, das kann leicht vorkommen. Es ist nämlich durchaus möglich, gar keine Treffer zu landen. Der Träger im allgemeinen Fall sind alle Ganzzahlen von \(0\) bis \(n\), also
 \[ \mathcal{T} = \{0, 1, \ldots, n\} \]
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte der Binomialverteilung mit den Parametern \(n\) und \(p\) lautet
 \[ f(x) = {n \choose x} p^x (1-p)^{n-x} \]
@@ -47,7 +47,7 @@ Berechne für das Beispiel Schießstand die Wahrscheinlichkeit, gar keinen Treff
 \(\mathbb{P}(X=0) = {6 \choose 0} \cdot 0.2^0 \cdot 0.8^6 = 0.2621\)
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Für die Verteilungsfunktion gibt es hier keine einfache Formel. In manchen Büchern (oder Klausuren) gibt es eine Verteilungstabelle zum einfachen Ablesen. In allen anderen Fällen muss man die einzelnen Wahrscheinlichkeiten also von Hand summieren. Das heisst, wenn man die Wahrscheinlichkeit für höchstens zwei Treffer berechnen möchte, also \(\mathbb{P}(X \leq 2)\), rechnet man sich die Wahrscheinlichkeit für null Treffer, einen Treffer, und zwei Treffer aus, und summiert sie:
 
@@ -84,14 +84,14 @@ Uns interessiert nun die Wahrscheinlichkeit, zwischen einem und fünf Treffern (
 
 Ausrechnen kann man diesen Wert nun über die zweite oder dritte Formel dieser Liste. Es kommt natürlich dieselbe Zahl raus, wobei der letztere Weg der schnellere ist. Wichtig ist hier aber, dass man die Wahrscheinlichkeit für null Treffer, also \(f(0)\), nicht vergisst. Das passiert im Eifer des Gefechts nämlich gerne.
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert der Binomialverteilung ist einfach:
 \[ \mathbb{E}(X) = n \cdot p \]
 
 Da der Erwartungswert für ein einzelnes Experiment \(p\) ist (s. Kap. \@ref(sec-bernoulliverteilung)), erwartet man bei \(n\) Wiederholungen genau die \(n\)-fache Anzahl, also \(n\cdot p\) Treffer.
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz der Binomialverteilung ist
 \[ \mathbb{V}(X) = n \cdot p \cdot (1-p). \]

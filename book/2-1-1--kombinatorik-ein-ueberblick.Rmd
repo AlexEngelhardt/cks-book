@@ -4,7 +4,7 @@ Die Kombinatorik ist ein breites Teilgebiet der Mathematik. Im Bereich der Stati
 
 Die zwei zentralen Begriffe sind hier zum einen die *Kombination*, und zum anderen die *Variation* von Objekten. Der Unterschied zwischen den beiden Begriffen ist, dass in einer Kombination die Reihenfolge der Objekte nicht interessant ist, in einer Variation jedoch schon.
 
-**Das Wichtigste in Kürze**
+#### Das Wichtigste in Kürze {-}
 
 In einer Aufgabe sollte man sich immer die folgenden Fragen stellen:
 

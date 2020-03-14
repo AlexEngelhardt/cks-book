@@ -1,6 +1,6 @@
 ## Merkmals- und Skalentypen {#merkmals-und-skalentypen}
 
-**Das Wichtigste in Kürze**
+#### Das Wichtigste in Kürze {-}
 
 Die Unterscheidungen diskret / stetig bzw. nominal / ordinal / intervallskaliert / verhältnisskaliert sind zwei verschiedene Möglichkeiten, ein Merkmal zu beschreiben. Meistens benutzt man allerdings nur die Bezeichnungen "nominal", "ordinal" und "stetig", bzw. "diskret" für verhältnisskalierte Zähldaten.
 

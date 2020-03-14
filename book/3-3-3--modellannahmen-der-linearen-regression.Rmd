@@ -18,7 +18,7 @@ Die Regressionsgerade im rechten Bild ist in dieser Situation keine gute Wahl. D
 
 Es gibt verschiedene Möglichkeiten, die Annahmen zu formulieren, und die genaue Anzahl der Annahmen ist dann auch abhängig von der Formulierung. In meiner Darstellungsweise gibt es die folgenden vier wichtigen Annahmen:
 
-**1. Linearer Zusammenhang**
+#### 1. Linearer Zusammenhang {-}
 
 Die erste Annahme wurde in unserem obigen Beispiel gleich verletzt: Für ein *lineares* Modell muss der Zusammenhang natürlich auch linear sein. In Abbildung \@ref(fig:regression-annahmen-2) ist das erste Bild ein Beispiel dafür, das zweite und dritte ein Gegenbeispiel.
 
@@ -34,7 +34,7 @@ Mathematisch sieht die Annahme für einen linearen Zusammenhang einfach so aus:
 
 Das ist die Formulierung für das lineare Modell. Ein mögliches Gegenbeispiel, im zweiten Bild, sähe z.B. so aus: \(\mathbb{E}(y_i) = a + \sin(x) / 10\)
 
-**2. Normalverteilung der Residuen**
+#### 2. Normalverteilung der Residuen {-}
 
 Die *Residuen* sind die Abstände zwischen einer Beobachtung und deren Vorhersage auf der Regressionsgeraden. (In Kapitel \@ref(sec-residuen) werden Residuen nochmal genauer erklärt.) Möchte man nun nicht nur eine "gute" Gerade durch die Daten ziehen, sondern auch Eigenschaften dieser Geraden *testen*, dann müssen als Voraussetzung dafür die Fehlerterme einer Normalverteilung folgen. Das hat den Grund, dass dann ein einfacher Hypothesentest für die Parameter (also z.B. Steigung der Geraden = 0) durchgeführt werden kann.
 
@@ -56,7 +56,7 @@ In eine Formel verpackt sieht diese Annahme nun so aus:
 
 Die zweite Zeile verlangt, dass die Residuen \(\epsilon\) normalverteilt sind. In dieser Formel steckt eigentlich auch schon die nächste Annahme mit drin:
 
-**3. Gleichbleibende Varianz der Residuen**
+#### 3. Gleichbleibende Varianz der Residuen {-}
 
 Diese Annahme besagt, dass die Varianz der Residuen sich über die \(x\)-Achse nicht verändern soll. In Abbildung \@ref(fig:regression-annahmen-4) zeigt das linke Bild wieder ein positives Beispiel, und das rechte Bild zeigt, wie es nicht aussehen soll.
 
@@ -68,7 +68,7 @@ knitr::include_graphics("img/regression-annahmen-4.png")
 
 Die gleichbleibende Varianz (man sagt auch *Homoskedastizität* dazu) steckt auch schon in der oberen Formel drin. Man verlangt nämlich, dass *für jede Beobachtung* \(i\) die Varianz gleich ist. Es ist also \(\epsilon_i \sim \mathcal{N}(0, \sigma^2)\), und **nicht** \(\epsilon_i \sim \mathcal{N}(0, \sigma_i^2)\). Der Unterschied ist sehr klein: Statt \(\sigma^2\) steht in der zweiten Formel \(\sigma_i^2\). Das tiefgestellte \(i\) bedeutet, dass die Varianz hier für jede Beobachtung \(i\) *unterschiedlich* ist. Im rechten Bild wäre also z.B. für die erste Beobachtung \(\sigma_1^2 = 0.6\), und für die letzte Beobachtung \(\sigma_{100}^2 = 12.4\). Das bedeutet: unterschiedliche Varianzen, und genau das ist im linearen Modell nicht erlaubt. Die Streuung muss für jede Beobachtung gleich groß sein.
 
-**4. Unabhängigkeit der Residuen**
+#### 4. Unabhängigkeit der Residuen {-}
 
 Mit Unabhängigkeit ist das Folgende gemeint: Wenn ich den Fehlerterm für eine bestimmte Beobachtung kenne, dann darf mir das keine Information über den Fehlerterm für die nächste Beobachtung liefern. Das ist zum Beispiel in Abbildung \@ref(fig:regression-annahmen-5) der Fall.
 

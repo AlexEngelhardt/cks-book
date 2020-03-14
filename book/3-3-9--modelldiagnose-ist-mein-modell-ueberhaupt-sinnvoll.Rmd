@@ -8,11 +8,11 @@ Grob kann man ein Modell auf zwei verschiedene Arten überprüfen: (a) mit *graf
 
 Für das Überprüfen der Annahmen einer Regression ist es wichtig zu verstehen, was Residuen sind. Dazu gibt es in Kapitel \@ref(sec-residuen) einen kleinen Exkurs.
 
-**1. Ist der Zusammenhang linear?**
+#### 1. Ist der Zusammenhang linear? {-}
 
 Die Annahme, dass der Zusammenhang zwischen Einflussgrößen und Zielgröße linear sein muss, ist der kritischste Faktor bei der Modelldiagnose. Falls der wahre Zusammenhang nicht linear ist, dann sind die Vorhersagen des Modells quasi unbrauchbar.
 
-**Überprüfen**
+#### Überprüfen {-}
 
 Am besten überprüft man diese Annahme mit Grafiken. Man erstellt z.B. ein Diagramm der beobachteten vs. vorhergesagten Zielgröße, oder der Residuen vs. der vorhergesagten Zielgröße. Abbildung \@ref(fig:regression-modelldiagnose-1) zeigt so ein Diagramm.
 
@@ -28,7 +28,7 @@ In Diagramm (b) sind nun \(\hat{y}\) und \(y\) abgebildet. Das sieht hier nur zu
 
 Diagramm (c) verdeutlicht uns das nun: Hier zeichnen wir die vorhergesagten y-Werte, also \(\hat{y}\), gegen die Residuen \(\epsilon\) ab. Im Idealfall sollte man in diesem Diagramm nur "Zufallsrauschen" erkennen, also keine Systematik. Hier ist das aber leider der Fall: Die Residuen haben eine klare Systematik, nämlich sind sie im niedrigen und im hohen Bereich der x-Achse eher größer als Null, und im mittleren Bereich eher kleiner. Das deutet stark darauf hin, dass wir dieses Problem beheben sollten.
 
-**Beheben**
+#### Beheben {-}
 
 Zum Beheben solch eines Problems gibt es zwei Alternativen:
 
@@ -59,7 +59,7 @@ Für welche dieser beiden Varianten man sich entscheidet, ist oft eine Sache des
 
 Manchmal ist die erste Alternative auch gar nicht möglich, wenn z.B. die \(y\)-Werte teilweise negativ sind. Dann kann man keine Wurzel berechnen. In diesem Fall kann man einfach auf die zweite Variante ausweichen.
 
-**2. Sind die Residuen normalverteilt?**
+#### 2. Sind die Residuen normalverteilt? {-}
 
 Ein häufiger Fehler bei der Regression ist, dass man denkt, *die Zielgröße* \(y\) muss normalverteilt sein, oder die Einflussgrößen müssen normalverteilt sein.
 
@@ -67,7 +67,7 @@ Das ist nicht der Fall!
 
 Wichtig ist nur, dass *die Residuen*, also die Schätzfehler, \(y - \hat{y}\) normalverteilt sind.
 
-**Überprüfen**
+#### Überprüfen {-}
 
 Es gibt zwei Möglichkeiten, die Normalverteilung der Residuen zu überprüfen:
 
@@ -84,11 +84,11 @@ Der Test kann von Hand quasi nicht durchgeführt werden, weswegen er in einer Kl
 
 Andere Tests (z.B. der Shapiro-Wilk-Test), sind für diese Aufgabe auch verbreitet. Sie beantworten genau dieselbe Frage, aber werden etwas anders berechnet.
 
-**Beheben**
+#### Beheben {-}
 
 Wenn die Residuen nicht normalverteilt sind, ist der Grund oft, dass die 1. Annahme der Linearität verletzt ist. Dann ist der Ausweg derselbe wie bei der 1. Annahme: Eine Variablentransformation, z.B. indem man die Zielgröße \(y\) mit der Wurzel oder mit einem Logarithmus transformiert. Oder eben durch das Aufnehmen einer weiteren Einflussgröße, z.B. \(x^2\) wie oben in der 1. Annahme, der Linearität.
 
-**3. Ist die Varianz der Residuen gleichbleibend?**
+#### 3. Ist die Varianz der Residuen gleichbleibend? {-}
 
 Für ein gültiges lineares Modell muss jedes Residuum die gleiche Verteilung haben: Eine Normalverteilung mit Mittelwert 0 und jeweils der gleichen Varianz \(\sigma^2\).
 
@@ -105,7 +105,7 @@ In diesem Diagramm sehen wir auf der x-Achse das Alter von Küken in Tagen, und 
 
 Der Fachbegriff für diese Situation nennt sich *heteroskedastische Fehler*, d.h. Fehler mit verschiedener Varianz. Der Begriff für Fehler mit gleicher Varianz (die Situation die wir bei der linearen Regression brauchen) lautet *homoskedastische Fehler*.
 
-**Überprüfen**
+#### Überprüfen {-}
 
 Bei einem multiplen Regressionsmodell, d.h. mit mehr als einer Einflussgröße \(x\), kann man nicht einfach ein Diagramm von x versus y zeichnen. Hier diagnostiziert man heteroskedastische Fehler dann mit derselben Methode die wir schon für nichtlineare Einflüsse verwendet haben: Wir zeichnen in Abbildung \@ref(fig:regression-modelldiagnose-heteroskedastie-diagnose) einen Plot der beobachteten y-Werte vs. der vorhergesagten y-Werte.
 
@@ -115,25 +115,25 @@ Bei einem multiplen Regressionsmodell, d.h. mit mehr als einer Einflussgröße \
 knitr::include_graphics("img/regression-modelldiagnose-heteroskedastie-diagnose.png")
 ```
 
-**Beheben**
+#### Beheben {-}
 
 Zum Beheben dieser Situation kommt ebenfalls eine Variablentransformation in Frage: Falls die Residuen eher prozentual konstant sind, macht eine log-Transformation der Zielgröße Sinn. Dazu muss die Zielgröße allerdings strikt positiv sein. Im Anschluß an einen Versuch der Transformation sollte man sich wieder die Diagnoseplots ansehen, und entscheiden ob die Situation nun besser geworden ist.
 
-**4. Sind die Residuen unabhängig?**
+#### 4. Sind die Residuen unabhängig? {-}
 
 Dieses Problem tritt häufig auf, wenn man eine *Zeitreihe* analysiert, wenn also die Zielgröße \(y\) und die Einflussgrößen \(x\) über einen bestimmten Zeitraum immer wieder gemessen wurden. Um eine Abhängigkeit der Residuen festzustellen, muss es nämlich eine gewisse *Reihenfolge* in den Daten geben, und das ist insbesondere dann der Fall, wenn eine Einflussgröße die Zeit ist. In allen anderen Fällen könnte man die Reihen des Datensatzes ja ohne Auswirkung beliebig umsortieren.
 
 Falls eine der anderen drei Annahmen verletzt ist, z.B. dass der Zusammenhang zwischen Einflussgröße und Zielgröße nicht linear ist, dann ist meistens auch automatisch diese Annahme der unabhängigen Residuen verletzt. Wenn man sich z.B. das Diagramm aus Abschnitt 1 ansieht, in dem der Zusammenhang eher einer Parabel folgt, dann erkennt man dass die Größe vom Residuum z.B. ganz am rechten Ende der x-Achse mit der Größe vom "vorletzten" Residuum direkt nebenan zusammenhängt - also abhängig ist.
 
-**Überprüfen**
+#### Überprüfen {-}
 
 Die Zeitreihenanalyse geht etwas über den Themenumfang heraus, daher gebe ich nur ein paar Begriffe als Ansatz zur weiteren Recherche. Ganz grob gesagt erkennt man eine Abhängigkeit z.B. über Plots der Residuen vs. der Zeitachse. Eine andere Möglichkeit ist ein Diagramm der sogenannten *Autokorrelationsfunktion* der Residuen. Zuletzt gibt es noch den *Durbin-Watson-Test*, mit dem man einen Hypothesentest auf Autokorrelation durchführen kann.
 
-**Beheben**
+#### Beheben {-}
 
 Um eine ernsthafte, problematische Abhängigkeit der Residuen zu beheben, muss man sich mit der Zeitreihenanalyse beschäftigen. Es bietet sich als Ausweg an, ein ARIMA-Modell zu rechnen, und z.B. einen AR(1) oder einen MA(1)-Term mit ins Modell aufzunehmen.
 
-**Weiterführende Literatur**
+#### Weiterführende Literatur {-}
 
 Die oben beschriebenen vier Annahmen sind hier auf Englisch nochmal detailliert beschrieben: http://people.duke.edu/~rnau/testing.htm
 

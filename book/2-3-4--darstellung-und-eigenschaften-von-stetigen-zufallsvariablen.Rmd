@@ -115,7 +115,7 @@ Dabei ist der zweite Teil, \(\mathbb{E}(X)^2\), einfach das Quadrat des Erwartun
 
 Dieses Integral ist leichter zu berechnen als das vorherige, und wenn man den Erwartungswert eh schon bestimmt hat, ist man mit dieser Methode meist schneller am Ziel. In der folgenden Beispielaufgabe bestimmen wir u.a. die Varianz, und verwenden beide Methoden, um den Unterschied zu sehen.
 
-**Beispielaufgabe**
+```{exercise, echo=TRUE}
 
 Als Beispiel schauen wir uns eine Zufallsvariable \(X\) und ihre Dichte \(f(x)\) an:
 
@@ -132,7 +132,9 @@ Für diese Dichte werden wir nun
 - ihre Quantilsfunktion bestimmen
 - die Wahrscheinlichkeit, dass \(X\) zwischen 0.5 und 0.6 liegt, bestimmen
 
-**Skizze der Funktion**
+```
+
+#### Skizze der Funktion {-}
 
 Die Dichte \(f(x)\) ist nur im Bereich von 0 bis 1 ungleich Null (s. Abb. \@ref(fig:zufallsvariablen-stetige-dichte)).
 
@@ -140,7 +142,7 @@ Die Dichte \(f(x)\) ist nur im Bereich von 0 bis 1 ungleich Null (s. Abb. \@ref(
 knitr::include_graphics("img/zufallsvariablen-stetige-dichte.png")
 ```
 
-**Ist es tatsächlich eine Dichte?**
+#### Ist es tatsächlich eine Dichte? {-}
 
 Um nachzuweisen dass eine Funktion \(f(x)\) eine "echte" Dichte ist, müssen wir zwei Eigenschaften überprüfen:
 
@@ -159,11 +161,11 @@ Der erste und dritte Teil fällt sofort weg: Die Fläche unter der Funktion, die
 
 Das Integral ist also insgesamt 1, und damit ist \(f(x)\) eine echte Dichte.
 
-**Was ist der Träger der Zufallsvariablen?**
+#### Was ist der Träger der Zufallsvariablen? {-}
 
 Der **Träger** einer Zufallsvariablen ist einfach die Menge aller möglichen Ergebnisse von \(X\). Übersetzt bedeutet das: Der Bereich, in dem der Funktionswert \(f(x)\) (also der Wert auf der \(y\)-Achse) größer als 0 ist. In unserem Fall also das Intervall von 0 bis 1 (strikt gesagt ohne der Null). Somit ist der Träger \(\mathcal{T} = (0,1]\).
 
-**Was ist ihr Erwartungswert \(\mathbb{E}(X)\)?**
+#### Was ist ihr Erwartungswert \(\mathbb{E}(X)\)? {-}
 
 Für den Erwartungswert wenden wir die Formel von oben an. Wir teilen das Integral wieder in drei Teile auf, wobei die Teile von \(-\infty\) bis \(0\) sowie von \(1\) bis \(\infty\) wieder wegfallen (da die Dichte dort 0 ist, und somit das Integral 0 wird):
 
@@ -174,7 +176,7 @@ Vorsicht: Im Integral steht hier nicht nur \(f(x)\), sonst wäre die Lösung des
 
 Somit ist \(\mathbb{E}(X) = \frac{2}{3}\).
 
-**Was ist ihre Varianz \(\mathbb{V}(X)\)?**
+#### Was ist ihre Varianz \(\mathbb{V}(X)\)? {-}
 
 Die Varianz können wir mit zwei Methoden bestimmen. Zuerst verwenden wir die Methode mit Verschiebungssatz (s. Kap. \@ref(sec-verschiebungssatz)):
 
@@ -196,7 +198,7 @@ Nur um zu sehen, wie kompliziert es ohne dieser Regel ist, berechnen wir die Var
 
 \[ \begin{aligned} \mathbb{V}(X) = \int_{-\infty}^\infty (x-\mu)^2 f(x) \, dx &= \int_0^1 (x^2 - 2\mu x + \mu^2) \cdot 2x \, dx \\ &= \int_0^1 2x^3-4\mu x^2 + 2\mu^2 x \, dx \\ &= \left[ 2 \cdot \frac{1}{4} x^4 - 4 \mu \cdot \frac{1}{3} x^3 + 2\mu^2 \cdot \frac{1}{2} x^2 \right]_0^1 \\ &= (2 \cdot \frac{1}{4} 1^4 - 4\mu \cdot \frac{1}{3}1^3 + 2\mu^2 \cdot \frac{1}{2} 1^2) - (0-0+0) \\ &= \frac{2}{4} - \frac{4}{3}\mu + \frac{2}{2}\mu^2 \\ &= \frac{1}{2} - \frac{4}{3} \cdot \frac{2}{3} + \left( \frac{2}{3} \right)^2 \\ &= \frac{1}{2} - \frac{8}{9} + \frac{4}{9} \\ &= \frac{9}{18} - \frac{16}{18} + \frac{4}{9} \\ &= \frac{1}{18} \end{aligned} \]
 
-**Was ist ihre Verteilungsfunktion \(F(x)\)?**
+#### Was ist ihre Verteilungsfunktion \(F(x)\)? {-}
 
 Die Verteilungsfunktion an der Stelle \(x\) ist die Fläche der Dichte, links von der Stelle \(x\). Wir integrieren also die Dichte von \(-\infty\) bis \(x\). Da die Variable \(x\) hier die rechte Grenze der Fläche angibt, müssen wir in der Dichtefunktion einen anderen Variablennamen nehmen, wir verwenden einfach \(t\). Das ändert natürlich die Funktion nicht, denn ob da \(f(x)=2x\) oder \(f(A) = 2A\) steht, ist egal.
 
@@ -216,7 +218,7 @@ Abbildung \@ref(fig:zufallsvariablen-stetige-verteilungsfunktion) zeigt diese Ve
 knitr::include_graphics("img/zufallsvariablen-stetige-verteilungsfunktion.png")
 ```
 
-**Was ist die Quantilsfunktion \(Q(x)\)?**
+#### Was ist die Quantilsfunktion \(Q(x)\)? {-}
 
 Die Quantilsfunktion ist nur von 0 bis 1 definiert, und ist in diesem Bereich die Umkehrfunktion der Verteilungsfunktion \(F(x)\). Um die Umkehrfunktion zu berechnen, ersetzen wir in der Definition der Verteilunsfunktion \(F(x)\) durch \(x\), und \(x\) durch \(Q(x)\):
 \[ \begin{aligned} F(x) &= x^2 \\ x &= \left(Q(x)\right)^2 \end{aligned}\]
@@ -231,8 +233,7 @@ Und das ist auch schon die Quantilsfunktion (nicht vergessen, nur im Bereich von
 knitr::include_graphics("img/zufallsvariablen-stetige-quantilssfunktion.png")
 ```
 
-
-**Was ist die Wahrscheinlichkeit, dass \(X\) zwischen 0.5 und 0.6 liegt?**
+#### Was ist die Wahrscheinlichkeit, dass \(X\) zwischen 0.5 und 0.6 liegt? {-}
 
 Wir möchten also \(\mathbb{P}(0.5 \leq X \leq 0.6)\) bestimmen. Hierfür gibt es wieder eine einfache, und eine aufwändige Methode. In der einfachen Methode arbeiten wir mit der Verteilungsfunktion:
 

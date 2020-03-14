@@ -10,7 +10,7 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
 bookdown::pdf_book:
-  documentclass: book
+  # the documentclass is specified in index.Rmd
   includes:
     in_header: preamble.tex
   toc_depth: 3

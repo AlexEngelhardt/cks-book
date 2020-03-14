@@ -1,12 +1,12 @@
 ### Exponentialverteilung: Wartezeit bis Glühbirnenausfall
 
-**Idee**
+#### Idee {-}
 
 Die Exponentialverteilung wird meistens für Warte- und Ausfallzeiten aller Art verwendet. Klassische Beispiele hierfür sind die Lebenszeit einer Glühbirne (also die Wartezeit bis zum Ausfall), oder die Wartezeit bis zum nächsten Anrufer in einer Kundenhotline. Auch die Dauer eines Telefongesprächs kann mit der Exponentialverteilung modelliert werden.
 
 Die Exponentialverteilung kann man als stetige Version der geometrischen Verteilung (s. Kap. \@ref(sec-geometrische)) ansehen. Die Dichte hat dieselbe Form, es handelt sich in beiden Fällen um eine exponentiell fallende Funktion.
 
-**Parameter**
+#### Parameter {-}
 
 Die Exponentialverteilung hat nur einen Parameter, nämlich \(\lambda\) (Lambda). Er beschreibt die durchschnittliche Wartezeit bis zum nächsten "Ereignis", wie auch immer man das definiert. Ein größeres Lambda steht dabei für eine *kleinere* durchschnittliche Wartezeit (dazu später mehr).
 
@@ -16,7 +16,7 @@ Man bezeichnet eine exponentialverteilte Zufallsvariable \(X\) mit dem Parameter
 
 Selten, in manchen Büchern bzw. Vorlesungen, findet man auch den Parameter \(\mu\), der dann gleich \(\frac{1}{\lambda}\) ist. Im amerikanischen Raum ist diese Schreibweise der Exponentialverteilung verbreiteter, da muss man also aufpassen, mit welcher Version man gerade arbeitet.
 
-**Träger**
+#### Träger {-}
 
 Da es sich bei der Exponentialverteilung häufig um gemessene (Warte-)zeiten handelt, machen natürlich nur Ergebnisse (Sekunden, Minuten, Tage, ...) im positiven Raum Sinn. Der Träger sind daher die positiven reellen Zahlen, oder \(\mathbb{R}^+\):
 
@@ -24,7 +24,7 @@ Da es sich bei der Exponentialverteilung häufig um gemessene (Warte-)zeiten han
 
 Es sind also von \(0\) bis \(\infty\) alle Wartezeiten denkbar (die sehr langen natürlich mit einer entsprechend winzigen Wahrscheinlichkeit).
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte der Exponentialverteilung ist nur für positive \(x\) größer als null, und lautet dann
 
@@ -42,7 +42,7 @@ Abbildung \@ref(fig:verteilungen-exponentialverteilung-dichte) zeigt eine beispi
 knitr::include_graphics("img/verteilungen-exponentialverteilung-dichte.png")
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Die Verteilungsfunktion der Exponentialverteilung lautet im Bereich der positiven \(x\):
 
@@ -58,7 +58,7 @@ Auch hier kann man sich mathematisch exakter, aber auf den ersten Blick etwas un
 knitr::include_graphics("img/verteilungen-exponentialverteilung-verteilungsfunktion.png")
 ```
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert bei der Exponentialverteilung ist
 
@@ -107,7 +107,7 @@ Die Stammfunktion im linken Teil der großen Klammer ist nun null, denn: \(\exp(
 
 Puh! Fertig. So beweisen wir also, dass der Erwartungswert bei der Exponentialverteilung gleich \(\frac{1}{\lambda}\) ist.
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz einer exponentialverteilten Zufallsvariable ist
 

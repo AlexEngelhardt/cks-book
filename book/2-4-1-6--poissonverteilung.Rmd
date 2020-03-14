@@ -1,12 +1,12 @@
 ### Poissonverteilung: Anzahl an Toren pro Fußballspiel
 
-**Idee**
+#### Idee {-}
 
 Die Poissonverteilung ist eine diskrete Verteilung, mit der man die Anzahl von Ereignissen in einem gegebenen Zeitintervall modellieren kann. Ein schönes Beispiel ist die Anzahl von Toren, die Verein \(A\) innerhalb eines Fußballspiels schießt. Andere Anwendungen sind etwa die Anzahl an Bankkunden, die innerhalb eines Tages am Schalter ankommen, oder die Anzahl an Schadensfällen, die in einem Monat bei einer Versicherung eingehen.
 
 Man zählt in jedem dieser Fälle die Anzahl der Ereignisse, die in einem fest vorgegebenen Zeitintervall eintreten, und möchte die Wahrscheinlichkeiten modellieren, mit der \(x\) Ereignisse in diesem Zeitraum auftreten.
 
-**Parameter**
+#### Parameter {-}
 
 Die Poissonverteilung hat nur einen Parameter, nämlich \(\lambda\). Er bezeichnet die durchschnittlich zu erwartende Anzahl an Ereignissen (also den Erwartungswert, s. Kap. \@ref(sec-duevdz-erwartungswert)). Eine poissonverteilte Zufallsvariable \(X\) bezeichnet man dann durch
 
@@ -14,13 +14,13 @@ Die Poissonverteilung hat nur einen Parameter, nämlich \(\lambda\). Er bezeichn
 
 Man könnte nun zum Beispiel für 100 Fußballspiele vom Verein \(A\) die Anzahl seiner geschossenen Tore notieren, und deren Mittelwert ausrechnen. Wenn der Mittelwert 1.2 Tore sind, dann wäre in diesem Fall \(X \sim \text{Po}(1.2)\).
 
-**Träger**
+#### Träger {-}
 
 Bei einem Poisson-Experiment können zwischen null und unendlich viele Ereignisse eintreten. Im Beispiel mit dem Fußballspiel sind theoretisch unbegrenzt viele Tore möglich. Der Träger einer poissonverteilten Zufallsvariable ist also
 
 \[ \mathcal{T}(X) = \{ 0, 1, 2, \ldots \} \]
 
-**Dichte**
+#### Dichte {-}
 
 Die Wahrscheinlichkeit, dass bei einer poissonverteilten Zufallsvariable mit dem Parameter \(\lambda\) genau \(x\) Ereignisse auftreten, berechnet man über die Dichte zu
 
@@ -49,7 +49,7 @@ Deine Gewinnwahrscheinlichkeit ist die Summe aller einzelnen Wahrscheinlichkeite
 Da wir mit einer Wahrscheinlichkeit von etwa 63,9% gewinnen, sollten wir diese Wette also annehmen. Obwohl das Ereignis mit der höchsten einzelnen Wahrscheinlichkeit ein Tor ist, so ist es doch wahrscheinlicher, dass irgendein anderes Ergebnis eintritt.
 ```
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Für die Verteilungsfunktion gibt es keine bequeme Formel. Man muss für \(F(x) = \mathbb{P}(X \leq x)\) die einzelnen Werte der Dichtefunktion von 0 bis \(x\) aufsummieren:
 
@@ -65,13 +65,13 @@ Die Wahrscheinlichkeit dass unser Verein höchstens zwei Tore schießt, berechne
 knitr::include_graphics("img/verteilungen-poissonverteilung-verteilungsfunktion.png")
 ```
 
-**Erwartungswert und Varianz**
+#### Erwartungswert und Varianz {-}
 
 Der Parameter \(\lambda\) einer poissonverteilten Zufallsvariable ist zugleich Erwartungswert und Varianz dieser Verteilung:
 
 \[ \begin{aligned} \mathbb{E}(X)&=\lambda \\ \mathbb{V}(X)&=\lambda \end{aligned} \]
 
-**Eigenschaften**
+#### Eigenschaften {-}
 
 Die folgenden Regeln sind hilfreich für kompliziertere Aufgaben mit der Poissonverteilung.
 

@@ -53,7 +53,7 @@ Ab jetzt können wir also den Einstichproben-t-Test durchführen, und brauchen h
 
 Damit können wir direkt in Schritt 5 der Abfolge beim Hypothesentest einsteigen, dem Berechnen der Prüfgröße. Dieser und alle weiteren Schritte kann man nun genauso durchführen wie im Kapitel \@ref(sec-einstichproben-t-test) zum Einstichproben-t-Test erklärt.
 
-**Ergebnis**
+#### Ergebnis {-}
 
 Wer diese Aufgabe selbst zuende rechnen und nachprüfen möchte, für den fasse ich hier die Ergebnisse kurz zusammen. Das Vorgehen ist wie gesagt in Kapitel \@ref(sec-einstichproben-t-test) detailliert beschrieben.
 
@@ -61,15 +61,15 @@ Wer diese Aufgabe selbst zuende rechnen und nachprüfen möchte, für den fasse 
 - Standardabweichung: \(s = 4.531\)
 - Stichprobengröße: \(n = 9\)
 
-**Schritt 5: Prüfgröße berechnen**
+#### Schritt 5: Prüfgröße berechnen {-}
 
 \[T = \sqrt{n} \cdot \frac{\bar{x} \, - \, \mu_0}{s} = \sqrt{9} \cdot \frac{-4.444 \, - \, 0}{4.531} = -2.942 \]
 
-**Schritt 6: Verteilung der Prüfgröße bestimmen**
+#### Schritt 6: Verteilung der Prüfgröße bestimmen {-}
 
 \[T \sim t(8) \]
 
-**Schritt 7: Kritischen Bereich (oder p-Wert) berechnen**
+#### Schritt 7: Kritischen Bereich (oder p-Wert) berechnen {-}
 
 Vorsicht: In dieser Aufgabe ist das Signifikanzniveau \(\alpha\) nicht 0.05, wie es normalerweise ist, sondern 0.1.
 
@@ -79,6 +79,6 @@ Für die kritische Schranke brauchen wir das 10%-Quantil der t-Verteilung mit 8 
 
 Der kritische Bereich, in dem wir die Nullhypothese ablehnen, sind also alle Werte für \(T\), die kleiner als -1,397 sind.
 
-**Schritt 8: Testentscheidung treffen**
+#### Schritt 8: Testentscheidung treffen {-}
 
 Hier ist \(T=-2.942\), und der kritische Bereich ist alles was kleiner als -1,397 ist. Daher liegt die Prüfgröße im kritischen Bereich, und somit können wir die Nullhypothese bei dieser Untersuchung ablehnen.

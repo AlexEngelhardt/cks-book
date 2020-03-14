@@ -20,7 +20,7 @@ Wir haben also eine gewisse Unsicherheit in der Schätzung. Die Regressionsgerad
 
 Ein *Konfidenzintervall* kann diese Unsicherheit nun in Zahlen ausdrücken.
 
-**Was sind Konfidenzintervalle?**
+#### Was sind Konfidenzintervalle? {-}
 
 Für eine allgemeine Einführung, was ein Konfidenzintervall (abgekürzt: ein **KI**) ist, empfehle ich, erstmal Kapitel \@ref(sec-was-ki) zu lesen und zu verstehen. Um KIs bei der Regression zu verstehen, hilft es enorm, erstmal die einfachere Variante der KIs für Schätzer zu verstehen. Denn die Regression ist im Grunde genommen einfach nur eine Art der Parameterschätzung (s. Kap. \@ref(sec-wat-parameter)): In der einfachen linearen Regression suchen wir die Parameter \(a\) und \(b\), und sie werden genauso geschätzt wie ein einfacher Verteilungsparameter: Durch eine Schätzfunktion, die die Daten aus einer erhobenen Stichprobe auf eine passende Art zusammenfasst. Das Ergebnis ist dann ein *Punktschätzer*, und die kennen wir ja auch schon aus dem Bereich der Parameterschätzer.
 
@@ -32,7 +32,7 @@ Wenn wir eine Regression berechnen, dann gehen wir davon aus, dass es ein *wahre
 
 Wir haben als Daten nicht die komplette Grundgesamtheit verfügbar, sondern nur eine kleine Stichprobe. Daher werden die Parameter, die wir *schätzen*, quasi niemals die wahren Parameter sein, sondern nur irgendwo in der Nähe liegen - vielleicht schätzen wir z.B. \(\hat{a} = 3.0\) und \(\hat{b} = 1.63\). Das ist die beste Schätzung die wir mit der Stichprobe machen können, denn die wahren Werte kennen wir ja nicht. Wir werden immer eine gewisse *Unsicherheit* bei der Schätzung dabei haben. Aber: je mehr Daten uns zur Verfügung stehen, also je größer unsere Stichprobe ist, desto sicherer sind wir uns mit dem Ergebnis, d.h. desto kleiner ist unsere Unsicherheit bei der Schätzung. Das zeigt sich dann in einem engeren Konfidenzintervall.
 
-**Wie werden Konfidenzintervalle interpretiert?**
+#### Wie werden Konfidenzintervalle interpretiert? {-}
 
 Ein KI für einen Regressionsparameter, nehmen wir zum Beispiel einfach die Steigung \(b\), wird genauso interpretiert wie ein KI für z.B. den Mittelwert von normalverteilten Daten. Wie das geht, kann man in Kapitel \@ref(sec-was-ki) nachlesen.
 
@@ -40,7 +40,7 @@ Das Konfidenzintervall für einen Regressionsparameter, z.B. \(a\) oder \(b\), s
 
 Man schreibt das KI dann entweder als Intervall, in der Schreibweise \([1.57, \, 1.69]\), oder in der Schreibweise "Schätzer plus/minus Abstand", also z.B. \(1.63 \pm 0.06\). Die beiden Schreibweisen beschreiben aber dasselbe Intervall.
 
-**Wie werden Konfidenzintervalle berechnet?**
+#### Wie werden Konfidenzintervalle berechnet? {-}
 
 Auch beim Berechnen von KIs hilft es, sich noch einmal das Vorgehen für KIs bei Verteilungsparametern durchzulesen (s. Kap. \@ref(sec-was-ki)). Denn ein KI für einen Regressionsparameter berechnet man genau auf die selbe Weise. Wir brauchen dazu:
 

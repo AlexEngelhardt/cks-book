@@ -1,6 +1,6 @@
 ### Hypergeometrische Verteilung
 
-**Idee**
+#### Idee {-}
 
 Während die Binomialverteilung (s. Kap. \@ref(sec-binomialverteilung)) für Experimente mit gleichbleibender Wahrscheinlichkeit für "Erfolg" verwendet wird, wendet man die hypergeometrische Verteilung dann an, wenn sich die Grundgesamtheit im Laufe des Experiments verändert. Anders ausgedrückt: Mit der Binomialverteilung beschreibt man Experimente *mit Zurücklegen*, und mit der hypergeometrischen Verteilung Experimente *ohne Zurücklegen*.
 
@@ -8,7 +8,7 @@ Habe ich also einen Beutel mit 10 roten und 5 weißen Kugeln, und nehme viermal 
 
 Möchte man stattdessen die Kugeln nicht zurücklegen, verwendet man die hypergeometrische Verteilung. Das Experiment, das man mit ihr modellieren kann, sieht also zum Beispiel wie folgt aus: Man hat einen Beutel mit 15 Kugeln, wovon 5 Kugeln weiß sind. Man nimmt nun nacheinander vier Kugeln aus dem Beutel, *ohne sie danach zurückzulegen*. Nun kann ich mit Hilfe der hypergeometrischen Verteilung ausrechnen, mit welcher Wahrscheinlichkeit ich keine, eine, zwei, drei, oder vier weiße Kugeln in meiner Stichprobe erhalte.
 
-**Parameter**
+#### Parameter {-}
 
 Für die hypergeometrische Verteilung ist es nun im Gegensatz zur Binomialverteilung wichtig, wieviele Kugeln jeder Sorte im Beutel liegen. Daher hat diese Verteilung drei Parameter:
 
@@ -20,13 +20,13 @@ Wenn wir unser Beispiel mit der Zufallsvariablen \(X\) beschreiben, sieht die hy
 
 \[ X \sim \text{HG}(15, 5, 4) \]
 
-**Träger**
+#### Träger {-}
 
 Die hypergeometrische Verteilung hat denselben Träger wie die Binomialverteilung: Wenn man \(n=4\) Kugeln zieht, sind 0 bis 4 Erfolge möglich. Allgemein ist also
 
 \[ \mathcal{T} = \{ 0, 1, \ldots, n \} \]
 
-**Dichte**
+#### Dichte {-}
 
 Die Dichte einer hypergeometrisch verteilten Zufallsvariable \(X\) lautet
 
@@ -44,7 +44,7 @@ knitr::include_graphics("img/verteilungen-hypergeometrische-verteilung-dichte.pn
 
 Beachte hier, dass die Werte \(N\), \(M\) und \(n\) das Experiment beschreiben, und dann (gegeben einem Experiment) nicht mehr verändert werden. Die Variable \(x\) hingegen kann alle möglichen Ausgänge des Experiments annehmen, hier also alles von 0 bis 4.
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Für die Verteilungsfunktion gibt es hier, wie bei der Binomialverteilung, keine kürzere Formel, sondern man summiert einfach die Dichte über alle möglichen Ausprägungen aus:
 
@@ -64,13 +64,13 @@ Einen Trick gibt es allerdings in den Fällen, in denen man viele einzelne Wahrs
 
 \[F(3) = \mathbb{P}(X \leq 3) = 1-\mathbb{P}(X=4) = 1-0.004 = 0.996\]
 
-**Erwartungswert**
+#### Erwartungswert {-}
 
 Der Erwartungswert ist, analog zur Binomialverteilung, einfach \(n\)-mal der anfängliche Anteil an Treffern, also \(M/N\). Es ist daher
 
 \[ \mathbb{E}(X) = n \cdot \frac{M}{N} \]
 
-**Varianz**
+#### Varianz {-}
 
 Die Varianz berechnet man durch
 

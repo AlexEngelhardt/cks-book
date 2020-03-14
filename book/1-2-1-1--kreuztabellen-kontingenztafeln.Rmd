@@ -2,7 +2,7 @@
 
 Kreuztabellen sind [Häufigkeitstabellen](#sec-haeufigkeitstabellen) für zwei Merkmale. Sie sind also dazu da, die *gemeinsame Verteilung* von zwei Merkmalen zu visualisieren.
 
-**Kreuztabellen für absolute Häufigkeiten**
+#### Kreuztabellen für absolute Häufigkeiten {-}
 
 Die einfachste Tabelle besteht aus absoluten Häufigkeiten, also einfach der Anzahl an untersuchten Einheiten in jeder Gruppe. Befragt man zum Beispiel 200 Personen nach ihrem Geschlecht und der letzten gewählten Partei, könnte sich eine Tabelle wie folgt ergeben:
 
@@ -48,7 +48,7 @@ Als kleine Verständniskontrolle kann man sich überlegen, wofür die folgenden 
 
 ```
 
-**Kreuztabellen für relative Häufigkeiten**
+#### Kreuztabellen für relative Häufigkeiten {-}
 
 Eine Tabelle für absolute Häufigkeiten wandelt man ganz einfach in eine Tabelle relativer Häufigkeiten um: Man dividiert jede Zelle (egal ob es eine Datenzelle oder eine Randhäufigkeit ist) durch \(n\), und ist fertig. Hier ist unsere Beispieltabelle von oben in relativen Häufigkeiten, indem wir jede Zelle durch 200 teilen:
 

@@ -1,10 +1,10 @@
 ### \(\chi^2\)-Verteilung {#sec-chisq-verteilung}
 
-**Idee**
+#### Idee {-}
 
 Die \(\chi^2\)-Verteilung wird eigentlich nur für einige Hypothesentests verwendet, insbesondere für den Unabhängigkeitstest für Kontingenztabellen. In der "freien Wildbahn", also zum Modellieren irgendwelcher erhobenen Daten, trifft man sie quasi nie an. Aus diesem Grund sind viele Details dieser Verteilung (Erwartungswert, Dichte, und Varianz) eher unwichtig - nur die Verteilungsfunktion ist interessant, da mit ihr das 95%-Quantil (die wichtige kritische Schranke für Hypothesentests) bestimmt werden kann.
 
-**Parameter**
+#### Parameter {-}
 
 Die \(\chi^2\)-Verteilung hat einen Parameter, nämlich die Anzahl der Freiheitsgrade, \(df\). Man notiert eine \(\chi^2\)-verteilte Zufallsvariable \(X\) mit \(df\) Freiheitsgraden als
 
@@ -18,15 +18,15 @@ Abbildung \@ref(fig:verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion
 knitr::include_graphics("img/verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion.png")
 ```
 
-**Träger**
+#### Träger {-}
 
 Der Träger der \(\chi^2\)-Verteilung ist \(\mathbb{R}^+\), die positiven reellen Zahlen.
 
-**Erwartungswert, Varianz und Dichte**
+#### Erwartungswert, Varianz und Dichte {-}
 
 Da mit der \(\chi^2\)-Verteilung eigentlich nie Daten modelliert werden, braucht man eigentlich weder die Dichte, noch den Erwartungswert oder die Varianz kennen. Der Vollständigkeit halber sei sie hier trotzdem genannt: Der Erwartungswert für eine \(\chi^2\)-verteilte Zufallsvariable \(X\) mit \(df\) Freiheitsgraden ist \(\mathbb{E}(X) = df\), und ihre Varianz ist \(\mathbb{V}(X)= 2\cdot df\).
 
-**Verteilungsfunktion**
+#### Verteilungsfunktion {-}
 
 Wie oben schon erwähnt, ist für die \(\chi^2\)-Verteilung eigentlich nur die Verteilungsfunktion, und dort auch meistens nur das 95%-Quantil als Spezialfall, interessant.
 

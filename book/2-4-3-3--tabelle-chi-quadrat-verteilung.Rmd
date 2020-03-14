@@ -11,7 +11,7 @@ knitr::include_graphics("img/verteilungen-chisq-verteilung-verteilungstabelle.pn
 ```
 
 
-**Die Tabelle der \(\chi^2\)-Verteilung**
+#### Die Tabelle der \(\chi^2\)-Verteilung {-}
 
 Tabelle \@ref(tab:table-chisq-verteilung) zeigt die Verteilungstabelle der \(\chi^2\)-Verteilung.
 

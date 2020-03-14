@@ -50,7 +50,7 @@ Außerdem können wir die Wahrscheinlichkeit notieren, dass der Würfel eine "1"
 
 \[ \mathbb{P}(Y=1) = f_Y(1) = \frac{1}{6} \]
 
-**Rechenregeln für Dichten von unabhängigen Zufallsvariablen**
+#### Rechenregeln für Dichten von unabhängigen Zufallsvariablen {-}
 
 Im Falle von unabhängigen Experimenten (so wie der Münze und dem Würfel oben) können wir nun **gemeinsame Wahrscheinlichkeiten** ganz einfach berechen: Möchten wir etwa wissen, wie hoch die Wahrscheinlichkeit ist, dass wir zuerst "Kopf" werfen, und danach eine "3" würfeln (das heisst, wir möchten \(f(0,3)\) berechnen), können wir die beiden einzelnen Dichten einfach multiplizieren:
 

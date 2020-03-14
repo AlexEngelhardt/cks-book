@@ -12,6 +12,7 @@ Wir packen einen Block und einen Bleistift ein, und machen uns auf den Weg zum C
 
 Nach einem anstrengenden Tag zählen wir die Daten aus. 20 unserer 80 befragten Studenten - also ein Viertel - sind im ersten Semester. Die restlichen Antworten sind in der folgenden Tabelle zusammengefasst. Die Spalte \(h_i\) zeigt die absolute Anzahl an Antworten für jede Semesterzahl (von 1 bis 7). In der Spalte \(f_i\) ist die relative Häufigkeit, also die Spalte \(h_i\) geteilt durch \(n=80\). In der letzten Spalte ist die kumulierte Häufigkeit \(F_i\), hier werden die Elemente der Spalte \(f_i\) schrittweise aufsummiert.
 
+
 | Semester \(i\) | \(h_i\) | \(f_i\) | \(F_i\) |
 | -------------- | ------- | ------- | ------- |
 | 1              | 20      | 0.25    | 0.25    |

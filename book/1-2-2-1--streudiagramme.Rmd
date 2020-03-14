@@ -24,7 +24,7 @@ knitr::include_graphics("img/zweivariablen-streudiagramme-3d.png")
 
 Wie gesagt, 3d-Streudiagramme sind nicht zu empfehlen, und wären auf dem Papier auch nur schwer zu zeichnen.
 
-**Zeichnen eines Streudiagramms**
+#### Zeichnen eines Streudiagramms {-}
 
 Um ein Streudiagramm zu zeichnen, benötigt man eine Reihe von *gepaarten* Messungen \(x_i\) und \(y_i\). Das können z.B. zwei Spalten, also zwei Variablen aus einem Datensatz sein, oder einfach die beiden gemessenen Merkmale in irgend einer Liste.
 

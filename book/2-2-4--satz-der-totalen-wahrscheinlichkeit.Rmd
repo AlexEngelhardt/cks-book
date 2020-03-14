@@ -49,8 +49,7 @@ Mit diesen Werten können wir nun die Gesamtwahrscheinlichkeit für eine beliebi
 Wir enden also bei einer Wahrscheinlichkeit von 0,276% für eine Person beliebigen Geschlechts, an Parkinson zu erkranken. Wichtig ist hier, dass das nicht genau der Mittelwert zwischen \(\mathbb{P}(A|B) = 0.00309\) und \(\mathbb{P}(A|\bar{B}) = 0.00241\) ist, sondern dass diese Werte mit dem Geschlechterverhältnis gewichtet werden, das zwar nahe an 50/50 liegt, aber eben nicht genau gleich ist.
 ```
 
-
-**Mehr als zwei Gruppen in \(B\)**
+#### Mehr als zwei Gruppen in \(B\) {-}
 
 Man kann die totale Wahrscheinlichkeit auch bestimmen, wenn es sich um mehr als zwei Gruppen handelt. Dann arbeitet man nicht mit den beiden Ereignissen \(B\) und \(\bar{B}\), sondern z.B. mit drei Ereignissen \(B_1\), \(B_2\), und \(B_3\). Wichtig ist hier, dass diese Gruppen *disjunkt* sind, d.h. dass sie sich nicht überschneiden. Die Folge dieser Voraussetzung ist, dass sich ihre Wahrscheinlichkeiten zu 1 summieren, dass also jedes mögliche Ereignis in eines, und genau eines der drei Unterereignisse fällt:
 

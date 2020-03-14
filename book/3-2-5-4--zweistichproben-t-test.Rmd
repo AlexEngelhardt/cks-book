@@ -1,6 +1,6 @@
 ### Zweistichproben-\(t\)-Test: Mittelwerte zweier Gruppen vergleichen {#sec-zweistichproben-t-test}
 
-**Grundlagen**
+#### Grundlagen {-}
 
 Zum Einstieg sollte man sich zu Beginn die folgenden beiden Kapitel durchlesen:
 
@@ -11,13 +11,13 @@ In ihnen beschreibe ich ganz allgemein die Schritte, mit denen man einen Hypothe
 
 Außerdem macht es Sinn, das Kapitel \@ref(sec-binomialtest) zum Binomialtest zu lesen, da ich dort noch etwas ausführlicher beschrieben habe, wie man die allgemeinen Prinzipien auf einen speziellen Test anwendet. Falls hier etwas nur kurz beschrieben wird, dann ist es im Kapitel \@ref(sec-binomialtest) zum Binomialtest evtl. ausführlicher verständlicher erklärt worden.
 
-**Der Zweistichproben-t-Test**
+#### Der Zweistichproben-t-Test {-}
 
 Der einfachste Fall eines t-Tests ist der Einstichproben-t-Test (s. Kap. \@ref(sec-einstichproben-t-test)). Allerdings ist es in der Praxis üblicher, dass man nicht nur eine, sondern zwei Gruppen hat, und deren Mittelwerte vergleichen möchte. Ein typisches Beispiel sind Messungen, die an Patienten mit einer bestimmten Krankheit vorgenommen werden, und dann "zur Kontrolle" an einer anderen Gruppe von gesunden Menschen.
 
 In diesem Fall handelt es sich um zwei unabhängige Gruppen. Unabhängig bedeutet hier, dass die Personen (oder Objekte) aus der ersten Gruppe nichts mit denen aus der zweiten Gruppe zu tun haben. Im gepaarten t-Test (s. Kap. \@ref(sec-gepaarter-t-test)) war das anders, da waren in der ersten und zweiten Gruppe dieselben Personen, nur eben vor bzw. nach einer bestimmten Behandlung.
 
-**1. Hypothesen aufstellen**
+#### 1. Hypothesen aufstellen {-}
 
 Beim t-Test gibt es, genau wie beim Binomialtest (s. Kap. \@ref(sec-binomialtest)), drei verschiedene Möglichkeiten, seine Hypothesen zu formulieren. Welche Variante man verwenden muss, hängt von der Fragestellung ab, die man untersucht. Dazu drei Beispiele:
 
@@ -40,11 +40,11 @@ Die drei verschiedenen Möglichkeiten hängen also davon ab, in welche Richtung 
 
 Für das restliche Kapitel konzentrieren wir uns auf das erste Beispiel, das mit der höheren Lebenserwartung von Nichtrauchern.
 
-**2. Test wählen**
+#### 2. Test wählen {-}
 
 Um die Abfolge der 8 Schritte nicht zu verändern, die wir in den Kapiteln \@ref(sec-wat-tests) und \@ref(sec-vorgehen-tests) aufgestellt haben, nehme ich hier den 2. Schritt auch mit auf. Es ist natürlich schon klar, dass wir einen Zweistichproben-t-Test verwenden werden.
 
-**3. Signifikanzniveau festlegen**
+#### 3. Signifikanzniveau festlegen {-}
 
 Wie in den vorherigen Kapiteln schon beschrieben, legt das Signifikanzniveau die Wahrscheinlichkeit fest, mit der man einen bestimmten Fehler macht, nämlich die fälschliche Entscheidung dass die Alternativhypothese gilt, obwohl in Wirklichkeit die Nullhypothese wahr ist.
 
@@ -52,7 +52,7 @@ Allgemeiner Konsens ist hier ein Wert von 5%, also \(\alpha=0.05\). In besonders
 
 Für unsere Beispielaufgabe nehmen wir das übliche Signifikanzniveau von \(\alpha=0.05\).
 
-**4. Daten sammeln**
+#### 4. Daten sammeln {-}
 
 In einer Klausur sind die Daten meist schon gegeben, aber in einer echten Untersuchung müssen wir sie natürlich erst sammeln. Beim Zweistichproben-t-Test brauchen wir, wie der Name schon sagt, *zwei* Stichproben. Das erreichte Lebensalter der 6 Nichtraucher sind in unserer Aufgabe die folgenden Werte:
 
@@ -62,7 +62,7 @@ Wir haben auch das Alter von 8 Rauchern erhalten:
 
 \[ R = (81, 72, 68, 71, 59, 91, 71, 70) \]
 
-**5. Prüfgröße berechnen**
+#### 5. Prüfgröße berechnen {-}
 
 Beim Zweistichproben-t-Test gibt es einige Spezialfälle, je nachdem ob die Varianz in den beiden Gruppen gleich bzw. verschieden ist, oder ob sie bekannt bzw. unbekannt ist. Ich möchte aber nicht auf alle diese Fälle eingehen, sondern nur auf den in der Praxis relevantesten: Die Varianzen der Merkmale in den zwei Gruppen sind nicht notwendigerweise gleich, und sie sind unbekannt.
 
@@ -88,7 +88,7 @@ Bei uns setzen wir also ein und erhalten:
 
 Unsere Prüfgröße T hat also den Wert 1.598.
 
-**6. Verteilung der Prüfgröße bestimmen**
+#### 6. Verteilung der Prüfgröße bestimmen {-}
 
 Falls die Nullhypothese gilt, ist die Prüfgröße t-verteilt mit \(n_x + n_y - 2\) Freiheitsgraden:
 
@@ -101,7 +101,7 @@ Bei uns ist das also eine t-Verteilung (s. Kap. \@ref(sec-t-verteilung)) mit 6+8
 *Notiz am Rande: In unterschiedlicher Literatur gibt es sowohl für den Nenner bei der Prüfgröße, als auch für die Anzahl der Freiheitsgrade hier, verschiedene Formeln. Das Thema ist etwas komplexer, aber in der Praxis vereinfacht sich das ungemein, da wir dann für die beiden Gruppen genügend Beobachtungen haben, und einen einfacheren Test verwenden können (wer es genau wissen will: Dann greift der zentrale Grenzwertsatz und wir können als Approximation die Normalverteilung statt der t-Verteilung verwenden).*  
 *In Klausuren ist es allerdings nicht machbar, Mittelwerte und Varianzen von mehr als 30 Beobachtungen zu berechnen, weswegen es in diesen Fällen dann doch immer zu diesen Formeln führt. Falls sich Formeln in euren Vorlesungen oder Formelsammlungen von den hier genannten unterscheiden, verwendet natürlich immer die Formeln die euer Professor euch vorgegeben hat. Das grundlegende Prinzip wird sich dadurch nicht ändern, dieses Kapitel ist also trotzdem sinnvoll. Nur die Zahl im Ergebnis wird ein wenig anders sein.*
 
-**7. Kritischen Bereich (oder p-Wert) berechnen**
+#### 7. Kritischen Bereich (oder p-Wert) berechnen {-}
 
 Den kritischen Bereich berechnen wir genau so wie wir es beim Einstichproben-t-Test und beim gepaarten t-Test schon gemacht haben. Eine Einführung in diese Aufgabe, und ein paar weiter verdeutlichende Beispiele gibt es in diesen beiden Kapiteln, \@ref(sec-einstichproben-t-test) und \@ref(sec-gepaarter-t-test).
 
@@ -117,7 +117,7 @@ Alle Werte, die "rechts" von dieser Schranke liegen, d.h. größer als diese Sch
 
 Die genauen Werte erhalten wir aus der Tabelle der t-Verteilung (in Kapitel \@ref(sec-tabelle-t-verteilung) ist auch genauer erklärt, wie man das macht). Die rechte Schranke ist, wie schon gesagt, das 95%-Quantil der t-Verteilung mit 12 Freiheitsgraden, und aus der Tabelle lesen wir dafür den Wert 1.782 ab. Prüfe das am besten selbst nach, es ist für eine Klausur unerlässlich, das schnell und sicher zu können.
 
-**8. Testentscheidung treffen**
+#### 8. Testentscheidung treffen {-}
 
 Für die Entscheidung haben wir jetzt alle Informationen zusammen:
 
@@ -128,6 +128,6 @@ Unsere Prüfgröße liegt also *nicht* im kritischen Bereich. Daher können wir 
 
 *Hinweis: Das bedeutet ausdrücklich nicht, dass wir bewiesen haben dass Nichtraucher nicht länger leben als Raucher. Denn wir können \(H_0\) niemals "statistisch beweisen", sondern nur \(H_1\). Diese Tatsache ist in Kapitel \@ref(sec-h0-h1) genauer erklärt.*
 
-**Änderungen bei den zwei anderen Beispielen**
+#### Änderungen bei den zwei anderen Beispielen {-}
 
 Für die übrigen zwei Beispiele aus dem 1. Schritt, wenn die Alternativhypothese entweder zweiseitig ist, oder nach links statt nach rechts zielt, verändert sich nur der kritische Bereich in Schritt 7; die Prüfgröße \(T\) wird aber auf dieselbe Weise berechnet. Die Änderungen sind identisch wie im Einstichproben-t-Test, weswegen der unterste Abschnitt in Kapitel \@ref(sec-einstichproben-t-test) hier genauso angewendet werden kann.

@@ -1,6 +1,6 @@
 ## Testen von Regressionsparametern
 
-**Testen von Einflüssen**
+#### Testen von Einflüssen {-}
 
 In den bisherigen Kapiteln haben wir uns nur mit dem *Schätzen* von den Parametern der Regression beschäftigt.
 
@@ -20,7 +20,7 @@ knitr::include_graphics("img/regression-testen-1.png")
 
 Die beiden Streudiagramme in Abbildung \@ref(fig:regression-testen-1) zeigen, dass größere Menschen tendenziell schwerer sind, d.h. der Regressionsparameter \(b\) für die Körpergröße wird wahrscheinlich größer als Null sein. Allerdings gibt es zwischen der Hausnummer und dem Gewicht einer Person (wie erwartet) keinen wirklichen Zusammenhang. Der Vorteil ist nun, dass wir diese Variable rauswerfen können, und in zukünftigen Befragungen die Leute nicht mehr nach ihrer Adresse fragen müssen. Dadurch sparen wir Zeit und evtl. auch Geld, und der kürzere Fragebogen führt vielleicht auch zu mehr Bereitschaft zur Teilnahme, und damit einer größeren Stichprobe am Ende.
 
-**Hypothesen**
+#### Hypothesen {-}
 
 Wir möchten also, wie oben beschrieben, wissen welche Einflussgrößen bzw. Parameter "wichtig" für unser Regressionsmodell sind.
 
@@ -31,7 +31,7 @@ Die Hypothesen bei einer linearen Regression sind immer gleich. Für jeden berec
 
 Wenn wir diesen Test durchführen, und als Resultat die Nullhypothese ablehnen, dann können wir sagen, dass der Parameter \(b\) "signifikant" ist. Wir meinen damit ausführlich: Der Parameter \(b\) ist signifikant von Null verschieden.
 
-**Signifikanz**
+#### Signifikanz {-}
 
 Das Signifikanzniveau, das wir festlegen müssen, gibt an wie sicher wir uns sein möchten, bevor wir die Nullhypothese bei einem Test ablehnen. Es ist genau dasselbe Prinzip wie bei den Hypothesentests in der Parameterschätzung. Punkt 3 in Kapitel \@ref(sec-vorgehen-tests) erklärt dieses Prinzip bereits gut, aber es sei hier nochmal kurz zusammengefasst:
 
@@ -39,7 +39,7 @@ Wir nennen einen Parameter *signifikant* ungleich 0, wenn es "sehr unwahrscheinl
 
 Wann etwas "sehr unwahrscheinlich" ist, muss man vohrer definieren, indem man ein *Signifikanzniveau* \(\alpha\) festlegt. Meist ist, wie bei anderen Hypothesentests auch, \(\alpha=0.05\) ein gerne genutzter Wert. Das bedeutet sinngemäß, dass wir nur in 5% der Fälle die Nullhypothese ablehnen, obwohl sie in Wirklichkeit wahr ist. Wenn man allerdings noch sicherer sein möchte, keinen Fehler zu machen, kann man z.B. auch \(\alpha=0.01\) setzen.
 
-**Hier rechnen wir mit p-Werten**
+#### Hier rechnen wir mit p-Werten {-}
 
 Wir erinnern uns, dass es zwei mögliche Arten gibt, die Entscheidung eines Tests zu berechnen: Entweder durch das Bestimmen eines kritischen Bereichs, oder durch das Berechnen eines p-Werts.
 
@@ -83,7 +83,7 @@ Jedes Statistikprogramm gibt das Ergebnis etwas anders aus, aber die wichtigsten
 
 Obwohl der Parameter für die Hausnummer einer Person nicht signifikant ist, wird er natürlich durch den Zufall bedingt niemals als genau 0 geschätzt. Es kommt immer eine gewisse Zahl dabei heraus, und die Interpretation klingt in diesem Fall tatsächlich etwas komisch: eine Person, deren *Hausnummer* um 1 höher ist, wiegt etwa 68 Gramm mehr.
 
-**Einseitige vs. zweiseitige Tests**
+#### Einseitige vs. zweiseitige Tests {-}
 
 Wie bei Hypothesentests für Verteilungsparameter, können wir uns auch hier für einseitige oder zweiseitige Tests entscheiden. Der Unterschied ist in Kapitel \@ref(sec-vorgehen-tests) gut erklärt, aber nochmal kurz die Zusammenfassung:
 
@@ -93,7 +93,7 @@ Trotzdem verwendet man eigentlich immer zweiseitige Tests. Denn dann ist man unv
 
 Natürlich kann man trotzdem einen einseitigen Test verwenden - in Klausuren wird das auch gerne mal verlangt - aber in der Praxis muss man die Wahl dann schon gut begründen können.
 
-**Der absolute Wert des Parameters sagt wenig aus**
+#### Der absolute Wert des Parameters sagt wenig aus {-}
 
 Es ist noch wichtig zu erwähnen, dass man die "Wichtigkeit" eines Parameters nicht an seinem absoluten Wert ablesen kann. Wenn man also einen Koeffizienten von \(b = 0.5158\) hat, weiß man noch lange nicht ob er wichtig, d.h. signifikant oder nicht ist.
 

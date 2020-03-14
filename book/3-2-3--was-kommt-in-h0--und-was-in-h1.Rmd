@@ -2,7 +2,7 @@
 
 Beim Testen muss man zuallererst die beiden Hypothesen aufstellen. Hier tun sich viele Studenten schwer - auch ich hatte damals Probleme - daher möchte ich hier nochmal genauer erläutern, welcher Teil in welche Hypothese kommt.
 
-**Das Wichtigste: Man kann \(H_0\) nie beweisen!**
+#### Das Wichtigste: Man kann \(H_0\) nie beweisen! {-}
 
 Es ist nicht das gleiche, \(H_0\) beizubehalten, und \(H_0\) zu beweisen. Um zurück auf das Beispiel mit dem unschuldigen Angeklagten (aus Kapitel \@ref(sec-wat-tests)) zu kommen:
 
@@ -18,7 +18,7 @@ Wenn ich nun "Daten erhebe", also in der Verhandlung Beweise gesammelt werden, d
 
 Man kann also \(H_0\) nie beweisen, sondern nur \(H_1\). Aus diesem Grund ist es so wichtig, dass man die Hypothesen richtig herum formuliert: Der Fall, den man nachweisen möchte, kommt in die Alternativhypothese. Die Metapher mit der Gerichtsverhandlung ist eine hilfreiche Eselsbrücke, um sich an dieses Vorgehen zu erinnern.
 
-**Ein Beispiel**
+#### Ein Beispiel {-}
 
 Zwei Führungskräfte streiten sich: Kevin behauptet dass die Mitarbeiter ihrer Firma im Durchschnitt weniger als 6 Tage im Jahr krank sind, aber Falk ist davon überzeugt, dass sie mindestens 6 Tage im Jahr krank sind.
 

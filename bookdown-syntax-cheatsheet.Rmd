@@ -19,3 +19,26 @@ Referenziere Abb. \@ref(fig:mediandots)
 ```{r mediandots, fig.cap="(ref:mediandots-caption)"}
 knitr::include_graphics("img/median.png")
 ```
+
+## Tabellen
+
+Markdown-Tabellen können auch in ein float-environment gepackt werden. Mit kable() passiert das automatisch, in reinem Markdown muss eine besondere Zeile vor die Tabelle geschrieben werden.
+
+Aber: Das ändert nichts daran, dass sie immer noch von pandoc in ein longtable-environment geschrieben werden.
+
+Falsch: Die folgende Tabelle:
+
+| Person \(i\) | Alter \(x_i\) |
+| ------------ | ------------- |
+| \(i=1\)      | 87            |
+| \(i=2\)      | 134           |
+
+Richtig: Tabelle \@ref(tab:herpderp)
+
+Table: (#tab:herpderp) Die caption kommt hier hin
+
+| Person \(i\) | Alter \(x_i\) |
+| ------------ | ------------- |
+| \(i=1\)      | 87            |
+| \(i=2\)      | 134           |
+

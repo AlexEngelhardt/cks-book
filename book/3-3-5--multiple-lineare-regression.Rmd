@@ -4,7 +4,7 @@ In den bisherigen Kapiteln zur Regression ging es nur um die *einfache* lineare 
 
 Das Wort "multipel" bedeutet, dass wir nun nicht mehr eine, sondern mehrere Einflussgrößen haben. Wichtig: es gibt *mehrere Einflussgrößen*. Die Anzahl der *Zielgrößen* verändert sich nicht, es ist immer noch nur eine Zielgröße.
 
-**Beispiel**
+#### Beispiel {-}
 
 Wir können uns das Beispiel aus den Kapiteln \@ref(sec-regression-einfuehrung) und \@ref(sec-regression-einfache) zur einfachen linearen Regression ansehen, und es etwas weiterführen. Dort haben wir versucht, mit Hilfe der Regression die Ringgröße \(y\) einer Freundin zu schätzen, gegeben man kennt ihre Körpergröße \(x\).
 
@@ -36,7 +36,7 @@ Mit der multiplen Regression kann ich nun Werte für die Parameter \(a\), \(b_1\
 
 Anmerkung: Genauso wie in der einfachen linearen Regression können die Parameter in anderen Büchern/Skripten anders benannt sein (z.B. \(\beta_0\), \(\beta_1\) usw.). Sie bedeuten aber genau dasselbe.
 
-**Schätzung der Parameter**
+#### Schätzung der Parameter {-}
 
 Die Parameterschätzung ist etwas aufwändiger, und von Hand praktisch nicht mehr durchführbar. Grob gesagt werden die drei Einflussgrößen \(x_1\), \(x_2\) und \(x_3\), die man ja als Vektoren ansehen kann, spaltenweise in eine Matrix \(X\) zusammengefasst. Mit Hilfe dieser Matrix und dem Vektor aller Zielgrößen \(y\) kann man dann den Vektor der Parameter (nennen wir ihn mal \(b\)) schätzen:
 
@@ -46,7 +46,7 @@ Das wird, wie gesagt, etwas komplizierter, und ist auch mit dem Taschenrechner n
 
 Was aber durchaus Klausurstoff sein kann, ist die Interpretation der Parameter und die Vorhersage mit bereits gegebenen Parametern. Das schauen wir uns jetzt noch genauer an.
 
-**Interpretation der Parameter**
+#### Interpretation der Parameter {-}
 
 Wie gesagt, die Berechnung bei der *multiplen* Regression ist zu kompliziert für Papier und Taschenrechner, daher lasse ich die Herleitung hier weg. Aber mit den Daten aus der obigen Tabelle erhalten wir per Computer gerundet die folgenden Parameter:
 
@@ -75,7 +75,7 @@ Da nur die ersten beiden \(p\)-Werte kleiner als 0.05 sind, können wir hier sch
 
 (Das Berechnen der \(p\)-Werte ist wieder etwas komplizierter, und in einer Klausur wohl nicht gefragt werden, und wird daher hier übersprungen. Falls das jemand genauer wissen will, verweise ich wieder auf die Standardliteratur zur Regression.)
 
-**Vorhersage bei der multiplen linearen Regression**
+#### Vorhersage bei der multiplen linearen Regression {-}
 
 Bei der multiplen linearen Regression läuft die Vorhersage genauso ab wie bei der einfachen Regression, nur eben mit mehreren Einflussgrößen. Unsere Regressionsgleichung lautet:
 
