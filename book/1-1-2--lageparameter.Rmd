@@ -78,7 +78,7 @@ Die zweiteilige Definition ist deswegen notwendig, weil wir bei einer ungeraden 
 
 (ref:mediandots-caption) Der Median einer Datenreihe mit einer ungeraden bzw. geraden Anzahl von Elementen. Bei einer ungeraden Anzahl gibt es ein "mittleres" Element, nämlich das \(\frac{n+1}{2}\)-te Element \(x_{(\frac{n+1}{2})}\). Bei einer geraden Anzahl bildet man den Mittelwert zwischen den zwei Elementen in der Mitte, dem \(\frac{n}{2}\)-ten und dem \((\frac{n}{2}+1)\)-ten Element: \(\frac{1}{2}(x_{(\frac{n}{2})}+x_{(\frac{n}{2}+1)})\)
 
-```{r mediandots, out.width="50%", fig.cap="(ref:mediandots-caption)"}
+```{r mediandots, out.width="75%", fig.cap="(ref:mediandots-caption)"}
 mediandots <- function(x, titlestring=NULL){
   plot.new()
   plot.window(xlim=range(x), ylim=c(1, 1.12))

@@ -4,7 +4,7 @@ Streudiagramme (oft auch Scatterplots genannt) sind gleichzeitig eine der einfac
 
 Ein Beispiel ist der Datensatz von Abbildung \@ref(fig:zweivariablen-streudiagramm-bsp), in dem bei einer Reihe von Autos Vollbremsungen durchgeführt wurden, und die Ausgangsgeschwindigkeit (\(x\)-Achse) und der resultierende Bremsweg (\(y\)-Achse) gemessen wurde.
 
-```{r zweivariablen-streudiagramm-bsp, fig.cap="Ein Streudiagramm von Bremsweg vs. Geschwindigkeit."}
+```{r zweivariablen-streudiagramm-bsp, out.width="75%", fig.cap="Ein Streudiagramm von Bremsweg vs. Geschwindigkeit."}
 cars[3,2] <- 110
 cars %>%
     filter(speed<17 | speed>20) %>%
@@ -43,7 +43,7 @@ Als beispielhafte Daten schauen wir uns die Messungen \(x_i\) = Alter eines Kind
 
 Das erste Kind erhält nun einen Punkt der auf der \(x\)-Achse den Wert 3 hat, und auf der \(y\)-Achse den Wert 22. Genauso wird mit den übrigen drei Kindern verfahren. Abbildung \@ref(fig:zweivariablen-streudiagramme-2d) zeigt das Streudiagramm für die 4 Kinder.
 
-```{r zweivariablen-streudiagramme-2d, fig.cap="Ein 2d-Streudiagramm."}
+```{r zweivariablen-streudiagramme-2d, out.width="75%", fig.cap="Ein 2d-Streudiagramm."}
 x <- c(3, 5, 3, 6)
 y <- c(22, 26, 23, 25)
 plot(x,y, xlab="Alter", ylab="Schuhgröße", xlim=c(1, 8), ylim=c(20, 30), main="Schuhgröße vs. Alter eines Kindes")

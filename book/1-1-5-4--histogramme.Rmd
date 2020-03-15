@@ -99,7 +99,7 @@ if(knitr::is_html_output()){
 
 Das zugehörige Histogramm ist in Abbildung \@ref(fig:histogramm-variabel) dargestellt.
 
-```{r histogramm-variabel, fig.height=4, fig.cap='Ein Histogramm für verschieden breite Klassen.'}
+```{r histogramm-variabel, out.width="75%", fig.height=4, fig.cap='Ein Histogramm für verschieden breite Klassen.'}
 hist(x, right=FALSE, breaks=c(140, 160, 165, 190, 200), main="Histogramm der Körpergröße von 20 Personen", col=3, ylab="Dichte", xlab="Körpergröße in cm")
 ```
 

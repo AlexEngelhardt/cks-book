@@ -33,7 +33,7 @@ Hier ist dann natürlich zwingend, dass die Verteilungsfunktion immer bei 0 begi
 
 Übrigens kann man an der Verteilungsfunktion auch die Quantile ablesen, indem man den Graphen "andersrum" liest. Sucht man sich auf der \(y\)-Achse ein gewünschtes Quantil, z.B. das 70%-Quantil, geht man von dort auf einer Horizontalen nach rechts, bis man die Verteilungsfunktion schneidet. Der zugehörige \(x\)-Wert (in diesem Fall 5) ist das Semester, das 70% der Studenten nicht überschreiten (also das 70%-Quantil, oder \(x_{0.7}\)).
 
-Für den Fall, dass man ein \(p\)-Quantil bestimmen will, und \(np\) gerade ist (vgl. Kapitel \@ref(sec-quantile)), landet man in der Verteilungsfunktion direkt auf einer "Stufe" der Treppe. In dem Fall kann das Quantil theoretisch jeder Wert dieser Stufe sein, wir nehmen aber meist den Mittelwert der beiden "Grenzen". Schauen wir uns die Verteilungsfunktion für die folgenden Daten an:
+Für den Fall, dass man ein \(p\)-Quantil bestimmen will, und \(np\) gerade ist (vgl. Kapitel \@ref(sec-quantile)), landet man in der Verteilungsfunktion direkt auf einer "Stufe" der Treppe. In dem Fall kann das Quantil theoretisch jeder Wert dieser Stufe sein, wir nehmen aber meist den Mittelwert der beiden "Grenzen". Schauen wir uns die Verteilungsfunktion für die folgenden Daten an (s. Abb. \@ref(fig:verteilungsfunktion-beispiel)).
 
 | Person | Ausprägung |
 | ------ | ---------- |

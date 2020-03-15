@@ -10,7 +10,7 @@ In manchen Fällen kann man die Daten genau in zwei Anteile \(p\) und \(1-p\) au
 
 (ref:quantiles-caption) Bestimmung eines 20%-Quantils für die beiden Spezialfälle: Oben ist \(n\cdot p\) ganzzahlig (\(n=5\) Beobachtungen und \(p=0.2\), und das Quantil liegt theoretisch "irgendwo" zwischen dem ersten und zweiten Punkt. In der Praxis wird meist der Mittelwert zwischen den beiden Punkten genommen. Im unteren Bild ist \(n\cdot p\), also \(6\cdot 0.2\), nicht ganzzahlig, und das Quantil fällt genau auf den zweiten Wert.
 
-```{r quantiles, out.width="50%", fig.cap="(ref:quantiles-caption)"}
+```{r quantiles, out.width="75%", fig.cap="(ref:quantiles-caption)"}
 quantiledots <- function(x, titlestring=NULL, q=0.2){
 qx <- quantile(x, probs=q)
 

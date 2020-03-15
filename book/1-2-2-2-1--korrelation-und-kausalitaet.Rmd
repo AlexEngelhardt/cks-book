@@ -4,7 +4,7 @@ Zwischen einem reinem Zusammenhang, d.h. einer Korrelation (s. Kap. \@ref(sec-pe
 
 Sehen wir uns eine Grafik dazu an. Wir befragen \(n=30\) Personen zu ihrer Schuhgröße und ihrem monatlichem Einkommen. Abbildung \@ref(fig:zweivariablen-kausalitaet) zeigt das Streudiagramm mit den Ergebnissen.
 
-```{r zweivariablen-kausalitaet, fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
+```{r zweivariablen-kausalitaet, out.width="75%", fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
 set.seed(20140921)
 
 n <- 30
@@ -40,7 +40,7 @@ Was allerdings hier wahr ist: Wenn man zwei Menschen mit unbekanntem Einkommen a
 
 Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt 22% weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Das hat ein paar erklärbare Gründe, wie z.B. die Tendenz, dass Frauen häufiger Teilzeitjobs oder schlechter bezahlte Berufe annehmen, und ihnen eine steile Karriere nicht so wichtig ist wie z.B. geistige Gesundheit. Aber der Effekt auf das Einkommen ist trotzdem da. Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
 
-```{r zweivariablen-kausalitaet-getrennt, fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
+```{r zweivariablen-kausalitaet-getrennt, out.width="75%", fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
 plot(shoesize, income, col=geschlecht+1, pch=geschlecht+15, main="Einkommen vs. Schuhgrösse, nach Geschlecht getrennt", xlab="Schuhgrösse", ylab="Einkommen")
 legend("topleft", legend=c("Männer", "Frauen"), col=c(2,1), pch=c(16, 15))
 abline(lm(income[male] ~ shoesize[male]), col=2)
@@ -55,7 +55,7 @@ Das klingt nun vielleicht alles etwas realitätsfern, weil mein Beispiel sehr of
 
 Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064) (Franz H. Messerli: *Chocolate Consumption, Cognitive Function, and Nobel Laureates*), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz (s. Abb. \@ref(fig:chocolate-nobel)).
 
-```{r chocolate-nobel, fig.cap="Quelle: Messerli, Franz H. (2012). Chocolate Consumption, Cognitive Function, and Nobel Laureates. New England Journal of Medicine, 367:16, 1562-1564."}
+```{r chocolate-nobel, out.width="75%", fig.cap="Quelle: Messerli, Franz H. (2012). Chocolate Consumption, Cognitive Function, and Nobel Laureates. New England Journal of Medicine, 367:16, 1562-1564."}
 knitr::include_graphics("img/pictures/chocolate_nobel.jpg")
 ```
 

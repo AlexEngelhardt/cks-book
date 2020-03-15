@@ -26,7 +26,7 @@ Für gemessene Daten \(x_1, x_2, \ldots, x_n\):
 Die **Spannweite** einer Datenreihe ist definiert als der Abstand zwischen dem
 Maximum und dem Minimum dieser Daten (s. Abb. \@ref(fig:spannweite))
 
-```{r spannweite, fig.height=3.5, fig.cap="Die Spannweite ist die Differenz zwischen dem größten und dem kleinsten Wert einer Datenreihe"}
+```{r spannweite, fig.height=3.5, out.width="75%", fig.cap="Die Spannweite ist die Differenz zwischen dem größten und dem kleinsten Wert einer Datenreihe"}
 spannweite <- function(x, titlestring=NULL){
   plot.new()
   plot.window(xlim=range(x), ylim=c(1,1.1))
@@ -49,7 +49,7 @@ Man sucht also in den Daten nach dem Maximum und dem Minimum, und zieht das Mini
 
 (ref:iqr-caption) Der Interquartilsabstand ist die Differenz zwischen dem 75%-Quantil und dem 25%-Quantil einer Datenreihe
 
-```{r interquartilsabstand, fig.height=3.5, fig.cap="(ref:iqr-caption)"}
+```{r interquartilsabstand, out.width="75%", fig.height=3.5, fig.cap="(ref:iqr-caption)"}
 iqr <- function(x, titlestring=NULL){
   plot.new()
   plot.window(xlim=range(x), ylim=c(1,1.1))

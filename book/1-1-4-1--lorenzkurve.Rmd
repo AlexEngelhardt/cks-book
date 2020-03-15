@@ -10,7 +10,7 @@ Um die Kurve zu zeichnen, benötigt man also eine Liste von Anteilen (das wird d
 
 Die Lorenzkurve ist ein beliebtes grafisches Mittel, um so eine Ungleichmäßigkeit zu visualisieren. An ihr kann man ablesen, wie sehr eine Verteilung von einer völlig gerechten Gleichverteilung abweicht (s. Abb. \@ref(fig:lorenzkurve-idee))
 
-```{r lorenzkurve-idee, fig.cap="Ist das eine gerechte Verteilung eines Einkommens auf fünf Personen, oder ist sie zu konzentriert?"}
+```{r lorenzkurve-idee, out.width="75%", fig.cap="Ist das eine gerechte Verteilung eines Einkommens auf fünf Personen, oder ist sie zu konzentriert?"}
 knitr::include_graphics("img/pictures/lorenz.png")
 ```
 
