@@ -42,8 +42,13 @@ Am einfachsten erstellt man all diese Daten in einer Tabelle:
 
 Damit kann man nun ein Histogramm zeichen (s. Abb. \@ref(fig:histogramm-fix)).
 
-```{r histogramm-fix, fig.cap='Links: Das Histogramm der relativen Dichte. Rechts: Das Histogramm der absoluten Anzahl an Personen. Es unterscheidet sich nur die y-Achse.'}
-knitr::include_graphics("img/histogramm-fix.png")
+```{r histogramm-fix, fig.width=12, fig.cap='Links: Das Histogramm der relativen Dichte. Rechts: Das Histogramm der absoluten Anzahl an Personen. Es unterscheidet sich nur die y-Achse.'}
+set.seed(280989)
+x <- round(rnorm(20, 170, 10))
+op <- par(mfrow=c(1,2))
+hist(x, right=FALSE, breaks=c(150,160,170,180,190,200), freq=FALSE, main="Histogramm der Körpergröße von 20 Personen", col=1, ylab="Dichte", xlab="Körpergröße in cm")
+hist(x, right=FALSE, breaks=c(150,160,170,180,190,200), main="Histogramm der Körpergröße von 20 Personen", col=2, ylab="Anzahl Personen", xlab="Körpergröße in cm")
+par(op)
 ```
 
 Das linke Histogramm haben wir gerade berechnet. Das rechte unterscheidet sich nur darin, dass auf der \(y\)-Achse absolute Zahlen verwendet wurden - es wurden also statt den Höhen \(h_i\) die Anzahl an Personen, \(n_i\) gezeichnet. Man sieht hier also direkt, dass in der mittleren Klasse 8 Personen liegen. Aber wie gesagt, für variable Klassenbreiten kann man das dann nicht mehr machen.
@@ -94,8 +99,11 @@ if(knitr::is_html_output()){
 
 Das zugehörige Histogramm ist in Abbildung \@ref(fig:histogramm-variabel) dargestellt.
 
-```{r histogramm-variabel, fig.cap='Ein Histogramm für verschieden breite Klassen.'}
-knitr::include_graphics("img/histogramm-variabel.png")
+```{r histogramm-variabel, fig.height=4, fig.cap='Ein Histogramm für verschieden breite Klassen.'}
+hist(x, right=FALSE, breaks=c(140, 160, 165, 190, 200), main="Histogramm der Körpergröße von 20 Personen", col=3, ylab="Dichte", xlab="Körpergröße in cm")
 ```
 
 Wie schon gesagt, diese Darstellung macht wenig Sinn, könnte aber in einer Klausur abgefragt werden, um zu prüfen ob man das Prinzip verstanden hat.
+
+
+

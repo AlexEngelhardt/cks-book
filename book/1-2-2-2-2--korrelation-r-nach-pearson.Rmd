@@ -12,8 +12,51 @@ Sehen wir uns in Abbildung \@ref(fig:korrelation-bsp) ein paar grafische Beispie
 
 (ref:korrelation-bsp-caption) Hier sieht man vier Beispiele für Datensätze mit zwei Variablen. Gezeigt sind die X- und Y-Werte, sowie der jeweilige Korrelationskoeffizient \(r\), und eine Regressionslinie.
 
-```{r korrelation-bsp, fig.cap="(ref:korrelation-bsp-caption)"}
-knitr::include_graphics("img/korrelationen.png")
+```{r korrelation-bsp, fig.height=10, fig.width=10, fig.cap="(ref:korrelation-bsp-caption)"}
+set.seed(20140605)
+n <- 20
+
+x <- list()
+y <- list()
+titel_x <- titel_y <- list()
+
+e <- function(n=20, sd=.1) rnorm(n=n, sd=sd)
+
+titel_x[[1]] <- "Aussentemperatur"
+titel_y[[1]] <- "Eisumsatz"
+x[[1]] <- runif(n, 0, 40)
+y[[1]] <- 2*(x[[1]] + 5 ) + e(sd=6)
+
+titel_x[[2]] <- "Kinopreis"
+titel_y[[2]] <- "Kinobesucher"
+x[[2]] <- runif(n, 5, 20)
+y[[2]] <- -15*x[[2]] + 1500 +e(sd=15)
+
+titel_x[[3]] <- "Körpergrösse"
+titel_y[[3]] <- "Nettoeinkommen"
+x[[3]] <- runif(n, 150, 200)
+y[[3]] <- 2000 + runif(n, -500,500)
+
+titel_x[[4]] <- "Nettoeinkommen"
+titel_y[[4]] <- "gekaufte Busfahrkarten pro Monat"
+x[[4]] <- runif(n, 0, 4000)
+y[[4]] <- -1/1e6*(x[[4]]-2000)^2 + 15 +e(sd=.5)
+
+ylims <- list(NULL, c(1000,2000), NULL, NULL)
+
+op <- par(mfrow=c(2,2))
+for(i in seq(y)){
+    this_y <- y[[i]]
+    titel <- paste0(titel_y[[i]], " vs. ", titel_x[[i]])
+    plot(x[[i]], this_y,
+         ylab=titel_y[[i]],
+         xlab=titel_x[[i]],
+         ylim=ylims[[i]],
+         main=bquote( atop(.(LETTERS[i]) * plain(")") ~ .(titel), r==.(round(cor(x[[i]],this_y),digits=2))) )
+         )
+    abline(lm(this_y~x[[i]]))
+}
+par(op)
 ```
 
 A) Hier sieht man eine starke positive Korrelation. Die hohe Korrelation deutet darauf hin, dass ein Zusammenhang zwischen Außentemperatur und Umsatz einer Eisdiele besteht.

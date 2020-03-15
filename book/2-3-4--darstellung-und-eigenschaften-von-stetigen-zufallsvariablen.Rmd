@@ -1,11 +1,49 @@
 ## Stetige Zufallsvariablen {#sec-duevsz}
 
+Stetige Zufallsvariablen beschreiben ein Experiment, in dem das Ergebnis ein *stetiges* Merkmal ist (s. Kap. \@ref(merkmals-und-skalentypen)). In Abbildung \@ref(fig:zufallsvariablen-stetig-dichte-verteilung) ist die Dichte und Verteilungsfunktion für eine beispielhafte stetige Zufallsvariable dargestellt.
+
 In diesem Kapitel schauen wir uns stetige Zufallsvariablen im Allgemeinen an. Spezielle Verteilungen wie die Exponentialverteilung oder Normalverteilung findet man im Kapitel \@ref(sec-verteilungen).
 
 (ref:zufallsvariablen-stetig-dichte-verteilung-caption) Links sieht man ein Beispiel einer Dichte für eine stetige Zufallsvariable. Die gestrichelte Linie markiert den Erwartungswert von X. Rechts ist die Verteilungsfunktion derselben Zufallsvariablen abgebildet. Die gestrichelte Linie hier markiert das 30%-Quantil, das wir genau wie bei [diskreten Zufallsvariablen](#sec-duevdz) bestimmen.
 
-```{r zufallsvariablen-stetig-dichte-verteilung, fig.cap="(ref:zufallsvariablen-stetig-dichte-verteilung-caption)"}
-knitr::include_graphics("img/zufallsvariablen-stetig-dichte-verteilung.png")
+```{r zufallsvariablen-stetig-dichte-verteilung, fig.width=10, fig.cap="(ref:zufallsvariablen-stetig-dichte-verteilung-caption)"}
+plot_gamma_dens <- function(x, shape, rate, E=FALSE, area=FALSE, text_y=0.1, ...){
+    plot(x, dgamma(x, shape, rate), col=1, type="l", lwd=2, ylab="f(x)", ...)
+    if(length(area)==2){
+        from <- area[1]
+        to <- area[2]
+        x_sub <- x[x >=from & x<=to]
+        polygon(x=c(x_sub[1], x_sub, x_sub[length(x_sub)]),
+                y=c(0, dgamma(x_sub, shape, rate), 0),
+                col=2)
+        text(mean(area), text_y, round(pgamma(area[2],shape,rate)-pgamma(area[1],shape,rate), 3))
+    }
+    if(E==TRUE){
+        abline(v=shape/rate, lty=2)
+        legend("topright", legend=c(paste0("X~Gamma(", shape, ", ", rate, ")"), paste0("E(X) = ", round(shape/rate, 2))), pch=19)
+    }
+}
+
+plot_gamma_dist <- function(x, shape, rate, q=FALSE, ...){
+    plot(x, pgamma(x, shape, rate), col=2, type="l", lwd=2, ylab="F(x)", ...)
+    if(q[1] != FALSE){
+        for(q_i in q){
+            lines(x=c(0, qgamma(q_i, shape, rate)),
+                  y=c(q_i, q_i), lty=2)
+            lines(x=c(qgamma(q_i, shape, rate), qgamma(q_i, shape, rate)),
+                  y=c(q_i, 0), lty=2)
+        }
+    }
+}
+
+x <- seq(0, 4, by=.01)
+shape <- 2
+rate <- 3
+
+op <- par(mfrow=c(1,2))
+plot_gamma_dens(x, shape, rate, E=TRUE, main="Dichte einer stetigen Zufallsvariablen")
+plot_gamma_dist(x, shape, rate, q=0.3, main="Die zugehörige Verteilungsfunktion")
+par(op)
 ```
 
 ### Dichte {#sec-duevsz-dichte}
@@ -17,12 +55,12 @@ Jede Dichtefunktion einer stetigen Zufallsvariablen hat zwei Eigenschaften:
 
 Der große Unterschied zwischen diskreten und stetigen Zufallsvariablen ist, dass die Dichte hier, bei stetigen Zufallsvariablen, nicht die Wahrscheinlichkeit für einen beliebigen Punkt repräsentiert. Im stetigen Fall ist es nun so, dass die Wahrscheinlichkeit für ein bestimmtes, festes Ergebnis immer Null ist. Im Beispielbild oben ist etwa \(\mathbb{P}(X=0.237) = 0\).
 
-Im stetigen Fall kann man **Wahrscheinlichkeiten nur für Intervalle** bestimmen. Man kann also z.B. sagen, dass \(X\) mit 18.2% einen Wert zwischen 1 und 2 annehmen wird: \(\mathbb{P}(X \in [1,2]) = 0.182\). Diese "Wahrscheinlichkeitsmasse" von 0.182 ist die **Fläche unter der Dichte**, von 1 bis 2.
+Im stetigen Fall kann man **Wahrscheinlichkeiten nur für Intervalle** bestimmen. Man kann also z.B. sagen, dass \(X\) mit 18.2% einen Wert zwischen 1 und 2 annehmen wird: \(\mathbb{P}(X \in [1,2]) = 0.182\). Diese "Wahrscheinlichkeitsmasse" von 0.182 ist die **Fläche unter der Dichte**, von 1 bis 2 (s. Abb. \@ref(fig:zufallsvariablen-stetig-integral)).
 
 (ref:zufallsvariablen-stetig-integral-caption) Die Wahrscheinlichkeit, dass das Ergebnis unserer Zufallsvariablen zwischen 1 und 2 liegt, notieren wir mit \(\mathbb{P}(X \in [1,2])\). Wir bestimmen es als die Fläche unter der Dichte, beschränkt auf den Bereich \([1,2]\), hier als braune Fläche dargestellt.
 
-```{r zufallsvariablen-stetig-integral, fig.cap="(ref:zufallsvariablen-stetig-integral-caption)"}
-knitr::include_graphics("img/zufallsvariablen-stetig-integral.png")
+```{r zufallsvariablen-stetig-integral, fig.height=6, fig.width=6, out.width="50%", fig.cap="(ref:zufallsvariablen-stetig-integral-caption)"}
+plot_gamma_dens(x, shape, rate, area=c(1,2), text_y=0.05)
 ```
 
 Wie lässt sich diese Fläche nun berechnen? Es handelt sich nicht mehr um Rechtecke oder Trapeze (wie etwa beim [Gini-Koeffizienten](#sec-gini)), sondern um eine glatte Funktion. Daher müssen wir mit dem Integral arbeiten. Die Verteilungsfunktion \(F(x)\) ist im stetigen Fall nun genau das Integral der Dichtefunktion \(f(x)\).
@@ -33,12 +71,14 @@ Die Verteilungsfunktion \(F(x)\) ist im stetigen Fall genauso definiert wie im d
 
 \[ F(x) = \mathbb{P}(X \leq x) \]
 
-Sie wird jetzt nicht über die Summe der Dichte berechnet, sondern weil wir ja unendlich mögliche Werte für \(x\) haben, über das **Integral der Dichte** berechnet.
+Sie wird jetzt nicht über die Summe der Dichte berechnet, sondern weil wir ja unendlich mögliche Werte für \(x\) haben, über das **Integral der Dichte** berechnet (s. Abb. \@ref(fig:zufallsvariablen-dichte-zu-integral-1)).
 
 (ref:zufallsvariablen-dichte-zu-integral-1-caption) Links sieht man die Dichtefunktion. Die Wahrscheinlichkeit, dass \(X\) kleiner oder gleich 1.5 ist, entspricht der Fläche unter der Dichte bis zum Wert 1.5 auf der x-Achse. Rechts ist die Verteilungsfunktion \(F(x)\) abgebildet, die genau diese Fläche darstellt.
 
-```{r zufallsvariablen-dichte-zu-integral-1, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-1-caption)"}
-knitr::include_graphics("img/zufallsvariablen-dichte-zu-integral-1.png")
+```{r zufallsvariablen-dichte-zu-integral-1, fig.height=7, fig.width=12, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-1-caption)"}
+par(mfrow=c(1,2))
+plot_gamma_dens(x,shape,rate,area=c(0,1.5), main=expression({plain(P)(X <= 1.5) == plain(F)(1.5)} == 0.939))
+plot_gamma_dist(x, shape, rate, q=0.939)
 ```
 
 Es gilt also:
@@ -53,14 +93,21 @@ Oft interessiert uns aber auch die **Wahrscheinlichkeit, dass \(X\) zwischen zwe
 
 (ref:zufallsvariablen-dichte-zu-integral-2-caption) Im ersten Schritt (weiter oben) berechneten wir \(\mathbb{P}(X \leq 1.5)\). Hier, im zweiten Schritt, berechnen wir nun \(\mathbb{P}(X \leq 0.5)\), was hier links als braune Fläche dargestellt wird, und rechts als entsprechender Wert der Verteilungsfunktion.
 
-```{r zufallsvariablen-dichte-zu-integral-2, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-2-caption)"}
-knitr::include_graphics("img/zufallsvariablen-dichte-zu-integral-2.png")
+```{r zufallsvariablen-dichte-zu-integral-2, fig.height=7, fig.width=12, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-2-caption)"}
+par(mfrow=c(1,2))
+plot_gamma_dens(x,shape,rate,area=c(0,0.5), main=expression({plain(P)(X <= 0.5) == plain(F)(0.5)} == 0.442))
+plot_gamma_dist(x, shape, rate, q=0.442)
 ```
 
 (ref:zufallsvariablen-dichte-zu-integral-3-caption) Im letzten Schritt ziehen wir \(F(0.5)\) von \(F(1.5)\) ab. Übrig bleibt die gesuchte Wahrscheinlichkeit \(\mathbb{P}(0.5 \leq X \leq 1.5)\), die im linken Bild als Fläche dargestellt ist, und im rechten als Differenz der beiden Werte auf der y-Achse.
 
-```{r zufallsvariablen-dichte-zu-integral-3, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-3-caption)"}
-knitr::include_graphics("img/zufallsvariablen-dichte-zu-integral-3.png")
+```{r zufallsvariablen-dichte-zu-integral-3, fig.height=7, fig.width=12, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-3-caption)"}
+par(mfrow=c(1,2))
+plot_gamma_dens(x,shape,rate,area=c(0.5,1.5),
+              main=expression({plain(P)({0.5 <= X} <= 1.5) == plain(F)(1.5)-plain(F)(0.5)} == 0.497))
+plot_gamma_dist(x, shape, rate, q=c(0.442, 0.939))
+text(0, 0.69, "}", cex=13)
+text(0.5, 0.69, "0.497", cex=1.5)
 ```
 
 #### Formel oder Verteilungstabelle? {#sec-verteilungstabelle}
@@ -82,7 +129,7 @@ Genauso macht man das bei der Quantilsfunktion: Man löst die Formel der Verteil
 Eine Zufallsvariable ist schon eindeutig beschrieben, wenn man nur eine der drei Funktionen (Dichte, Verteilungsfunktion, oder Quantilsfunktion) hat. Man kann nämlich eindeutig zwischen den dreien hin- und herrechnen (s. Abb \@ref(fig:f-F-Q))
 
 
-```{r f-F-Q, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-3-caption)"}
+```{r f-F-Q, out.width="70%", fig.cap="(ref:zufallsvariablen-dichte-zu-integral-3-caption)"}
 knitr::include_graphics("img/pictures/f_F_Q.png")
 ```
 
@@ -138,8 +185,11 @@ Für diese Dichte werden wir nun
 
 Die Dichte \(f(x)\) ist nur im Bereich von 0 bis 1 ungleich Null (s. Abb. \@ref(fig:zufallsvariablen-stetige-dichte)).
 
-```{r zufallsvariablen-stetige-dichte, fig.cap="Skizze der Dichtefunktion"}
-knitr::include_graphics("img/zufallsvariablen-stetige-dichte.png")
+```{r zufallsvariablen-stetige-dichte, out.width="70%", fig.cap="Skizze der Dichtefunktion"}
+f <- function(x) 2*x * (x>=0) * (x<=1)
+x <- seq(-0.5, 1.5, by=0.01)
+fx <- f(x)
+plot(x, fx, type="l", ylab="f(x)", main="Dichtefunktion von X")
 ```
 
 #### Ist es tatsächlich eine Dichte? {-}
@@ -214,8 +264,11 @@ Und schließlich, im Bereich von \(1\) bis \(\infty\) ist \(F(x)\) konstant, wei
 
 Abbildung \@ref(fig:zufallsvariablen-stetige-verteilungsfunktion) zeigt diese Verteilungsfunktion.
 
-```{r zufallsvariablen-stetige-verteilungsfunktion, fig.cap="Skizze der Verteilungsfunktion"}
-knitr::include_graphics("img/zufallsvariablen-stetige-verteilungsfunktion.png")
+```{r zufallsvariablen-stetige-verteilungsfunktion, out.width="70%", fig.cap="Skizze der Verteilungsfunktion"}
+Fx <- 0*x * (x<=0) +
+    x^2 * (x>0) * (x<=1) +
+    1 * (x>1)
+plot(x, Fx, type="l", ylab="F(x)", main="Verteilungsfunktion von X")
 ```
 
 #### Was ist die Quantilsfunktion \(Q(x)\)? {-}
@@ -229,8 +282,10 @@ Das lösen wir jetzt nach \(Q(x)\) auf:
 
 Und das ist auch schon die Quantilsfunktion (nicht vergessen, nur im Bereich von 0 bis 1!). Abbildung \@ref(fig:zufallsvariablen-stetige-quantilssfunktion) zeigt diese Funktion.
 
-```{r zufallsvariablen-stetige-quantilssfunktion, fig.cap="Skizze der Quantilsfunktion"}
-knitr::include_graphics("img/zufallsvariablen-stetige-quantilssfunktion.png")
+```{r zufallsvariablen-stetige-quantilssfunktion, out.width="70%", fig.cap="Skizze der Quantilsfunktion"}
+x2 <- x[x<=1 & x>=0]
+Qx <- sqrt(x2)
+plot(x2, Qx, type="l", ylab="Q(x)", main="Quantilsfunktion von X")
 ```
 
 #### Was ist die Wahrscheinlichkeit, dass \(X\) zwischen 0.5 und 0.6 liegt? {-}
@@ -249,6 +304,27 @@ Abbildung \@ref(fig:zufallsvariablen-stetige-wahrscheinlichkeit) erklärt dieses
 
 (ref:zufallsvariablen-stetige-wahrscheinlichkeit-caption) Die grafische Idee hinter der Bestimmung von \(\mathbb{P}(0.5 \leq X \leq 0.6)\). Im linken Bild die Motivation über die Fläche unter der Dichte in diesem Bereich, also die Lösung über das Integral von 0.5 bis 0.6. Im rechten Bild die Motivation über die Verteilungsfunktion, also die Lösung über \(F(0.6)-F(0.5)\).
 
-```{r zufallsvariablen-stetige-wahrscheinlichkeit, fig.cap="(ref:zufallsvariablen-stetige-wahrscheinlichkeit-caption)"}
-knitr::include_graphics("img/zufallsvariablen-stetige-wahrscheinlichkeit.png")
+```{r zufallsvariablen-stetige-wahrscheinlichkeit, fig.height=7, fig.width=12, fig.cap="(ref:zufallsvariablen-stetige-wahrscheinlichkeit-caption)"}
+op <- par(mfrow=c(1,2))
+xx <- seq(0.5, 0.6, by=.01)
+plot(x, fx, type="l", ylab="f(x)", main="Dichtefunktion von X")
+polygon(x=c(xx[1], xx, xx[length(xx)]),
+        y=c(0, f(xx), 0),
+        col=1)
+text(0.7, 0.5, "0.11")
+
+plot(x, Fx, type="l", ylab="F(x)", main="Verteilungsfunktion von X")
+q <- 0.6^2
+lines(x=c(-0.5, sqrt(q)),
+      y=c(q, q), lty=2)
+lines(x=c(sqrt(q), sqrt(q)),
+      y=c(q, 0), lty=2)
+q <- 0.5^2
+lines(x=c(-0.5, sqrt(q)),
+      y=c(q, q), lty=2)
+lines(x=c(sqrt(q), sqrt(q)),
+      y=c(q, 0), lty=2)
+text(x=-0.5, y=mean(c(0.5^2, 0.6^2)), "}", cex=3)
+text(x=-0.4, y=mean(c(0.5^2, 0.6^2)), "0.11")
+par(op)
 ```

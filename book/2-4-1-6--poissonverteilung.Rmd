@@ -34,8 +34,14 @@ Im Beispiel mit dem Fußballverein berechnet man etwa die Wahrscheinlichkeit, da
 
 (ref:verteilungen-poissonverteilung-dichte-caption) Die Dichte der Poissonverteilung für die Anzahl der von Team \(A\) geschossenen Tore in einem Spiel, mit \(\lambda=1.2\). Die \(x\)-Achse ist hier bei 7 abgeschnitten: Höhere Werte als \(x=7\) sind theoretisch möglich, aber sehr unwahrscheinlich. Man sieht hier auch, dass mit der höchsten Wahrscheinlichkeit ein Tor geschossen wird.
 
-```{r verteilungen-poissonverteilung-dichte, fig.cap="(ref:verteilungen-poissonverteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-poissonverteilung-dichte.png")
+```{r verteilungen-poissonverteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-poissonverteilung-dichte-caption)"}
+lambda <- 1.2
+x <- 0:7
+
+plot(x, dpois(x, lambda), pch=19, col=1, main=paste0("Dichte der Poissonverteilung mit lambda=", lambda), xlab="x", ylab="f(x)")
+for(xi in x){
+    lines(c(xi, xi), c(0, dpois(xi, lambda)), lwd=2, col=1)
+}
 ```
 
 ```{exercise, echo=TRUE}
@@ -61,8 +67,12 @@ Die Wahrscheinlichkeit dass unser Verein höchstens zwei Tore schießt, berechne
 
 (ref:verteilungen-poissonverteilung-verteilungsfunktion-caption) Die Verteilungsfunktion für die Anzahl der Tore von Verein \(A\). Man sieht, dass die Wahrscheinlichkeit \(F(4)\) für maximal vier Tore schon sehr nahe an der 1 liegt, dass es also andersherum sehr unwahrscheinlich ist, dass Team \(A\) in einem Spiel mehr als vier Tore schießt.
 
-```{r verteilungen-poissonverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-poissonverteilung-verteilungsfunktion-caption)"}
-knitr::include_graphics("img/verteilungen-poissonverteilung-verteilungsfunktion.png")
+```{r verteilungen-poissonverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-poissonverteilung-verteilungsfunktion-caption)"}
+plot(x, ppois(x, lambda), pch=19, col=2, main=paste0("Verteilungsfunktion der Poissonerteilung\nmit lambda=",lambda), xlab="x", ylab="F(x)", ylim=c(0,1))
+for(xi in x){
+    lines(c(xi, xi+1), c(ppois(xi,lambda), ppois(xi,lambda)), lwd=2, col=2)
+    points(xi+1, ppois(xi,lambda), col=2)
+}
 ```
 
 #### Erwartungswert und Varianz {-}

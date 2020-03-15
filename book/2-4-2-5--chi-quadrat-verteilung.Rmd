@@ -14,8 +14,28 @@ Abbildung \@ref(fig:verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion
 
 (ref:verteilungen-chisq-v-d-u-v-caption) Dichte- und Verteilungsfunktion der \(\chi^2\)-Verteilung für verschiedene beispielhafte Freiheitsgrade.
 
-```{r verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion, fig.cap="(ref:verteilungen-chisq-v-d-u-v-caption)"}
-knitr::include_graphics("img/verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion.png")
+```{r verteilungen-chisq-verteilung-dichte-und-verteilungsfunktion, fig.width=6, fig.height=8, out.width="75%", fig.cap="(ref:verteilungen-chisq-v-d-u-v-caption)"}
+par(mfrow=c(2,1))
+
+x <- seq(0.01, 10, by=0.01)
+dfs <- c(2, 3, 4, 5)
+plot(x, dchisq(x, 1), type="l", col=1, main="Dichtefunktionen der Chi-Quadrat-Verteilung", ylab="f(x)", ylim=c(0,1), lwd=2)
+for(i in seq_along(dfs)){
+    col <- i+1
+    df <- dfs[i]
+    lines(x, dchisq(x, df), col=col, lwd=2, lty=i+1)
+}
+legend("topright", lty=1:5, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
+
+x <- seq(0.01, 10, by=0.01)
+dfs <- c(2, 3, 4, 5)
+plot(x, pchisq(x, 1), type="l", col=1, main="Verteilungsfunktionen der Chi-Quadrat-Verteilung", ylab="F(x)", ylim=c(0,1), lwd=2)
+for(i in seq_along(dfs)){
+    col <- i+1
+    df <- dfs[i]
+    lines(x, pchisq(x, df), col=col, lwd=2, lty=i+1)
+}
+legend("bottomright", lty=1:5, legend=paste(c(1, dfs), c("Freiheitsgrad", rep("Freiheitsgrade", length(dfs)))), col=1:(1+length(dfs)), lwd=2)
 ```
 
 #### Träger {-}

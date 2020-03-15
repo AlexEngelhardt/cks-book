@@ -18,8 +18,22 @@ Mit dem Mittelwert \(\mu\) verschiebt man die Kurve nach links bzw. rechts, und 
 
 (ref:verteilungen-normalverteilung-mu-sigma-caption) Der Einfluss der Parameter \(\mu\) und \(\sigma^2\) auf die Dichte der Normalverteilung.
 
-```{r verteilungen-normalverteilung-mu-sigma, fig.cap="(ref:verteilungen-normalverteilung-mu-sigma-caption)"}
-knitr::include_graphics("img/verteilungen-normalverteilung-mu-sigma.png")
+```{r verteilungen-normalverteilung-mu-sigma, fig.width=12, fig.height=7, out.width="75%", fig.cap="(ref:verteilungen-normalverteilung-mu-sigma-caption)"}
+x <- seq(-10, 10, by=0.01)
+
+par(mfrow=c(1,2))
+plot(x, dnorm(x, -3, 2), type="l", ylab="f(x)", col=1, lwd=2,
+     main=paste0("Drei Normalverteilungen mit verschiedenen Mittelwerten\n und gleicher Varianz"))
+lines(x, dnorm(x, 0, 2), col=2, lty=2, lwd=2)
+lines(x, dnorm(x, 5, 2), col=3, lty=3, lwd=2)
+legend("topleft", legend=c(expression(mu==-3),expression(mu==0),expression(mu==5)), lty=1:3, col=1:3)
+
+
+plot(x, dnorm(x, 0, 1), type="l", ylab="f(x)", col=1, lwd=2,
+     main=paste0("Drei Normalverteilungen mit verschiedenen Varianzen\n und gleichem Mittelwert"))
+lines(x, dnorm(x, 0, 2), col=2, lty=2, lwd=2)
+lines(x, dnorm(x, 0, 4), col=3, lty=3, lwd=2)
+legend("topleft", legend=c(expression(sigma==1),expression(sigma==2),expression(sigma==4)), lty=1:3, col=1:3)
 ```
 
 Vorsicht: Der Parameter ist meist die Varianz, also \(\sigma^2\). Beim Rechnen mit der Normalverteilung (zum Beispiel beim Standardisieren der Zufallsvariablen oder bei Hypothesentests) wird oft mit der Standardabweichung \(\sigma\), also der Wurzel der Varianz, gearbeitet. Hier muss man immer genau hinschauen, welche Variante verwendet wird, und gegebenenfalls zwischen den beiden Werten umrechnen.
@@ -53,8 +67,39 @@ Wenn man sich statt der Varianz \(\sigma^2\) die Standardabweichung \(\sigma\), 
 
 (ref:verteilungen-normalverteilung-skizze-caption) Skizze einer Normalverteilung mit \(\mu=0\) und \(\sigma^2=1\).
 
-```{r verteilungen-normalverteilung-skizze, fig.cap="(ref:verteilungen-normalverteilung-skizze-caption)"}
-knitr::include_graphics("img/verteilungen-normalverteilung-skizze.png")
+```{r verteilungen-normalverteilung-skizze, out.width="75%", fig.cap="(ref:verteilungen-normalverteilung-skizze-caption)"}
+
+mu <- 0
+var <- 1
+sd <- sqrt(var)
+##
+x <- seq(mu-4*sd, mu+4*sd, by=0.01)
+
+plot(x, dnorm(x, mean=mu, sd=sd), type="l", ylab="f(x)", main="")
+##
+x_1 <- mu-sd
+x_2 <- mu+sd
+y_1 <- dnorm(x_1, mean=mu, sd=sd)
+lines(x=c(x_1,x_2), y=c(y_1,y_1), lty=2)
+text(0, y_1+0.01, expression(mu %+-% 1*sigma))
+lines(x=c(x_1,x_1), y=c(y_1-0.01, y_1+0.01), lty=2)
+lines(x=c(x_2,x_2), y=c(y_1-0.01, y_1+0.01), lty=2)
+##
+x_1 <- mu-2*sd
+x_2 <- mu+2*sd
+y_1 <- dnorm(x_1, mean=mu, sd=sd)
+lines(x=c(x_1,x_2), y=c(y_1,y_1), lty=2)
+text(0, y_1+0.01, expression(mu %+-% 2*sigma))
+lines(x=c(x_1,x_1), y=c(y_1-0.01, y_1+0.01), lty=2)
+lines(x=c(x_2,x_2), y=c(y_1-0.01, y_1+0.01), lty=2)
+##
+x_1 <- mu-3*sd
+x_2 <- mu+3*sd
+y_1 <- dnorm(x_1, mean=mu, sd=sd)
+lines(x=c(x_1,x_2), y=c(y_1,y_1), lty=2)
+text(0, y_1+0.01, expression(mu %+-% 3*sigma))
+lines(x=c(x_1,x_1), y=c(y_1-0.01, y_1+0.01), lty=2)
+lines(x=c(x_2,x_2), y=c(y_1-0.01, y_1+0.01), lty=2)
 ```
 
 #### Verteilungsfunktion {-}
@@ -67,8 +112,9 @@ Man nimmt daher eine Verteilungstabelle (s. Kap. \@ref(sec-verteilungstabelle)) 
 
 (ref:verteilungen-nv-v-caption) Verteilungsfunktion \(\Phi(z)\) der Standardnormalverteilung (also mit \(\mu=0\) und \(\sigma^2=1\)).
 
-```{r verteilungen-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-nv-v-caption)"}
-knitr::include_graphics("img/verteilungen-normalverteilung-verteilungsfunktion.png")
+```{r verteilungen-normalverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-nv-v-caption)"}
+x <- seq(-4,4, by=0.01)
+plot(x, pnorm(x), type="l", ylab="F(x)", main="Verteilungsfunktion der Normalverteilung", col=1, lwd=2)
 ```
 
 #### Zum Ablesen von Verteilungstabellen {-}
@@ -81,8 +127,21 @@ Angenommen, wir haben eine Zufallsvariable \(X\sim \text{N}(4, 1)\), und möchte
 
 (ref:verteilungen-normalverteilung-standardisierung-caption) Die linke Fläche, d.h. \(\mathbb{P}(X \leq 3)\) für die Zufallsvariable \(X\sim \text{N}(4, 1)\) ist genau gleich der Fläche \(\mathbb{P}(Z \leq -1)\) für die Standardnormalverteilung \(Z\sim \text{N}(0,1)\).
 
-```{r verteilungen-normalverteilung-standardisierung, fig.cap="(ref:verteilungen-normalverteilung-standardisierung-caption)"}
-knitr::include_graphics("img/verteilungen-normalverteilung-standardisierung.png")
+```{r verteilungen-normalverteilung-standardisierung, fig.width=10, fig.height=6, out.width="75%", fig.cap="(ref:verteilungen-normalverteilung-standardisierung-caption)"}
+z <- seq(-6, 6, by=0.01)
+x <- seq(-6, 6, by=0.01)
+mu <- 4
+
+par(mfrow=c(1,2))
+plot(x, dnorm(x, mu, 1), type="l", xlim=c(-6,6), ylab="f(x)", main="P(X <= 3)")
+legend("topleft", legend="X~N(4,1)")
+idx <- x<3
+polygon(x=c(x[idx], x[sum(idx)]), y=c(dnorm(x[idx], mu, sd),0), col=1)
+##
+plot(z, dnorm(z, 0, 1), type="l", xlim=c(-6,6), ylab="f(z)", main="P(Z <= -1)")
+legend("topleft", legend="Z~N(0,1)")
+idx <- z < -1
+polygon(x=c(z[idx], z[sum(idx)]), y=c(dnorm(z[idx], 0, sd),0), col=1)
 ```
 
 Man standardisiert eine normalverteilte Zufallsvariable \(X\), indem man also, wie gerade gezeigt, zuerst ihren Mittelwert abzieht, und danach durch die Standardabweichung teilt:

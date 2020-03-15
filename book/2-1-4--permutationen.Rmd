@@ -22,7 +22,7 @@ Manchmal besteht eine Grundgesamtheit aus Elementen, die nicht alle voneinander 
 - drei 10ct-Münzen
 
 ```{r permutationen, fig.cap="Wieviele Möglichkeiten gibt es, 7 Elemente in eine Reihenfolge zu bringen, wenn einige Elemente davon nicht unterscheidbar sind?"}
-knitr::include_graphics("img/permutationen.png")
+knitr::include_graphics("img/pictures/permutationen.png")
 ```
 
 Man möchte jetzt wissen, wieviele Möglichkeiten es gibt, diese \(N=7\) Münzen in eine Reihe zu legen. Dabei sollen die gleichen Elemente - also die beiden 1€-Münzen und die drei 10ct-Münzen - nicht unterscheidbar sein. Man teilt die bekannte Formel \(N! \) durch das Produkt der Fakultäten der Häufigkeiten jedes Elementes. In unserem Fall gibt es also

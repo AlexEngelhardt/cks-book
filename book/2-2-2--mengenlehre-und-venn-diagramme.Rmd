@@ -4,7 +4,7 @@ Man verwendet Venn-Diagramme, um zwei oder mehrere Mengen und deren Beziehungen 
 
 Abbildung \@ref(fig:venn1) zeigt ein Venn-Diagramm für zwei Mengen \(A\) und \(B\).
 
-```{r venn1, fig.cap="Ein simples Venn-Diagramm"}
+```{r venn1, out.width="50%", fig.cap="Ein simples Venn-Diagramm"}
 knitr::include_graphics("img/pictures/VennDiagramme/venn.jpg")
 ```
 
@@ -18,7 +18,7 @@ Wir werfen einen Würfel, und notieren uns die Augenzahl. Die möglichen Ergebni
 
 Das Ereignis \(A\) beinhaltet also die Zahlen 2, 4, und 6, und das Ereignis \(B\) umfasst die 1, 2, und 3. Hier fällt auf, dass die 2 in beiden Ereignissen vorkommt. Abbildung \@ref(fig:venn-beispiel) zeigt die Aufteilung der Ergebnisse in diesem Beispiel.
 
-```{r venn-beispiel, fig.cap="Ein Venn-Diagramm für zwei Würfel-Ereignisse"}
+```{r venn-beispiel, out.width="50%", fig.cap="Ein Venn-Diagramm für zwei Würfel-Ereignisse"}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-beispiel.jpg")
 ```
 
@@ -26,7 +26,7 @@ Man sieht hier ein großes Rechteck, das das ganze "Universum" \(\Omega\), also 
 
 Die Menge \(B\) lässt sich nun durch einen blauen Kreis darstellen (s. Abb. \@ref(fig:venn-B)).
 
-```{r venn-B, fig.cap="Die Menge B"}
+```{r venn-B, out.width="50%", fig.cap="Die Menge B"}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-B.jpg")
 ```
 
@@ -35,7 +35,7 @@ Wenn ich dich den Würfel rollen lasse, und sage, bei einem Ergebnis aus \(B\) h
 
 Die Menge \(\Omega\) ist, wie schon gesagt, die Menge aller möglichen Ereignisse:
 
-```{r venn-omega, fig.cap="Die Menge Omega"}
+```{r venn-omega, out.width="50%", fig.cap="Die Menge Omega"}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-omega.jpg")
 ```
 
@@ -63,7 +63,7 @@ Versuche, die Menge \(A \cup B\) in einem Venn-Diagramm zu zeichnen. Überlege d
 
 Die Menge \(A \cup B\) enthält die Zahlen 1, 2, 3, 4, und 6. Es sind also alle Zahlen außer der 5 in dieser Vereinigungsmenge enthalten. Abbildung \@ref(fig:venn-A-oder-B) zeigt das dazugehörige Venn-Diagramm.
 
-```{r venn-A-oder-B, fig.cap='Der "oder"-Operator'}
+```{r venn-A-oder-B, out.width="50%", fig.cap='Der "oder"-Operator'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-A-oder-B.jpg")
 ```
 
@@ -73,7 +73,7 @@ Die Zahl 2 kommt zwar in beiden Mengen, \(A\) und \(B\) vor, ist aber in der Ver
 
 Mit dem "und"-Operator \(\cap\) bezeichnet man die *Schnittmenge* zweier Mengen \(A\) und \(B\). Man erhält als Ergebnis nur die Elemente, die sowohl in \(A\) *als auch* in \(B\) enthalten sind (s. Abb. \@ref(fig:venn-A-und-B))
 
-```{r venn-A-und-B, fig.cap='Der "und"-Operator'}
+```{r venn-A-und-B, out.width="50%", fig.cap='Der "und"-Operator'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-A-und-B.jpg")
 ```
 
@@ -83,7 +83,7 @@ Für unser Beispiel mit den Würfeln bedeutet das: In \(A \cap B\) sind die Zahl
 
 Mit diesen drei Operatoren, der Vereinigungs- und Schnittmenge sowie der Negation (also dem Querbalken), kann man nun zusammen jede mögliche Kombination der beiden Mengen \(A\) und \(B\) erstellen. Zum Beispiel kann man sich alle Elemente ansehen, die zwar in \(A\), aber nicht in \(B\) enthalten sind (s. Abb. \@ref(fig:venn-A-und-nicht-B)).
 
-```{r venn-A-und-nicht-B, fig.cap='A und nicht-B'}
+```{r venn-A-und-nicht-B, out.width="50%", fig.cap='A und nicht-B'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-A-und-nicht-B.jpg")
 ```
 
@@ -108,11 +108,11 @@ b) Die Menge \(\bar{A} \cap \bar{B}\) bezeichnet alle Elemente, die weder in \(A
 Die Menge \(\bar{A} \cap \bar{B}\) lässt sich übrigens äquivalent als \(\overline{A \cup B}\) ausdrücken. Das ist eine der Rechenregeln für Mengenoperationen, auf die wir hier aber nicht näher eingehen.
 ```
 
-```{r venn-B-oder-nicht-A, fig.cap='B oder nicht-A'}
+```{r venn-B-oder-nicht-A, out.width="50%", fig.cap='B oder nicht-A'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-B-oder-nicht-A.jpg")
 ```
 
-```{r venn-nicht-A-und-nicht-B, fig.cap='nicht-A und nicht-B'}
+```{r venn-nicht-A-und-nicht-B, out.width="50%", fig.cap='nicht-A und nicht-B'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-nicht-A-und-nicht-B.jpg")
 ```
 

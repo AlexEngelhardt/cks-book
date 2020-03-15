@@ -12,10 +12,18 @@ In der Praxis ist das Schätzen von Parametern aber oft nur der erste Schritt, u
 
 Dazu ein Beispiel: Wir möchten das Gewicht einer Person vorhersagen, mit Hilfe seiner Körpergröße (in Metern) und der Hausnummer seiner Adresse.
 
-(ref:regression-testen-1-caption) Streudiagramm der Zielgröße \(y\)=Körpergewicht vs. der beiden Einflussgrößen "Körpergröße" und "Hausnummer".
+(ref:regression-testen-1-caption) Streudiagramm der Zielgröße \(y\)=Körpergewicht vs. der beiden Einflussgrößen "Körpergröße" und "Hausnummer". Die Körpergröße hat wohl einen Einfluss auf das Gewicht, aber die Hausnummer einer Person sollte das nicht haben.
 
-```{r regression-testen-1, fig.cap="(ref:regression-testen-1-caption)"}
-knitr::include_graphics("img/regression-testen-1.png")
+```{r regression-testen-1, fig.width=8, fig.cap="(ref:regression-testen-1-caption)"}
+set.seed(20190804)
+n <- 20
+groesse_cm <- runif(n, 150, 195)
+hausnr <- round(exp(runif(n, 0, 5)))
+gewicht <- -41 + 0.7 * groesse_cm + rnorm(n, sd=10)
+
+layout(matrix(1:2, nrow=1))
+plot(groesse_cm, gewicht, xlab="Körpergröße (cm)", ylab="Gewicht (kg)", main="Gewicht vs. Körpergröße")
+plot(hausnr, gewicht, xlab="Hausnummer", ylab="Gewicht (kg)", main="Gewicht vs. Hausnummer")
 ```
 
 Die beiden Streudiagramme in Abbildung \@ref(fig:regression-testen-1) zeigen, dass größere Menschen tendenziell schwerer sind, d.h. der Regressionsparameter \(b\) für die Körpergröße wird wahrscheinlich größer als Null sein. Allerdings gibt es zwischen der Hausnummer und dem Gewicht einer Person (wie erwartet) keinen wirklichen Zusammenhang. Der Vorteil ist nun, dass wir diese Variable rauswerfen können, und in zukünftigen Befragungen die Leute nicht mehr nach ihrer Adresse fragen müssen. Dadurch sparen wir Zeit und evtl. auch Geld, und der kürzere Fragebogen führt vielleicht auch zu mehr Bereitschaft zur Teilnahme, und damit einer größeren Stichprobe am Ende.
@@ -58,8 +66,12 @@ Abbildung \@ref(fig:regression-testen-2) zeigt nochmal das Bild mit den Daten vo
 
 (ref:regression-testen-2-caption) Streudiagramm und Regressionsgeraden der Zielgröße \(y\)=Körpergewicht vs. der beiden Einflussgrößen "Körpergröße" und "Hausnummer".
 
-```{r regression-testen-2, fig.cap="(ref:regression-testen-2-caption)"}
-knitr::include_graphics("img/regression-testen-2.png")
+```{r regression-testen-2, fig.width=8, fig.cap="(ref:regression-testen-2-caption)"}
+layout(matrix(1:2, nrow=1))
+plot(groesse_cm, gewicht, xlab="Körpergröße (cm)", ylab="Gewicht (kg)", main="Gewicht vs. Körpergröße")
+abline(lm(gewicht ~ groesse_cm))
+plot(hausnr, gewicht, xlab="Hausnummer", ylab="Gewicht (kg)", main="Gewicht vs. Hausnummer")
+abline(lm(gewicht ~ hausnr))
 ```
 
 Für den Zusammenhang zwischen Körpergröße und Gewicht sieht man eine klare positive Steigung. Für die Hausnummer sieht man zwar eine ganz leicht steigende Gerade, die allerdings nicht signifikant ist - das sehen wir an der Ausgabe der Regression:
@@ -103,8 +115,27 @@ Das ist im Prinzip dasselbe Regressionsmodell, nur mit unterschiedlich skalierte
 
 (ref:regression-testen-3-caption) Zwei verschiedene Regressionsmodelle: Links wurde die Körpergröße in Zentimetern gemessen, rechts in Metern.
 
-```{r regression-testen-3, fig.cap="(ref:regression-testen-3-caption)"}
-knitr::include_graphics("img/regression-testen-3.png")
+```{r regression-testen-3, fig.width=10, fig.cap="(ref:regression-testen-3-caption)"}
+set.seed(20190806)
+n <- 15
+cm <- runif(15, 150, 200)
+m <- cm/100
+kg <- -41 + 0.7 * cm + rnorm(n, sd=10)
+
+layout(matrix(1:2, nrow=1))
+mod_cm <- lm(kg~cm)
+gerade_cm <- paste("Regressionsgerade: y =", round(coef(mod_cm)[1], 2), "+", round(coef(mod_cm)[2], 4), "* cm")
+plot(cm, kg, main=paste("Gewicht (kg) vs. Größe (in Zentimetern)", gerade_cm, sep="\n"), xlab="Größe (cm)", ylab="Gewicht (kg)")
+abline(mod_cm)
+
+mod_m <- lm(kg~m)
+gerade_m <- paste("Regressionsgerade: y =", round(coef(mod_m)[1], 2), "+", round(coef(mod_m)[2], 2), "* m")
+# https://stackoverflow.com/questions/49708371/how-to-show-more-decimal-digits-on-an-axis
+plot(m, kg, xaxt='n', main=paste("Gewicht (kg) vs. Größe (in Metern)", gerade_m, sep="\n"), xlab="Größe (m)", ylab="Gewicht (kg)")
+abline(mod_m)
+p <- pretty(par('usr')[1:2])
+l <- formatC(p, format="f", digits=2)
+axis(1, at=p, labels=l)
 ```
 
 Das bedeutet, dass man für eine Aussage zur Wichtigkeit eines Parameters immer den Parameterschätzer *zusammen mit dem p-Wert* betrachten muss.

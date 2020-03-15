@@ -22,8 +22,28 @@ Je größer die Stichprobe wird, desto größer wird die Anzahl der Freiheitsgra
 
 (ref:verteilungen-t-verteilung-normalverteilung-caption) Die \(t\)-Verteilung hat eine breitere Streuung als die Standardnormalverteilung \(N(0,1)\). Mit steigender Anzahl der Freiheitsgrade \(df\) nähert sich die \(t\)-Verteilung aber der Normalverteilungskurve an. Ab etwa \(df=50\) ist sie nah genug an der Normalverteilung, dass man die \(t\)-Verteilung mit ihr approximieren kann.
 
-```{r verteilungen-t-verteilung-normalverteilung, fig.cap="(ref:verteilungen-t-verteilung-normalverteilung-caption)"}
-knitr::include_graphics("img/verteilungen-t-verteilung-normalverteilung.png")
+```{r verteilungen-t-verteilung-normalverteilung, out.width="75%", fig.cap="(ref:verteilungen-t-verteilung-normalverteilung-caption)"}
+x <- seq(-4, 4, by=0.01)
+dfs <- c(2, 5, 10, 20, 30)
+
+plot(x, dnorm(x), ylab="f(x)", type="l", lwd=2, main="Verschiedene t-Verteilungen und die Normalverteilung")
+for(i in seq_along(dfs)){
+    df <- dfs[i]
+    lines(x, dt(x, df), col=i, lty=i+1)
+}
+legend("topleft",
+       legend=c(
+           "N(0,1)",
+           "t(2)",
+           "t(5)",
+           "t(10)",
+           "t(20)",
+           "t(30)"
+       ),
+       col=c("black", palette()[1:5]),
+       lty=1:6,
+       lwd=c(2,1,1,1,1,1)
+)
 ```
 
 Je höher also die Anzahl der Freiheitsgrade \(df\), desto ähnlicher ist die \(t\)-Verteilung der Standardnormalverteilung \(N(0,1)\). Ab etwa 50 Freiheitsgraden, also \(df>50\), kann man mit dem Auge fast keinen Unterschied mehr zwischen den beiden Kurven erkennen.
@@ -52,6 +72,22 @@ Abbildung \@ref(fig:verteilungen-t-verteilung-normalverteilung-verteilungsfunkti
 
 (ref:verteilungen-t-v-nv-v-caption) Verteilungsfunktionen für drei ausgewählte \(t\)-Verteilungen. Auch die Verteilungsfunktion ähnelt sich mit steigenden Freiheitsgraden immer mehr der Standardnormalverteilung an.
 
-```{r verteilungen-t-verteilung-normalverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-t-v-nv-v-caption)"}
-knitr::include_graphics("img/verteilungen-t-verteilung-normalverteilung-verteilungsfunktion.png")
+```{r verteilungen-t-verteilung-normalverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-t-v-nv-v-caption)"}
+dfs <- c(2, 5, 10)
+plot(x, pnorm(x), ylab="F(x)", type="l", lwd=2, main="Verschiedene t-Verteilungen und die Normalverteilung")
+for(i in seq_along(dfs)){
+    df <- dfs[i]
+    lines(x, pt(x, df), col=i, lty=i+1)
+}
+legend("topleft",
+       legend=c(
+           "N(0,1)",
+           "t(2)",
+           "t(5)",
+           "t(10)"
+       ),
+       col=c("black", palette()[1:5]),
+       lty=1:4,
+       lwd=c(2,1,1,1,1,1)
+)
 ```

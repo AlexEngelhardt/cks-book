@@ -25,8 +25,15 @@ Wenn man versteht, wie diese Formel zustandekommt, kann man sie sich sogar selbs
 
 (ref:verteilungen-binomialverteilung-dichte-caption) Die Dichte der Binomialverteilung mit n=6 und p=0.2. Man sieht, dass man mit hoher Wahrscheinlichkeit zwischen 0 und 3 Treffer erhalten wird. 5 oder 6 Treffer zu bekommen, ist sehr unwahrscheinlich.
 
-```{r verteilungen-binomialverteilung-dichte, fig.cap="(ref:verteilungen-binomialverteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-binomialverteilung-dichte.png")
+```{r verteilungen-binomialverteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-binomialverteilung-dichte-caption)"}
+p <- 0.2
+n <- 6
+
+x <- 0:n
+plot(x, dbinom(x, size=n, prob=p), pch=19, col=1, main=paste0("Dichte der Binomialverteilung mit n=", n, " und p=", p), xlab="x", ylab="f(x)")
+for(xi in x){
+    lines(c(xi, xi), c(0, dbinom(xi, size=n, prob=p)), lwd=2, col=1)
+}
 ```
 
 Am Beispiel des Schießstandes: Die Wahrscheinlichkeit, dass wir zwei Treffer erhalten werden, ist laut Formel \(f(2) = {6 \choose 2} (0.2)^2 (0.8)^4\). Interpretiert wird das so:
@@ -55,8 +62,12 @@ Für die Verteilungsfunktion gibt es hier keine einfache Formel. In manchen Büc
 
 (ref:verteilungen-binomialverteilung-verteilungsfunktion-caption) Anhand der Verteilungsfunktion kann man auch ablesen, dass die Wahrscheinlichkeit, höchstens 4 Treffer zu erhalten, schon nahezu 1 ist.
 
-```{r verteilungen-binomialverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-binomialverteilung-verteilungsfunktion-caption)"}
-knitr::include_graphics("img/verteilungen-binomialverteilung-verteilungsfunktion.png")
+```{r verteilungen-binomialverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-binomialverteilung-verteilungsfunktion-caption)"}
+plot(x, pbinom(x, size=n, prob=p), pch=19, col=2, main=paste0("Verteilungsfunktion der Binomialverteilung mit n=", n, " und p=", p), xlab="x", ylab="F(x)", ylim=c(0,1))
+for(xi in x){
+    lines(c(xi, xi+1), c(pbinom(xi,n,p), pbinom(xi,n,p)), lwd=2, col=2)
+    points(xi+1, pbinom(xi,n,p), col=2)
+}
 ```
 
 ```{exercise, echo=TRUE}

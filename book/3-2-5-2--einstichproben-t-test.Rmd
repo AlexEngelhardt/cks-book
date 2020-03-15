@@ -108,8 +108,20 @@ Mir hat es zum Verständnis immer geholfen, ein Diagramm zu zeichnen, um zu vers
 
 (ref:hypothesentests-dt9-caption) Kritischer Bereich bei einem zweiseitigen \(t\)-Test.
 
-```{r hypothesentests-dt9, fig.cap="(ref:hypothesentests-dt9-caption)"}
-knitr::include_graphics("img/hypothesentests-dt9.png")
+```{r hypothesentests-dt9, out.width="75%", fig.cap="(ref:hypothesentests-dt9-caption)"}
+xlim <- 4
+x <- seq(-xlim, xlim, by=0.01)
+df <- 9
+plot(x, dt(x, df), type="l", ylab="f(x)", main=paste("Dichtefunktion der t-Verteilung\nmit", df, "Freiheitsgraden"))
+Q <- qt(0.975, df)
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+polygon(-poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+#poly_x <- c(-Q, -Q, x[x > -Q & x < Q], Q, Q)
+#polygon(poly_x, c(0, dt(Q, df), dt(x[x > -Q & x < Q], df), dt(Q, df), 0), col=2)
+text(0, 0.10, "95%", cex=1)
+text(Q, 0.03, "2.5%", cex=1, pos=4)
+text(-Q, 0.03, "2.5%", cex=1, pos=2)
 ```
 
 Wir suchen nun die beiden Grenzen, die den kritischen Bereich einrahmen. An der Grafik erkennt man schon, dass sie ein bisschen über der 2 liegen, vielleicht bei -2,3 und +2,3.
@@ -130,8 +142,13 @@ Im Beispiel dieses Kapitels haben wir einen *zweiseitigen* t-Test durchgeführt.
 
 (ref:hypothesentests-dt9-left-caption) Kritischer Bereich bei einem nach links einseitigen \(t\)-Test.
 
-```{r hypothesentests-dt9-left, fig.cap="(ref:hypothesentests-dt9-left-caption)"}
-knitr::include_graphics("img/hypothesentests-dt9-left.png")
+```{r hypothesentests-dt9-left, out.width="75%", fig.cap="(ref:hypothesentests-dt9-left-caption)"}
+plot(x, dt(x, df), type="l", ylab="f(x)", main=paste("Kritischer Bereich bei einem einseitigen Test (links)"))
+Q <- qt(0.95, df)  # we use a minus later, so use 0.95, not 0.05 here
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(-poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+text(0, 0.10, "95%", cex=1)
+text(-Q, 0.03, "5%", cex=1, pos=2)
 ```
 
 Wenn also die Prüfgröße \(T\) kleiner als ca. 1,9 ist (der genaue Wert hängt wieder von der Stichprobengröße, also der Anzahl der Freiheitsgrade ab), dann lehnen wir die Nullhypothese in diesem Fall ab.
@@ -140,6 +157,11 @@ Falls der Test allerdings einseitig nach rechts testet, z.B. beim 3. Beispiel (d
 
 (ref:hypothesentests-dt9-right-caption) Kritischer Bereich bei einem nach rechts einseitigen \(t\)-Test.
 
-```{r hypothesentests-dt9-right, fig.cap="(ref:hypothesentests-dt9-right-caption)"}
-knitr::include_graphics("img/hypothesentests-dt9-right.png")
+```{r hypothesentests-dt9-right, out.width="75%", fig.cap="(ref:hypothesentests-dt9-right-caption)"}
+plot(x, dt(x, df), type="l", ylab="f(x)", main=paste("Kritischer Bereich bei einem einseitigen Test (rechts)"))
+Q <- qt(0.95, df)
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+text(0, 0.10, "95%", cex=1)
+text(Q, 0.03, "5%", cex=1, pos=4)
 ```

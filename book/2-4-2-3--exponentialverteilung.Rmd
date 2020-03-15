@@ -38,8 +38,11 @@ Abbildung \@ref(fig:verteilungen-exponentialverteilung-dichte) zeigt eine beispi
 
 (ref:verteilungen-exponentialverteilung-dichte-caption) Dichtefunktion der Exponentialverteilung mit \(\lambda=0.5\). Man kann leicht ausrechnen, dass das Maximum der Funktion bei \(x=0\) und \(f(x)=\lambda\) (hier 0.5) liegt.
 
-```{r verteilungen-exponentialverteilung-dichte, fig.cap="(ref:verteilungen-exponentialverteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-exponentialverteilung-dichte.png")
+```{r verteilungen-exponentialverteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-exponentialverteilung-dichte-caption)"}
+lambda <- 0.5
+x <- seq(-1, 8, by=0.01)
+
+plot(x, dexp(x, lambda), type="l", xlab="x", ylab="f(x)", col=1, lwd=2, main=paste0("Dichte der Exponentialverteilung\nmit lambda=", lambda))
 ```
 
 #### Verteilungsfunktion {-}
@@ -54,8 +57,8 @@ Auch hier kann man sich mathematisch exakter, aber auf den ersten Blick etwas un
 
 (ref:verteilungen-exp-v-caption) Verteilungsfunktion der Exponentialverteilung mit \(\lambda=0.5\).
 
-```{r verteilungen-exponentialverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-exp-v-caption)"}
-knitr::include_graphics("img/verteilungen-exponentialverteilung-verteilungsfunktion.png")
+```{r verteilungen-exponentialverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-exp-v-caption)"}
+plot(x, pexp(x, lambda), type="l", xlab="x", ylab="F(x)", ylim=c(0,1.05), col=2, lwd=2, main=paste0("Verteilungsfunktion der Exponentialverteilung\nmit lambda=", lambda))
 ```
 
 #### Erwartungswert {-}

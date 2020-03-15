@@ -36,8 +36,14 @@ Diese Dichte kann man sich leicht veranschaulichen: Um die Wahrscheinlichkeit zu
 
 (ref:verteilungen-geometrische-verteilung-dichte-caption) Die Dichte der geometrischen Verteilung für das Beispiel des betrunkenen Pförtners. Die \(x\)-Achse ist abgeschnitten, da die Dichte nach rechts ins Unendliche weitergeht. Die Wahrscheinlichkeiten für mehr als ca. 30 Versuche werden verschwindend gering, aber sind theoretisch immer noch im Bereich des Möglichen. Man sieht auch, dass \(f(1)\), die Wahrscheinlichkeit, dass gleich beim ersten Versuch der Treffer erfolgt, genau \(p\) ist.
 
-```{r verteilungen-geometrische-verteilung-dichte, fig.cap="(ref:verteilungen-geometrische-verteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-geometrische-verteilung-dichte.png")
+```{r verteilungen-geometrische-verteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-geometrische-verteilung-dichte-caption)"}
+p <- 1/8
+x <- 0:40
+
+plot(x, dgeom(x-1, p), pch=19, col=1, main=paste0("Dichte der geometrischen Verteilung\nmit p=",p), xlab="x", ylab="f(x)")
+for(xi in x){
+    lines(c(xi, xi), c(0, dgeom(xi-1, p)), lwd=2, col=1)
+}
 ```
 
 #### Verteilungsfunktion {-}
@@ -56,8 +62,8 @@ Die Verteilungsfunktion der geometrischen Verteilung ist also
 
 (ref:verteilungen-g-v-v-caption) Die Verteilungsfunktion der geometrischen Verteilung. Ihr Wert nähert sich im Unendlichen der 1 an, erreicht ihn aber nie exakt.
 
-```{r verteilungen-geometrische-verteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-g-v-v-caption)"}
-knitr::include_graphics("img/verteilungen-geometrische-verteilung-verteilungsfunktion.png")
+```{r verteilungen-geometrische-verteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-g-v-v-caption)"}
+plot(x, pgeom(x-1, p), pch=19, col=2, main=paste0("Verteilungsfunktion der geometrischen Verteilung\nmit p=",p), xlab="x", ylab="F(x)", ylim=c(0,1))
 ```
 
 

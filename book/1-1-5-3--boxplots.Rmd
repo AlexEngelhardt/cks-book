@@ -36,6 +36,7 @@ Das Maximum der Daten liegt bei 9. Das ist 9-3=6 von der Box entfernt. Geteilt d
 Der dazugehörige Boxplot ist in Abbildung \@ref(fig:boxplot-beispiel) dargestellt.
 ```
 
-```{r boxplot-beispiel, fig.cap='Ein Boxplot. Man sieht die Daten hier aufgeteilt in vier Viertel: Das untere Viertel der Daten geht (inklusive) von 0 bis 0.5, das zweite Viertel von 0.5 bis 1.5, das dritte Viertel von 1.5 bis 3, und das letzte Viertel von 3 bis 9.'}
-knitr::include_graphics("img/boxplot1.png")
+```{r boxplot-beispiel, fig.width=2, fig.cap='Ein Boxplot. Man sieht die Daten hier aufgeteilt in vier Viertel: Das untere Viertel der Daten geht (inklusive) von 0 bis 0.5, das zweite Viertel von 0.5 bis 1.5, das dritte Viertel von 1.5 bis 3, und das letzte Viertel von 3 bis 9.'}
+d <- 10-c(9,6,7,7,3,9,10,1,8,7,9,9,8,10,5,10,10,9,10,8)
+boxplot(d)
 ```

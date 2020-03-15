@@ -32,8 +32,13 @@ Der \(y\)-Wert der Dichtefunktion an der Stelle \(x\) ist also, falls \(x\) zwis
 
 (ref:verteilungen-stetige-gleichverteilung-dichte-caption) Die Dichte der stetigen Gleichverteilung mit \(a=0\) und \(b=10\). Sie ist überall null, und im Bereich von 0 bis 10 gleich \(\frac{1}{10}\).
 
-```{r verteilungen-stetige-gleichverteilung-dichte, fig.cap="(ref:verteilungen-stetige-gleichverteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-stetige-gleichverteilung-dichte.png")
+```{r verteilungen-stetige-gleichverteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-stetige-gleichverteilung-dichte-caption)"}
+a <- 0
+b <- 10
+x <- seq(a-2, b+2, by=0.01)
+
+plot(x, dunif(x,a,b), ylim=c(0, 0.12), type="l", xlab="x", ylab="f(x)", col=1, lwd=2,
+     main=paste0("Dichte der stetigen Gleichverteilung\nmit a=",a," und b=",b))
 ```
 
 #### Verteilungsfunktion {-}
@@ -44,8 +49,9 @@ Abbildung \@ref(fig:verteilungen-stetige-gleichverteilung-verteilungsfunktion) z
 
 (ref:verteilungen-s-g-v-v-caption) Die Verteilungsfunktion der stetigen Gleichverteilung, hier mit \(a=0\) und \(b=10\).
 
-```{r verteilungen-stetige-gleichverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-s-g-v-v-caption)"}
-knitr::include_graphics("img/verteilungen-stetige-gleichverteilung-verteilungsfunktion.png")
+```{r verteilungen-stetige-gleichverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-s-g-v-v-caption)"}
+plot(x, punif(x,a,b), type="l", ylim=c(0,1.2), xlab="x", ylab="F(x)", col=2, lwd=2,
+     main=paste0("Verteilungsfunktion der stetigen Gleichverteilung\nmit a=",a," und b=",b))
 ```
 
 Innerhalb des Intervalls von \(a\) bis \(b\) ist die Verteilungsfunktion eine gerade Linie von 0 bis 1. In einer Formel drückt man diese Linie durch \(\frac{x-a}{b-a}\) aus. Der Nenner ist hier an jeder Stelle von \(x\) eine Konstante. Der Zähler ist an der Stelle \(x=a\) genau null, und wird dann in Richtung \(b\) immer größer.

@@ -26,14 +26,46 @@ Für gemessene Daten \(x_1, x_2, \ldots, x_n\):
 Die **Spannweite** einer Datenreihe ist definiert als der Abstand zwischen dem
 Maximum und dem Minimum dieser Daten (s. Abb. \@ref(fig:spannweite))
 
-```{r spannweite, fig.cap="Die Spannweite ist die Differenz zwischen dem größten und dem kleinsten Wert einer Datenreihe"}
-knitr::include_graphics("img/spannweite.png")
+```{r spannweite, fig.height=3.5, fig.cap="Die Spannweite ist die Differenz zwischen dem größten und dem kleinsten Wert einer Datenreihe"}
+spannweite <- function(x, titlestring=NULL){
+  plot.new()
+  plot.window(xlim=range(x), ylim=c(1,1.1))
+  title(titlestring)
+  plot.xy(xy.coords(x=x, y=rep(1.03, times=length(x))), type="p", pch=19, cex=2, col=3)
+  lines(c(min(x), min(x)), c(1.03,1.06), cex=2)
+  lines(c(max(x), max(x)), c(1.03,1.06), cex=2)
+  lines(c(min(x), max(x)), c(1.06, 1.06), cex=2)
+  lines(rep(mean(c(min(x), max(x))), 2), c(1.06, 1.08), cex=2)
+  text(xy.coords(mean(c(min(x), max(x))), 1.09), "Spannweite")
+  axis(1)
+}
+
+set.seed(2)
+x <- rnorm(10)
+spannweite(x)
 ```
 
 Man sucht also in den Daten nach dem Maximum und dem Minimum, und zieht das Minimum vom Maximum ab - so erhält man die Spannweite. Das ist ein sehr einfaches Streuungsmaß, aber unglaublich anfällig für Ausreißer (was in der Statistik meist unerwünscht ist). Daher betrachtet man auch den **Interquartilsabstand**, der ein bisschen dagegen hilft; er ist der Abstand zwischen dem 75%-[Quantil](#sec-quantile) und dem 25%-Quantil (s. Abb. \@ref(fig:interquartilsabstand)).
 
-```{r interquartilsabstand, fig.cap="Der Interquartilsabstand ist die Differenz zwischen dem 75%-Quantil und dem 25%-Quantil einer Datenreihe"}
-knitr::include_graphics("img/interquartilsabstand.png")
+(ref:iqr-caption) Der Interquartilsabstand ist die Differenz zwischen dem 75%-Quantil und dem 25%-Quantil einer Datenreihe
+
+```{r interquartilsabstand, fig.height=3.5, fig.cap="(ref:iqr-caption)"}
+iqr <- function(x, titlestring=NULL){
+  plot.new()
+  plot.window(xlim=range(x), ylim=c(1,1.1))
+  title(titlestring)
+  plot.xy(xy.coords(x=x, y=rep(1.03, times=length(x))), type="p", pch=19, cex=2, col=3)
+  low <- quantile(x, 0.25, type=1)
+  high <- quantile(x, 0.75, type=1)
+  lines(c(low, low), c(1.03,1.06), cex=2)
+  lines(c(high, high), c(1.03,1.06), cex=2)
+  lines(c(low, high), c(1.06, 1.06), cex=2)
+  lines(rep(mean(c(low, high)), 2), c(1.06, 1.08), cex=2)
+  text(xy.coords(mean(c(low, high)), 1.09), "Interquartilsabstand")
+  axis(1)
+}
+
+iqr(x)
 ```
 
 Hier muss man also das 75%-Quantil (\(x_{0.75}\)) und das 25%-Quantil (\(x_{0.25}\)) berechnen, und erhält den Interquartilsabstand durch \(x_{0.75}-x_{0.25}\). Im oberen Bild mit \(n=10\) Datenpunkten ist das 25%-Quantil bestimmt als \(x_{0.25}=x_{(\lfloor np \rfloor + 1)} = x_{(3)}\), und das 75%-Quantil analog als \(x_{(8)}\). Die tatsächlichen Werte der Datenpunkte sind hier nicht berücksichtigt, aber wir nehmen immer den dritten und achten Wert der sortierten Daten.

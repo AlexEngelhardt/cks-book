@@ -4,8 +4,14 @@ Stell dir vor, du möchtest den Zusammenhang zwischen den beiden Variablen \(x =
 
 (ref:regression-ki-1-caption) Beispiel einer Stichprobe von Körpergröße und Körpergewicht für 6 Personen.
 
-```{r regression-ki-1, fig.cap="(ref:regression-ki-1-caption)"}
-knitr::include_graphics("img/regression-ki-1.png")
+```{r regression-ki-1, out.width="75%", fig.cap="(ref:regression-ki-1-caption)"}
+set.seed(20190727)
+x <- runif(6, 155, 200)
+y <- 0.9 * x - 60 + rnorm(length(x), sd=10)
+mod <- lm(y~x)
+plot(x, y, xlim=c(154, 201), ylim=c(60, 120),
+     main=paste0("Stichprobe 1\ny = ", round(coef(mod)[1], 2), " + ", round(coef(mod)[2], 2), " * x"))
+abline(mod)
 ```
 
 Fünf deiner Freunde sind aber an derselben Frage interessiert, und fragen selbst jeder \(n=6\) Personen nach diesen Daten. Bei ihnen ergeben sich natürlich andere Regressionsgeraden. Das Ergebnis der 6 Stichproben könnte z.B. wie in Abbildung \@ref(fig:regression-ki-2) aussehen.
@@ -13,7 +19,16 @@ Fünf deiner Freunde sind aber an derselben Frage interessiert, und fragen selbs
 (ref:regression-ki-2-caption) Beispiel von sechs wiederholten Stichproben von Körpergröße und Körpergewicht für 6 Personen. Jede Stichprobe ergibt natürlich eine leicht andere Regressionsgerade.
 
 ```{r regression-ki-2, fig.cap="(ref:regression-ki-2-caption)"}
-knitr::include_graphics("img/regression-ki-2.png")
+set.seed(20190727)
+layout(matrix(1:6, nrow=2, byrow=TRUE))
+for(i in 1:6){
+    x <- runif(6, 155, 200)
+    y <- 0.9 * x - 60 + rnorm(length(x), sd=10)
+    mod <- lm(y~x)
+    plot(x, y, xlim=c(154, 201), ylim=c(60, 120),
+         main=paste0("Stichprobe ", i, "\ny = ", round(coef(mod)[1], 2), " + ", round(coef(mod)[2], 2), " * x"))
+    abline(mod)
+}
 ```
 
 Wir haben also eine gewisse Unsicherheit in der Schätzung. Die Regressionsgerade (d.h., die beiden *Parameter* \(a\) und \(b\), durch die die Gerade beschrieben wird) kann nie exakt berechnet werden, sondern immer nur geschätzt werden, und ist daher mit Unsicherheit behaftet.

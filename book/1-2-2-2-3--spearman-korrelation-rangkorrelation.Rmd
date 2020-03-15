@@ -40,8 +40,25 @@ Den Spearman-Korrelationskoeffizient erhält man nun, wenn man die Formel der Ko
 
 (ref:zweivariablen-spearman-bsp-caption) Links ist das Alter und die Zeit für 100 Meter in einem Scatterplot dargestellt. Aus diesen Daten wird die Pearson-Korrelation \(r\) berechnet. Rechts sind die dazugehörigen Ränge (jeweils von 1 bis 6) dargestellt. Mit diesen Rängen berechnet man den Spearman-Korrelationskoeffizienten \(r_\text{Sp}\).
 
-```{r zweivariablen-spearman-bsp, fig.cap="(ref:zweivariablen-spearman-bsp-caption)"}
-knitr::include_graphics("img/zweivariablen-spearman-bsp.png")
+```{r zweivariablen-spearman-bsp, fig.width=10, fig.cap="(ref:zweivariablen-spearman-bsp-caption)"}
+spearmanplot <- function(a, b, main_1="", xlab_1="x", ylab_1="y", main_2="", xlab_2="x", ylab_2="y"){
+    layout(matrix(1:2, nrow=1))
+    plot(a, b, main=main_1, xlab=xlab_1, ylab=ylab_1)
+    text(min(a), max(b), paste0("Pearson-Korrelation: ", round(cor(a,b),2)), adj=0)
+    plot(rank(a), rank(b), main=main_2, xlab=xlab_2, ylab=ylab_2)
+    text(1,length(a), paste0("Spearman-Korrelation: ", round(cor(a,b,method="spearman"),2)), adj=0)
+}
+
+set.seed(20150418)
+n <- 6
+Alter <- round(runif(n, 18, 80))
+Zeit <- round(rnorm(n, mean=9+0.1*Alter), 2)
+
+spearmanplot(Alter, Zeit,
+             "Alter vs. Zeit", "Alter (Jahre)", "Zeit (Sekunden)",
+             "Rang des Alters vs. Platzierung", "Rang des Alters", "Platzierung (Rang der Zeit)"
+             )
+
 ```
 
 Die Formel für die Spearman-Korrelation ist genau dieselbe wie für die Pearson-Korrelation, nur werden die Daten \(x_i\) und \(y_i\) mit ihren jeweiligen Rängen ersetzt:
@@ -62,8 +79,10 @@ Da bei der Spearman-Korrelation die Ränge verwendet werden, sind dort die tats�
 
 (ref:zweivariablen-spearman-r1-caption) Links ist ein Scatterplot für Beispieldaten \(x\) und \(y\). Der niedrigste \(x\)-Wert gehört zum niedrigsten \(y\)-Wert, usw., jedoch ist der Zusammenhang nicht linear, sondern folgt einer Kurve. Rechts sieht man nun die Ränge der Daten gegeneinander geplottet. Der hieraus resultierende Spearman-Korrelationskoeffizient ist genau 1.
 
-```{r zweivariablen-spearman-r1, fig.cap="(ref:zweivariablen-spearman-r1-caption)"}
-knitr::include_graphics("img/zweivariablen-spearman-r1.png")
+```{r zweivariablen-spearman-r1, fig.width=10, fig.cap="(ref:zweivariablen-spearman-r1-caption)"}
+x <- runif(10,0,5)
+y <- exp(x)
+spearmanplot(x,y, main_1="Originaldaten", main_2="Ränge der Daten")
 ```
 
 Mathematisch sagt man: Die Spearman-Korrelation misst den *monotonen* Zusammenhang, während die Pearson-Korrelation den *linearen* Zusammenhang misst.

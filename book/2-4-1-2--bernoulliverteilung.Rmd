@@ -22,8 +22,12 @@ Abbildung \@ref(fig:verteilungen-bernoulliverteilung-dichte) zeigt diese Dichte.
 
 (ref:verteilungen-bernoulliverteilung-dichte-caption) Die Dichte für unser Beispiel auf dem Jahrmarktschießstand. Die Wahrscheinlichkeit für eine Niete (also \(X=0\)) ist hier 80%, und die Wahrscheinlichkeit für einen Treffer, \(X=1\), ist 20%. Alle anderen Werte haben den Wert 0. Die Wahrscheinlichkeit, mit einem Schuss zum Beispiel 0.5 oder 3 Treffer zu erhalten, ist natürlich 0.
 
-```{r verteilungen-bernoulliverteilung-dichte, fig.cap="(ref:verteilungen-bernoulliverteilung-dichte-caption)"}
-knitr::include_graphics("img/verteilungen-bernoulliverteilung-dichte.png")
+```{r verteilungen-bernoulliverteilung-dichte, out.width="75%", fig.cap="(ref:verteilungen-bernoulliverteilung-dichte-caption)"}
+p <- 0.2
+
+plot(0:1, c(1-p, p), xlim=c(-0.5, 1.5), ylim=c(0,1), pch=19, col=1, main="Dichte f(x) der Bernoulliverteilung mit p=0.2", ylab="f(x)", xlab="x")
+lines(c(0,0), c(0, 1-p), lwd=2, col=1)
+lines(c(1,1), c(0, p), lwd=2, col=1)
 ```
 
 #### Verteilungsfunktion {-}
@@ -40,8 +44,15 @@ Die dritte Stufe ist alles über \(x=1\). Da nur die Ergebnisse 0 oder 1 rauskom
 
 (ref:verteilungen-bernoulliverteilung-verteilungsfunktion-caption) Die Verteilungsfunktion für das Beispiel des Jahrmarktschießstands ist eine Treppenfunktion. Hier liest man z.B. ab, dass \(\mathbb{P}(X \leq 0) = 0.8\) ist, und ebenso, dass \(\mathbb{P}(X \leq 0.5) = 0.8\) ist.
 
-```{r verteilungen-bernoulliverteilung-verteilungsfunktion, fig.cap="(ref:verteilungen-bernoulliverteilung-verteilungsfunktion-caption)"}
-knitr::include_graphics("img/verteilungen-bernoulliverteilung-verteilungsfunktion.png")
+```{r verteilungen-bernoulliverteilung-verteilungsfunktion, out.width="75%", fig.cap="(ref:verteilungen-bernoulliverteilung-verteilungsfunktion-caption)"}
+p <- 0.2
+
+plot(c(-0.5,1.5), c(-0.1,1.1), type="n", main="Verteilungsfunktion F(x) der Bernoulliverteilung mit p=0.2", ylab="F(x)", xlab="x")
+lines(c(-0.5,0), c(0,0), col=2)
+lines(c(0,1), c(1-p,1-p), col=2)
+lines(c(1,1.5), c(1,1), col=2)
+points(c(0,1), c(1-p, 1), pch=19, col=2)
+points(c(0,1), c(0, 1-p), col=2)
 ```
 
 #### Erwartungswert {-}

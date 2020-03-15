@@ -1,11 +1,46 @@
 ## Diskrete Zufallsvariablen {#sec-duevdz}
 
+Diskrete Zufallsvariablen beschreiben ein Experiment, in dem das Ergebnis ein *diskretes* Merkmal ist (s. Kap. \@ref(merkmals-und-skalentypen)). In Abbildung \@ref(fig:zufallsvariablen-dichte-verteilung) ist die Dichte und Verteilungsfunktion für eine beispielhafte diskrete Zufallsvariable dargestellt.
+
 Dieses Kapitel beschreibt Eigenschaften, die allen Zufallsvariablen mit diskreten Verteilungen zugrunde liegen. Für Eigenschaften spezieller Verteilungen, z.B. der Poissonverteilung, siehe Kapitel \@ref(sec-verteilungen).
 
 (ref:zufallsvariablen-dichte-verteilung-caption) Im linken Bild sieht man die Dichte einer diskreten Zufallsvariable. Man sieht, dass die Wahrscheinlichkeit f(x) für die Ergebnisse 2 und 3 am höchsten ist. Der Erwartungswert E(X) ist 3, und ist mit einer gestrichelten Linie eingezeichnet. Im rechten Bild sieht man die entsprechende Verteilungsfunktion derselben Zufallsvariablen. Außerdem ist das 30%-Quantil eingezeichnet. Man bestimmt es, indem man von der y-Achse auf der Höhe des Quantils (bei uns 0.3) waagerecht nach rechts bis zur Verteilungsfunktion geht, und dann das Lot nach unten fällt. Unser 30%-Quantil ist also 2.
 
-```{r zufallsvariablen-dichte-verteilung, fig.cap="(ref:zufallsvariablen-dichte-verteilung-caption)"}
-knitr::include_graphics("img/zufallsvariablen-dichte-verteilung.png")
+```{r zufallsvariablen-dichte-verteilung, fig.width=10, fig.cap="(ref:zufallsvariablen-dichte-verteilung-caption)"}
+plot_pois_dens <- function(x, lambda, E=FALSE, ...){
+    plot(x, dpois(x, lambda), col=1, pch=19, ylab="f(x)", ...)
+    for(x_i in x){
+        lines(c(x_i, x_i), c(0, dpois(x_i, lambda)), col=1, lwd=2)
+    }
+    if(E==TRUE){
+        abline(v=lambda, lty=2)
+        legend("topright", legend=c(paste0("X ~ Po(",lambda,")"), paste0("E(X) = ",lambda)), pch=19)
+    }
+}
+
+plot_pois_dist <- function(x, lambda, q=FALSE, ...){
+    plot(x, ppois(x, lambda), col=2, pch=19, ylab="F(x)", ylim=c(0,1), ...)
+    for(x_i in x){
+        F <- ppois(x_i, lambda)
+        lines(c(x_i, x_i+1), c(F, F), col=2, lwd=2)
+        lines(c(x_i+1, x_i+1), c(F, ppois(x_i+1, lambda)), col=2, lwd=2, lty=2)
+    }
+    ## F_X mit Quantil
+    if(q != FALSE){
+        lines(x=c(0, qpois(q, lambda)),
+              y=c(q, q), lty=2)
+        lines(x=c(qpois(q, lambda), qpois(q, lambda)),
+              y=c(q, 0), lty=2)
+    }
+}
+
+lambda <- 3
+x <- 0:10
+
+op <- par(mfrow=c(1,2))
+plot_pois_dens(x, lambda, E=TRUE, main="Ausschnitt einer Dichte")
+plot_pois_dist(x, lambda, q=0.3, main="Ausschnitt der zugehörigen Verteilungsfunktion")
+par(op)
 ```
 
 ### Dichte {#sec-duevdz-dichte}
@@ -73,8 +108,16 @@ Bei manchen Verteilungen, wie z.B. der Poissonverteilung, gibt es unendlich viel
 
 (ref:zufallsvariablen-varianz-caption) Zwei beispielhafte Dichten. Oben sieht man eine Dichte mit niedriger Varianz, das Ergebnis der Zufallsvariable bewegt sich meist im Bereich von 0 bis 5. Unten eine Zufallsvariable mit höherer Varianz, hier ist die Dichte breit gestreut.
 
-```{r zufallsvariablen-varianz, fig.cap="(ref:zufallsvariablen-varianz-caption)"}
-knitr::include_graphics("img/zufallsvariablen-varianz.png")
+```{r zufallsvariablen-varianz, fig.height=6, out.width="70%", fig.cap="(ref:zufallsvariablen-varianz-caption)"}
+#### Eine Dichte mit hoher, eine mit niedriger Varianz
+lambda1 <- 2
+lambda2 <- 6
+x <- 0:15
+
+op <- par(mfrow=c(2,1))
+plot_pois_dens(x, lambda1, E=TRUE, main="Dichte einer Zufallsvariablen mit niedriger Varianz", ylim=c(0, 0.3))
+plot_pois_dens(x, lambda2, E=TRUE, main="Dichte einer Zufallsvariablen mit hoher Varianz", ylim=c(0, 0.3))
+par(op)
 ```
 
 Die Varianz einer Zufallsvariablen (s. Abb. \@ref(fig:zufallsvariablen-varianz)) wird mit \(\mathbb{V}(X)\), und manchmal kurz mit \(\sigma^2\) notiert. Sie ist die erwartete quadratische Abweichung einer Zufallsvariablen von ihrem Erwartungswert. Die Abweichung vom Erwartungswert \(\mathbb{E}(X)\), nennen wir ihn kurz \(\mu\), ist \(X-\mu\). Die quadratische Abweichung ist \((X-\mu)^2\), und die erwartete quadratische Abweichung ist nun \(\mathbb{E}[(X-\mu)^2]\). Und das ist auch schon die Definition der Varianz einer Zufallsvariablen:

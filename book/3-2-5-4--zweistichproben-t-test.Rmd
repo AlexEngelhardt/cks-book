@@ -109,8 +109,13 @@ In dieser Aufgabe führen wir einen einseitigen t-Test durch, in dem die Alterna
 
 (ref:hypothesentests-dt12-right-caption) Die \(t\)-Verteilung mit 12 Freiheitsgraden.
 
-```{r hypothesentests-dt12-right, fig.cap="(ref:hypothesentests-dt12-right-caption)"}
-knitr::include_graphics("img/hypothesentests-dt12-right.png")
+```{r hypothesentests-dt12-right, out.width="75%", fig.cap="(ref:hypothesentests-dt12-right-caption)"}
+plot(x, dt(x, df), type="l", ylab="f(x)", main=paste("Kritischer Bereich bei einem einseitigen Test (rechts)"))
+Q <- qt(0.95, df)
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+text(0, 0.10, "95%", cex=1)
+text(Q, 0.03, "5%", cex=1, pos=4)
 ```
 
 Alle Werte, die "rechts" von dieser Schranke liegen, d.h. größer als diese Schranke sind, liegen nun im kritischen Bereich. Falls unsere Prüfgröße dort gelandet ist, lehnen wir die Nullhypothese ab.

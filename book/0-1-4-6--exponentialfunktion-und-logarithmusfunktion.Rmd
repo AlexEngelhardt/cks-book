@@ -38,7 +38,24 @@ Die meisten sind wohl vertraut mit Polynomialfunktionen wie \(f(x) = x^3\). Hier
 (ref:einige-polynome-caption) Beispiele für Polynomfunktionen: Die Kurven für \(x^a\) mit \(a=1,2,3,4,5\).
 
 ```{r einige-polynome, fig.cap="(ref:einige-polynome-caption)"}
-knitr::include_graphics("img/grundlagen-explog-polynom.png")
+pow <- c(1,2,3,4,5)
+x <- seq(-2,3, by=0.01)
+plot(x, x^pow[1], type="l", lty=2, col=1, xlab="x", ylab="f(x)", main="Einige Polynome", lwd=2)
+abline(h=0)
+abline(v=0)
+for(i in 2:length(pow)){
+    p <- pow[i]
+    LTY <- i+1
+    lines(x, x^pow[i], lty=LTY, lwd=2, col=i)
+}
+legendtext <- c(
+    expression(f(x)==x^1),
+    expression(f(x)==x^2),
+    expression(f(x)==x^3),
+    expression(f(x)==x^4),
+    expression(f(x)==x^5)
+)
+legend("bottomright", lty=2:6, col=1:5, bg="white", legend=legendtext, lwd=2)
 ```
 
 **Von der Polynomfunktion zur Exponentialfunktion** gelangt man nun, wenn man nicht die Basis variiert, sondern den Exponenten. Wir nehmen also nicht \(f(x)=x^2\), sondern stattdessen \(f(x)=2^x\). Exponentialfunktionen sehen wie in Abbildung \@ref(fig:einige-exponentialfunktionen) aus.
@@ -46,7 +63,21 @@ knitr::include_graphics("img/grundlagen-explog-polynom.png")
 (ref:einige-exponentialfunktionen-caption) Die Exponentialfunktionen für die Basis 1, 2, \(e\), und 3. Die Funktion \(f(x)=1^x\) ist konstant 1, da z.B. \(1^3=1\) ist.
 
 ```{r einige-exponentialfunktionen, fig.cap="(ref:einige-exponentialfunktionen-caption)"}
-knitr::include_graphics("img/grundlagen-explog-exponential.png")
+base <- c(1, 2, exp(1), 3)
+x <- seq(-2, 3, by=0.01)
+plot(x, base[1]^x, type="l", lty=2, col=1, xlab="x", ylab="f(x)", main="Einige Exponentialfunktionen", ylim=c(-1, 8), lwd=2)
+abline(h=0)
+abline(v=0)
+for(i in 2:length(base)){
+    lines(x, base[i]^x, lty=i+1, lwd=2, col=i)
+}
+legendtext <- c(
+    expression(f(x)==1^x),
+    expression(f(x)==2^x),
+    expression(f(x)==e^x),
+    expression(f(x)==3^x)
+)
+legend("topleft", lty=2:5, bg="white", col=1:4, legend=legendtext, lwd=2)
 ```
 
 Hier fallen die folgenden Dinge auf:
@@ -80,7 +111,13 @@ In diesem Beispiel interpretiert man den Logarithmus so: "\(e\) hoch *wieviel* i
 (ref:logarithmusfkt-caption) Auf der linken Grafik sieht man die Exponentialfunktion \(f(x) = \exp (x)\). Hier kann man ablesen, dass \(\exp (3)\) in etwa 20 ist. Auf der rechten Grafik ist die Logarithmusfunktion, \(f(x) = \log (x)\), dargestellt. Hier kann man die erhaltenen 20 wieder umkehren in \(\log (20) \approx 3\).
 
 ```{r logarithmusfkt, fig.cap="(ref:logarithmusfkt-caption)"}
-knitr::include_graphics("img/grundlagen-explog-log.png")
+x <- seq(-2,4,by=0.01)
+op <- par(mfrow=c(1,2))
+plot(x, exp(x), type="l", lwd=2, main="f(x) = exp(x)")
+abline(h=0);abline(v=0)
+plot(exp(x), log(exp(x)), type="l", lwd=2, xlab="x", ylab="log(x)", main="f(x) = log(x)")
+abline(h=0);abline(v=0)
+par(op)
 ```
 
 Genauso wie es bei Exponentialfunktionen eine Basis gibt (wie z.B. die Basis \(10\) bei der Funktion \(f(x) = 10^x\), so bezieht sich auch ein Logarithmus immer auf eine Basis. Der *natürliche Logarithmus*, den wir bisher betrachtet haben, bezieht sich auf die Basis \(e\). Die verbreitetsten anderen Logarithmen ist der Zweierlogarithmus mit der Basis 2, und der Zehnerlogarithmus mit der Basis 10. Am eindeutigsten notiert man den Logarithmus, indem man die Basis unter das Log-Symbol schreibt, also z.B. \(\log_{10}\) oder \(\log_2\). Wenn keine Zahl als Basis hinzugefügt wurde, meint ein "nacktes" \(\log\)-Symbol zumindest im statistischen Bereich immer den natürlichen Logarithmus, zur Basis \(e\). In manchen angewandten Gebieten kann damit allerdings auch der Zehnerlogarithmus gemeint sein, dort wird dann \(\ln\) für den natürlichen Logarithmus verwendet. Wegen dieser Möglichkeit der Verwechslung ist es empfohlen, die Basis immer explizit dazuzuschreiben.
@@ -90,7 +127,13 @@ Der Zehnerlogarithmus ist besonders leicht zu interpretieren, da die Zehnerpoten
 (ref:einwohnerzahlen-caption) Die Einwohnerzahlen aller deutschen Großstädte (>100.000 Einwohner). Oben sieht man die untransformierten Daten, und eine sehr schiefe Verteilung, in der sich fast alle Punkte zwischen 100.000 und 500.000 aufhalten. Die vier Städte rechts der 1Mio-Marke sind Berlin, Hamburg, München und Köln. In der unteren Grafik sind die Daten nur mit dem Zehnerlogarithmus transformiert. Man hat hier eine bessere Übersicht über die Streuung der Daten in den niedrigen Bereichen. Da \(\log_{10} (1.000.000) = 6\) ist, sind die vier Millionenstädte in der unteren Grafik die, die rechts der \(6.0\) liegen.
 
 ```{r einwohnerzahlen, fig.cap="(ref:einwohnerzahlen-caption)"}
-knitr::include_graphics("img/grundlagen-explog-einwohner.png")
+ppl <- read.csv("data/Statista2_UTF8.csv", header=TRUE)
+
+op <- par(mfrow=c(2,1))
+y <- runif(nrow(ppl))
+plot(ppl$X2013, y, xlab="Einwohnerzahl", ylab="", yaxt="n", ylim=c(-.25, 1.25), main="Deutschlands Großstädte (Stand 2014)")
+plot(log10(ppl$X2013), y, xlab="log10(Einwohnerzahl)", ylab="", yaxt="n", ylim=c(-.25, 1.25))
+par(op)
 ```
 
 Da das Ergebnis einer Exponentialfunktion nur positiv sein kann, kann man umgekehrt den Logarithmus auch nur von einer positiven Zahl nehmen. Ein Wert wie z.B. \(\log (-3)\) ist nicht definiert. Der Definitionsbereich für die Logarithmusfunktion ist also \(\mathbb{R}^+\), die gesamten positiven reellen Zahlen. Der Wertebereich hingegen sind die gesamten reellen Zahlen \(\mathbb{R}\).

@@ -20,16 +20,42 @@ In Abbildung \@ref(fig:zufallsvariablen-unabhaengige-ZV) sind vier Beispiele fü
 
 (ref:zufallsvariablen-unabhaengige-ZV-caption) (a) Eine Zählvariable \(Y\) und eine gleichverteilte stetige Variable \(X\). (b) Zwei Zählvariablen. (c) Zwei stetig gleichverteilte Variablen. (d) Zwei normalverteilte Variablen.
 
-```{r zufallsvariablen-unabhaengige-ZV, fig.cap="(ref:zufallsvariablen-unabhaengige-ZV-caption)"}
-knitr::include_graphics("img/zufallsvariablen-unabhaengige-ZV.png")
+```{r zufallsvariablen-unabhaengige-ZV, fig.height=8, fig.width=8, fig.cap="(ref:zufallsvariablen-unabhaengige-ZV-caption)"}
+set.seed(20141026)
+n <- 100
+
+op <- par(mfrow=c(2,2))
+x <- runif(n, 0, 10)
+y <- rpois(n, 4)
+plot(x, y, main="(a)")
+x <- rpois(n, 2)
+y <- rpois(n, 4)
+plot(x, y, main="(b)")
+x <- runif(n, 0, 10)
+y <- runif(n,0,10)
+plot(x, y, main="(c)")
+x <- rnorm(n, 0, 10)
+y <- rnorm(n,0,10)
+plot(x, y, main="(d)")
+par(op)
 ```
 
 Abbildung \@ref(fig:zufallsvariablen-abhaengige-ZV) zeigt vier beispielhafte Streudiagramme für abhängige Zufallsvariablen, und macht deutlich dass diese Abhängigkeiten nicht immer linear (wie in Abbildung \@ref(fig:zufallsvariablen-abhaengige-ZV) (a) dargestellt) sein müssen.
 
 (ref:zufallsvariablen-abhaengige-ZV-caption) (a) Das klassische Beispiel: \(X\) und \(Y\) sind linear abhängig. (b) Hier ist eine quadratische Abhängigkeit zwischen \(X\) und \(Y\) erkennbar. (c) Ein ungewöhnliches Beispiel, aber dennoch eine Abhängigkeit: Falls uns der Wert von \(X\) gegeben wird, lässt uns das eine genauere Aussage für \(Y\) treffen. (d) Eine beispielhafte (quadratische) Abhängigkeit zwischen einer Zählvariable \(Y\) und einer gleichverteilten Variable \(X\).
 
-```{r zufallsvariablen-abhaengige-ZV, fig.cap="(ref:zufallsvariablen-abhaengige-ZV-caption)"}
-knitr::include_graphics("img/zufallsvariablen-abhaengige-ZV.png")
+```{r zufallsvariablen-abhaengige-ZV, fig.height=8, fig.width=8, fig.cap="(ref:zufallsvariablen-abhaengige-ZV-caption)"}
+x <- runif(n, -2, 2)
+op <- par(mfrow=c(2,2))
+y <- 3*x + rnorm(n, sd=2)
+plot(x, y, main="(a)")
+y <- -(x-0.5)^2 + rnorm(n, sd=1)
+plot(x, y, main="(b)")
+y <- (x > 0 & x < 1) + rnorm(n, sd=.1)
+plot(x, y, main="(c)")
+y <- rpois(n, abs(x))
+plot(x, y, main="(d)")
+par(op)
 ```
 
 In Abbildung \@ref(fig:zufallsvariablen-abhaengige-ZV) (c) wird sehr schön klar, dass die absolute Verteilung von \(Y\) anders ist als die Verteilung von \(Y\), gegeben ich kenne \(X\). Denn es ist zum Beispiel \(Y|X=0.5 \sim N(1, 0.1)\), aber \(Y | X=-1 \sim N(0, 0.1)\). Das bedeutet: Die Verteilung von \(Y\), gegeben X ist 0.5, ist eine Normalverteilung mit Mittelwert 1 (und Standardabweichung 0.1). Falls \(X\) aber zum Beispiel -1 ist, ist die bedingte Verteilung von \(Y\) normalverteilt mit Mittelwert 0 (und Standardabweichung 0.1).

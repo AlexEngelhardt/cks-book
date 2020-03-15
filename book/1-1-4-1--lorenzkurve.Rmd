@@ -45,8 +45,48 @@ Um die Lorenzkurve zu zeichnen, werden nun einfach diese Punkte in einen Graphen
 
 (ref:lorenzkurve-bsp1-caption) Eine mögliche Lorenzkurve für Einkommensdaten. Die gestrichelte Linie ist die "Gerade der perfekten Gleichverteilung". Hätte jedes Merkmal den gleichen Anteil, würde die Lorenzkurve nämlich genau auf dieser Geraden liegen. Man liest die tatsächliche Kurve am Beispiel der gepunkteten Linie folgendermaßen ab: "Die ärmsten 80% der Bevölkerung haben 48.6 Prozent des gesamten Einkommens" (Der genaue Wert stammt aus der Tabelle oben). Umgekehrt kann man dann natürlich über die reichsten 20% der Bevölkerung sagen, dass sie 51.4 Prozent des Einkommens haben.
 
-```{r lorenzkurve-bsp1, fig.cap="(ref:lorenzkurve-bsp1-caption)"}
-knitr::include_graphics("img/lorenzkurve.png")
+```{r lorenzkurve-bsp1, fig.cap="(ref:lorenzkurve-bsp1-caption)", message=FALSE}
+plotlorenz <- function(x,
+                       xlab="Anteil der Bevölkerung",
+                       ylab="Anteil des Einkommens",
+                       points=TRUE,
+                       eqline=TRUE,
+                       area=c("none", "over", "under", "all"),
+                       ...){
+  area <- match.arg(area)
+  library(ineq)
+  LC <- Lc(x)
+
+  plot(Lc(x)$p, Lc(x)$L, type="l", xlab=xlab, ylab=ylab, ...)
+
+  if(points)
+    points(LC$p, LC$L, pch=19)
+  
+  if(eqline)
+    lines(c(0,1), c(0,1), lty=2)
+
+  if(area=="over"){
+    x <- LC$p
+    y <- LC$L
+    polygon(x, y, lty=0, col=1)
+  } else if(area=="under"){
+    x <- c(LC$p, 1)
+    y <- c(LC$L, 0)
+    polygon(x, y, lty=0, col=1)
+  } else if(area=="all"){
+    x <- c(0,1,1)
+    y <- c(0,0,1)
+    polygon(x, y, lty=0, col=1)
+  }
+  
+  return(LC)
+}
+
+EK <- c(3, 4, 5, 5, 18)
+
+LC <- plotlorenz(EK, main="Lorenzkurve")
+lines(c(0.8,0.8), c(-1, LC$L[5]), lty=3) # c(fromX, toX), c(fromY, toY)
+lines(c(-1, 0.8), c(LC$L[5], LC$L[5]), lty=3)
 ```
 
 Eine perfekte Gleichverteilung, wenn also jede Person das gleiche Einkommen hätte, wird in der Lorenzkurve durch eine Gerade vom Punkt (0,0) zu (1,1) dargestellt. In In Abbildung \@ref(fig:lorenzkurve-bsp1) ist diese Gerade durch eine gestrichelte Linie eingezeichnet. Hier könnte man ablesen, dass die ärmsten 20% genau 20% des Einkommens hätten, usw. - wobei es bei einer absolut fairen Gleichverteilung ja eigentlich keine "ärmsten" 20% gibt. Die entsprechende (nicht sehr spannende) Lorenzkurve ist in Abbildung \@ref(fig:vierlorenzkurven) (d) dargestellt.
@@ -55,8 +95,16 @@ Das andere Extrem wäre eine Verteilung, bei der eine einzelne Person das komple
 
 (ref:vierlorenzkurven-caption) Vier beispielhafte Lorenzkurven. Kurve (a) ist eine übliche Kurve, die wir oben schon gesehen haben. Kurve (b) ist etwas unfairer, hier sind 60% (also drei von fünf) der Einwohner noch sehr arm. Kurve (c) ist für fünf Personen das unfairste Extrem, da 80% der Personen (vier von fünf) gar nichts besitzen. Kurve (d) ist die fairste Lorenzkurve, nämlich eine Gerade vom Punkt (0,0) zum Punkt (1,1).
 
-```{r vierlorenzkurven, fig.cap="(ref:vierlorenzkurven-caption)"}
-knitr::include_graphics("img/vierlorenzkurven.png")
+```{r vierlorenzkurven, fig.height=7, fig.cap="(ref:vierlorenzkurven-caption)"}
+op <- par(mfrow=c(2,2))
+LCa <- plotlorenz(EK, main="(a) eine normale Lorenzkurve")
+EK2 <- c(1,2,2,30,59)
+LCb <- plotlorenz(EK2, main="(b) etwas unfairer")
+EK3 <- c(0,0,0,0,10)
+LCc <- plotlorenz(EK3, main="(c) eine Person besitzt alles")
+EK4 <- c(2,2,2,2,2)
+LCd <- plotlorenz(EK4, main="(d) perfekte faire Gleichverteilung")
+par(op)
 ```
 
 #### Mathematische Definition der Lorenzkurve {-}

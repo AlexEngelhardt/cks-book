@@ -33,7 +33,7 @@ Abbildung \@ref(fig:konfidenzintervall) veranschaulicht ein Beispiel: Es gibt ei
 
 (ref:konfidenzintervall-caption) In dieser Grafik sind zwei verschiedene Konfidenzintervalle berechnet und visualisiert worden: Das obere ist ein 99%-KI, also mit einer Irrtumswahrscheinlichkeit von nur 1%. Da wir uns hier sehr sicher (nämlich 99% sicher) sein wollen, dass der wahre Parameter in diesem KI liegt, muss das KI natürlich auch breiter sein, um einen Irrtum unwahrscheinlicher zu machen. Das untere KI ist im Gegensatz dazu "nur" ein 95%-KI, also mit einer Irrtumswahrscheinlichkeit von 5%. In diesem Beispiel ist sogar der unwahrscheinliche Fall eingetreten, dass der wahre Mittelwert \(\mu\) außerhalb des KIs liegt. Das kann natürlich nie komplett ausgeschlossen werden, sondern immer nur durch das Konfidenzniveau \(\alpha\) eingeschränkt werden.
 
-```{r konfidenzintervall, fig.cap="(ref:konfidenzintervall-caption)"}
+```{r konfidenzintervall, out.width="90%", fig.cap="(ref:konfidenzintervall-caption)"}
 knitr::include_graphics("img/pictures/konfidenzintervall.png")
 ```
 

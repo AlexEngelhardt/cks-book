@@ -14,8 +14,24 @@ Grafisch kann man sich das schön veranschaulichen. Das Residuum für eine Beoba
 
 (ref:regression-residuen-1-caption) An einem Streudiagramm kann man ein Residuum schön veranschaulichen: Es ist der vertikale Abstand von einem Datenpunkt zur Regressionsgeraden.
 
-```{r regression-residuen-1, fig.cap="(ref:regression-residuen-1-caption)"}
-knitr::include_graphics("img/regression-residuen-1.png")
+```{r regression-residuen-1, out.width="75%", fig.cap="(ref:regression-residuen-1-caption)"}
+set.seed(20191001)
+n <- 10
+x <- sort(runif(n, min=1, max=10))
+y <- 5 * x + 3 + rnorm(n, sd=6)
+mod <- lm(y~x)
+
+i <- 4
+x[i]
+c(y[i], predict(mod)[i])
+
+y_i <- round(y[i])
+yhat_i <- round(predict(mod)[i])
+epsilon_i <- y_i - yhat_i
+
+plot(x, y, main=bquote(y[.(i)] == .(y_i) ~ ", " ~ hat(y)[.(i)] == .(yhat_i) ~ ", " ~ hat(epsilon[.(i)]) == .(epsilon_i)))
+abline(mod)
+lines(x=c(x[i], x[i]), y=c(y[i], predict(mod)[i]), col=1, lwd=3)
 ```
 
 Für die vierte Beobachtung in dieser Grafik liegt der wahre \(y\)-Wert bei 35, und der vorhergesagte (also der auf der Regressionsgeraden) bei 26. Das Residuum, der Fehler der Schätzung, liegt also bei \(\hat{\epsilon}_4 = 35 - 26 = 9\).

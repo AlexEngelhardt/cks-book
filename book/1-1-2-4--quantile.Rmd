@@ -10,8 +10,35 @@ In manchen Fällen kann man die Daten genau in zwei Anteile \(p\) und \(1-p\) au
 
 (ref:quantiles-caption) Bestimmung eines 20%-Quantils für die beiden Spezialfälle: Oben ist \(n\cdot p\) ganzzahlig (\(n=5\) Beobachtungen und \(p=0.2\), und das Quantil liegt theoretisch "irgendwo" zwischen dem ersten und zweiten Punkt. In der Praxis wird meist der Mittelwert zwischen den beiden Punkten genommen. Im unteren Bild ist \(n\cdot p\), also \(6\cdot 0.2\), nicht ganzzahlig, und das Quantil fällt genau auf den zweiten Wert.
 
-```{r quantiles, fig.cap="(ref:quantiles-caption)"}
-knitr::include_graphics("img/quantile.png")
+```{r quantiles, out.width="50%", fig.cap="(ref:quantiles-caption)"}
+quantiledots <- function(x, titlestring=NULL, q=0.2){
+qx <- quantile(x, probs=q)
+
+plot.new()
+plot.window(xlim=range(x), ylim=c(0.9, 1.35))
+title(titlestring)
+plot.xy(xy.coords(x=x, y=rep(1.03, times=length(x))), type="p", pch=19, cex=2, col=3)
+lines(c(qx, qx+.7), c(1.03, 1.2), lty=2)
+points(qx, 1.03, pch=4)
+
+## if(!(length(x)*q %% 1)){ ## is.integer failt -.-
+if(all.equal(length(x)*q, round(length(x)*q))==TRUE){
+  text(qx+.7, 1.25, paste0("ein mögliches ", q*100, "%-Quantil: ", qx))
+} else {
+  text(qx+.7, 1.25, paste0(q*100, "%-Quantil: ", qx))
+}
+axis(1)
+#axis(2)
+#box()
+}
+
+int <- c(1,2.3,4,4.5,5)
+frac <- c(1,2.3,2.7,3.4,4.2,5)
+
+op <- par(mfrow=c(2,1))
+quantiledots(int, titlestring="n*p ganzzahlig", q=0.2)
+quantiledots(frac, titlestring="n*p nicht ganzzahlig", q=0.2)
+par(op)
 ```
 
 Es gibt ein paar verschiedene Methoden, in diesem Fall einen festen Wert für das Quantil zu bestimmen. Meist nimmt man einfach den Mittelwert der beiden anliegenden Punkte. Das haben wir ja beim Median schon so gemacht.

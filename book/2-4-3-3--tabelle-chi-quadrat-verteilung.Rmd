@@ -6,8 +6,19 @@ Haben wir also einen \(\chi^2\)-Test mit 5 Freiheitsgraden, und möchten die kri
 
 (ref:vert-c-v-v-caption) Ablesebeispiel der \(\chi^2\)-Verteilung mit \(df=5\) Freiheitsgraden. Die Dichte (obere Grafik) hat ab der Stelle \(x=11.07\) noch eine Fläche von 5%. Die Verteilungsfunktion (untere Grafik) an der Stelle \(x=11.07\) hat genau den Wert 0.95.
 
-```{r verteilungen-chisq-verteilung-verteilungstabelle, fig.cap="(ref:vert-c-v-v-caption)"}
-knitr::include_graphics("img/verteilungen-chisq-verteilung-verteilungstabelle.png")
+```{r verteilungen-chisq-verteilung-verteilungstabelle, fig.height=8, fig.width=6, fig.cap="(ref:vert-c-v-v-caption)"}
+par(mfrow=c(2,1))
+df <- 5
+Q <- qchisq(0.95, df)
+xlim=30
+x <- seq(0, xlim, by=0.01)
+plot(x, dchisq(x, df), type="l", ylab="f(x)", main=paste0("95%-Quantil der Chi-Quadrat-Verteilung\nmit ", df, " Freiheitsgraden: ", round(Q, 3)))
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(poly_x, c(0, dchisq(Q, df), dchisq(x[x>Q], df), 0), col=1)
+text(Q+2, 0.015, "5% Fläche", pos=4)
+
+plot(x, pchisq(x, df), type="l", ylab="F(x)", main=paste0("Verteilungsfunktion\nF(",round(Q,3),") = 0.95"))
+lines(c(Q, Q, 0), c(0, 0.95, 0.95), lty=2)
 ```
 
 

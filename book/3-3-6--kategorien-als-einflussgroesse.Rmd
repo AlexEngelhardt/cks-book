@@ -14,8 +14,35 @@ Denken wir nochmal kurz zürück an das Beispiel aus Kapitel \@ref(sec-regressio
 
 (ref:regression-gerade2-caption) Die fertige Regressionsgerade für unser Beispiel mit der Ringgröße.
 
-```{r regression-gerade2, fig.cap="(ref:regression-gerade2-caption)"}
-knitr::include_graphics("img/regression-gerade.png")
+```{r regression-gerade2, out.width="75%", fig.cap="(ref:regression-gerade2-caption)"}
+set.seed(20160511)
+n <- 10
+x <- runif(n,155,180)
+y <- 0+0.3*x+rnorm(n,sd=.8)
+mod <- lm(y~x)
+
+x <- round(x,1)
+y <- round(y,1)
+
+xmx <- x-mean(x)
+ymy <- y-mean(y)
+xmx2 <- xmx^2
+
+z <- sum(xmx*ymy)
+n <- sum(xmx2)
+
+b <- z/n
+a <- mean(y) - b*mean(x)
+
+x_1 <- 160
+x_2 <- 170
+
+y_1 <- a + b * x_1
+y_2 <- a + b * x_2
+
+plot(x,y, xlab="Körpergröße (x)", ylab="Ringgröße (y)", main="Regressionsgerade y = a + b*x")
+points(c(x_1, x_2), c(y_1, y_2), col=2, pch=19)
+abline(a=a, b=b, col=2, lwd=2)
 ```
 
 Diese Gerade wird durch zwei Parameter, \(a\) und \(b\) beschrieben:

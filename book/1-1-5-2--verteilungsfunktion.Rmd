@@ -22,7 +22,7 @@ Abbildung \@ref(fig:verteilungsfunktion-aufgabe) zeigt die Verteilungsfunktion f
 ```
 
 ```{r verteilungsfunktion-aufgabe, fig.cap='Die Verteilungsfunktion für unsere Studentenbefragung. An den "Sprüngen" der Funktion zählt der Wert, an dem der Punkt eingezeichnet ist. Vertikale Linien zwischen den Sprüngen der Funktion können, aber müssen nicht gezeichnet werden.'}
-knitr::include_graphics("img/verteilungsfunktion.png")
+plot(es, verticals=TRUE, main="Verteilungsfunktion des Merkmals \"Semester\"")
 ```
 
 In Abbildung \@ref(fig:verteilungsfunktion-aufgabe) sind die Punkte einfach aus der Häufigkeitstabelle übernommen. Der \(x\)-Wert ist das jeweilige Semester, und der \(y\)-Wert das zugehörige \(F_i\), also der Anteil der Studenten, die *höchstens* in diesem Semester sind. Die horizontalen Linien zwischen den Punkten geben nun auch für "krumme" Zahlen einen sinnvollen Prozentsatz an: Möchte man z.B. wissen, welcher Anteil der Studenten mit einer Semesterzahl von höchstens 4.3 geantwortet hat, ist das (also \(F(4.3)\)) derselbe Anteil, der mit höchstens 4.0 geantwortet hat (also \(F(4.0)\)).
@@ -46,7 +46,8 @@ Für den Fall, dass man ein \(p\)-Quantil bestimmen will, und \(np\) gerade ist 
 (ref:verteilungsfunktion-beispiel-caption) Das 20%-Quantil (die gepunktete Linie) in diesem Beispiel könnte jeder Wert auf der \(x\)-Achse sein, der zwischen dem ersten (1) und dem zweiten Datenpunkt (2) liegt, da alle Werte die Daten in "niedrige 20%" und "hohe 80%" teilen. Das wird durch das Plateau auf der Treppenfunktion verdeutlicht. Das Quantil kann man aber meist einfach als \(\frac{1}{2}(1+2)\), also 1.5 definieren.
 
 ```{r verteilungsfunktion-beispiel, fig.cap='(ref:verteilungsfunktion-beispiel-caption)'}
-knitr::include_graphics("img/verteilungsfunktion-beispiel.png")
+plot(ecdf(c(1,2,3,5,7)), verticals=TRUE, main="")
+lines(c(-2,1), c(.2,.2), lty=3)
 ```
 
 Mathematisch ausgedrückt: Die Quantilsfunktion ist die *Inversfunktion* der Verteilungsfunktion. Die Quantilsfunktion wird daher auch mit \(F^{-1}(x)\) bezeichnet.

@@ -20,8 +20,9 @@ library(tidyverse)
 library(colorspace)
 library(knitr)
 library(kableExtra)  # add_header_above
+library(scatterplot3d)
 
-knitr::opts_chunk$set(echo=FALSE)
+knitr::opts_chunk$set(echo=FALSE, fig.align="center")
 
 n <- 7
 palette(
@@ -32,7 +33,7 @@ palette(
 
 Ich habe während meines Statistikstudiums als Nachhilfelehrer gearbeitet. Dort habe ich gemerkt, dass Mathematiker ihre Konzepte oft anders verstehen und erklären als Nichtmathematiker, und habe dann experimentiert, wie man den Stoff möglichst unkompliziert und verständlich vermittelt. Das Ergebnis habe ich in diesem Buch zusammengestellt.
 
-Der Inhalt soll thematisch die Vorlesungen "Statistik I" und "Statistik II" abdecken, wie sie an den meisten Universitäten gelehrt werden. Das Buch ist hauptsächlich an Studenten gerichtet, die diese Vorlesungen hören müssen und oft Schwierigkeiten mit dem Stoff haben, odder das Wissen zusammengefasst vor der Klausur nachholen möchten.
+Der Inhalt soll thematisch die Vorlesungen "Statistik I" und "Statistik II" abdecken, wie sie an den meisten Universitäten gelehrt werden. Das Buch ist hauptsächlich an Studenten gerichtet, die diese Vorlesungen hören müssen und oft Schwierigkeiten mit dem Stoff haben, oder das Wissen zusammengefasst vor der Klausur nachholen möchten.
 
 Ich habe Wert darauf gelegt, die Erklärungen möglichst einfach zu halten, und den Stoff verständlicher und mit mehr Beispielen rüberzubringen, als es in den meisten Skripten oder Büchern passiert.
 

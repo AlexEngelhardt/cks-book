@@ -4,8 +4,16 @@ Der Gini-Koeffizient verpackt die grafische Information der Lorenzkurve (s. Kap.
 
 Abbildung \@ref(fig:gini-veranschaulichung) zeigt ein paar Beispiele für die Konzentrationsfläche.
 
-```{r gini-veranschaulichung, fig.cap="Die farbige Konzentrationsfläche, zwischen der gestrichelten Geraden der perfekten Gleichverteilung und der tatsächlichen Lorenzkurve, ist ein Maß dafür, wie gleichmäßig die Merkmalssumme verteilt ist. Je fairer das Merkmal verteilt ist, desto näher kommt die Lorenzkurve an die gestrichelte Gerade, und damit wird die Konzentrationsfläche kleiner."}
-knitr::include_graphics("img/gini-veranschaulichung.png")
+```{r gini-veranschaulichung, fig.height=7, fig.cap="Die farbige Konzentrationsfläche, zwischen der gestrichelten Geraden der perfekten Gleichverteilung und der tatsächlichen Lorenzkurve, ist ein Maß dafür, wie gleichmäßig die Merkmalssumme verteilt ist. Je fairer das Merkmal verteilt ist, desto näher kommt die Lorenzkurve an die gestrichelte Gerade, und damit wird die Konzentrationsfläche kleiner."}
+op <- par(mfrow=c(2,2))
+LCa <- plotlorenz(EK, main="(a) eine normale Lorenzkurve", area="over")
+EK2 <- c(1,2,2,30,59)
+LCb <- plotlorenz(EK2, main="(b) etwas unfairer", area="over")
+EK3 <- c(0,0,0,0,10)
+LCc <- plotlorenz(EK3, main="(c) eine Person besitzt alles", area="over")
+EK4 <- c(2,2,2,2,2)
+LCd <- plotlorenz(EK4, main="(d) perfekte faire Gleichverteilung", area="over")
+par(op)
 ```
 
 Damit der Gini-Koeffizient auf einen Bereich von 0 bis 1 normiert wird, teilt man diese Fläche nun durch die "maximal mögliche Fläche". Der Koeffizient ist also ein *Anteil*, nämlich die tatsächliche Konzentrationsfläche geteilt durch die größtmögliche Konzentrationsfläche.
@@ -39,8 +47,41 @@ if(knitr::is_html_output()){
 }
 ```
 
-```{r gini-schritte, fig.cap='Die Schritte zur Berechnung des Gini-Koeffizienten. Oben links: Die Flächen dieser Trapeze werden einzeln ausgerechnet und aufsummiert. Oben rechts: So berechnet man die Fläche eines Trapezes. Unten links: Die "maximal mögliche Fläche" beim einfachen Gini-Koeffizienten. Unten rechts: Die "maximal mögliche Fläche" beim normierten Gini-Koeffizienten.'}
-knitr::include_graphics("img/gini-schritte.png")
+```{r gini-schritte, fig.width=10, fig.height=10, fig.cap='Die Schritte zur Berechnung des Gini-Koeffizienten. Oben links: Die Flächen dieser Trapeze werden einzeln ausgerechnet und aufsummiert. Oben rechts: So berechnet man die Fläche eines Trapezes. Unten links: Die "maximal mögliche Fläche" beim einfachen Gini-Koeffizienten. Unten rechts: Die "maximal mögliche Fläche" beim normierten Gini-Koeffizienten.'}
+op <- par(mfrow=c(2,2))
+LC <- plotlorenz(EK)
+for(i in 1:length(EK)){
+  polygon(c(LC$p[i], LC$p[i+1], LC$p[i+1], LC$p[i]),
+          c(0, 0, LC$L[i+1], LC$L[i]), col=i)
+}
+##
+plot.new()
+plot.window(xlim=c(0,100), ylim=c(10,80))
+title(expression(A==frac(h[1]+h[2], 2) %.% b)) # see ?plotmath
+polygon(c(15,15,35,35), c(20,50,70,20), col=1)
+lines(c(15, 15), c(50, 60), lty=2)
+lines(c(15, 35), c(60, 60), lty=2)
+text(10, 35, expression(h[1]))
+text(40, 35, expression(h[2]))
+text(25, 15, expression(b))
+text(50, 45, "=", cex=4)
+polygon(c(65,65,85,85), c(20,60,60,20), col=4)
+text(60, 35, expression(frac(h[1]+h[2], 2)))
+text(90, 35, expression(frac(h[1]+h[2], 2)))
+text(75, 15, expression(b))
+##
+plot(c(0,1), c(0,1), type="n", 
+     xlab="Anteil der Bevölkerung", ylab="Anteil des Einkommens")
+lines(c(0,1), c(0,1), lty=2)
+polygon(c(0,1,1), c(0,1,0), col=3)
+text(0.2, 0.8, expression(A==frac(1,2)), cex=1.5)
+##
+plot(c(0,1), c(0,1), type="n", 
+     xlab="Anteil der Bevölkerung", ylab="Anteil des Einkommens")
+lines(c(0,1), c(0,1), lty=2)
+polygon(c(0,0.8,1), c(0,0,1), col=3)
+text(0.2, 0.8, expression(A==frac(n-1,2*n)), cex=1.5)
+par(op)
 ```
 
 #### Die Fläche unter der Lorenzkurve {-}
@@ -62,8 +103,31 @@ Die Gesamtfläche unter der Lorenzkurve ist nun die Summe der Teilflächen, also
 
 #### Die Konzentrationsfläche {-}
 
-```{r konzentrationsflaeche, fig.cap="Die Konzentrationsfläche ist die Fläche zwischen der Diagonalen und der Lorenzkurve"}
-knitr::include_graphics("img/konzentrationsflaeche.png")
+```{r konzentrationsflaeche, fig.height=2.6, fig.width=7.2, fig.cap="Die Konzentrationsfläche ist die Fläche zwischen der Diagonalen und der Lorenzkurve"}
+cuts <- c(0.3, 0.35, 0.65, 0.7)
+smx <- matrix(c(0, cuts[1], 0, 1,
+                cuts[1], cuts[2], 0, 1,
+                cuts[2], cuts[3], 0, 1,
+                cuts[3], cuts[4], 0, 1,
+                cuts[4], 1, 0, 1
+                ), byrow=T, ncol=4)
+screens <- split.screen(smx)
+screen(2)
+text(0.5, 0.5, "-", cex=10)
+
+screen(4)
+text(0.5, 0.5, "=", cex=10)
+
+screen(1)
+LC1 <- plotlorenz(1, xlab="", ylab="", area="under", points=FALSE)
+
+screen(3)
+LC2 <- plotlorenz(EK, area="under", xlab="", ylab="", points=FALSE)
+
+screen(5)
+LC3 <- plotlorenz(EK, area="over", xlab="", ylab="", points=FALSE)
+
+close.screen(all.screens=TRUE)
 ```
 
 Um die Konzentrationsfläche - also die Flächen, von der wir in der obersten Abbildung gesprochen haben - zu erhalten, ziehen wir einfach die Fläche unter der Lorenzkurve von \(\frac{1}{2}\) ab (s. Abb. \@ref(fig:konzentrationsflaeche)). Warum? Weil die Fläche unter der Gleichverteilungsgeraden ein halbes Quadrat ist, also die Fläche \(\frac{1}{2}\) ist. Die Fläche zwischen zwei Kurven ist nun genau die Fläche unter der oberen *minus* der Fläche unter der unteren Kurve (nochmal lesen!). Unsere Konzentrationsfläche ist also \(\frac{1}{2} - 0.3228 = 0.1772\).

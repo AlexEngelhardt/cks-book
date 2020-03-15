@@ -16,8 +16,29 @@ Abbildung \@ref(fig:verteilungen-t-verteilung-verteilungstabelle) visualisiert d
 
 (ref:verteilungen-t-verteilung-verteilungstabelle-caption) So interpretiert man die aus der Verteilungstabelle abgelesenen Quantile.
 
-```{r verteilungen-t-verteilung-verteilungstabelle, fig.cap="(ref:verteilungen-t-verteilung-verteilungstabelle-caption)"}
-knitr::include_graphics("img/verteilungen-t-verteilung-verteilungstabelle.png")
+```{r verteilungen-t-verteilung-verteilungstabelle, fig.height=8, fig.width=6, out.width="75%", fig.cap="(ref:verteilungen-t-verteilung-verteilungstabelle-caption)"}
+xlim <- 6
+x <- seq(-xlim, xlim, by=0.01)
+df <- 4
+
+par(mfrow=c(2,1))
+plot(x, dt(x, df), type="l", ylab="f(x)", main=paste("Dichtefunktion der t-Verteilung\nmit", df, "Freiheitsgraden"))
+Q <- qt(0.975, df)
+poly_x <- c(Q, Q, x[x>Q], xlim)
+polygon(poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+polygon(-poly_x, c(0, dt(Q, df), dt(x[x>Q], df), 0), col=1)
+poly_x <- c(-Q, -Q, x[x > -Q & x < Q], Q, Q)
+polygon(poly_x, c(0, dt(Q, df), dt(x[x > -Q & x < Q], df), dt(Q, df), 0), col=2)
+text(0, 0.10, "95%", cex=1)
+text(Q, 0.03, "2.5%", cex=1, pos=4)
+text(-Q, 0.03, "2.5%", cex=1, pos=2)
+plot(x, pt(x, df), type="l", ylab="F(x)", main=paste("Verteilungsfunktion der t-Verteilung\nmit", df, "Freiheitsgraden"))
+lines(x=c(Q, Q, -xlim), y=c(0, 0.975, 0.975), lty=2)
+lines(x=c(-Q, -Q, -xlim), y=c(0, 0.025, 0.025), lty=2)
+text(Q, 0, paste0("x=",round(Q, 3)), pos=4)
+text(-Q, 0, paste0("x=",-round(Q, 3)), pos=4)
+text(-xlim, 0.85, "F(x)=0.975", pos=4)
+text(-xlim, 0.1, "F(x)=0.025", pos=4)
 ```
 
 

@@ -78,8 +78,27 @@ Die zweiteilige Definition ist deswegen notwendig, weil wir bei einer ungeraden 
 
 (ref:mediandots-caption) Der Median einer Datenreihe mit einer ungeraden bzw. geraden Anzahl von Elementen. Bei einer ungeraden Anzahl gibt es ein "mittleres" Element, nämlich das \(\frac{n+1}{2}\)-te Element \(x_{(\frac{n+1}{2})}\). Bei einer geraden Anzahl bildet man den Mittelwert zwischen den zwei Elementen in der Mitte, dem \(\frac{n}{2}\)-ten und dem \((\frac{n}{2}+1)\)-ten Element: \(\frac{1}{2}(x_{(\frac{n}{2})}+x_{(\frac{n}{2}+1)})\)
 
-```{r mediandots, fig.cap="(ref:mediandots-caption)"}
-knitr::include_graphics("img/median.png")
+```{r mediandots, out.width="50%", fig.cap="(ref:mediandots-caption)"}
+mediandots <- function(x, titlestring=NULL){
+  plot.new()
+  plot.window(xlim=range(x), ylim=c(1, 1.12))
+  title(titlestring)
+  plot.xy(xy.coords(x=x, y=rep(1.03, times=length(x))), type="p", pch=19, cex=2, col=3)
+  lines(c(median(x), median(x)-.7), c(1.03, 1.08))
+  points(median(x), 1.03, pch=4)
+  text(median(x)-.7, 1.1, "Median")
+  axis(1)
+  #axis(2)
+  #box()
+}
+
+odd <- c(1,2,4,4.5,5)
+even <- c(1,3.2,4.2,5)
+
+op <- par(mfrow=c(2,1))
+mediandots(odd, titlestring="n ungerade")
+mediandots(even, titlestring="n gerade")
+par(op)
 ```
 
 ### Modus

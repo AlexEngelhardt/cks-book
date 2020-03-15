@@ -16,8 +16,17 @@ Du befrägst deinen gesamten weiblichen Bekanntenkreis (10 Personen) nach ihrer 
 
 (ref:regression-motivation1-caption) Körpergröße \(x\) und Ringgröße \(y\) für 10 befragte Personen.
 
-```{r regression-motivation1, fig.cap="(ref:regression-motivation1-caption)"}
-knitr::include_graphics("img/regression-motivation1.png")
+```{r regression-motivation1, out.width="75%", fig.cap="(ref:regression-motivation1-caption)"}
+set.seed(20160511)
+n <- 10
+x <- runif(n,155,180)
+y <- 0+0.3*x+rnorm(n,sd=.8)
+mod <- lm(y~x)
+
+x <- round(x,1)
+y <- round(y,1)
+
+plot(x,y, xlab="Körpergröße (x)", ylab="Ringgröße (y)")
 ```
 
 Deine Tante Emma ist zum Beispiel \(x=\)165cm groß und trägt Ringgröße \(y=\)49. Sie wird durch den Punkt ca. in der Mitte links repräsentiert.
@@ -30,8 +39,16 @@ Die Regression in der Statistik ist nun ein mathematisches Werkzeug, um eine exa
 
 (ref:regression-motivation2-caption) Die Regression ist eine Methode, mit der man die "bestmögliche" Gerade durch eine Punktwolke zieht. Das Ziel ist meistens, mit Hilfe dieser Geraden für neue Beobachtungen von \(x\) eine Vorhersage für \(y\) (hier: die Ringgröße) zu machen.
 
-```{r regression-motivation2, fig.cap="(ref:regression-motivation2-caption)"}
-knitr::include_graphics("img/regression-motivation2.png")
+```{r regression-motivation2, out.width="75%", fig.cap="(ref:regression-motivation2-caption)"}
+plot(x,y, xlab="Körpergröße (x)", ylab="Ringgröße (y)", main="Welche Gerade ist die beste?")
+
+abline(mod)
+abline(coef(mod)[1] - 17,
+       coef(mod)[2] + 0.1,
+       lty=2)
+abline(coef(mod)[1] - 1,
+       coef(mod)[2],
+       lty=2)
 ```
 
 Wie man diese Gerade berechnet, interpretiert, und mit ihr Vorhersagen macht, sehen wir dann in den nächsten Kapiteln. Das grundlegende Problem, und das Vorgehen bei der Lösung des Problems, ist aber genau dasselbe wie in diesem Beispiel beschrieben wurde.

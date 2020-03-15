@@ -24,7 +24,16 @@ Diese Daten können wir nun in ein Streudiagramm einzeichnen, und erkennen sofor
 (ref:regression-motivation11-caption) Körpergröße \(x\) und Ringgröße \(y\) für 10 befragte Personen.
 
 ```{r regression-motivation11, fig.cap="(ref:regression-motivation11-caption)"}
-knitr::include_graphics("img/regression-motivation1.png")
+set.seed(20160511)
+n <- 10
+x <- runif(n,155,180)
+y <- 0+0.3*x+rnorm(n,sd=.8)
+mod <- lm(y~x)
+
+x <- round(x,1)
+y <- round(y,1)
+
+plot(x,y, xlab="Körpergröße (x)", ylab="Ringgröße (y)")
 ```
 
 Die **Regression** ist nun eine statistische Methode, um die **bestmögliche Gerade** zu finden, die man durch diese Daten legen kann. Eine Gerade wird ja definiert durch zwei Parameter \(a\) und \(b\); man kann sie dann darstellen als
@@ -162,8 +171,26 @@ Die Punkte \((160, 48.22)\) und \((170, 51.06)\) können wir nun in das Streudia
 
 (ref:regression-gerade-caption) Die fertige Regressionsgerade für unser Beispiel mit der Ringgröße. Wir suchen uns zwei beliebige x-Werte aus, hier 160 und 170, und berechnen jeweils den durch die Regression vorhergesagten y-Wert. Die zwei Punkte, jeweils unsere x-Koordinate und die berechnete y-Koordinate, zeichnen wir in das Diagramm, und dann ziehen wir die Regressionsgerade dort durch.
 
-```{r regression-gerade, fig.cap="(ref:regression-gerade-caption)"}
-knitr::include_graphics("img/regression-gerade.png")
+```{r regression-gerade, out.width="75%", fig.cap="(ref:regression-gerade-caption)"}
+xmx <- x-mean(x)
+ymy <- y-mean(y)
+xmx2 <- xmx^2
+
+z <- sum(xmx*ymy)
+n <- sum(xmx2)
+
+b <- z/n
+a <- mean(y) - b*mean(x)
+
+x_1 <- 160
+x_2 <- 170
+
+y_1 <- a + b * x_1
+y_2 <- a + b * x_2
+
+plot(x,y, xlab="Körpergröße (x)", ylab="Ringgröße (y)", main="Regressionsgerade y = a + b*x")
+points(c(x_1, x_2), c(y_1, y_2), col=2, pch=19)
+abline(a=a, b=b, col=2, lwd=2)
 ```
     
 ### Vorhersage bei der einfachen linearen Regression
