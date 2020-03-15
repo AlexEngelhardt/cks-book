@@ -1,0 +1,18 @@
+Subtitle
+========
+
+Klausurvorbereitung für Statistik I und Statistik II
+
+Rückentext & Amazon Beschreibung
+================================
+
+Dieses Buch hat das Ziel, die Grundlagen der Statistik auf einfache Art zu vermitteln, verständlicher und mit mehr Beispielen und Veranschaulichungen als es bei den meisten anderen Büchern oder Skripten geschieht. Die Themen werden zuerst in Klartext erläutert, bevor die dazugehörigen mathematischen Formeln eingeführt werden.
+
+Das Buch beginnt mit mathematischen Grundlagen, Symbolen, und Rechelnregeln, geht dann im ersten Teil in die deskriptive Statistik und grafische Darstellungen von Daten. Der zweite Teil umfasst die Wahrscheinlichkeitsrechnung inklusive der Kombinatorik, Zufallsvariablen und Verteilungen. Im dritten Teil wird die Inferenzstatistik behandelt, mit den Kapiteln Parameterschätzung, Konfidenzintervalle, Hypothesentests und Regression.
+
+Das Buch eignet sich für Studenten aus Fachrichtungen wie BWL, Psychologie, und Soziologie, die die Veranstaltungen Statistik I und II hören, aber auch an Studenten die Statistik im Haupt- oder Nebenfach studieren und sich eine ausführlichere Erklärung der Themen wünschen. Es ist ebenso geeignet zur Vorbereitung auf Klausuren.
+
+Ab00t
+=====
+
+Alexander Engelhardt hat von 2008 bis 2017 Statistik an der Ludwig-Maximilians-Universität München studiert, und dort im Bereich komplexer Datensätze promoviert. Seitdem ist er als freiberuflicher Data Scientist tätig (https://www.alpha-epsilon.de).
