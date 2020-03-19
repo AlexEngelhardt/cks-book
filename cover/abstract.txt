@@ -15,4 +15,4 @@ Das Buch eignet sich für Studenten aus Fachrichtungen wie BWL, Psychologie, und
 Ab00t
 =====
 
-Alexander Engelhardt hat von 2008 bis 2017 Statistik an der Ludwig-Maximilians-Universität München studiert, und dort im Bereich komplexer Datensätze promoviert. Seitdem ist er als freiberuflicher Data Scientist tätig (https://www.alpha-epsilon.de).
+Dr. Alexander Engelhardt hat von 2008 bis 2017 Statistik an der Ludwig-Maximilians-Universität München studiert, und dort über die Analyse großer und komplexer Datensätze promoviert. Seitdem ist er selbstständig als Data Scientist tätig (https://www.alpha-epsilon.de).

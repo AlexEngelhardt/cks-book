@@ -61,6 +61,15 @@ spearmanplot(Alter, Zeit,
 
 ```
 
+
+(ref:zweivariablen-spearman-r1-caption) Links ist ein Scatterplot für Beispieldaten \(x\) und \(y\). Der niedrigste \(x\)-Wert gehört zum niedrigsten \(y\)-Wert, usw., jedoch ist der Zusammenhang nicht linear, sondern folgt einer Kurve. Rechts sieht man nun die Ränge der Daten gegeneinander geplottet. Der hieraus resultierende Spearman-Korrelationskoeffizient ist genau 1.
+
+```{r zweivariablen-spearman-r1, fig.width=10, fig.cap="(ref:zweivariablen-spearman-r1-caption)"}
+x <- runif(10,0,5)
+y <- exp(x)
+spearmanplot(x,y, main_1="Originaldaten", main_2="Ränge der Daten")
+```
+
 Die Formel für die Spearman-Korrelation ist genau dieselbe wie für die Pearson-Korrelation, nur werden die Daten \(x_i\) und \(y_i\) mit ihren jeweiligen Rängen ersetzt:
 
 \[r_\text{Sp} = \frac{\sum_{i=1}^n (\text{rang}(x_i) - \overline{\text{rang}(x)}) (\text{rang}(y_i) - \overline{\text{rang}(y)})}{ \sqrt{\sum_{i=1}^n (\text{rang}(x_i) - \overline{\text{rang}(x)})^2} \cdot \sqrt{\sum_{i=1}^n (\text{rang}(y_i) - \overline{\text{rang}(y)})^2} } \]
@@ -75,21 +84,15 @@ Eine kurze Bemerkung noch: Die Ränge könnte man auch andersrum vergeben, dass 
 
 #### Was ist der Effekt davon, die Ränge statt der Originaldaten zu nehmen? {-}
 
-Da bei der Spearman-Korrelation die Ränge verwendet werden, sind dort die tatsächlichen Abstände zwischen z.B. Platz 1 und Platz 2 egal. Die Spearman-Korrelation ist immer dann 1, wenn der niedrigste Wert für \(x\) gepaart ist mit dem niedrigsten Wert von \(y\), usw.
-
-(ref:zweivariablen-spearman-r1-caption) Links ist ein Scatterplot für Beispieldaten \(x\) und \(y\). Der niedrigste \(x\)-Wert gehört zum niedrigsten \(y\)-Wert, usw., jedoch ist der Zusammenhang nicht linear, sondern folgt einer Kurve. Rechts sieht man nun die Ränge der Daten gegeneinander geplottet. Der hieraus resultierende Spearman-Korrelationskoeffizient ist genau 1.
-
-```{r zweivariablen-spearman-r1, fig.width=10, fig.cap="(ref:zweivariablen-spearman-r1-caption)"}
-x <- runif(10,0,5)
-y <- exp(x)
-spearmanplot(x,y, main_1="Originaldaten", main_2="Ränge der Daten")
-```
+Da bei der Spearman-Korrelation die Ränge verwendet werden, sind dort die tatsächlichen Abstände zwischen z.B. Platz 1 und Platz 2 egal. Die Spearman-Korrelation ist immer dann 1, wenn der niedrigste Wert für \(x\) gepaart ist mit dem niedrigsten Wert von \(y\), usw. Abbildung \@ref(fig:zweivariablen-spearman-r1) veranschaulicht diese Situation.
 
 Mathematisch sagt man: Die Spearman-Korrelation misst den *monotonen* Zusammenhang, während die Pearson-Korrelation den *linearen* Zusammenhang misst.
 
 #### Was passiert bei gleichen Rängen, also "Unentschieden"? {-}
 
-Es kann passieren, dass z.B. zwei oder mehr Werte für \(x\) denselben Wert annehmen. In diesem Fall wird den entsprechenden Werten der Durchschnittsrang zugewiesen. Hierzu drei Beispiele, hätten die Personen aus dem obigen 100-Meter-Sprint stattdessen ein anderes Alter gehabt:
+Es kann passieren, dass z.B. zwei oder mehr Werte für \(x\) denselben Wert annehmen. In diesem Fall wird den entsprechenden Werten der Durchschnittsrang zugewiesen. Hierzu zwei Beispiele, hätten die Personen aus dem obigen 100-Meter-Sprint stattdessen ein anderes Alter gehabt:
+
+Table: (#tab:spearman-table1) Zwei gleiche Ränge
 
 | Alter \(x_i\) | Rang \(\text{rang}(x_i)\) |
 | ------------- | ------------------------- |
@@ -100,7 +103,10 @@ Es kann passieren, dass z.B. zwei oder mehr Werte für \(x\) denselben Wert anne
 | 43            | 5                         |
 | 59            | 6                         |
 
-In der obigen Tabelle haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 wären. Daher bekommen beide Personen den Durchschnittsrang 2.5.
+In Tabelle \@ref(tab:spearman-table1) haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 wären. Daher bekommen beide Personen den Durchschnittsrang 2.5.
+
+Table: (#tab:spearman-table2) Drei gleiche Ränge
+
 
 | Alter \(x_i\) | Rang \(\text{rang}(x_i)\) |
 | ------------- | ------------------------- |
@@ -111,7 +117,7 @@ In der obigen Tabelle haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 w
 | 35            | 4                         |
 | 59            | 6                         |
 
-Hier haben drei Personen dasselbe Alter. Deren Ränge wären 3, 4, und 5. Der resultierende Durchschnittsrang für alle drei Personen ist also 4.
+In Tabelle \@ref(tab:spearman-table2) haben drei Personen dasselbe Alter. Deren Ränge wären 3, 4, und 5. Der resultierende Durchschnittsrang für alle drei Personen ist also 4.
 
 #### Eine kürzere Formel für die Spearman-Korrelation {-}
 

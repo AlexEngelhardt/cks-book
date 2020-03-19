@@ -1,9 +1,5 @@
 ### Streudiagramme
 
-Streudiagramme (oft auch Scatterplots genannt) sind gleichzeitig eine der einfachsten und informativsten grafischen Darstellungen von Daten. Sie sind hauptsächlich für die gleichzeitige Darstellung von zwei Variablen geeignet.
-
-Ein Beispiel ist der Datensatz von Abbildung \@ref(fig:zweivariablen-streudiagramm-bsp), in dem bei einer Reihe von Autos Vollbremsungen durchgeführt wurden, und die Ausgangsgeschwindigkeit (\(x\)-Achse) und der resultierende Bremsweg (\(y\)-Achse) gemessen wurde.
-
 ```{r zweivariablen-streudiagramm-bsp, out.width="75%", fig.cap="Ein Streudiagramm von Bremsweg vs. Geschwindigkeit."}
 cars[3,2] <- 110
 cars %>%
@@ -11,6 +7,10 @@ cars %>%
         transform(speed=speed*6) %>%
         plot(main="Bremsweg vs. Geschwindigkeit eines Autos", xlab="Geschwindigkeit", ylab="Bremsweg")
 ```
+
+Streudiagramme (oft auch Scatterplots genannt) sind gleichzeitig eine der einfachsten und informativsten grafischen Darstellungen von Daten. Sie sind hauptsächlich für die gleichzeitige Darstellung von zwei Variablen geeignet.
+
+Ein Beispiel ist der Datensatz von Abbildung \@ref(fig:zweivariablen-streudiagramm-bsp), in dem bei einer Reihe von Autos Vollbremsungen durchgeführt wurden, und die Ausgangsgeschwindigkeit (\(x\)-Achse) und der resultierende Bremsweg (\(y\)-Achse) gemessen wurde.
 
 Durch die Darstellung der Daten fallen hier direkt drei Dinge auf:
 
@@ -32,7 +32,9 @@ Wie gesagt, 3d-Streudiagramme sind nicht zu empfehlen, und wären auf dem Papier
 
 Um ein Streudiagramm zu zeichnen, benötigt man eine Reihe von *gepaarten* Messungen \(x_i\) und \(y_i\). Das können z.B. zwei Spalten, also zwei Variablen aus einem Datensatz sein, oder einfach die beiden gemessenen Merkmale in irgend einer Liste.
 
-Als beispielhafte Daten schauen wir uns die Messungen \(x_i\) = Alter eines Kindes und \(y_i\) = Schugröße eines Kindes an. Wir bekommen die folgende Tabelle:
+Als beispielhafte Daten schauen wir uns die Messungen \(x_i\) = Alter eines Kindes und \(y_i\) = Schugröße eines Kindes an. Tabelle \@ref(tab:streudiagramm-table) zeigt die Ergebnisse.
+
+Table: (#tab:streudiagramm-table) Alter und Schuhgrösse für vier Kinder.
 
 | Kind \(i\) | Alter \(x_i\) | Schuhgrösse \(y_i\) |
 | ---------- | ------------- | ------------------- |
