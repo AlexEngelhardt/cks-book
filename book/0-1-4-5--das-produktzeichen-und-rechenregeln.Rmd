@@ -6,7 +6,7 @@ Statt ausführlich \(1 \cdot 2 \cdot 3 \cdot 4 \cdot 5\) zu schreiben, kann man 
 
 \[ \prod_{i=1}^5 i = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \]
 
-Diese Notation ist übrigens äquivalent zur Fakultät (s. Kap. \@ref(fakultaet)) von 5. Es ist also \(x! = \prod_{i=1}^x i\).
+Diese Notation ist übrigens äquivalent zur Fakultät (s. Kap. \@ref(fakultaet)) von 5. Man kann sie auch durch die Formel \(x! = \prod_{i=1}^x i\) darstellen.
 
 Wenn man nicht über Ganzzahlen, sondern z.B. gemessene Daten \(x_1,x_2,x_3,x_4,x_5\) multiplizieren möchte, kann man auch über den Index der Variablen \(x\) laufen:
 
