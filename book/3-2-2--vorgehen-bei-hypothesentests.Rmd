@@ -13,7 +13,7 @@ Das generelle Vorgehen bei einem Hypothesentest ist für alle Varianten gleich:
 
 Einführend wurden diese acht Schritte schon in Kapitel \@ref(sec-wat-tests) erwähnt. Hier werden diese Schritte nochmal etwas detaillierter beschrieben:
 
-### 1. Hypothesen aufstellen
+### Schritt 1: Hypothesen aufstellen
 
 Zuallererst formuliert man seine Fragestellung, und bringt sie in die Form von zwei Hypothesen. Hier ist wichtig, dass man die Nullhypothese \(H_0\) widerlegen möchte, und nachweisen möchte dass stattdessen die Alternativhypothese, \(H_1\), gilt. Deswegen müssen sich \(H_0\) und \(H_1\) auch widersprechen. In Kapitel \@ref(sec-wat-tests) hatten wir schon das Beispiel mit den Maßkrügen. Dort wollten wir nachweisen, dass auf dem Oktoberfest im Durchschnitt zuwenig Bier in die Maßkrüge gefüllt wird. Unsere Hypothesen werden also wie folgt formuliert:
 
@@ -88,13 +88,13 @@ Wenn wir das durchschnittliche Einstiegsgehalt von Bachelorabsolventen mit \(\mu
 
 ```
 
-### 2. Test wählen
+### Schritt 2: Test wählen
 
 Um zu entscheiden, welcher Test der passende ist, muss man erst die Null- und Alternativhypothese aufstellen, und das Skalenniveau aller vorkommenden Variablen (Zielgröße, und evtl. Einflussgröße(n)) festlegen. Die Testwahl ist dann z.B. über eine Tabelle möglich, wie sie in Kapitel \@ref(sec-welchen-test) gezeigt ist. Im Beispiel mit dem Maßkrug oben haben wir eine normalverteilte Zielgröße, und keine Einflussgröße - laut Tabelle passt hier also der Einstichproben-t-Test.
 
 Nachdem man den passenden Test gewählt hat, ergibt sich später auch automatisch, welche Prüfgröße man berechnen muss, und welche Verteilung sie hat.
 
-### 3. Signifikanzniveau festlegen
+### Schritt 3: Signifikanzniveau festlegen
 
 Eine Hypothese kann nie mit absoluter Sicherheit bestätigt bzw. widerlegt werden, sondern immer nur mit einer gewissen Wahrscheinlichkeit. Es kann also immer passieren, dass wir durch Zufall in unserer Stichprobe viele Maßkrüge mit wenig Bier erhalten, und einen Mittelwert von zum Beispiel \(\bar{x}=940\text{ml}\) berechnen. Wir würden also fälschlicherweise "nachweisen", dass im Mittel zuwenig Bier in die Krüge gefüllt wird, obwohl der echte durchschnittliche Inhalt tatsächlich ein Liter ist.
 
@@ -115,7 +115,7 @@ Insgesamt können bei einem Test vier Fälle auftreten:
     1. **In Wirklichkeit stimmt \(H_0\)**: Alles in Ordnung. \(H_0\) stimmt, und wir glauben nicht an \(H_1\).
     2. **In Wirklichkeit stimmt \(H_1\)**: In diesem Fall ist unsere Vermutung wahr (d.h. \(H_1\), die wir ja nachweisen möchten, stimmt), aber durch den Test konnte sie nicht bestätigt werden, da wir \(H_0\) beibehalten. Dies ist der sogenannte \(\beta\)-Fehler, auch Fehler 2. Art genannt. Diese Wahrscheinlichkeit können wir nicht kontrollieren, sie ist abhängig von der Art des Tests und des Signifikanzniveaus \(\alpha\).
 
-### 4. Daten sammeln
+### Schritt 4: Daten sammeln
 
 Als nächstes erhebt man Daten. Das muss man in einer Klausur natürlich nicht machen, aber in realen Situationen ist die Datenerhebung meist der zeitaufwändigste Schritt.
 
@@ -134,7 +134,7 @@ In unserem Beispiel würden wir aufs Oktoberfest gehen, z.B. zehn Maß Bier best
 | \(x_9\)      | 979         |
 | \(x_{10}\)   | 965         |
 
-### 5. Prüfgröße berechnen
+### Schritt 5: Prüfgröße berechnen
 
 Nun werden die Daten ausgewertet, und zwar unter der Annahme, dass \(H_0\) gilt, also alles in Ordnung ist, d.h. der durchnittliche Inhalt eines Maßkrugs tatsächlich ein Liter ist.
 
@@ -148,7 +148,7 @@ Wir könnten jetzt natürlich subjektiv sein und sagen: "984ml ist schon niedrig
 
 Der Test verpackt diese Frage nun in eine mathematische Formel und eine Entscheidungsregel. Es wird dazu eine *Prüfgröße* (oder *Teststatistik*) berechnet, die in diesem Fall eine standardisierte Version des Mittelwerts \(\bar{x}\) ist:
 
-\[ T = \sqrt{n} \frac{\bar{x} - \mu_0}{s} \]
+\[ T = \sqrt{n} \cdot \frac{\bar{x} - \mu_0}{s} \]
 
 Die ganzen Standardisierungen in dieser Formel sind dazu da, damit dem Test egal ist,
 
@@ -158,9 +158,9 @@ Die ganzen Standardisierungen in dieser Formel sind dazu da, damit dem Test egal
 
 In unserem Beispiel bestimmen wir \(\bar{x} = 984.4\text{ml}\) und \(s= 16.057\). Den Wert \(\mu_0=1000\) nehmen wir aus der Nullhypothese. Unsere Prüfgröße \(Z\) ist somit
 
-\[ T = \sqrt{n} \frac{\bar{x} - \mu_0}{s} = \sqrt{10} \frac{984.4 - 1000}{16.057} = -3.072\]
+\[ T = \sqrt{n} \cdot \frac{\bar{x} - \mu_0}{s} = \sqrt{10} \cdot \frac{984.4 - 1000}{16.057} = -3.072\]
 
-### 6. Verteilung der Prüfgröße bestimmen
+### Schritt 6: Verteilung der Prüfgröße bestimmen
 
 Um bestimmen zu können, welche Werte für die Prüfgröße "normal", also noch akzeptabel sind, muss man wissen, welche Verteilung diese Prüfgröße hat. Die Prüfgröße bei einem Binomialtest hat z.B. die Verteilung \(B(n,p)\), also eine Binomialverteilung mit n = "Anzahl der Beobachtungen" und p = "Wahrscheinlichkeit in der Nullhypothese". Bei einem t-Test hat die Prüfgröße dann eine \(t(n-1)\)-Verteilung, d.h. eine t-Verteilung mit \(n-1\) Freiheitsgraden.
 
@@ -168,7 +168,7 @@ Ein Test ist meistens so konzipiert, dass die Verteilung "einfach ist", z.B. ein
 
 Und diese Tatsache ist übrigens auch der Grund dafür, warum wir die Prüfgröße etwas umständlicher berechnen. Wir könnten als Prüfgröße ja einfach den Mittelwert der Daten nehmen. Stattdessen standardisieren wir ihn, indem wir \(\mu_0\) abziehen und durch \(s\) teilen. Der Vorteil dieser Variante ist nun, wie gerade beschrieben, dass die Prüfgröße in eine Verteilung "gezwängt" wird, für die wir eine Tabelle vorhanden haben.
 
-### 7. Test abschließen: Zwei Möglichkeiten
+### Schritt 7: Test abschließen: Zwei Möglichkeiten
 
 Nun gibt es zwei Möglichkeiten, die Frage zu beantworten, ob unser Mittelwert noch plausibel ist oder nicht:
 
@@ -188,7 +188,7 @@ Alternativ können wir aus der Prüfgröße auch einen **p-Wert** berechnen. Die
 
 Wenn diese Wahrscheinlichkeit nun sehr gering ist (genauer: Wenn sie unter dem festgelegten Signifikanzniveau \(\alpha\) liegt), hat man wieder einen Nachweis dafür, dass in Wirklichkeit weniger als 1000ml in einen Maßkrug gefüllt werden. Liegt der p-Wert aber darüber, konnte man das nicht nachweisen und behält die Nullhypothese bei.
 
-### 8. Testentscheidung treffen
+### Schritt 8: Testentscheidung treffen
 
 Nun hat man alle Werte berechnet, um seine Testentscheidung treffen zu können. Falls man sich in Schritt 7. für den kritischen Bereich entschieden hat, betrachten wir zwei Werte: die Prüfgröße und den kritischen Bereich. Man sieht einfach nach, ob die Prüfgröße innerhalb oder außerhalb dieses Bereichs liegt. Liegt sie außerhalb, dann ist "alles in Ordnung", also behalten wir die Nullhypothese, aber liegt sie innerhalb des kritischen Bereichs, dann haben wir genug Hinweise dafür gefunden, um die Alternativhypothese annehmen zu können.
 

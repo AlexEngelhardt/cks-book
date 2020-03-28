@@ -2,7 +2,7 @@
 
 In diesem Kapitel wird nun - aufbauend auf das einführende Beispiel in Kapitel \@ref(sec-regression-einfuehrung) - beschrieben, wie man die Regressionsgerade für unsere Beispieldaten berechnet und einzeichnet. Zur Wiederholung:
 
-Wir möchten die Ringgröße (\(y\)) unserer Freundin schätzen, um sie mit einem Ring zu überraschen. Wir wissen aber nur ihre Körpergröße (\(x\)). Um nun die Ringgröße zu schätzen, sammeln wir 20 Datenpunkte von Freunden und Bekannten, und notieren ihre Körpergröße und Ringgröße:
+Wir möchten die Ringgröße (\(y\)) unserer Freundin schätzen, um sie mit einem Ring zu überraschen. Wir wissen aber nur ihre Körpergröße (\(x\)). Um nun die Ringgröße zu schätzen, sammeln wir 10 Datenpunkte von Freunden und Bekannten, und notieren ihre Körpergröße und Ringgröße:
 
 | Person \(i\) | Körpergröße \(x\) | Ringgröße \(y\) |
 | ------------ | ----------------- | --------------- |
@@ -84,18 +84,18 @@ Zum Berechnen von \(b\) könnte man nun sofort loslegen, alles in den Taschenrec
 
 Zuerst brauchen wir Zwischenergebnisse, wo wir von jedem Wert den zugehörigen Mittelwert abziehen. Aus der Tabelle
 
-| Person \(i\) | Körpergrösse \(x\) | Ringgrösse \(y\) |
-| ------------ | ------------------ | ---------------- |
-| 1            | 156.3              | 47.1             |
-| 2            | 158.9              | 46.8             |
-| 3            | 160.8              | 49.3             |
-| 4            | 179.6              | 53.2             |
-| 5            | 156.6              | 47.7             |
-| 6            | 165.1              | 49.0             |
-| 7            | 165.9              | 50.6             |
-| 8            | 156.7              | 47.1             |
-| 9            | 167.8              | 51.7             |
-| 10           | 160.8              | 47.8             |
+| Person \(i\) | Körpergröße \(x\) | Ringgröße \(y\) |
+| ------------ | ----------------- | --------------- |
+| 1            | 156.3             | 47.1            |
+| 2            | 158.9             | 46.8            |
+| 3            | 160.8             | 49.3            |
+| 4            | 179.6             | 53.2            |
+| 5            | 156.6             | 47.7            |
+| 6            | 165.1             | 49.0            |
+| 7            | 165.9             | 50.6            |
+| 8            | 156.7             | 47.1            |
+| 9            | 167.8             | 51.7            |
+| 10           | 160.8             | 47.8            |
 
 werden also die folgenden Werte berechnet:
     

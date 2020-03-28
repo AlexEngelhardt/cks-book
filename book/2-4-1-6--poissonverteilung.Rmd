@@ -48,7 +48,7 @@ for(xi in x){
 Angenommen, die Anzahl der Tore von Team \(A\) ist tatsächlich poissonverteilt mit \(\lambda=1.2\). Ein Freund wettet um 10€ mit dir, dass das Team im folgenden Spiel genau ein Tor schießt, da das die Anzahl mit der höchsten Wahrscheinlichkeit ist. Solltest du diese Wette annehmen?
 ```
 ```{solution, show=TRUE}
-Deine Gewinnwahrscheinlichkeit ist die Summe aller einzelnen Wahrscheinlichkeiten \(f(x)\) für \(x\) Tore, außer für \(x=1\). Man kann natürlich nicht \(f(0)+f(2)+f(3)+f(4)+\ldots\) berechnen, sondern geht hier wieder mit der Gegenwahrscheinlichkeit vor. Wir berechen also nicht \(\mathbb{P}(\text{alles ausser ein Tor})\), sondern stattdessen äquivalent \(1-\mathbb{P}(\text{ein Tor})\):
+Deine Gewinnwahrscheinlichkeit ist die Summe aller einzelnen Wahrscheinlichkeiten \(f(x)\) für \(x\) Tore, außer für \(x=1\). Man kann natürlich nicht \(f(0)+f(2)+f(3)+f(4)+\ldots\) berechnen, sondern geht hier wieder mit der Gegenwahrscheinlichkeit vor. Wir berechen also nicht \(\mathbb{P}(\text{alles außer ein Tor})\), sondern stattdessen äquivalent \(1-\mathbb{P}(\text{ein Tor})\):
 
 \[ 1 - f(1) = 1 - \frac{1.2^1}{1!} \exp (-1.2) = 1-0.3614 = 0.639 \]
 

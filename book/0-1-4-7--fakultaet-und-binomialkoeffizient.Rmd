@@ -10,7 +10,7 @@ So ist die Fakultät von 5 also \(5! = 1\cdot 2\cdot 3\cdot 4\cdot 5 = 120\). Di
 
 Mit der Schreibweise des Produktzeichens \(\Pi\) kann man diese Formel noch etwas verkürzt darstellen:
 
-\[25! = \Pi_{i=1}^25\]
+\[25! = \Pi_{i=1}^{25} i\]
 
 Durch das \(\Pi\) spart man sich jetzt die Arbeit, die Zahlen \(1 \cdot 2 \cdot \ldots \cdot 25\) ausschreiben zu müssen.
 

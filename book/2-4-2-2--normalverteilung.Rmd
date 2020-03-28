@@ -1,4 +1,4 @@
-### Normalverteilung: Körpergrösse
+### Normalverteilung: Körpergröße
 
 #### Idee {-}
 
@@ -6,7 +6,7 @@ Die Normalverteilung ist aus vielen Gründen die wichtigste Verteilung in der St
 
 - Modelle (zum Beispiel das lineare Regressionsmodell) mit Normalverteilung sind besonders einfach zu rechnen, da die Formeln zur Bestimmung der Parameter \(\beta\) im Normalverteilungsfall sehr leicht auszuwerten sind.
 - Der Durchschnitt einer Stichprobe mit **beliebiger Verteilung** folgt einer Normalverteilung. Das ist weitaus wichtiger als es beim ersten Mal lesen klingt. Ich kann 100 Zufallszahlen aus irgendeiner Verteilung (stetig oder diskret, auch selbstgebastelte Verteilungen mit irgendeiner Dichte) ziehen, und ihr Mittelwert folgt immer einer Normalverteilung. Dieses Phänomen ist als *zentraler Grenzwertsatz* bekannt, und wird z.B. beim klassischen \(t\)-Test wichtig. Dort bildet man nämlich einen Stichprobenmittelwert und nutzt aus, dass er annähernd normalverteilt ist.
-- Viele natürliche Merkmale folgen einer Normalverteilung. Besonders wenn es ein Merkmal ist, dass aus dem Durchschnitt vieler einzelner Eigenschaften gebildet wird, ist das Resultat am Ende zumindest annähernd normalverteilt. Die Körpergrösse einer Person ist zum Beispiel das Ergebnis (der "Durchschnitt") vieler verschiedener genetischen Faktoren, und kann für ein gegebenes Geschlecht auch sehr gut mit einer Normalverteilung modelliert werden.
+- Viele natürliche Merkmale folgen einer Normalverteilung. Besonders wenn es ein Merkmal ist, dass aus dem Durchschnitt vieler einzelner Eigenschaften gebildet wird, ist das Resultat am Ende zumindest annähernd normalverteilt. Die Körpergröße einer Person ist zum Beispiel das Ergebnis (der "Durchschnitt") vieler verschiedener genetischen Faktoren, und kann für ein gegebenes Geschlecht auch sehr gut mit einer Normalverteilung modelliert werden.
 
 #### Parameter {-}
 
@@ -44,10 +44,10 @@ Bei jeder Normalverteilung, also egal welche Parameter \(\mu\) und \(\sigma^2\) 
 
 \[ \mathcal{T} = \mathbb{R} \]
 
-Das erscheint vielleicht etwas seltsam, da man die Normalverteilung oft auch dazu verwendet, Dinge wie die Körpergrösse zu modellieren, und es kann ja keine negativen Körpergrössen geben. Man sollte aber zwei Dinge beachten:
+Das erscheint vielleicht etwas seltsam, da man die Normalverteilung oft auch dazu verwendet, Dinge wie die Körpergröße zu modellieren, und es kann ja keine negativen Körpergrößen geben. Man sollte aber zwei Dinge beachten:
 
-- Bei der Modellierung der Körpergrösse wird zum Beispiel eine Normalverteilung mit \(\mu=165\)cm und \(\sigma^2=100\) verwendet. Da liegt die Wahrscheinlichkeit, dass eine Realisation kleiner als 0 herauskommt, bei ungefähr \(2\cdot 10^{-61}\). Diese Zahl ist eine Null, ein Komma, 60 Nullen, und dann erst eine zwei. Das ist so vernachlässigbar klein, dass in der gesamten Geschichte der Menschheit keine Person in diesem Bereich erwartet wird.
-- Die Normalverteilung ist natürlich nur ein "gut genug" passendes Modell, das zur Beschreibung der Körpergrösse verwendet wird. Die wahre Verteilung der Körpergrösse von Menschen sieht anders aus (und hat natürlich nur einen positiven Träger), aber niemand kennt diese Verteilung, und sie lässt sich wohl auch nicht durch eine so einfache Formel hinschreiben. Daher verwendet man bekannte Verteilungen als *Approximation*. Man sagt, dass eine bestimmte Verteilung gut genug zur Modellierung ist, und nimmt solche, mit denen man besonders einfach rechnen kann.
+- Bei der Modellierung der Körpergröße wird zum Beispiel eine Normalverteilung mit \(\mu=165\)cm und \(\sigma^2=100\) verwendet. Da liegt die Wahrscheinlichkeit, dass eine Realisation kleiner als 0 herauskommt, bei ungefähr \(2\cdot 10^{-61}\). Diese Zahl ist eine Null, ein Komma, 60 Nullen, und dann erst eine zwei. Das ist so vernachlässigbar klein, dass in der gesamten Geschichte der Menschheit keine Person in diesem Bereich erwartet wird.
+- Die Normalverteilung ist natürlich nur ein "gut genug" passendes Modell, das zur Beschreibung der Körpergröße verwendet wird. Die wahre Verteilung der Körpergröße von Menschen sieht anders aus (und hat natürlich nur einen positiven Träger), aber niemand kennt diese Verteilung, und sie lässt sich wohl auch nicht durch eine so einfache Formel hinschreiben. Daher verwendet man bekannte Verteilungen als *Approximation*. Man sagt, dass eine bestimmte Verteilung gut genug zur Modellierung ist, und nimmt solche, mit denen man besonders einfach rechnen kann.
 
 #### Erwartungswert {-}
 

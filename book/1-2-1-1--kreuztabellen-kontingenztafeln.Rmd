@@ -40,6 +40,7 @@ Als kleine Verständniskontrolle kann man sich überlegen, wofür die folgenden 
 
 ```{solution, echo=TRUE}
 
+
 - \(I=2\) (die Anzahl der Zeilen ohne der Summenzeile)
 - \(h_{12} = 22\) (die Anzahl der Männer, die CDU/CSU gewählt haben)
 - \(h_{\cdot 2}=50\) (die Anzahl aller CDU/CSU-Wähler)

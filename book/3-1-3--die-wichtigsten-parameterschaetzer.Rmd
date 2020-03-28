@@ -70,7 +70,7 @@ Bei uns ist es:
 
 Durch unsere Stichprobe haben wir also geschätzt, dass in der Grundgesamtheit im Mittel ca. 960ml Bier in einen Krug gefüllt werden.
 
-### Varianz
+### Varianz \(\sigma^2\)
 
 Der Schätzer von 960ml gibt uns schon einen Hinweis darauf, dass evtl. systematisch, also absichtlich, zuwenig Bier in die Krüge gefüllt wird. Um das genauer zu untersuchen, sollte man sich aber auch die Varianz der Daten ansehen. Denn es macht einen großen Unterschied ob *jeder* Krug mit ziemlich genau 960ml befüllt wird, oder ob manche Krüge mit 860ml, dafür manch andere mit 1060ml befüllt werden. Im zweiten Fall könnte es einfach auch sein, dass das Zapfpersonal sehr unterschiedlich einschenkt, und der niedrige durchschnittliche Inhalt von 960ml nur durch Zufall enstanden ist.
 

@@ -22,8 +22,8 @@ y <- 5 * x + 3 + rnorm(n, sd=6)
 mod <- lm(y~x)
 
 i <- 4
-x[i]
-c(y[i], predict(mod)[i])
+# x[i]
+# c(y[i], predict(mod)[i])
 
 y_i <- round(y[i])
 yhat_i <- round(predict(mod)[i])

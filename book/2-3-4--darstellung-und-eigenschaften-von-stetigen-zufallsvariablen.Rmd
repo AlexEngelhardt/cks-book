@@ -57,7 +57,7 @@ Der große Unterschied zwischen diskreten und stetigen Zufallsvariablen ist, das
 
 Im stetigen Fall kann man **Wahrscheinlichkeiten nur für Intervalle** bestimmen. Man kann also z.B. sagen, dass \(X\) mit 18.2% einen Wert zwischen 1 und 2 annehmen wird: \(\mathbb{P}(X \in [1,2]) = 0.182\). Diese "Wahrscheinlichkeitsmasse" von 0.182 ist die **Fläche unter der Dichte**, von 1 bis 2 (s. Abb. \@ref(fig:zufallsvariablen-stetig-integral)).
 
-(ref:zufallsvariablen-stetig-integral-caption) Die Wahrscheinlichkeit, dass das Ergebnis unserer Zufallsvariablen zwischen 1 und 2 liegt, notieren wir mit \(\mathbb{P}(X \in [1,2])\). Wir bestimmen es als die Fläche unter der Dichte, beschränkt auf den Bereich \([1,2]\), hier als braune Fläche dargestellt.
+(ref:zufallsvariablen-stetig-integral-caption) Die Wahrscheinlichkeit, dass das Ergebnis unserer Zufallsvariablen zwischen 1 und 2 liegt, notieren wir mit \(\mathbb{P}(X \in [1,2])\). Wir bestimmen es als die Fläche unter der Dichte, beschränkt auf den Bereich \([1,2]\), hier als markierte Fläche dargestellt.
 
 ```{r zufallsvariablen-stetig-integral, fig.height=6, fig.width=6, out.width="50%", fig.cap="(ref:zufallsvariablen-stetig-integral-caption)"}
 plot_gamma_dens(x, shape, rate, area=c(1,2), text_y=0.05)
@@ -91,7 +91,7 @@ Möchten wir also die Wahrscheinlichkeit wissen, dass \(x\) kleiner oder gleich 
 
 Oft interessiert uns aber auch die **Wahrscheinlichkeit, dass \(X\) zwischen zwei Werten**, z.B. zwischen 0.5 und 1.5 liegt. Die Verteilungsfunktion liefert uns aber nur die Wahrscheinlichkeit, dass \(X\) kleiner/gleich einem Wert ist. Hier können wir aber einen Trick anwenden: Wenn wir zuerst \(F(1.5)\) berechnen, und davon dann \(F(0.5)\) abziehen, haben wir genau die gesuchte Wahrscheinlichkeit, \(\mathbb{P}(0.5 \leq X \leq 1.5)\). Die Abbildungen \@ref(fig:zufallsvariablen-dichte-zu-integral-2) und \@ref(fig:zufallsvariablen-dichte-zu-integral-3) ergänzen das erste Bild von oben und visualisieren diese Idee.
 
-(ref:zufallsvariablen-dichte-zu-integral-2-caption) Im ersten Schritt (weiter oben) berechneten wir \(\mathbb{P}(X \leq 1.5)\). Hier, im zweiten Schritt, berechnen wir nun \(\mathbb{P}(X \leq 0.5)\), was hier links als braune Fläche dargestellt wird, und rechts als entsprechender Wert der Verteilungsfunktion.
+(ref:zufallsvariablen-dichte-zu-integral-2-caption) Im ersten Schritt (weiter oben) berechneten wir \(\mathbb{P}(X \leq 1.5)\). Hier, im zweiten Schritt, berechnen wir nun \(\mathbb{P}(X \leq 0.5)\), was hier links als markierte Fläche dargestellt wird, und rechts als entsprechender Wert der Verteilungsfunktion.
 
 ```{r zufallsvariablen-dichte-zu-integral-2, fig.height=7, fig.width=12, fig.cap="(ref:zufallsvariablen-dichte-zu-integral-2-caption)"}
 par(mfrow=c(1,2))

@@ -6,7 +6,7 @@ Der Spearman-Korrelationskoeffizient \(r_\text{Sp}\) wird auch Rangkorrelationsk
 
 Die Korrelation wird nicht zwischen den Datenpunkten selbst, sondern *zwischen ihren Rängen* berechnet. Ein Beispiel veranschaulicht das schnell:
 
-Beispiel: Alter vs. Performance beim 100m-Lauf
+**Beispiel: Alter vs. Performance beim 100m-Lauf**
 
 Wir möchten den Zusammenhang zwischen dem Alter einer Person und ihrer Performance beim 100-Meter-Sprint analysieren. Dazu messen wir von 6 Personen das Alter in Jahren, und die Zeit für 100 Meter in Sekunden:
 

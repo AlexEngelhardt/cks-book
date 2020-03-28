@@ -4,9 +4,9 @@ Der Variationskoeffizient (oft mit \(v\) bezeichnet) ist eine Kennzahl, die die 
 
 \[ v = \frac{s}{\bar{x}} \]
 
-Der Vorteil des Variationskoeffizienten \(v\) gegenüber der Standardabweichung \(s\) ist, dass dem Variationskoeffizient egal ist, auf welcher Skala die Daten gemessen wurden. Misst man etwa die Körpergrösse von fünf Personen in Zentimeter, kommt ein anderer Mittelwert raus (z.B. 175) als wenn man die Körpergrösse in Meter misst (dann sind es z.B. 1,75). Dasselbe passiert mit der Varianz und der Standardabweichung, *aber nicht mit dem Variationskoeffizenten*.
+Der Vorteil des Variationskoeffizienten \(v\) gegenüber der Standardabweichung \(s\) ist, dass dem Variationskoeffizient egal ist, auf welcher Skala die Daten gemessen wurden. Misst man etwa die Körpergröße von fünf Personen in Zentimeter, kommt ein anderer Mittelwert raus (z.B. 175) als wenn man die Körpergröße in Meter misst (dann sind es z.B. 1,75). Dasselbe passiert mit der Varianz und der Standardabweichung, *aber nicht mit dem Variationskoeffizenten*.
 
-Dazu können wir uns beispielhaft die gerade erwähnten Daten anschauen, die Körpergrösse von fünf Personen in Zentimetern und in Metern:
+Dazu können wir uns beispielhaft die gerade erwähnten Daten anschauen, die Körpergröße von fünf Personen in Zentimetern und in Metern:
 
 | Person \(i\) | Körpergröße in cm | Körpergröße in m |
 | ------------ | ----------------- | ---------------- |
@@ -18,7 +18,7 @@ Dazu können wir uns beispielhaft die gerade erwähnten Daten anschauen, die Kö
 
 ```{exercise, echo=TRUE}
 
-Berechne für beide obigen Datenreihen, die Körpergrösse in Zentimeter sowie in Meter, die folgenden Kennzahlen:
+Berechne für beide obigen Datenreihen, die Körpergröße in Zentimeter sowie in Meter, die folgenden Kennzahlen:
 
 - [Mittelwert](#sec-mittelwert) \(\bar{x}\)
 - [Varianz](#sec-var-sd) \(s^2\)

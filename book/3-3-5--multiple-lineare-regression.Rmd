@@ -12,21 +12,21 @@ Wenn dir jetzt allerdings sehr viel daran liegt, eine möglicht exakte Schätzun
 
 Die Daten würden nun also um zwei Variablen größer werden, und zum Beispiel so aussehen:
 
-| Person \(i\) | Körpergrösse \(x_1\) | Körpergewicht \(x_2\) | Alter \(x_3\) | Ringgrösse \(y\) |
-| ------------ | -------------------- | --------------------- | ------------- | ---------------- |
-| 1            | 156.3                | 62                    | 24            | 47.1             |
-| 2            | 158.9                | 52                    | 34            | 46.8             |
-| 3            | 160.8                | 83                    | 26            | 49.3             |
-| 4            | 179.6                | 69                    | 51            | 53.2             |
-| 5            | 156.6                | 74                    | 43            | 47.7             |
-| 6            | 165.1                | 52                    | 33            | 49.0             |
-| 7            | 165.9                | 77                    | 22            | 50.6             |
-| 8            | 156.7                | 65                    | 21            | 47.1             |
-| 9            | 167.8                | 79                    | 19            | 51.7             |
-| 10           | 160.8                | 51                    | 34            | 47.8             |
+| Person \(i\) | Körpergröße \(x_1\) | Körpergewicht \(x_2\) | Alter \(x_3\) | Ringgröße \(y\) |
+| ------------ | ------------------- | --------------------- | ------------- | --------------- |
+| 1            | 156.3               | 62                    | 24            | 47.1            |
+| 2            | 158.9               | 52                    | 34            | 46.8            |
+| 3            | 160.8               | 83                    | 26            | 49.3            |
+| 4            | 179.6               | 69                    | 51            | 53.2            |
+| 5            | 156.6               | 74                    | 43            | 47.7            |
+| 6            | 165.1               | 52                    | 33            | 49.0            |
+| 7            | 165.9               | 77                    | 22            | 50.6            |
+| 8            | 156.7               | 65                    | 21            | 47.1            |
+| 9            | 167.8               | 79                    | 19            | 51.7            |
+| 10           | 160.8               | 51                    | 34            | 47.8            |
 
 
-Wir haben jetzt nicht mehr eine Einflussgröße \(x\), sondern drei Stück: \(x_1\), \(x_2\), und \(x_3\). Und jede dieser Einflussgrößen hat eine Ausprägung pro Person \(i\). Das heißt, dass nun zwei Zahlen unter dem \(x\) stehen: Eine für die Einflussgröße und eine für die Person. Zum Beispiel ist das Körpergewicht der vierten Person \(x_{2,4} = 69kg\).
+Wir haben jetzt nicht mehr eine Einflussgröße \(x\), sondern drei Stück: \(x_1\), \(x_2\), und \(x_3\). Und jede dieser Einflussgrößen hat eine Ausprägung pro Person \(i\). Das heißt, dass nun zwei Zahlen unter dem \(x\) stehen: Eine für die Einflussgröße und eine für die Person. Zum Beispiel ist das Körpergewicht der vierten Person \(x_{4,2} = 69kg\).
 
 Dadurch, dass man jetzt mehr Daten verfügbar hat, kann man eine genauere Schätzung bekommen. Die Regressionsgleichung würde jetzt lauten:
 

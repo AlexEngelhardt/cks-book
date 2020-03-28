@@ -7,11 +7,11 @@ Bisher haben wir uns mit der *deskriptiven* (oder *beschreibenden*) Statistik, s
 
 In der **Inferenzstatistik** (oft auch *induktive* oder *schließende* Statistik genannt) gehen wir nun genau andersrum wie in der Wahrscheinlichkeitsrechnung vor: Wir haben eine Stichprobe gegeben, und möchten mit ihrer Hilfe auf die Parameter der darunterliegenden Verteilung in der Grundgesamtheit schließen.
 
-Die Inferenzstatistik verbindet also die vorhergehenden beiden Teile. Wir berechnen Kennzahlen der Stichprobe (deskriptiv), und schließen dann mit Hilfe der Wahrscheinlichkeitsrechnung auf Eigenschaften in der Grundgesamtheit (s. Abb. \@ref(fig:induktive-statistik)).
+Die Inferenzstatistik verbindet also die vorhergehenden beiden Teile. Wir berechnen Kennzahlen der Stichprobe (deskriptiv), und schließen dann mit Hilfe der Wahrscheinlichkeitsrechnung auf Eigenschaften in der Grundgesamtheit.
 
-(ref:induktive-statistik-caption) In der Wahrscheinlichkeitsrechnung haben wir eine Verteilung gegeben und wollen die Wahrscheinlichkeit für gewisse Daten ausrechnen. In der Inferenzstatistik haben wir Daten gegeben und wollen deren Verteilung (hier: Eine Poissonverteilung mit Parameter \(\lambda=2\)) bestimmen.
+In der Wahrscheinlichkeitsrechnung haben wir eine Verteilung gegeben und wollen die Wahrscheinlichkeit für gewisse Daten ausrechnen. In der Inferenzstatistik haben wir Daten gegeben und wollen deren Verteilung bestimmen.
 
-```{r induktive-statistik, fig.cap="(ref:induktive-statistik-caption)"}
+```{r induktive-statistik}
 knitr::include_graphics("img/pictures/induktive.png")
 ```
 

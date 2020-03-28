@@ -76,10 +76,10 @@ abline(lm(gewicht ~ hausnr))
 
 Für den Zusammenhang zwischen Körpergröße und Gewicht sieht man eine klare positive Steigung. Für die Hausnummer sieht man zwar eine ganz leicht steigende Gerade, die allerdings nicht signifikant ist - das sehen wir an der Ausgabe der Regression:
 
-|                    | Schätzer | Standardfehler | T-Statistik | p-Wert |
+|                    | Schätzer | Standardfehler | t-Statistik | p-Wert |
 | ------------------ | -------- | -------------- | ----------- | ------ |
 | Intercept \(a\)    | -48.012  | 30.144         | -1.593      | 0.130  |
-| Grösse \(b_1\)     | 0.730    | 0.175          | 4.181       | 0.001  |
+| Größe \(b_1\)      | 0.730    | 0.175          | 4.181       | 0.001  |
 | Hausnummer \(b_2\) | 0.068    | 0.069          | 0.985       | 0.339  |
 
 Jedes Statistikprogramm gibt das Ergebnis etwas anders aus, aber die wichtigsten Zeilen sind die für den Schätzer, und die für den p-Wert. An dieser Ausgabe kann man die folgenden Dinge ablesen:
@@ -148,7 +148,7 @@ Ein Marktforschungsunternehmen möchte mit einem Regressionsmodell die Verkaufsz
 
 Das Unternehmen sammelt also über einen Monat hinweg Daten, und rechnet dann eine Regression.
 
-Die Regressionsgerade für diese Studie lautet: \(y = a + b_1 * x_1 + b_2 * x_2\), wobei \(x_1\) der Preis einer Tube in Euro ist, und \(x_2\) die Außentemperatur in °C.
+Die Regressionsgerade für diese Studie lautet: \(y = a + b_1 \cdot x_1 + b_2 \cdot x_2\), wobei \(x_1\) der Preis einer Tube in Euro ist, und \(x_2\) die Außentemperatur in °C.
 
 Wir haben schon eine Vorahnung, wie der Einfluss auf die Verkaufszahlen aussehen wird:
 

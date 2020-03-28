@@ -40,5 +40,5 @@ Damit können wir alle Werte in das Intervall einsetzen:
 
 \[ \left[ \frac{13 \cdot 97.33}{22.362}, \frac{13 \cdot 97.33}{5.892} \right] = \left[ 56.58, 214.75 \right] \]
 
-Das 90%-Konfidenzintervall für die Varianz der Körpergrösse von Männern ist also [56.58, 214.75], d.h. die wahre Varianz liegt wahrscheinlich in diesem Bereich.
+Das 90%-Konfidenzintervall für die Varianz der Körpergröße von Männern ist also [56.58, 214.75], d.h. die wahre Varianz liegt wahrscheinlich in diesem Bereich.
 ```

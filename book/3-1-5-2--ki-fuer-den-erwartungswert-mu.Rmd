@@ -45,7 +45,7 @@ Oder, in Kurzschreibweise mit dem \(\pm\) Zeichen:
 
 Der Intelligenzquotient (IQ) ist so erstellt worden, dass er in der Gesamtbevölkerung normalverteilt ist mit einem Mittelwert von 100 und einer Standardabweichung von 15 (d.h. einer Varianz von \(15^2 = 225\). Wir haben nun eine Stichprobe von \(n=35\) Social-Media-Powerusern, die täglich mehr als 3 Stunden in sozialen Netzen unterwegs sind. Ich erspare euch die "Rohdaten", d.h. die einzelnen 35 IQs, und liefere direkt den Mittelwert der Stichprobe:
 
-\(\bar{x} = 93.523\)
+\[\bar{x} = 93.523\]
 
 Wir können die Varianz in der Gruppe als bekannt annehmen, nämlich als \(\sigma^2 = 225\). Berechne nun ein 95%-Konfidenzintervall (d.h. \(\alpha=0.05\)) für den mittleren IQ in der Grundgesamtheit *aller Social-Media-Poweruser*.
 
@@ -92,8 +92,8 @@ Anmerkung: Falls die Stichprobe mehr als 30 Beobachtungen hat, kann man im Norma
 
 Wir interessieren uns für den mittleren Intelligenzquotienten (IQ) in einer Förderschule für Hochbegabte. In der breiten Bevölkerung ist zwar bekannt, dass der IQ normalverteilt ist mit \(\mu=100\) und \(\sigma^2=225\), aber in dieser Untergruppe kann man weder vom selben Mittelwert noch von derselben Varianz ausgehen. Wir erheben also durch einen IQ-Test die Zahlen für eine Stichprobe von \(n=22\) Hochbegabten, und erhalten:
 
-\(\bar{x} = 134.32\)
-\(s^2 = 98.83\)
+- \(\bar{x} = 134.32\)
+- \(s^2 = 98.83\)
 
 Berechne nun ein 95%-Konfidenzintervall für den mittleren IQ von Hochbegabten in Förderklassen.
 

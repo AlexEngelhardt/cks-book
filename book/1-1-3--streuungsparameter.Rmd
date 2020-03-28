@@ -70,7 +70,7 @@ iqr(x)
 
 Hier muss man also das 75%-Quantil (\(x_{0.75}\)) und das 25%-Quantil (\(x_{0.25}\)) berechnen, und erhält den Interquartilsabstand durch \(x_{0.75}-x_{0.25}\). Im oberen Bild mit \(n=10\) Datenpunkten ist das 25%-Quantil bestimmt als \(x_{0.25}=x_{(\lfloor np \rfloor + 1)} = x_{(3)}\), und das 75%-Quantil analog als \(x_{(8)}\). Die tatsächlichen Werte der Datenpunkte sind hier nicht berücksichtigt, aber wir nehmen immer den dritten und achten Wert der sortierten Daten.
 
-Den Interquartilsabstand interessiert es nun nicht, ob die "äußeren" Daten (also \(x_{(1)}\), \(x_{(2)}\), \(x_{(9)}\) und \(x_{(10)}\)) Ausreißer sind oder nicht, also wenn man sie weiter nach aussen verschieben würde.
+Den Interquartilsabstand interessiert es nun nicht, ob die "äußeren" Daten (also \(x_{(1)}\), \(x_{(2)}\), \(x_{(9)}\) und \(x_{(10)}\)) Ausreißer sind oder nicht, also wenn man sie weiter nach außen verschieben würde.
 
 ### Varianz und Standardabweichung {#sec-var-sd}
 

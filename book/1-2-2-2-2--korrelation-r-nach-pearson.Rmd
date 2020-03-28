@@ -4,9 +4,9 @@ Die Korrelation ist eine Möglichkeit, den Zusammenhang zwischen zwei Variablen 
 
 Mit der Korrelation mißt man den *linearen* (dazu später mehr) Zusammenhang zwischen zwei Variablen. Der Wert kann zwischen -1 und 1 liegen, und wird wie folgt interpretiert:
 
-- \(r \approx 0\): Wenn zwei Variablen eine Korrelation von ungefähr Null haben, lässt sich kein Zusammenhang erkennen. Die Variablen sind unkorreliert. Eine Korrelation von 0 erwartet man z.B. zwischen der Hausnummer und der Körpergrösse einer Person.
-- \(r > 0\): Wenn \(r\) größer als Null ist, spricht man von einer positiven Korrelation. Größere Werte von \(X\) gehen dann einher mit größeren Werten von \(Y\). Das ist zum Beispiel bei der Körpergrösse und der Schuhgrösse einer Person der Fall: Grössere Menschen haben meistens auch grössere Schuhe.
-- \(r < 0\): Wenn \(r\) negativ ist, dann hängen höhere Werte von \(X\) mit niedrigeren Werten für \(Y\) (und umgekehrt) zusammen. Betrachtet man etwa die Anzahl der Skiurlauber und die Aussentemperatur, sieht man, dass bei niedrigeren Temperaturen mehr Urlauber kommen.
+- \(r \approx 0\): Wenn zwei Variablen eine Korrelation von ungefähr Null haben, lässt sich kein Zusammenhang erkennen. Die Variablen sind unkorreliert. Eine Korrelation von 0 erwartet man z.B. zwischen der Hausnummer und der Körpergröße einer Person.
+- \(r > 0\): Wenn \(r\) größer als Null ist, spricht man von einer positiven Korrelation. Größere Werte von \(X\) gehen dann einher mit größeren Werten von \(Y\). Das ist zum Beispiel bei der Körpergröße und der Schuhgröße einer Person der Fall: Größere Menschen haben meistens auch größere Schuhe.
+- \(r < 0\): Wenn \(r\) negativ ist, dann hängen höhere Werte von \(X\) mit niedrigeren Werten für \(Y\) (und umgekehrt) zusammen. Betrachtet man etwa die Anzahl der Skiurlauber und die Außentemperatur, sieht man, dass bei niedrigeren Temperaturen mehr Urlauber kommen.
 
 Sehen wir uns in Abbildung \@ref(fig:korrelation-bsp) ein paar grafische Beispiele an.
 
@@ -22,7 +22,7 @@ titel_x <- titel_y <- list()
 
 e <- function(n=20, sd=.1) rnorm(n=n, sd=sd)
 
-titel_x[[1]] <- "Aussentemperatur"
+titel_x[[1]] <- "Außentemperatur"
 titel_y[[1]] <- "Eisumsatz"
 x[[1]] <- runif(n, 0, 40)
 y[[1]] <- 2*(x[[1]] + 5 ) + e(sd=6)
@@ -32,7 +32,7 @@ titel_y[[2]] <- "Kinobesucher"
 x[[2]] <- runif(n, 5, 20)
 y[[2]] <- -15*x[[2]] + 1500 +e(sd=15)
 
-titel_x[[3]] <- "Körpergrösse"
+titel_x[[3]] <- "Körpergröße"
 titel_y[[3]] <- "Nettoeinkommen"
 x[[3]] <- runif(n, 150, 200)
 y[[3]] <- 2000 + runif(n, -500,500)
@@ -61,7 +61,7 @@ par(op)
 
 A) Hier sieht man eine starke positive Korrelation. Die hohe Korrelation deutet darauf hin, dass ein Zusammenhang zwischen Außentemperatur und Umsatz einer Eisdiele besteht.
 B) Ein Beispiel für eine negative Korrelation. Höhere Preise für Kinokarten gehen mit weniger Besuchern einher. Hier fällt auch auf, dass die Steigung der Geraden keine Rolle spielt. Der Korrelationskoeffizient bemerkt nur, wie "perfekt" der lineare Zusammenhang ist, aber nicht, wie stark er ist.
-C) Sieht man sich Daten für Körpergrösse und Nettoeinkommen an, erkennt man keinen Zusammenhang. Hier ist sogar eine leicht negative Korrelation zu erkennen, die man aber wohl als zufällig betrachten kann.
+C) Sieht man sich Daten für Körpergröße und Nettoeinkommen an, erkennt man keinen Zusammenhang. Hier ist sogar eine leicht negative Korrelation zu erkennen, die man aber wohl als zufällig betrachten kann.
 D) Ein Beispiel für die Grenzen der Korrelation: Sehr arme Menschen können sich keine Busfahrkarten leisten, und sehr reiche Menschen fahren eher Auto. Der Zusammenhang ist hier nicht linear, sondern folgt eher einer Parabel. Man sieht eine Abhängigkeit zwischen dem Einkommen und der gekauften Busfahrkarten, aber die lineare Korrelation erkennt ihn nicht.
 
 Um den Korrelationskoeffizienten \(r\) für zwei Variablen zu berechnen, gibt es zwei Formeln, wo bei beiden natürlich das Gleiche rauskommt. Manchmal ist allerdings die eine oder andere Formel einfacher in den Taschenrechner einzutippen.
@@ -118,11 +118,11 @@ Zusammen in die Formel von oben eingesetzt ergibt sich die Korrelation:
 
 Mit diesem Weg hat man mehr Zwischenergebnisse als mit Formel 1, und kann sich im Taschenrechner nicht so leicht vertippen. Man berechnet nacheinander die folgenden fünf Werte:
 
-\(\bar{x} = 8.57\)
-\(\bar{y} = 71.29\)
-\(\sum_{i=1}^n x_iy_i = 4\cdot 70 + 21\cdot 63 + 2\cdot 82 + 11\cdot 65 + 14\cdot 61 + 2\cdot 74 + 6\cdot 84 = 3988\)
-\(\sum_{i=1}^n x_i^2 = 4^2+21^2+2^2+11^2+14^2+2^2+6^2 =818\)
-\(\sum_{i=1}^n y_i^2 = 36071\)
+- \(\bar{x} = 8.57\)
+- \(\bar{y} = 71.29\)
+- \(\sum_{i=1}^n x_iy_i = 4\cdot 70 + 21\cdot 63 + 2\cdot 82 + 11\cdot 65 + 14\cdot 61 + 2\cdot 74 + 6\cdot 84 = 3988\)
+- \(\sum_{i=1}^n x_i^2 = 4^2+21^2+2^2+11^2+14^2+2^2+6^2 =818\)
+- \(\sum_{i=1}^n y_i^2 = 36071\)
 
 Diese Werte setzt man nun in die Formel ein:
 

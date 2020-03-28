@@ -28,7 +28,7 @@ Eine Google-Bildersuche für "which statistical test" bzw. "welcher statistische
 
 Die Zielgröße ist das Merkmal, das sich durch die Wirkung von Einflussgrößen verändern wird. Sie ist abhängig von den Einflussgrößen. Möchte ich z.B. die blutdrucksenkende Wirkung eines neuen Medikaments nachweisen, dann ist meine Zielgröße der Blutdruck, und die Einflussgröße ist das Medikament (man hätte z.B. zwei Gruppen, einmal Personen ohne Medikament und einmal Personen mit Medikament).
 
-Bestimme nun, von welcher Art (welches Skalenniveau, s. Kap. \@ref(merkmals-und-skalentypen)) deine Zielgröße ist:
+Bestimme nun, von welcher Art (welches *Skalenniveau*, s. Kap. \@ref(merkmals-und-skalentypen)) deine Zielgröße ist:
 
 1. **Nominal?** Das heißt, sie ist eine Kategorie mit zwei oder mehr möglichen Ausprägungen. Ein Beispiel wäre, dass man untersuchen möchte, welche Partei eine bestimmte Person wählen wird.
 2. **Ordinal?** Das ist der Fall, wenn man z.B. eine Fragebogenantwort mit den Werten "stimme nicht zu" / "neutral" / "stimme zu" untersucht.

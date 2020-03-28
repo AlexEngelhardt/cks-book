@@ -146,8 +146,9 @@ wobei mit \(x_{(i)}\) das \(i\)-te Element der *sortierten* Daten gemeint ist - 
 
 Für unsere Beispieldaten von oben (die Werte \(x_1=3\), \(x_2=4\), \(x_3=5\), \(x_4=5\), und \(x_5=18\)) berechnen wir diese Formel am besten, indem wir zuerst die beiden Summen des ersten Bruchs als Zwischenergebnis ausrechnen:
 
-\(\sum_{i=1}^n i x_{(i)} = 1\cdot 3 + 2 \cdot 4 + 3 \cdot 5 + 4 \cdot 5 + 5 \cdot 18 = 136\)
-\(\sum_{i=1}^n x_{(i)} = 3 + 4 + 5 + 5 + 18 = 35\)
+\[\sum_{i=1}^n i x_{(i)} = 1\cdot 3 + 2 \cdot 4 + 3 \cdot 5 + 4 \cdot 5 + 5 \cdot 18 = 136\]
+
+\[\sum_{i=1}^n x_{(i)} = 3 + 4 + 5 + 5 + 18 = 35\]
 
 Diese Werte setzen wir (zusammen mit den übrigen Werten für \(n\)) in die Formel ein:
 

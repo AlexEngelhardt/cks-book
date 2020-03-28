@@ -34,9 +34,9 @@ Um ein Streudiagramm zu zeichnen, benötigt man eine Reihe von *gepaarten* Messu
 
 Als beispielhafte Daten schauen wir uns die Messungen \(x_i\) = Alter eines Kindes und \(y_i\) = Schugröße eines Kindes an. Tabelle \@ref(tab:streudiagramm-table) zeigt die Ergebnisse.
 
-Table: (#tab:streudiagramm-table) Alter und Schuhgrösse für vier Kinder.
+Table: (#tab:streudiagramm-table) Alter und Schuhgröße für vier Kinder.
 
-| Kind \(i\) | Alter \(x_i\) | Schuhgrösse \(y_i\) |
+| Kind \(i\) | Alter \(x_i\) | Schuhgröße \(y_i\) |
 | ---------- | ------------- | ------------------- |
 | 1          | 3             | 22                  |
 | 2          | 5             | 26                  |

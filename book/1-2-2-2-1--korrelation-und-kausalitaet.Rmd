@@ -16,7 +16,7 @@ female <- geschlecht==0
 shoesize<- runif(n, min=36, max=43) + geschlecht*5
 income <- rnorm(n, mean=1300, sd=100) + geschlecht*286  # 22% mehr
 
-plot(shoesize, income, pch=19, col=1, xlab="Schuhgrösse", ylab="Einkommen", main="Einkommen vs. Schuhgrösse")
+plot(shoesize, income, pch=19, col=1, xlab="Schuhgröße", ylab="Einkommen", main="Einkommen vs. Schuhgröße")
 abline(lm(income~shoesize), col=1)
 ```
 
@@ -32,16 +32,16 @@ Wenn der zweite Satz stimmen würde, dann könnte man sich morgen Schuhe der Gr�
 
 Eine Korrelation zwischen zwei Merkmalen \(X\) und \(Y\) bedeutet also noch nicht, dass \(Y\) ein Verursacher von \(X\) ist (oder \(X\) ein Verursacher von \(Y\)). Dieses Phänomen nennt man **Scheinkorrelation**.
 
-Viele, teils richtig absurde Korrelationen gibt es auf der Webseite "[Spurious Correlations](http://www.tylervigen.com/spurious-correlations)".
+Viele, teils richtig absurde Korrelationen gibt es auf der Webseite "Spurious Correlations": http://www.tylervigen.com/spurious-correlations
 
 Was allerdings hier wahr ist: Wenn man zwei Menschen mit unbekanntem Einkommen auf einem Blatt Papier stehen hat, und einer eine viel größere Schuhgröße hat, erwarten wir von dieser Person ein höheres Einkommen als von der anderen.
 
 #### Mediator-/Confoundervariablen {-}
 
-Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt 22% weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Das hat ein paar erklärbare Gründe, wie z.B. die Tendenz, dass Frauen häufiger Teilzeitjobs oder schlechter bezahlte Berufe annehmen, und ihnen eine steile Karriere nicht so wichtig ist wie z.B. geistige Gesundheit. Aber der Effekt auf das Einkommen ist trotzdem da. Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
+Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt 22% weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
 
 ```{r zweivariablen-kausalitaet-getrennt, out.width="75%", fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
-plot(shoesize, income, col=geschlecht+1, pch=geschlecht+15, main="Einkommen vs. Schuhgrösse, nach Geschlecht getrennt", xlab="Schuhgrösse", ylab="Einkommen")
+plot(shoesize, income, col=geschlecht+1, pch=geschlecht+15, main="Einkommen vs. Schuhgröße, nach Geschlecht getrennt", xlab="Schuhgröße", ylab="Einkommen")
 legend("topleft", legend=c("Männer", "Frauen"), col=c(2,1), pch=c(16, 15))
 abline(lm(income[male] ~ shoesize[male]), col=2)
 abline(lm(income[female] ~ shoesize[female]), col=1, lty=2)
@@ -53,11 +53,7 @@ Die zu Beginn ignorierte Variable "Geschlecht" ist hier eine Mediator- oder Conf
 
 Das klingt nun vielleicht alles etwas realitätsfern, weil mein Beispiel sehr offensichtlich unklug war. Solche Sachen passieren allerdings in der Realität, und auch unter Experten:
 
-Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064) (Franz H. Messerli: *Chocolate Consumption, Cognitive Function, and Nobel Laureates*), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz (s. Abb. \@ref(fig:chocolate-nobel)).
-
-```{r chocolate-nobel, out.width="75%", fig.cap="Quelle: Messerli, Franz H. (2012). Chocolate Consumption, Cognitive Function, and Nobel Laureates. New England Journal of Medicine, 367:16, 1562-1564."}
-knitr::include_graphics("img/pictures/chocolate_nobel.jpg")
-```
+Im New England Journal of Medicine, einer hoch angesehenen wissenschaftlichen Zeitschrift, wurde [2012 ein Artikel veröffentlicht](https://www.nejm.org/doi/full/10.1056/NEJMon1211064) (Franz H. Messerli: *Chocolate Consumption, Cognitive Function, and Nobel Laureates*), der genau diesen Fehler machte. Sie fanden eine Korrelation zwischen Schokoladenkonsum und Anzahl an Nobelpreisträgern in einem Land, und schlossen auf einen Einfluss von Schokolade auf Intelligenz.
 
 Ein Blogartikel, der dieses Beispiel (auf Englisch) ausführlich behandelt, und sich am Ende sogar darüber lustig macht, ist hier zu finden: https://epianalysis.wordpress.com/2012/11/19/chocolate/
 
@@ -65,4 +61,4 @@ Ein Blogartikel, der dieses Beispiel (auf Englisch) ausführlich behandelt, und 
 
 Wie man sieht, gibt es mehrere mögliche Erklärungen für eine Korrelation zwischen zwei Variablen \(X\) und \(Y\). Es könnte z.B. \(X\) eine Auswirkung auf \(Y\) haben, oder umgekehrt \(Y\) eine Auswirkung auf \(X\), oder aber wie im Beispiel oben eine Mediatorvariable im Spiel sein, die beide Variablen, \(X\) sowie \(Y\) beeinflusst.
 
-Nachweisen kann man eine Kausalität nur durch ein Experiment. Hier müssten wir zum Beispiel von 100 Personen die Schuhgrösse und das Einkommen notieren, und dann der einen Hälfte größere Schuhe geben und der anderen nicht. Wenn sich nun das Einkommen der *Treatment-Gruppe*, also der Personen mit größeren Schuhen, gegenüber der *Kontrollgruppe* erhöht, dann haben wir einen Zusammenhang nachgewiesen (das wird aber in diesem Fall eher nicht erwartet).
+Nachweisen kann man eine Kausalität nur durch ein Experiment. Hier müssten wir zum Beispiel von 100 Personen die Schuhgröße und das Einkommen notieren, und dann der einen Hälfte größere Schuhe geben und der anderen nicht. Wenn sich nun das Einkommen der *Treatment-Gruppe*, also der Personen mit größeren Schuhen, gegenüber der *Kontrollgruppe* erhöht, dann haben wir einen Zusammenhang nachgewiesen (das wird aber in diesem Fall eher nicht erwartet).

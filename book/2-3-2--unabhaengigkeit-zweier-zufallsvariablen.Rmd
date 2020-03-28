@@ -8,13 +8,13 @@ Eine Abhängigkeit existiert ohne Richtung. Alle drei folgenden Aussagen bedeute
 - \(Y\) ist von \(X\) abhängig.
 - \(X\) und \(Y\) sind abhängig.
 
-Ein Beispiel für zwei abhängige Variablen ist \(X\)=Körpergrösse und \(Y\)=Körpergewicht von befragten Personen. Wenn ich die Größe einer Person kenne, kann ich ihr Gewicht besser einschätzen. Zwei unabhängige Variablen wären etwa \(X\)=Körpergewicht und \(Y\)=Hausnummer einer Person, denn die Hausnummer einer Person gibt mir keine Information über ihr Gewicht (und andersrum).
+Ein Beispiel für zwei abhängige Variablen ist \(X\)=Körpergröße und \(Y\)=Körpergewicht von befragten Personen. Wenn ich die Größe einer Person kenne, kann ich ihr Gewicht besser einschätzen. Zwei unabhängige Variablen wären etwa \(X\)=Körpergewicht und \(Y\)=Hausnummer einer Person, denn die Hausnummer einer Person gibt mir keine Information über ihr Gewicht (und andersrum).
 
 Es ist also bei zwei unabhängigen Variablen die Ausprägung von einem Wert für \(X\) keine Hilfe, um den Wert von \(Y\) vorherzusagen. Mathematisch ausgedrückt: Die Verteilung von \(Y\), gegeben ich kenne \(X\), ist gleich der Verteilung von \(Y\). Und noch kürzer, in einer Formel verpackt, schreiben wir das äquivalent als
 
 \[ \mathbb{P}(Y|X) = \mathbb{P}(Y). \]
 
-Es ist wichtig, im Kopf zu behalten dass eine Abhängigkeit nicht bedeutet, dass die eine Variable die andere *beeinflusst*. Um das am obigen Beispiel zu erläutern: Die Körpergrösse und das Körpergewicht sind voneinander abhängig. Wenn ich also eine Person habe, die 80kg schwer ist, und eine Person die 50kg schwer ist, dann gehe ich davon aus, dass die 80kg schwere Person etwas größer ist als die 50kg schwere. Das ist die Idee hinter dem Begriff **Abhängigkeit**. Es heißt aber nicht, dass ich jetzt 30kg zunehmen kann und erwarten darf, dass ich deswegen in die Höhe wachse. Dies unterstellt eine nicht vorhandene **Kausalität**. Der Unterschied zwischen den beiden Begriffen ist in Kapitel \@ref(sec-korrelation-kausalitaet) detaillierter erklärt.
+Es ist wichtig, im Kopf zu behalten dass eine Abhängigkeit nicht bedeutet, dass die eine Variable die andere *beeinflusst*. Um das am obigen Beispiel zu erläutern: Die Körpergröße und das Körpergewicht sind voneinander abhängig. Wenn ich also eine Person habe, die 80kg schwer ist, und eine Person die 50kg schwer ist, dann gehe ich davon aus, dass die 80kg schwere Person etwas größer ist als die 50kg schwere. Das ist die Idee hinter dem Begriff **Abhängigkeit**. Es heißt aber nicht, dass ich jetzt 30kg zunehmen kann und erwarten darf, dass ich deswegen in die Höhe wachse. Dies unterstellt eine nicht vorhandene **Kausalität**. Der Unterschied zwischen den beiden Begriffen ist in Kapitel \@ref(sec-korrelation-kausalitaet) detaillierter erklärt.
 
 In Abbildung \@ref(fig:zufallsvariablen-unabhaengige-ZV) sind vier Beispiele für Streudiagramme von unabhängigen Zufallsvariablen abgebildet.
 
