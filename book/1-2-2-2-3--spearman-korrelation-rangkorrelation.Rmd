@@ -1,5 +1,29 @@
 #### Spearman-Korrelation / Rangkorrelation
 
+(ref:table-spearman-1-cap1) Person \(i\)
+
+(ref:table-spearman-1-cap2) Alter \(x_i\)
+
+(ref:table-spearman-1-cap3) Rang des Alters \(\text{rang}(x_i)\)
+
+(ref:table-spearman-1-cap4) Zeit in Sekunden \(y_i\)
+
+(ref:table-spearman-1-cap5) Platzierung \(\text{rang}(y_i)\)
+
+(ref:table-spearman-1-cap6) Rangdifferenz \(d_i = \text{rang}(x_i) - \text{rang}(y_i)\)
+
+```{r}
+spearman_tbl <- tibble(
+        "(ref:table-spearman-1-cap1)" = c("A", "B", "C", "D", "E", "F"),
+        "(ref:table-spearman-1-cap2)" = c(59, 35, 43, 23, 42, 27),
+        "(ref:table-spearman-1-cap3)" = c(6, 3, 5, 1, 4, 2),
+        "(ref:table-spearman-1-cap4)" = c(14.61, 11.80, 14.34, 13.03, 14.18, 11.02),
+        "(ref:table-spearman-1-cap5)" = c(6, 2, 5, 3, 4, 1),
+        "(ref:table-spearman-1-cap6)" = c(0, 1, 0, -2, 0, 1)
+)
+```
+
+
 Mit der Spearman-Korrelation misst man ebenso wie mit der Pearson-Korrelation (s. Kap. \@ref(sec-pearson-korrelation)) den Zusammenhang zwischen zwei Variablen. Er nimmt ebenso Werte von -1 (perfekte negative Korrelation) bis +1 (perfekte positive Korrelation) an, und ist nahe bei 0, falls gar keine Korrelation vorliegt.
 
 Der Spearman-Korrelationskoeffizient \(r_\text{Sp}\) wird auch Rangkorrelationskoeffizient genannt, weil nur er einen kleinen, aber entscheidenden Unterschied zum klassischen Pearson-Korrelationskoeffizienten \(r\) hat:
@@ -10,14 +34,19 @@ Die Korrelation wird nicht zwischen den Datenpunkten selbst, sondern *zwischen i
 
 Wir möchten den Zusammenhang zwischen dem Alter einer Person und ihrer Performance beim 100-Meter-Sprint analysieren. Dazu messen wir von 6 Personen das Alter in Jahren, und die Zeit für 100 Meter in Sekunden:
 
-| Person \(i\) | Alter \(x_i\) | Zeit in Sekunden \(y_i\) |
-| ------------ | ------------- | ------------------------ |
-| A            | 59            | 14.61                    |
-| B            | 35            | 11.80                    |
-| C            | 43            | 14.34                    |
-| D            | 23            | 13.03                    |
-| E            | 42            | 14.18                    |
-| F            | 27            | 11.02                    |
+```{r table-spearman-1}
+subtbl <- spearman_tbl[, c(1, 2, 4)]
+
+if(knitr::is_html_output()){
+    knitr::kable(subtbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(subtbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(full_width = FALSE, latex_options="striped") %>%
+        column_spec(1, width="4em") %>%
+        column_spec(2, width="3.5em") %>%
+        column_spec(3, width="5.5em")
+}
+```
 
 Wir können nun die klassische Pearson-Korrelation zwischen den Variablen "Alter" und "Zeit" berechnen:
 
@@ -27,14 +56,21 @@ Wer zur Übung nachrechnen will, das Ergebnis ist \(r = 0.73\). Um für dieselbe
 
 In der Tabelle entstehen dafür zwei neue Spalten für die beiden Ränge. Die Ränge werden hier *aufsteigend* vergeben, was bedeutet dass die kleinste Zahl den Rang 1 erhält, usw.:
 
-| Person \(i\) | Alter \(x_i\) | Rang des Alters \(\text{rang}(x_i)\) | Zeit in Sekunden \(y_i\) | Platzierung \(\text{rang}(y_i)\) |
-| ------------ | ------------- | ------------------------------------ | ------------------------ | -------------------------------- |
-| A            | 59            | 6                                    | 14.61                    | 6                                |
-| B            | 35            | 3                                    | 11.80                    | 2                                |
-| C            | 43            | 5                                    | 14.34                    | 5                                |
-| D            | 23            | 1                                    | 13.03                    | 3                                |
-| E            | 42            | 4                                    | 14.18                    | 4                                |
-| F            | 27            | 2                                    | 11.02                    | 1                                |
+```{r table-spearman-2}
+subtbl <- spearman_tbl[, c(1, 2, 3, 4, 5)]
+
+if(knitr::is_html_output()){
+    knitr::kable(subtbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(subtbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped") %>%
+        column_spec(1, width="4em") %>%
+        column_spec(2, width="3.5em") %>%
+        column_spec(3, width="4em") %>%
+        column_spec(4, width="5.5em") %>%
+        column_spec(5, width="4em")
+}
+```
 
 Den Spearman-Korrelationskoeffizient erhält man nun, wenn man die Formel der Korrelation nicht auf die Variablen "Alter" und "Zeit" anwendet, sondern auf deren Ränge (s. Abb. \@ref(fig:zweivariablen-spearman-bsp)).
 
@@ -92,32 +128,42 @@ Mathematisch sagt man: Die Spearman-Korrelation misst den *monotonen* Zusammenha
 
 Es kann passieren, dass z.B. zwei oder mehr Werte für \(x\) denselben Wert annehmen. In diesem Fall wird den entsprechenden Werten der Durchschnittsrang zugewiesen. Hierzu zwei Beispiele, hätten die Personen aus dem obigen 100-Meter-Sprint stattdessen ein anderes Alter gehabt:
 
-Table: (#tab:spearman-table1) Zwei gleiche Ränge
+(ref:spearm-txt-bsp1) Alter \(x_i\)
 
-| Alter \(x_i\) | Rang \(\text{rang}(x_i)\) |
-| ------------- | ------------------------- |
-| 23            | 1                         |
-| 27            | 2.5                       |
-| 27            | 2.5                       |
-| 35            | 4                         |
-| 43            | 5                         |
-| 59            | 6                         |
+(ref:spearm-txt-bsp2) \(\text{rang}(x_i)\)
 
-In Tabelle \@ref(tab:spearman-table1) haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 wären. Daher bekommen beide Personen den Durchschnittsrang 2.5.
+```{r}
+tbl <- tibble(
+        "(ref:spearm-txt-bsp1)" = c(23, 27, 27, 35, 43, 59),
+        "(ref:spearm-txt-bsp2)" = c("1", "2.5", "2.5", "4", "5", "6")
+)
 
-Table: (#tab:spearman-table2) Drei gleiche Ränge
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 
-| Alter \(x_i\) | Rang \(\text{rang}(x_i)\) |
-| ------------- | ------------------------- |
-| 23            | 1                         |
-| 27            | 2                         |
-| 35            | 4                         |
-| 35            | 4                         |
-| 35            | 4                         |
-| 59            | 6                         |
+Hier haben zwei Personen dasselbe Alter, deren Ränge 2 und 3 wären. Daher bekommen beide Personen den Durchschnittsrang 2.5.
 
-In Tabelle \@ref(tab:spearman-table2) haben drei Personen dasselbe Alter. Deren Ränge wären 3, 4, und 5. Der resultierende Durchschnittsrang für alle drei Personen ist also 4.
+```{r}
+tbl <- tibble(
+        "(ref:spearm-txt-bsp1)" = c(23, 27, 35, 35, 35, 59),
+        "(ref:spearm-txt-bsp2)" = c(1, 2, 4, 4, 4, 6)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
+
+Hier haben nun *drei* Personen dasselbe Alter. Deren Ränge wären 3, 4, und 5. Der resultierende Durchschnittsrang für alle drei Personen ist also 4.
 
 #### Eine kürzere Formel für die Spearman-Korrelation {-}
 
@@ -129,16 +175,21 @@ Das oben angegebene Vorgehen zur Berechnung von \(r_\text{Sp}\) ist zwar (hoffen
 
 Hier ist \(d_i\) die Rangdifferenz, d.h. der Unterschied zwischen den beiden Rängen für eine Beobachtung. Wenn also im oberen Beispiel jemand der jüngste ist (also sein Rang des Alters 1 ist), und das drittschnellste Ergebnis gelaufen ist (also der Rang der Platzierung 3 ist), ist die Rangdifferenz \(d_i = 1 - 3 = -2\). Diese Differenz bestimmen wir nun für jeden Läufer:
 
-| Person \(i\) | Alter \(x_i\) | Rang des Alters \(\text{rang}(x_i)\) | Zeit in Sekunden \(y_i\) | Platzierung \(\text{rang}(y_i)\) | Rangdifferenz \(d_i = \text{rang}(x_i) - \text{rang}(y_i)\) |
-| ------------ | ------------- | ------------------------------------ | ------------------------ | -------------------------------- | ----------------------------------------------------------- |
-| A            | 59            | 6                                    | 14.61                    | 6                                | 0                                                           |
-| B            | 35            | 3                                    | 11.80                    | 2                                | 1                                                           |
-| C            | 43            | 5                                    | 14.34                    | 5                                | 0                                                           |
-| D            | 23            | 1                                    | 13.03                    | 3                                | -2                                                          |
-| E            | 42            | 4                                    | 14.18                    | 4                                | 0                                                           |
-| F            | 27            | 2                                    | 11.02                    | 1                                | 1                                                           |
+```{r table-spearman-3}
+if(knitr::is_html_output()){
+    knitr::kable(spearman_tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(spearman_tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped") %>%
+        column_spec(1, width="4em") %>%
+        column_spec(2, width="3.5em") %>%
+        column_spec(3, width="4em") %>%
+        column_spec(4, width="5.5em") %>%
+        column_spec(5, width="4em")
+}
+```
 
-Somit können wir die quadrierten (nicht vergessen!) Rangdiffernzen aufsummieren:
+Somit können wir die quadrierten (nicht vergessen!) Rangdifferenzen aufsummieren:
 
 \[ \sum_{i=1}^n d_i^2 = 0^2 + 1^2 + 0^2 + (-2)^2 + 0^2 + 1^2 = 6 \]
 

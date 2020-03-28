@@ -30,15 +30,38 @@ Eine Anleitung zum Berechnen der ersten drei Werte findest du in den entsprechen
 
 ```{solution, echo=TRUE}
 Zum Nachprüfen: Die folgenden Kennzahlen sind richtig:
+```
 
-|                             | in Zentimeter | in Meter |
-| --------------------------- | ------------- | -------- |
-| Mittelwert \(\bar{x}\)      | 171.2         | 1.712    |
-| Varianz \(s^2\)             | 82.7          | 0.00827  |
-| Standardabweichung \(s\)    | 9.09          | 0.0909   |
-| Variationskoeffizient \(v\) | 0.0531        | 0.0531   |
+(ref:tbl-varko-txt1) Mittelwert \(\bar{x}\)
+
+(ref:tbl-varko-txt2) Varianz \(s^2\)
+
+(ref:tbl-varko-txt3) Standardabweichung \(s\)
+
+(ref:tbl-varko-txt4) Variationskoeffizient \(v\)
+
+```{r}
+tbl <- tibble(
+    " "=c(
+        "(ref:tbl-varko-txt1)",
+        "(ref:tbl-varko-txt2)",
+        "(ref:tbl-varko-txt3)",
+        "(ref:tbl-varko-txt4)"
+    ),
+    "in Zentimeter" = c(171.2, 82.7, 9.09, 0.0531),
+    "in Meter" = c(1.712, 0.00827, 0.0909, 0.0531)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped")
+}
+```
+
 
 Es fällt hier auf, dass der Mittelwert, die Varianz und die Standardabweichung jeweils andere Werte annehmen, aber der Variationskoeffizient \(v\) für beide Daten gleich ist. Aus diesem Grund ist der Variationskoeffizient eine geeignete Maßzahl, wenn man die Streuung eines Merkmals unabhängig von ihrer Skalierung beschreiben möchte.
-```
+
 
 Man kann auch den Variationskoeffizienten von zwei oder mehr Merkmalen mit unterschiedlicher Skalierung vergleichen, z.B. die Körpergröße und das Gewicht von Studenten, oder die Population der USA und Deutschland. Wo normalerweise die Standardabweichung eines Merkmals mit großem Mittelwert (z.B. die Bevölkerung der USA) automatisch dazu tendiert, größer zu sein, ist der Variationskoeffizient nun vergleichbar.

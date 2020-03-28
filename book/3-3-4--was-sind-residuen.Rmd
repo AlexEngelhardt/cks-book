@@ -10,7 +10,7 @@ Man berechnet das Residuum für die \(i\)-te Beobachtung durch
 
 \[ \hat{\epsilon}_i = y_i - \hat{y}_i \]
 
-Grafisch kann man sich das schön veranschaulichen. Das Residuum für eine Beobachtung ist der farbig markierte Abstand in Abbildung \@ref(fig:regression-residuen-1).
+Grafisch kann man sich das schön veranschaulichen. Das Residuum für eine Beobachtung ist der eingezeichnete Abstand in Abbildung \@ref(fig:regression-residuen-1).
 
 (ref:regression-residuen-1-caption) An einem Streudiagramm kann man ein Residuum schön veranschaulichen: Es ist der vertikale Abstand von einem Datenpunkt zur Regressionsgeraden.
 

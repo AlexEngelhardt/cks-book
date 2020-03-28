@@ -14,13 +14,19 @@ Wir bauen nun ein Histogramm für die folgenden zwanzig Körpergrößen:
 
 Zuerst müssen wir die Gruppen festlegen, in die wir die Daten zuordnen wollen. Wir zeichnen zuerst ein Histogramm für fünf gleich breite Gruppen:
 
-| Gruppe | Intervall  |
-| ------ | ---------- |
-| 1      | [150, 160) |
-| 2      | [160, 170) |
-| 3      | [170, 180) |
-| 4      | [180, 190) |
-| 5      | [190, 200) |
+```{r}
+tbl <- tibble(
+        "Gruppe" = c(1, 2, 3, 4, 5),
+        "Intervall" = c("[150, 160)", "[160, 170)", "[170, 180)", "[180, 190)", "[190, 200)")
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Die eckigen und runden Klammern beschreiben die jeweiligen Grenzen des Intervalls. In der zweiten Spalte ist z.B. die 160 enthalten, da davor eine eckige Klammer steht, aber die 170 ist nicht enthalten, da dort eine runde Klammer ist. Wenn also jemand genau 170cm groß ist, fällt er in die dritte Gruppe. Falls jemand 169.8cm groß ist, fällt er in die zweite Gruppe.
 
@@ -61,12 +67,19 @@ Diese Art von Histogramm sieht man in der Realität so gut wie nie - zumindest i
 
 Das einzige, was hier noch dazukommt, sind die Klassenbreiten \(b_i\), die ja nun verschieden breit sind. Schauen wir uns ein Histogramm für die folgenden Klassen an:
 
-| Gruppe | Intervall  |
-| ------ | ---------- |
-| 1      | [140, 160) |
-| 2      | [160, 165) |
-| 3      | [165, 190) |
-| 4      | [190, 200) |
+```{r}
+tbl <- tibble(
+        "Gruppe" = c(1, 2, 3, 4),
+        "Intervall" = c("[140, 160)", "[160, 165)", "[165, 190)", "[190, 200)")
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Mit derselben Formel von oben, in die wir nun aber unterschiedliche Klassenbreiten eintragen, erhalten wir nun diese Werte:
 

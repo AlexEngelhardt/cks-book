@@ -17,8 +17,10 @@ tbl <- tibble(
 if(knitr::is_html_output()){
     knitr::kable(tbl)
 } else if(knitr::is_latex_output()){
-    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace") %>%
-        kableExtra::kable_styling(full_width = TRUE, latex_options="striped")
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(full_width = TRUE, latex_options="striped") %>%
+        column_spec(1, width="9em") %>%
+        column_spec(3, width="9em")
 }
 
 ```

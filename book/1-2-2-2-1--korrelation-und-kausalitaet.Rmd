@@ -38,7 +38,7 @@ Was allerdings hier wahr ist: Wenn man zwei Menschen mit unbekanntem Einkommen a
 
 #### Mediator-/Confoundervariablen {-}
 
-Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt 22% weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
+Wer aufgepasst hat, weiss vielleicht schon, was hier vor sich geht: Wir haben eine wichtige Variable, nämlich das Geschlecht der Personen nicht beachtet. Es ist nun so, dass [Frauen im Durchschnitt weniger verdienen als Männer](https://www.zeit.de/karriere/beruf/2014-03/lohn-unterschied-gender-pay-gap-bezahlung). Wenn wir unsere befragten Personen nun nach Geschlecht auftrennen, erkennen wir zwei Gruppen, nämlich eine mit großen Füßen und eine mit kleinen Füßen, in denen jeweils keine Korrelation besteht (s. Abb. \@ref(fig:zweivariablen-kausalitaet-getrennt)).
 
 ```{r zweivariablen-kausalitaet-getrennt, out.width="75%", fig.cap="Monatseinkommen vs. Schuhgröße für 30 Personen."}
 plot(shoesize, income, col=geschlecht+1, pch=geschlecht+15, main="Einkommen vs. Schuhgröße, nach Geschlecht getrennt", xlab="Schuhgröße", ylab="Einkommen")

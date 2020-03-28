@@ -25,4 +25,4 @@ Wie gesagt: zwei große Teilgebiete der Inferenzstatistik sind in den einführen
 - Zum einen das **Schätzen** der genauen Parameter (wie z.B. den Wert \(\lambda=2\) in der oberen Grafik) bzw. Bereiche, in denen der Parameter höchstwahrscheinlich liegt (sogenannter Konfidenzintervalle)
 - Zum anderen das **Testen**, ob gewisse Parameter einen bestimmten, hypothetischen Wert annehmen.
 
-Beim Schätzen haben wir also keine vorherige Meinung, was der Parameter sein könnte, und berechnen einfach einen höchstwahrscheinlichen Wert aus den Daten, und beim Testen haben wir vorher eine Idee über den Parameter (z.B. behaupten wir, dass \(\lambda=3\) ist), und überprüfen die Plausibilität dieser Behauptung (oder *Hypothese*) in einem Test.
+Beim Schätzen haben wir also keine vorherige Meinung, was der Parameter sein könnte, und berechnen einfach einen höchstwahrscheinlichen Wert aus den Daten, und beim Testen haben wir vorher eine Idee über den Parameter (z.B. behaupten wir, dass \(\lambda=3\) ist), und überprüfen die Plausibilität dieser Behauptung (*Hypothese*) in einem Test.

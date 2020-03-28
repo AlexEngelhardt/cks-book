@@ -40,3 +40,6 @@ Ich habe Wert darauf gelegt, die Erklärungen möglichst einfach zu halten, und 
 Dieses Buch enthält die Artikel von https://www.crashkurs-statistik.de überarbeitet und in Buchform. Auf diesem Blog ist der Inhalt kostenlos zur Verfügung gestellt. Trotzdem gibt es Personen (mich eingeschlossen), die mit Material in gedrucktem Format (oder als e-Book) besser lernen können. Dieses Buch ist für euch bestimmt - ich hoffe, ihr habt viel Erfolg damit!
 
 Für Feedback, Anregungen und Verbesserungsvorschläge kann man mich per E-Mail unter alex@crashkurs-statistik.de erreichen.
+
+Alexander Engelhardt  
+im März 2020

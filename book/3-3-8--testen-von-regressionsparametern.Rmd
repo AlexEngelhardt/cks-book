@@ -156,40 +156,82 @@ Wir haben schon eine Vorahnung, wie der Einfluss auf die Verkaufszahlen aussehen
 2. Für die Außentemperatur \(x_2\) vermuten wir keinen Einfluss. Bei einer Eisdiele wäre das anders, denn bei mehr Sonne wird normalerweise auch mehr Eis verkauft. Hier gehen wir aber mal davon aus, dass Zahnpasta zu jedem Wetter gleich gut verkauft wird.
 
 Welches der folgenden Ergebnisse ist auf diese zwei Vermutungen hin das plausibelste?
+```
+
+(ref:regparm-aufg-a) \(a\)
+
+(ref:regparm-aufg-b1) \(b_1\)
+
+(ref:regparm-aufg-b2) \(b_2\)
 
 a)
 
-| Parameter | Schätzer | p-Wert |
-| --------- | -------- | ------ |
-| \(a\)     | 1543.22  | 0.013  |
-| \(b_1\)   | 0.012    | 0.042  |
-| \(b_2\)   | 2.042    | 0.013  |
+```{r}
+tbl <- tibble(
+        "Parameter" = c("(ref:regparm-aufg-a)", "(ref:regparm-aufg-b1)", "(ref:regparm-aufg-b2)"),
+        "Schätzer" = c(1543.22, 0.012, 2.042),
+        "p-Wert" = c(0.013, 0.042, 0.013)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 b)
 
-| Parameter | Schätzer | p-Wert |
-| --------- | -------- | ------ |
-| \(a\)     | 1543.22  | 0.013  |
-| \(b_1\)   | -934.02  | 0.017  |
-| \(b_2\)   | 37.02    | 0.006  |
+```{r}
+tbl <- tibble(
+        "Parameter" = c("(ref:regparm-aufg-a)", "(ref:regparm-aufg-b1)", "(ref:regparm-aufg-b2)"),
+        "Schätzer" = c(1543.22, -934.02, 37.02),
+        "p-Wert" = c(0.013, 0.017, 0.006)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 c)
 
-| Parameter | Schätzer | p-Wert |
-| --------- | -------- | ------ |
-| \(a\)     | 1543.22  | 0.013  |
-| \(b_1\)   | -952.21  | 0.003  |
-| \(b_2\)   | -13.23   | 0.493  |
+```{r}
+tbl <- tibble(
+        "Parameter" = c("(ref:regparm-aufg-a)", "(ref:regparm-aufg-b1)", "(ref:regparm-aufg-b2)"),
+        "Schätzer" = c(1543.22, -952.21, -13.23),
+        "p-Wert" = c(0.013, 0.003, 0.493)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 d)
 
-| Parameter | Schätzer | p-Wert |
-| --------- | -------- | ------ |
-| \(a\)     | 1543.22  | 0.013  |
-| \(b_1\)   | 12.23    | 0.342  |
-| \(b_2\)   | 63.42    | 0.255  |
+```{r}
+tbl <- tibble(
+        "Parameter" = c("(ref:regparm-aufg-a)", "(ref:regparm-aufg-b1)", "(ref:regparm-aufg-b2)"),
+        "Schätzer" = c(1543.22, 12.23, 63.42),
+        "p-Wert" = c(0.013, 0.342, 0.255)
+)
 
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
 ```
+
 
 ```{solution, echo=TRUE}
 

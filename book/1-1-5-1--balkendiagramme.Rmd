@@ -8,18 +8,33 @@ Kurz am Rande: Das Balkendiagramm heißt genaugenommen *Säulendiagramm*, da die
 
 Wir benutzen die Daten aus Kapitel \@ref(sec-haeufigkeitstabellen) zu Häufigkeitstabellen:
 
-| Semester \(i\) | \(h_i\) | \(f_i\) | \(F_i\) |
-| -------------- | ------- | ------- | ------- |
-| 1              | 20      | 0.25    | 0.25    |
-| 2              | 4       | 0.05    | 0.3     |
-| 3              | 13      | 0.1625  | 0.4625  |
-| 4              | 9       | 0.1125  | 0.575   |
-| 5              | 21      | 0.2625  | 0.8375  |
-| 6              | 5       | 0.0625  | 0.9     |
-| 7              | 8       | 0.1     | 1       |
+```
+
+(ref:tbl-balkendiag-1) Semester \(i\)
+
+(ref:tbl-balkendiag-2) \(h_i\)
+
+(ref:tbl-balkendiag-3) \(f_i\)
+
+(ref:tbl-balkendiag-4) \(F_i\)
+
+```{r}
+tbl <- tibble(
+        "(ref:tbl-balkendiag-1)" = c(1, 2, 3, 4, 5, 6, 7),
+        "(ref:tbl-balkendiag-2)" = c(20, 4, 13, 9, 21, 5, 8),
+        "(ref:tbl-balkendiag-3)" = c(0.25, 0.05, 0.1625, 0.1125, 0.2625, 0.0625, 0.1),
+        "(ref:tbl-balkendiag-4)" = c(0.25, 0.3, 0.4625, 0.575, 0.8375, 0.9, 1)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Damit zeichnen wir nun ein Balkendiagramm für die absolute (die Spalte \(h_i\)) und relative (die Spalte \(f_i\)) Häufigkeit für jedes Semester. Abbildung \@ref(fig:balkendiagramm) zeigt dieses Diagramm.
-```
 
 (ref:balkendiagramm-caption) Hier sieht man, dass sich nur die Skalierung der \(y\)-Achse ändert; die (relativen) Höhen der Balken bleiben gleich.
 

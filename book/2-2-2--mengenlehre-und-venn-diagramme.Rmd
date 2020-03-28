@@ -71,7 +71,7 @@ Die Zahl 2 kommt zwar in beiden Mengen, \(A\) und \(B\) vor, ist aber in der Ver
 
 #### Der "und"-Operator (Schnittmengen) {-}
 
-Mit dem "und"-Operator \(\cap\) bezeichnet man die *Schnittmenge* zweier Mengen \(A\) und \(B\). Man erhält als Ergebnis nur die Elemente, die sowohl in \(A\) *als auch* in \(B\) enthalten sind (s. Abb. \@ref(fig:venn-A-und-B))
+Mit dem "und"-Operator \(\cap\) bezeichnet man die *Schnittmenge* zweier Mengen \(A\) und \(B\). Man erhält als Ergebnis nur die Elemente, die sowohl in \(A\) *als auch* in \(B\) enthalten sind (s. Abb. \@ref(fig:venn-A-und-B)).
 
 ```{r venn-A-und-B, out.width="50%", fig.cap='Der "und"-Operator'}
 knitr::include_graphics("img/pictures/VennDiagramme/venn-A-und-B.jpg")

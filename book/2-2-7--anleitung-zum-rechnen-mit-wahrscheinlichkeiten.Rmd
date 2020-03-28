@@ -5,6 +5,8 @@ Das Umgehen mit Wahrscheinlichkeiten gehört zum essentiellen Handwerkszeug in d
 ```{r}
 # Im folgenden Block von Text-Referenzen muss ich vorher einen Punkt einfügen, da eine reine Formel, d.h. eine Zeile die mit \( beginnt,
 # nicht geparst wird :(
+#
+# Komischerweise geht es im Kapitel Spearman-Korrelation: (ref:spearm-txt-bsp2) \(\text{rang}(x_i)\)
 ```
 
 

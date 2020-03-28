@@ -35,7 +35,7 @@ Es ist wohl hilfreich, wenn man diesen Fall genau betrachtet, und mit dem Beispi
 Da man theoretisch beide Möglichkeiten (FH-Absolventen verdienen mehr, oder Uni-Absolventen verdienen mehr) für denkbar hält, möchte man bezüglich der Richtung unvoreingenommen vorgehen - man führt also einen *zweiseitigen* Test durch. Wir bezeichnen das mittlere Einkommen von FH-Absolventen mit \(\mu_F\), das der Uni-Absolventen mit \(\mu_U\). Die Hypothesen lauten dann:  
 
 - \(H_0: \mu_F = \mu_U\)
-- \(H_0: \mu_F \neq \mu_U\)
+- \(H_1: \mu_F \neq \mu_U\)
 
 Die drei verschiedenen Möglichkeiten hängen also davon ab, in welche Richtung die Alternativhypothese geht (kleiner oder größer), bzw. ob sie einseitig oder - wie im dritten Beispiel - zweiseitig ist.
 
