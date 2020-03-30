@@ -4,18 +4,26 @@ In diesem Kapitel wird nun - aufbauend auf das einführende Beispiel in Kapitel 
 
 Wir möchten die Ringgröße (\(y\)) unserer Freundin schätzen, um sie mit einem Ring zu überraschen. Wir wissen aber nur ihre Körpergröße (\(x\)). Um nun die Ringgröße zu schätzen, sammeln wir 10 Datenpunkte von Freunden und Bekannten, und notieren ihre Körpergröße und Ringgröße:
 
-| Person \(i\) | Körpergröße \(x\) | Ringgröße \(y\) |
-| ------------ | ----------------- | --------------- |
-| 1            | 156.3             | 47.1            |
-| 2            | 158.9             | 46.8            |
-| 3            | 160.8             | 49.3            |
-| 4            | 179.6             | 53.2            |
-| 5            | 156.6             | 47.7            |
-| 6            | 165.1             | 49.0            |
-| 7            | 165.9             | 50.6            |
-| 8            | 156.7             | 47.1            |
-| 9            | 167.8             | 51.7            |
-| 10           | 160.8             | 47.8            |
+(ref:tab-einflinreg-h1) Person \(i\)
+
+(ref:tab-einflinreg-h2) Körpergröße \(x\)
+
+(ref:tab-einflinreg-h3) Ringgröße \(y\)
+
+```{r}
+tbl <- tibble(
+    "(ref:tab-einflinreg-h1)" = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+    "(ref:tab-einflinreg-h2)" = c(156.3, 158.9, 160.8, 179.6, 156.6, 165.1, 165.9, 156.7, 167.8, 160.8),
+    "(ref:tab-einflinreg-h3)" = c(47.1, 46.8, 49.3, 53.2, 47.7, 49.0, 50.6, 47.1, 51.7, 47.8)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Wir nennen hier \(y\) die **Zielgröße**, da ihre Vorhersage unser Ziel ist. Die Körpergröße \(x\) wird allgemein auch **Einflussgröße** genannt. Es gibt aber noch unzählige andere Namen für die beiden Typen von Variablen. In anderen Quellen wird \(y\) auch häufig Zielvariable, Regressand, Outcome, erklärte Variable oder abhängige Variable (weil sie von \(x\) abhängig ist) genannt. Andere Namen für \(x\) sind Kovariable, Input, Regressor, erklärende Variable oder unabhängige Variable.
 

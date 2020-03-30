@@ -20,15 +20,35 @@ Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelw
 
 Angenommen, wir befragen 7 Familien nach der Kinderzahl im Haushalt und bekommen die in der folgenden Tabelle dargestellten Antworten.
 
-| Familie | Merkmal | Kinder |
-| ------- | ------- | ------ |
-| Weber   | \(x_1\) | 1      |
-| Kaiser  | \(x_2\) | 2      |
-| Kandl   | \(x_3\) | 6      |
-| Nöbauer | \(x_4\) | 1      |
-| Sturm   | \(x_5\) | 1      |
-| Baumann | \(x_6\) | 3      |
-| Dürr    | \(x_7\) | 2      |
+(ref:tab-lageparm-t1) \(x_1\)
+
+(ref:tab-lageparm-t2) \(x_2\)
+
+(ref:tab-lageparm-t3) \(x_3\)
+
+(ref:tab-lageparm-t4) \(x_4\)
+
+(ref:tab-lageparm-t5) \(x_5\)
+
+(ref:tab-lageparm-t6) \(x_6\)
+
+(ref:tab-lageparm-t7) \(x_7\)
+
+```{r}
+tbl <- tibble(
+    Familie=c("Weber", "Kaiser", "Kandl", "Nöbauer", "Sturm", "Baumann", "Dürr"),
+    Merkmal=c("(ref:tab-lageparm-t1)", "(ref:tab-lageparm-t2)", "(ref:tab-lageparm-t3)", "(ref:tab-lageparm-t4)", "(ref:tab-lageparm-t5)", 
+              "(ref:tab-lageparm-t6)", "(ref:tab-lageparm-t7)"),
+    Kinder=c(1, 2, 6, 1, 1, 3, 2)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 
 Der Mittelwert berechnet sich demnach zu \(\frac{1}{7}(1+2+6+1+1+3+2) = 2.2857\).

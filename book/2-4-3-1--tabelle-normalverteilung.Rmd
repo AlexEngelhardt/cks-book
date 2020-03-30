@@ -127,6 +127,6 @@ if(knitr::is_html_output()){
 } else if(knitr::is_latex_output()){
     kable(mx, format="latex", booktabs=TRUE, caption="(ref:tabelle-nv-caption)") %>%
         add_header_above(c("(ref:tabelle-nv-colheader)", "(ref:tabelle-nv-rowheader)"=10)) %>%
-        kableExtra::kable_styling(font_size = 8, latex_options = "hold_position")  # Latex's [h!]
+        kableExtra::kable_styling(font_size = 7, latex_options = "hold_position")  # Latex's [h!]
 }
 ```

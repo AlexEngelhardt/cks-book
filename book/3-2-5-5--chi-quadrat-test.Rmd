@@ -47,12 +47,24 @@ Die Ausgangslage, die wir für einen Chi-Quadrat-Test benötigen, ist immer eine
 
 Die Ergebnisse bekommen wir als Liste, aber wir können sie einfach in eine Kreuztabelle zusammenfassen (s. Kap. \@ref(sec-kreuztabellen)). Als Ausgangssituation haben wir oft eine Liste der folgenden Form:
 
-| Person \(i\) | Geschlecht | Partei     |
-| ------------ | ---------- | ---------- |
-| 1            | männlich   | CDU/CSU    |
-| 2            | weiblich   | Sonstige   | 
-| 3            | männlich   | SPD        |
-| \(\vdots\)   | \(\vdots\) | \(\vdots\) |
+(ref:tab-chisqtest-h1) Person \(i\)
+
+(ref:tab-chisqtest-vdots) \(\vdots\)
+
+```{r}
+tbl <- tibble(
+    "(ref:tab-chisqtest-h1)" = c("1", "2", "3", "(ref:tab-chisqtest-vdots)"),
+    "Geschlecht"=c("männlich", "weiblich", "männlich", "(ref:tab-chisqtest-vdots)"),
+    "Partei"=c("CDU/CSU", "Sonstige", "SPD", "(ref:tab-chisqtest-vdots)")
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Wir formen diese Daten um in eine Kreuztabelle (wie in Kapitel \@ref(sec-kreuztabellen) beschrieben):
 

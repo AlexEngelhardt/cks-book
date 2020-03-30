@@ -102,15 +102,21 @@ Die **Standardabweichung** einer Datenreihe ist einfach die Wurzel aus der Varia
 
 Schauen wir uns Beispieldaten eines diskreten Merkmals für 7 Personen an. Wir berechnen für diese Datenreihe die Spannweite, den Interquartilsabstand, und die Varianz und Standardabweichung.
 
-| Person | Merkmal |
-| ------ | ------- |
-| A      | 3       |
-| B      | 2       |
-| C      | 0       |
-| D      | 5       |
-| E      | 1       |
-| F      | 4       |
-| G      | 4       |
+```
+
+```{r}
+tbl <- tibble(
+    "Personal" = c("A", "B", "C", "D", "E", "F", "G"),
+    "Merkmal" = c(3, 2, 0, 5, 1, 4, 4)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Für Spannweite und Interquartilsabstand brauchen wir zuerst wieder die sortierten Daten:
 

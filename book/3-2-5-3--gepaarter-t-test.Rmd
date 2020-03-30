@@ -6,17 +6,23 @@ Als Beispiel eines vorher/nachher-Vergleichs misst man etwa bei 9 Personen den B
 
 In diesem Beispiel könnten die Daten dann wie folgt aussehen:
 
-| Person \(x_i\) | Blutdruck vorher | Blutdruck nachher |
-| -------------- | ---------------- | ----------------- |
-| 1              | 130              | 124               |
-| 2              | 145              | 142               |
-| 3              | 151              | 138               |
-| 4              | 143              | 143               |
-| 5              | 129              | 122               |
-| 6              | 138              | 141               |
-| 7              | 143              | 140               |
-| 8              | 113              | 108               |
-| 9              | 133              | 127               |
+(ref:tab-geptt-head) Person \(x_i\)
+
+```{r}
+tbl <- tibble(
+    "(ref:tab-geptt-head)" = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+    "Blutdruck vorher" = c(130, 145, 151, 143, 129, 138, 143, 113, 133),
+    "Blutdruck nachher" = c(124, 142, 138, 143, 122, 141, 140, 108, 127)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
+
 
 Wir möchten nun zum Signifikanzniveau \(\alpha=0.1\) testen, ob diese Personen nach der 30-minütigen Meditation einen niedrigeren Blutdruck haben, ob sich also der durchschnittliche Blutdruck gesenkt hat.
 
@@ -24,17 +30,21 @@ Das Schöne an einer *gepaarten* Stichprobe ist nun, dass wir uns eines Tricks b
 
 Da die beiden Gruppen *verbunden* sind, es also jeweils dieselbe Person in der vorher- bzw. nachher-Gruppe ist, können wir für jede Person die Differenz der beiden Messungen berechnen. Wir fügen eine neue Spalte an die Tabelle von eben an, in der wir einfach "nachher minus vorher" rechnen:
 
-| Person \(x_i\) | Blutdruck vorher | Blutdruck nachher | Differenz / "Effekt" |
-| -------------- | ---------------- | ----------------- | -------------------- |
-| 1              | 130              | 124               | -6                   |
-| 2              | 145              | 142               | -3                   |
-| 3              | 151              | 138               | -13                  |
-| 4              | 143              | 143               | 0                    |
-| 5              | 129              | 122               | -7                   |
-| 6              | 138              | 141               | +3                   |
-| 7              | 143              | 140               | -3                   |
-| 8              | 113              | 108               | -5                   |
-| 9              | 133              | 127               | -6                   |
+```{r}
+tbl <- tibble(
+    "(ref:tab-geptt-head)" = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+    "Blutdruck vorher" = c(130, 145, 151, 143, 129, 138, 143, 113, 133),
+    "Blutdruck nachher" = c(124, 142, 138, 143, 122, 141, 140, 108, 127),
+    "Differenz / Effekt" = c(-6, -3, -13, 0, -7, 3, -3, -5, - 6)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Wir rechnen "nachher minus vorher", und nicht "vorher minus nachher", damit eine negative Zahl, z.B. -6, darauf hindeutet, dass der Blutdruck nach der Meditation *gesunken* ist.
 

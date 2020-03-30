@@ -28,11 +28,30 @@ Wir haben insgesamt \(n=50\) Studenten beobachtet. Von ihnen haben 25 auf die Kl
 
 Wir erstellen aus diesen Angaben zuerst eine Kreuztabelle der Merkmale \(L\)="Auf die Klausur gelernt" und \(B\)="Klausur bestanden".
 
-|                             | \(B\) = bestanden | \(\bar{B}\) = nicht bestanden | Summe |
-| --------------------------- | ----------------- | ----------------------------- | ----- |
-| \(L\) = gelernt             | 20                | 5                             | 25    |
-| \(\bar{L}\) = nicht gelernt | 10                | 15                            | 25    |
-| Summe                       | 30                | 20                            | 50    |
+(ref:tab-bed-wsk-h1) \(B\) = bestanden
+
+(ref:tab-bed-wsk-h2) \(\bar{B}\) = nicht bestanden
+
+(ref:tab-bed-wsk-row1) \(L\) = gelernt
+
+(ref:tab-bed-wsk-row2) \(\bar{L}\) = nicht gelernt
+
+```{r}
+tbl <- tibble(
+    " " = c("(ref:tab-bed-wsk-row1)", "(ref:tab-bed-wsk-row2)", "Summe"),
+    "(ref:tab-bed-wsk-h1)" = c(20, 10, 30),
+    "(ref:tab-bed-wsk-h2)" = c(5, 15, 20),
+    "Summe" = c(25, 25, 50)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
+
 
 Angenommen, wir nehmen aus dieser Gruppe Studenten nun eine zufällige Person heraus, können wir für sie die Wahrscheinlichkeit \(\mathbb{P}(B)\) bestimmen, dass sie die Klausur bestanden hat. Von 50 Studenten haben 30 die Klausur bestanden:
 
@@ -52,12 +71,15 @@ Das ist somit die allgemeine Formel für die bedingte Wahrscheinlichkeit. Meiste
 
 ```{exercise, echo=TRUE}
 
+
 Wir werfen einen normalen Würfel, und betrachten die Ereignisse \(A\) = "Es kommt eine gerade Zahl", und \(B\) = "Es kommt eine Zahl kleiner oder gleich 3".
 
 a) Bestimme die Wahrscheinlichkeit für \(A\).
 b) Bestimme die Wahrscheinlichkeit für \(A\), gegeben \(B\) ist bereits eingetreten.
 
+
 ```
+
 
 ```{solution, echo=TRUE}
 
@@ -84,5 +106,6 @@ Diese Werte können wir nun einsetzen und erhalten für die gesuchte Wahrscheinl
 Das bedeutet: *Gegeben* jemand hat uns schon verraten, dass das Ergebnis des Würfels eine Zahl kleiner gleich 3 ist, dann ist die Wahrscheinlichkeit dass die Zahl gerade ist, ein Drittel.
 
 Das kann man sich auch leicht erklären: Nachdem unser Informant gesagt hat, dass der Würfel eine Zahl kleiner gleich 3 zeigt, wissen wir dass es nur noch drei mögliche Ergebnisse des Würfels gibt, nämlich die 1, 2, oder 3. Und nur eine davon ist gerade. Das heißt, eins von drei Ergebnissen ist für uns günstig, daher die letztendliche Wahrscheinlichkeit von \(\frac{1}{3}\).
+
 
 ```

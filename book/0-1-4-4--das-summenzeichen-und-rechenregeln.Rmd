@@ -4,14 +4,39 @@ Das grosse Sigma \(\Sigma\) wird verwendet, um längere Summen in einer kurzen S
 
 Wir werden in der folgenden Tabelle als Beispiel das Lebensalter von fünf ARD-Zuschauern betrachten, und daraus einen Mittelwert berechnen.
 
-| Person \(i\) | Alter \(x_i\) |
-| ------------ | ------------- |
-| \(i=1\)      | 87            |
-| \(i=2\)      | 134           |
-| \(i=3\)      | 77            |
-| \(i=4\)      | 97            |
-| \(i=5\)      | 67            |
+(ref:tab-summenz-h1) Person \(i\)
 
+(ref:tab-summenz-h2) Alter \(x_i\)
+
+(ref:tab-summenz-t1) \(i=1\)
+
+(ref:tab-summenz-t2) \(i=2\)
+
+(ref:tab-summenz-t3) \(i=3\)
+
+(ref:tab-summenz-t4) \(i=4\)
+
+(ref:tab-summenz-t5) \(i=5\)
+
+```{r}
+tbl <- tibble(
+    "(ref:tab-summenz-h1)" = c(
+        "(ref:tab-summenz-t1)",
+        "(ref:tab-summenz-t2)",
+        "(ref:tab-summenz-t3)",
+        "(ref:tab-summenz-t4)",
+        "(ref:tab-summenz-t5)"
+    ),
+    "(ref:tab-summenz-h2)" = c(87, 134, 77, 97, 67)
+)
+
+if(knitr::is_html_output()){
+    knitr::kable(tbl)
+} else if(knitr::is_latex_output()){
+    knitr::kable(tbl, format='latex', booktabs=TRUE, linesep="\\addlinespace", longtable=FALSE) %>%
+        kableExtra::kable_styling(latex_options="striped")
+}
+```
 
 Wir messen hier das Merkmal \(x\), welches das Alter darstellen soll. Der Index \(i\) wird benutzt, um das Alter einer einzelnen Person darzustellen, zum Beispiel steht \(x_3\) für das Alter der dritten Person, \(x_3=77\).
 
