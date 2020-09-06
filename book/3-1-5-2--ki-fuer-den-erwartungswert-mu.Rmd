@@ -110,12 +110,12 @@ Die Werte, die wir brauchen sind:
 - \(\alpha = 0.05\), denn da wir ein 95%-KI brauchen, ist die Irrtumswahrscheinlichkeit 5%, also 0.05.
 - \(t_{1-\frac{\alpha}{2}}(n-1)\) ist das \(1-\frac{\alpha}{2}\)-Quantil, also das 97,5%-Quantil der t-Verteilung mit \(n-1\), also mit 21 Freiheitsgraden. In der Verteilungstabelle (s. Kap. \@ref(sec-tabelle-t-verteilung)) lesen wir ab, dass dieser Wert \(t_{0.975}(21) = 2.080\) ist
 - \(s = \sqrt{s^2} = \sqrt{98.83} = 9.941\)
-- \(\sqrt{n} = \sqrt{21} = 4.583\)
+- \(\sqrt{n} = \sqrt{22} = 4.69\)
 
 Wir setzen also diese Werte ein und rechnen aus:
 
-\[ 134.32 \pm 2.080 \cdot \frac{9.941}{4.583}\]
+\[ 134.32 \pm 2.080 \cdot \frac{9.941}{4.69}\]
 
-Das gesuchte Konfidenzintervall ist also \(134.32 \pm 4.51\), also in Intervallschreibweise \([129.81, 138.83]\). Der IQ unter Förderschülern liegt also ziemlich wahrscheinlich in diesem Bereich.
+Das gesuchte Konfidenzintervall ist also \(134.32 \pm 4.41\), also in Intervallschreibweise \([129.91, 138.73]\). Der IQ unter Förderschülern liegt also ziemlich wahrscheinlich in diesem Bereich.
 
 ```
